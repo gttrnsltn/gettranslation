@@ -92,7 +92,6 @@
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
 
     text-align: center;
 
@@ -185,24 +184,24 @@ select:focus {
     background: #FFFFFF;
     border-radius: 6px;
     border: none;
-    padding-left: 24px;
+    padding: 12px 24px;
 
     font-family: 'Nexa Regular';
     font-size: 16px;
 
     @include tablet-landscape-down {
         width: 280px;
-        padding-left: 16px;
+        padding: 12px 16px;
     }
 
     @include mobile-only {
         width: 100%;
-        padding-left: 20px;
+        padding: 12px 20px;
         font-size: 14px;
     }
 }
 .box_item:focus{
-    border: 2px solid #4247E5;
+    outline: 2px solid #4247E5;
 }
 .box_item:hover {
     cursor: pointer;
@@ -254,10 +253,59 @@ select:focus {
         right: 65%;
     }    
     @include mobile-only {
-        display: none;
+        right: 66%;
+    }
+}
+.order_file_container{
+    display: flex;
+    align-items: center;
+    border-left: 1px solid #D4D6F3;;
+    height: 30px;
+    position: absolute;
+    right: 0;
+    bottom: 35%;
+    padding: 0 48px 0 32px;
+    @include tablet-portrait-down{
+        padding: 0 36px 0 32px;
     }
 }
 
+.order_file_count::before{
+    content: '';
+    position: absolute;
+    top: 25%;
+    margin-left: -18px;
+    width: 12px;
+    height: 12px;
+    background-image: url('../../assets/clip_file.svg');
+}
+
+.order_file_count {
+    margin: 0 16px 0 0;
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #161616;
+    @include tablet-landscape-down{
+    }
+}
+.order_edit {
+    margin: 0;
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+
+    color: #4247E5;
+    @include tablet-landscape-down{
+        right: 44px;
+    }
+}
 .or {
     position: absolute;
     top: 40%;
@@ -276,63 +324,8 @@ select:focus {
         right: 55%;
     }  
     @include mobile-only {
-        display: none;
+       right: 56%;
     }
-}
-
-.order_line {
-    position: absolute;
-    width: 1px;
-    height: 30px;
-    left: 773px;
-    top: 66px;
-
-    height: 30px;
-    width: 1px;
-    left: 985px;
-    top: 78px;
-    border-radius: 0px;
-
-    background: rgba(172, 173, 183, 0.2);
-}
-
-.order_img {
-    position: absolute;
-    width: 12px;
-    height: 12px;
-    left: 1002px;
-    top: 86px;
-}
-
-.order_file_count {
-    position: absolute;
-    height: 22px;
-    left: 1022px;
-    top: 82.5px;
-
-    font-family: 'Nexa Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-
-    color: #161616;
-}
-
-.order_edit {
-    position: absolute;
-    width: 28px;
-    height: 22px;
-    left: 1068px;
-    top: 82.5px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-
-    color: #4247E5;
 }
 
 select {
@@ -359,19 +352,39 @@ select {
 }
 
 .upload_btn {
+    display: flex;
+    align-items: center;
     height: 34px;
     width: 128px;
+    border: 1px dashed #4247E5;
+    border-radius: 6px;
 
     position: absolute;
     top: 36%;
     right: 10%;
-    opacity: 0;
+    padding: 8px 16px;
 
     @include tablet-landscape-down {
         width: 118px;
-        height: 30px;
-        top: 38%;
+        padding: 8px 11px;
     }
+    @include mobile-only{
+        width: 108px;
+        padding: 8px 6px;
+        right: 20px;
+    }
+}
+.upload_icon{
+    width: 18px;
+    height: 13px;
+    margin: 0 6px 0 0;
+}
+.upload_text{
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    color: #4247E5;
 }
 
 .show_button {
@@ -773,13 +786,9 @@ select {
     font-weight: 800;
     font-size: 32px;
     line-height: 40px;
-    /* identical to box height, or 125% */
 
     margin: 22px 0 4px 0;
     text-align: center;
-
-    /* #161616 */
-
     color: #161616;
 
     @include tablet-landscape-down {
@@ -803,11 +812,7 @@ select {
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
-
     text-align: center;
-
-    /* blue grey */
 
     background: linear-gradient(90deg, #CCD1F6 43%, #B9BEE4 58%);
     -webkit-background-clip: text;
@@ -890,12 +895,9 @@ select {
     font-weight: 900;
     font-size: 14px;
     line-height: 22px;
-    /* identical to box height, or 157% */
 
     text-align: center;
-
     color: #FFFFFF;
-
 }
 
 .white {
@@ -1392,6 +1394,7 @@ input::-webkit-inner-spin-button {
     @include tablet-portrait-down{
         max-width: 327px;
         padding: 40px 16px;
+        min-height: 298px;
     }
 }
 
@@ -1404,6 +1407,9 @@ input::-webkit-inner-spin-button {
     margin: 0 0 32px 0;
     border: 2px dashed rgba(66, 71, 229, 0.25);
     border-radius: 6px;
+    @include tablet-portrait-down{
+        height: 80px;
+    }
 }
 .upload_mod_btn {
     display: flex;
@@ -1413,6 +1419,9 @@ input::-webkit-inner-spin-button {
 
     opacity: 0;
     cursor: pointer;
+    @include tablet-portrait-down{
+        height: 80px;
+    }
 }
 .upload_mod_img {
     width: 50%;
@@ -2013,7 +2022,7 @@ input::-webkit-inner-spin-button {
 }
 
 #dropdown:focus-within{
-    border: 2px solid #4247E5;
+    outline: 2px solid #4247E5;
 }
 
 #dropdown label {
@@ -2030,8 +2039,8 @@ input::-webkit-inner-spin-button {
     margin-left: 0px;
 
     @include mobile-only {
-        padding-top: 20px;
-        padding-left: 10px;
+        padding-top: 16px;
+        padding-left: 20px;
         font-family: 'Nexa Regular';
         font-style: normal;
         font-weight: 400;

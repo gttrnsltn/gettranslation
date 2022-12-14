@@ -173,6 +173,10 @@
         "detail1_text3": "Light edit of a machine generated translation by a native professional translator to remove the most serious errors only. Not available for scanned PDFs and images. Valuable translation for understanding or personal use. Not suitable for publication purposes.",
         "moredetails_label": "More details",
 
+        "order_upload": "Upload files",
+        "order_edit": "Edit",
+        
+
         "status_error1": "Unfortunately we could not count the words for this file.",
         "status_error2": "Please insert the estimated word count:",
         "status_error3": "if you wish us to count words for you.",

@@ -58,23 +58,22 @@
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label3' | translate }}</div>
-        <input class="box_item" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000" maxlength="7"
+        <input class="box_item" [(ngModel)]="word" value="1000" type="number" min="0" inputmode="numeric" pattern="[0-9]*" size="7" max="1000000" maxlength="7"
             (keydown)="onKeydown($event)">
 
         <div *ngIf="!orderServ.fileName">
             <div class="line"></div>
             <div class="or">or</div>
-
-            <img class="upload" src="../../assets/upload files.svg" alt="">
-            <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)"></a>
+            <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">
+                <img class="upload_icon" alt="icon upload files" src="../../assets/cloud_arrow.svg"> 
+                <p class="upload_text">{{ 'quote.order_upload' | translate }}</p>
+            </a>
 
         </div>
 
-        <div *ngIf="orderServ.fileName">
-            <div class="order_line"></div>
-            <img class="order_img" src="../../assets/quote/attach-paperclip-symbol(2) 1.svg" alt="">
+        <div class="order_file_container" *ngIf="orderServ.fileName">
             <div class="order_file_count">{{ fileCountStr }}</div>
-            <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">Edit</a>
+            <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">{{ 'quote.order_edit' | translate }}</a>
         </div>
     </div>
 
