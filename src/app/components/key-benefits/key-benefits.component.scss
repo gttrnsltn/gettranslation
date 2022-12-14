@@ -1,0 +1,163 @@
+@import '../../../responsive.scss';
+
+.key_benefits_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    justify-content: space-between;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+        flex-direction: column;
+    }
+    @include tablet-portrait-down{
+        margin: 0 24px 140px;
+
+    }
+}
+
+.naming_section {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    width: 100%;
+    margin: 0 24px 0 0;
+    color: #161616;
+
+    @include tablet-landscape-down {
+        max-width: 100%;
+        margin: 0 0 32px 0;
+    }
+}
+
+.key_benefits_cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    @include tablet-landscape-down {
+        flex-direction: row;
+    }
+    @include tablet-portrait-down {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.key_benefits_title {    
+    display: flex;
+    margin: 0 0 8px 0;
+
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 48px;
+
+    color: #161616;
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.key_benefits_descr {
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include tablet-landscape-down {
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.benefit_card {
+    display: flex;
+    align-items: center;
+    min-height: 188px;
+    max-width: 760px;
+    width: 100%;
+    border-radius: 12px;
+    padding: 24px 32px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    margin: 0 0 24px 0;
+
+    @include tablet-landscape-down {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 14px 0 0;
+    }
+    @include tablet-portrait-down {
+        margin: 0  0 16px 0;
+        max-width: 327px;
+    }
+}
+
+.benefit_card:hover {
+    box-shadow: 0px 4px 14px rgba(6, 7, 7, 0.15);
+    transition-duration: .2s;
+}
+
+.benefit_icon {
+    height: 72px;
+    width: 72px;
+    margin-right: 24px;
+
+    @include tablet-landscape-down {
+        margin: 0 0 12px 0;
+    }
+    @include tablet-portrait-down {
+        margin-right: 24px;
+    }
+}
+
+.benefit_descr {
+    display: flex;
+    flex-direction: column;
+    color: #161616;
+}
+
+.benefit_text {
+    margin: 0 0 6px 0;
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.benefit_subtext {
+    margin: 0 0 6px 0;
+
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+
+    @include tablet-landscape-down {
+        font-size: 12px;
+        line-height: 18px;
+    }    
+    @include tablet-portrait-down {
+        font-size: 14px;
+        line-height: 20px;
+    }
+}
+
+.link {
+    font-family: 'Nexa XBold';
+    font-size: 14px;
+    line-height: 22px;
+    color: #4247E5;
+    margin: 6px 0 0 0;
+}

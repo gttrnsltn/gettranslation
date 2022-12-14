@@ -1,0 +1,94 @@
+<app-header></app-header>
+<div class="banner">
+    <div class="flex-column">
+        <div class="banner_container">
+            <div class="banner_text">{{ 'developers.banner_text' | translate }}</div>
+            <div class="banner_subtext">{{ 'developers.banner_subtext' | translate }}</div>
+        </div>
+        <div class="buttons">
+            <button [routerLink]="['/quote']" class="btn_instant">{{ 'buttons.quote' | translate }}</button>
+            <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+        </div>
+    </div>
+
+    <div class="illustration_cont"><img class="illustration" src="../../assets/illustrations/illustration-2.svg" alt="">
+    </div>
+</div>
+
+<div class="flex">
+    <div class="sup_maintext">{{ 'developers.sup_maintext' | translate }}</div>
+
+    <div class="blocks">
+        <a class="block" [routerLink]="['/website-localization']">
+            <div class="mob-flex">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+                <div class="text">{{ 'developers.sup_text1' | translate }}</div>
+            </div>
+            <div class="subtext">
+                {{ 'developers.sup_subtext1' | translate }}
+            </div>
+        </a>
+        <a class="block" [routerLink]="['/adwords-localization']">
+            <div class="mob-flex">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+                <div class="text">{{ 'developers.sup_text2' | translate }}</div>
+            </div>
+            <div class="subtext">
+                {{ 'developers.sup_subtext2' | translate }}
+            </div>
+        </a>
+        <a class="block" [routerLink]="['/transcription-subtitle-translation']">
+            <div class="mob-flex">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+                <div class="text">{{ 'developers.sup_text3' | translate }}</div>
+            </div>
+            <div class="subtext">
+                {{ 'developers.sup_subtext3' | translate }}
+            </div>
+        </a>
+        <a class="block" [routerLink]="['/web-software-localization']">
+            <div class="mob-flex">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+                <div class="text">{{ 'developers.sup_text4' | translate }}</div>
+            </div>
+            <div class="subtext">
+                {{ 'developers.sup_subtext4' | translate }}
+            </div>
+        </a>
+        <a class="block" [routerLink]="['/multilingual-dtp-services']">
+            <div class="mob-flex">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+                <div class="text">{{ 'developers.sup_text5' | translate }}</div>
+            </div>
+            <div class="subtext">
+                {{ 'developers.sup_subtext5' | translate }}
+            </div>
+        </a>
+        <a class="block" [routerLink]="['/sworn-certified-official-translation']">
+            <div class="mob-flex">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+                <div class="text">{{ 'developers.sup_text6' | translate }}</div>
+            </div>
+            <div class="subtext">
+                {{ 'developers.sup_subtext6' | translate }}
+            </div>
+        </a>
+    </div>
+</div>
+
+<app-logo-block></app-logo-block>
+
+<div class="work">
+    <div class="work_maintext">{{ 'developers.work_maintext' | translate }}</div>
+    <div class="work_block">
+        <div class="work_text">{{ 'developers.work_text' | translate }}</div>
+        <a [routerLink]="['/contact']" class="work_link link_hover">{{ 'developers.work_link' | translate }}</a>
+    </div>
+</div>
+
+<app-our-clients></app-our-clients>
+<app-logo-app></app-logo-app>
+<app-embrace></app-embrace>
+<app-more></app-more>
+<app-instant></app-instant>
+<app-footer></app-footer>

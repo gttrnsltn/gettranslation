@@ -1,0 +1,14 @@
+<div class="banner">
+    <div class="flex-column">
+        <div class="banner_container">
+            <div class="banner_text">{{ 'home.banner_text' | translate }}</div>
+            <div class="banner_subtext">{{ 'home.banner_subtext' | translate }}</div>
+        </div>
+        <div class="buttons">
+            <button [routerLink]="['/quote']" class="btn_instant">{{ 'buttons.quote' | translate }}</button>
+            <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+        </div>
+    </div>
+
+    <div class="illustration_cont"><img class="illustration" src="../../assets/illustration.svg" alt=""></div>
+</div>

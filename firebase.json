@@ -1,0 +1,10 @@
+{
+  "hosting": {
+    "public": "dist/gettranslation",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

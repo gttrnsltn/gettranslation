@@ -1,0 +1,9 @@
+#toTop {
+    width: 56px;
+    height: 56px;
+    position:fixed;
+    bottom:30px; /* отступ кнопки от нижнего края страницы*/
+    right:100px;
+    cursor:pointer;
+    display:none;
+}

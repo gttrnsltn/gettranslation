@@ -1,0 +1,194 @@
+
+
+<!-- <button (click)="checkout($event)">test pay</button>
+<pre *ngIf="confirmation">{{ confirmation | json }}</pre> -->
+    
+<div class="container">
+<a [routerLink]="['/']">
+    <img class="logo" src="../../assets/logo/Group 128.svg" alt="">
+</a>
+
+<!-- <button (click)="onCreate()">test</button> -->
+
+<div *ngIf="!order3" class="group">
+    <div class="block1"></div>
+    <img class="icon1" src="../../assets/order/user (2) 1.svg" alt="">
+    <div class="text1">Do you have an account? <a class="link" href="">Sign in</a> and save time</div>
+</div>
+
+<div *ngIf="order1">
+<div class="maintext">Project information</div>
+<div class="text2">Project name</div>
+<div class="subtext2">(will appear in the invoice)</div>
+<input [(ngModel)]="reason" placeholder="My website translation" class="input2" type="text">
+
+
+<div class="text3">E-mail<span class="red">*</span></div>
+<div class="subtext3">(where the translation will be sent to)</div>
+<input [(ngModel)]="email" placeholder="example@domain.com" class="input3" type="text">
+
+<div class="text4">Notes for the translator</div>
+<textarea [(ngModel)]="comment" style="resize: none;"  class="input4" placeholder="Share context, intended audience, private/public use, trigger warnings..."></textarea>
+
+<div class="text5">Certificate of Translation Accuracy</div>
+<div class="subtext5">This certificate attests that the translation was carried out by a professional native translator to the best of his/her ability. Certified translations have an additional cost of €15.00 (or 3% of the total price for orders over €500).</div>
+<input [(ngModel)]="cetificate" (click)="cetificate()" class="input5" type="checkbox">
+
+<div class="files">Your files</div>
+<img class="conf_img" src="../../assets/order/Frame 40.svg" alt="">
+<div class="conf">All your data is kept confidental</div>
+
+
+
+<div *ngIf="orderServ.fileName == ''">
+    <button class="upload_img">
+        <img class="btn_text" src="../../assets/order/upload file.svg" alt="">
+    </button>
+    <input class="upload" type="file" (change)="changeListener($event)">
+</div>   
+
+<img *ngIf="orderServ.fileName !== ''" class="files_img" src="../../assets/Rectangle 36.svg" alt="">
+<div *ngIf="orderServ.fileName !== ''" class="files_block">
+    <div class="flex">
+        <div class="file_name">{{ orderServ.fileName }}</div>
+        <!-- <a (click)="deleteFile()" class="file_delete">
+            <img  src="../../assets/Frame 38.svg" alt="">
+        </a> -->
+    </div>
+    <div *ngIf="upload_mod_status != 'IN_PROCESS'" class="file_word">({{ orderServ.word }} words)</div>
+</div>
+
+<a [routerLink]="['/quote']">
+    <img class="return_img" src="../../assets/order/arrow.svg" alt="">
+</a>
+
+<a [routerLink]="['/quote']" class="return">Return to solution selection</a>
+<button (click)="continue()" class="continue">{{ btn_text }}</button>
+</div>
+
+
+
+
+
+    <div class="block2"></div>
+
+
+<div class="help">Need Help?</div>
+<button [routerLink]="['/contact']" class="contact">Contact us</button>
+<div class="lang">{{ orderServ.to }}</div>
+<!-- <button class="lang">{{ orderServ.to }}</button> -->
+<div class="lang_text">{{ orderServ.to }}</div>
+
+<div class="summary">Order summary</div>
+<a [routerLink]="['/quote']" class="edit">Edit</a>
+
+<div class="from">From {{ orderServ.from }} to:</div>
+<div class="from_val">1 language</div>
+
+<div class="subject">Subject</div>
+<div class="subject_val">{{ orderServ.subject }}</div>
+
+<div class="word">Word count</div>
+<div class="word_val">{{ orderServ.word }} words</div>
+<div class="service">Service type</div>
+<div class="service_val">{{ orderServ.service }}</div>
+<div class="price">Price per word</div>
+<div class="price_val">{{orderServ.price}}</div>
+<div class="delivery">Delivery date</div>
+<div class="delivery_val">{{orderServ.delivery}} {{ timezone }}</div>
+
+
+<div class="order">Order total</div>
+<div class="order_val">€{{orderServ.total}}</div>
+
+<div class="desc">
+    <p>The price does not include value added tax (VAT). VAT shall apply</p>
+    <p>to private customers residing in the European Union, to EU-based companiees which do not have a VAT number, as well as to Estonian private customers and companies.</p>
+</div>
+
+
+<!-- order2 -->
+<div *ngIf="order2">
+    <div class="billing">Billing information</div>
+    <div class="text6">First and last name</div>
+    <input [(ngModel)]="name" placeholder="John Doe" class="input6" type="text">
+    <div class="text7">Telephone</div>
+    <input [(ngModel)]="phone_number" placeholder="+44 20 4577 3740" class="input7" type="number" (keydown)="onKeydown($event)">
+    
+    <div class="text8">Who are you?</div>
+    <input [(ngModel)]="type" class="rad1" type="radio" id="contactChoice1"
+         name="contact" value="20">
+    <label class="lab1" for="contactChoice1">Company</label>
+    <input [(ngModel)]="type" class="rad2" type="radio" id="contactChoice2"
+        name="contact" value="10">
+    <label class="lab2" for="contactChoice2">Individual</label>  
+    
+    <div *ngIf="type!='10'" class="text9">Company name</div>
+    <input *ngIf="type!='10'" placeholder="Gettranslation OÜ" class="input9" type="text">
+    
+    <div class="text10">Address (line 1)</div>
+    <input [(ngModel)]="address1" placeholder="Vesivärava tn 50-201" class="input10" type="text">
+    <div class="text11">Address (line 2)</div>
+    <input [(ngModel)]="address2" placeholder="С/O Gettranslation OÜ" class="input11" type="text">
+    
+    <div class="text12">City</div>
+    <select (click)="getCities()" [(ngModel)]="city" class="input12" name="from" id="from">
+        <option *ngFor="let city of cities_code_list;" value="{{ city }}">{{ city }}</option>
+    </select>
+    <!-- <input (click)="getCities()" placeholder="Tallinn" class="input12" type="text" value="{{city}}"> -->
+    <div class="text13">ZIP Code</div>
+    <input placeholder="10152" class="input13" type="text" value="{{postalCode}}">
+    
+    <div class="text14">Country</div>
+
+    <select [(ngModel)]="country" class="input14" name="from" id="from">
+        <option *ngFor="let countr of countries_code_list;" value="{{ countr }}">{{ countr }}</option>
+    </select>
+
+    <!-- <input placeholder="My website translation" class="input14" type="text" value="{{country}}"> -->
+    <div *ngIf="type!='10'" class="text15">VAT Number (EU only)</div>
+    <input *ngIf="type!='10'" placeholder="EE10217354" class="input15" type="text" [(ngModel)]="vatNumber">
+    
+    <input class="agree" type="checkbox">
+    <div class="agree_text">I have read and agree to the <a class="blue" href="https://gettranslation.io/privacy" target="_blank">Privacy Policy</a> and <a class="blue" href="https://gettranslation.io/terms" target="_blank">General Sales Conditions</a></div>    
+    
+    <a (click)="back()">
+        <img class="return_img2" src="../../assets/order/arrow.svg" alt="">
+    </a>
+      
+
+    <a (click)="back()" class="return2">Return to order details</a>
+    <button (click)="submite()" class="submit">Submit order</button>
+</div>
+
+<!-- order3 -->
+<div *ngIf="order3">
+    <div class="thank">Thank you! Order confirmed!</div>
+    <div class="your_order">Your order</div>
+    <div class="order_num">{{ request_id }}</div>
+    <div class="has_been">has been confirmed and is now in progress.</div>
+    <div class="you_will">You will receive the translation by</div>
+    <div class="trans_date">{{ orderServ.delivery }}</div>
+    <div class="date_form">{{ timezone }}</div>
+    <div class="want">Want to pay now?</div>
+    <div class="want_sub">If you want you can pay now or within 5 days of translation delivery.</div>
+    <button (click)="pay()" class="pay">Pay now</button>
+    <div class="pay_sub">
+        <p>If you need to modify or cancel your order, please contact us as soon as possible at <a href="mailto:hello@gettranslation.io" class="link">hello@gettranslation.io</a>,</p>
+        <p>quoting the order n.48002341.</p>
+    </div>
+    <button [routerLink]="['/']" class="back">Go back to Home page</button>
+
+</div>
+
+</div>
+
+    <!-- TrustBox widget - Review Collector -->
+   
+        <div [ngClass]="{'visible': order3}" class="trustpilot-widget widget" data-locale="en-GB" data-template-id="56278e9abfbbba0bdcd568bc" data-businessunit-id="62f3d30cc073360b8248b328" data-style-height="52px" data-style-width="100%">
+            <a href="https://uk.trustpilot.com/review/gettranslation.io" target="_blank" rel="noopener">Trustpilot</a>
+        </div>
+
+    <!-- End TrustBox widget -->
+
+<div *ngIf="upload_mod_status == 'IN_PROCESS'" class="loader-line"></div>

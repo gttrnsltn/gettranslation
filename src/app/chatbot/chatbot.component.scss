@@ -1,0 +1,658 @@
+
+.maintext {
+    position: absolute;
+    width: 599px;
+    height: 48px;
+    left: 501px;
+    top: 180px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    text-align: center;
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-299px
+}
+
+.subtext {
+    position: absolute;
+    width: 760px;
+    height: 40px;
+    left: 420px;
+    top: 244px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    text-align: center;
+    
+    color: #180A24;
+
+    left:50%; 
+    margin-left:-380px
+}
+
+
+.make {
+    position: absolute;
+    width: 346px;
+    height: 144px;
+    left: 224px;
+    top: 340px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    
+    
+    color: #161616;
+
+    left:50%; 
+    margin-left:-576px
+}
+
+.make_sub {
+    position: absolute;
+    width: 760px;
+    height: 88px;
+    left: 616px;
+    top: 340px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px
+}
+
+.logo_app {
+    position: absolute;
+    width: 1138px;
+    height: 153px;
+    left: 231px;
+    top: 652px;    
+    
+    left:50%; 
+    margin-left:-576px
+}
+
+.why {
+    position: absolute;
+    width: 1152px;
+    height: 456px;
+    left: 224px;
+    top: 973px;
+
+    left:50%; 
+    margin-left:-576px
+}
+
+.logo_block {
+    position: absolute;
+    width: 1152px;
+    height: 104px;
+    left: 224px;
+    top: 1597px;
+
+    left:50%; 
+    margin-left:-576px
+}
+
+
+
+.space_top {
+    margin-top: .5rem;
+}
+
+.our {
+    position: absolute;
+    width: 261px;
+    height: 48px;
+    left: 670px;
+    top: 1869px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-130px;
+}
+
+.our1 {
+    position: absolute;
+    width: 368px;
+    height: 300px;
+    left: 224px;
+    top: 1949px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    left:50%; 
+    margin-left:-576px;
+}
+.our2 {
+    position: absolute;
+    width: 368px;
+    height: 300px;
+    left: 616px;
+    top: 1949px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    left:50%; 
+    margin-left:-184px;
+}
+.our3 {
+    position: absolute;
+    width: 368px;
+    height: 300px;
+    left: 1008px;
+    top: 1949px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    left:50%; 
+    margin-left:208px;
+}
+
+.our_img1 {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 248px;
+    top: 1973px;
+    
+
+    left:50%; 
+    margin-left:-532px;
+}
+.our_img2 {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 640px;
+    top: 1973px;
+
+    left:50%; 
+    margin-left:-160px;
+}
+.our_img3 {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    left: 1032px;
+    top: 1973px;
+
+    left:50%; 
+    margin-left: 232px;
+}
+
+.our_text1 {
+    position: absolute;
+    width: 31px;
+    height: 26px;
+    left: 248px;
+    top: 2061px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-532px;
+}
+.our_text2 {
+    position: absolute;
+    width: 77px;
+    height: 26px;
+    left: 640px;
+    top: 2061px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-160px;
+}
+.our_text3 {
+    position: absolute;
+    width: 93px;
+    height: 26px;
+    left: 1032px;
+    top: 2061px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 232px;
+}
+
+.our_link1 {
+    position: absolute;
+    width: 151px;
+    height: 22px;
+    left: 248px;
+    top: 2095px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #4247E5;
+    left:50%; 
+    margin-left:-532px;
+}
+.our_link2 {
+    position: absolute;
+    width: 161px;
+    height: 22px;
+    left: 639px;
+    top: 2095px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #4247E5;
+    left:50%; 
+    margin-left:-160px;
+}
+.our_link3 {
+    position: absolute;
+    width: 161px;
+    height: 22px;
+    left: 1031px;
+    top: 2095px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #4247E5;
+    left:50%; 
+    margin-left: 232px;
+}
+
+
+.our_sub1 {
+    position: absolute;
+    width: 332px;
+    height: 100px;
+    left: 248px;
+    top: 2125px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-532px;
+}
+.our_sub2 {
+    position: absolute;
+    width: 320px;
+    height: 100px;
+    left: 640px;
+    top: 2125px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-160px;
+}
+.our_sub3 {
+    position: absolute;
+    width: 320px;
+    height: 100px;
+    left: 1032px;
+    top: 2125px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 232px;
+}
+
+.link {
+    font-family: 'Nexa XBold';
+    color: #4247E5;
+}
+.our_btn {
+    position: absolute;
+    width: 148px;
+    height: 48px;
+    left: 726px;
+    top: 2281px;
+    
+    background: #ECEDFC;
+    border-radius: 12px;
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    color: #4247E5;
+
+    border: none;
+    left:50%; 
+    margin-left: -74px;
+}
+
+.support_text {
+    position: absolute;
+    width: 243px;
+    height: 144px;
+    left: 224px;
+    top: 2497px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-576px
+}
+
+.s1 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 616px;
+    top: 2497px;  
+
+    left:50%; 
+    margin-left:-184px;
+}
+
+.s2 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 747px;
+    top: 2497px;
+    left:50%; 
+    margin-left:-53px;
+}
+.s3 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 878px;
+    top: 2497px;
+    left:50%; 
+    margin-left: 78px;
+}
+.s4 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 1009px;
+    top: 2497px;
+    left:50%; 
+    margin-left:209px;
+}
+.s5 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 1140px;
+    top: 2497px;
+    left:50%; 
+    margin-left:340px;
+}
+.s6 {
+    position: absolute;
+    width: 105px;
+    height: 105px;
+    left: 1271px;
+    top: 2497px;
+    left:50%; 
+    margin-left:471px;
+}
+
+.about {
+    position: absolute;
+    width: 286px;
+    height: 96px;
+    left: 224px;
+    top: 2809px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    
+    
+    color: #161616;
+    
+    left:50%; 
+    margin-left:-576px  
+}
+
+.about_text {
+    position: absolute;
+    width: 760px;
+    height: 362px;
+    left: 616px;
+    top: 2809px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px  
+}
+.the_text {
+    position: absolute;
+    width: 760px;
+    height: 170px;
+    left: 616px;
+    top: 3195px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px  
+}
+.make_text {
+    position: absolute;
+    width: 760px;
+    height: 192px;
+    left: 616px;
+    top: 3389px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px  
+}
+.can_text {
+    position: absolute;
+    width: 760px;
+    height: 192px;
+    left: 616px;
+    top: 3605px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px  
+}
+
+.bold {
+    font-family: 'Nexa XBold';   
+}
+
+.regular {
+    font-family: 'Nexa Regular Italic';   
+}
+
+.bold_italic {
+    font-family: 'Nexa XBold Italic'
+}
+
+.discover {
+    position: absolute;
+    width: 1040px;
+    height: 420px;
+    left: 224px;
+    top: 3965px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.more {
+    position: absolute;
+    width: 1035px;
+    height: 208px;
+    left: 224px;
+    top: 4552px;    
+    left:50%; 
+    margin-left:-576px
+}
+
+.instant {
+    position: absolute;
+    width: 1152px;
+    height: 280px;
+    left: 224px;
+    top: 4928px;
+    left:50%; 
+    margin-left:-576px
+}
+
+
+.footer{
+    overflow: unset;
+    position: absolute;
+    width: 1152px;
+    height: 150px;
+    left: 224px;
+    top: 5376px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.space {
+    position: absolute;
+    width: 1152px;
+    height: 32px;
+    left: 224px;
+    top: 5526px;
+    left:50%; 
+    margin-left:-576px
+}

@@ -1,0 +1,135 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+    font-family: 'Nexa XBold';
+    src: url('../src/assets/Nexa/Nexa-XBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa XBold Italic';
+    src: url('../src/assets/Nexa/Nexa-XBold-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa Heavy';
+    src: url('../src/assets/Nexa/NexaHeavy.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa Book';
+    src: url('../src/assets/Nexa/Nexa-Book.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa Regular';
+    src: url('../src/assets/Nexa/NexaRegular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa Regular Italic';
+    src: url('../src/assets/Nexa/Nexa-Regular-Italic.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Nexa Light';
+    src: url('../src/assets/Nexa/Nexa-Light.ttf') format('truetype');
+}
+
+
+* {
+    padding: 0;
+    margin: 0 auto;
+    box-sizing: border-box;
+
+}
+
+:host {
+    display: block;
+}
+
+
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: black;
+    cursor: pointer;
+    text-decoration: none;
+
+    &:hover {
+        color: black;
+    }
+
+}
+
+* {
+    scroll-behavior: smooth
+}
+
+.btn {
+    background-color: white;
+    height: 44px;
+    width: 144px;
+    left: 844px;
+    top: 0px;
+    border-radius: 12px;
+
+    border: 1px solid #161616;
+
+}
+
+
+input:hover {
+    outline: none;
+    border: 1px solid #4247E5;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid #4247E5;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.link_hover:hover {
+    text-decoration: underline;
+}
+
+.btn1_hover:hover {
+    background: #3135CD;
+}
+
+.btn2_hover:hover {
+    background: #4247E5;
+    color: white;
+}
+
+.btn3_hover:hover {
+    border: 1px solid #4247E5;
+}
+
+// @media (min-width: 374px) {
+//     * {
+//         padding-left: 24px;
+//         padding-right: 24px;
+//         width: 100%;
+//     }
+// }
+
+// @media mobile (max-width: 430px) {
+//     * {
+//         max-width: 327px;
+//         margin: 0 auto;
+//     }
+// }

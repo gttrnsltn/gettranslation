@@ -1,0 +1,132 @@
+@import '../../../responsive.scss';
+
+a {
+    margin: 0;
+}
+
+.clients_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+
+    @include desktop-down {
+        margin: 0 64px 140px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 0 48px 140px;
+        flex-direction: column-reverse;
+    }
+
+    @include tablet-portrait-down {
+        margin: 0 32px 140px;
+    }
+}
+
+.review_container {
+    display: flex;
+    flex-direction: column;
+    max-width: 662px;
+    width: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    padding: 40px 48px;
+    position: relative;
+    margin: 0;
+    @include tablet-landscape-down{
+        padding: 32px 40px;
+    }    
+    @include mobile-only{
+        padding: 40px 24px;
+    }  
+}
+
+.review_container:hover {
+    box-shadow: 0px 4px 14px rgba(6, 7, 7, 0.15);
+    transition-duration: .2s;
+}
+
+.review_avatar {
+    width: 96px;
+    height: 96px;
+}
+
+.review_logo {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    right: 40%;   
+    @include tablet-portrait-down{
+        right: 38%;
+    }
+    @include mobile-only{
+        right: 32%;
+    }
+}
+
+.review_text {
+    font-family: 'Nexa Heavy';
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 16px;
+}
+
+.review_subtext {
+    font-family: 'Nexa Book';
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.review_desc {
+    font-family: 'Nexa Book';
+    font-size: 14px;
+    line-height: 20px;
+    width: 100%;
+    margin-top: 16px;
+    text-align: center;
+}
+
+.cta {
+    margin-left: 48px;
+    width: 441px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include tablet-landscape-down{
+        margin: 0 0 40px 0;
+        width: 100%;
+    }  
+}
+
+.cta_text {
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px; 
+    margin-left: 0;
+    @include tablet-portrait-down{
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+.cta_subtext {
+    font-family: 'Nexa Book';
+    font-size: 16px;
+    line-height: 22px;
+    margin-top: 16px;
+    margin: 0;
+    @include tablet-portrait-down{
+        font-size: 16px;
+        line-height: 22px;
+    }
+}
+
+.cta_link {
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    line-height: 24px;
+    color: #4247E5;    
+    margin-top: 16px;
+    margin-left: 0;
+}

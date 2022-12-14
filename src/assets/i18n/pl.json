@@ -1,0 +1,205 @@
+{
+    "header" : { 
+        "enterprises": "Przedsiębiorstwa",
+        "developers": "Programiści",
+        "translators": "Tłumacze",
+        "services": "Usługi",
+        "contact": "Kontakt",
+        "instant": "Wycena"
+    },
+    "home" : {
+        "banner_text": "Bezproblemowe wielojęzyczne rozwiązania",
+        "banner_subtext": "Rozwiązania i narzędzia do sprawnej, precyzyjnej komunikacji w skali globalnej lub lokalnej. Biegle posługujemy się ponad 190 językami, mamy do dyspozycji ponad 50 000 tłumaczy i specjalistów językowych.",
+
+        "benefits_text1": "Professional Translation",
+        "benefits_subtext1": "Tailored solutions that blend tech solutions with skilled language professionals to enhance the way you work with language.",
+        "benefits_link1": "Natychmiastowa wycena",
+        "benefits_text2": "Rozwiązania dla przedsiębiorstw",
+        "benefits_subtext2": "Execute translations seamlessly on a global scale with workflows and tech that accelerate time to market and boost overall efficiency.",
+        "benefits_link2": "Dowiedz się więcej",
+        "benefits_text3": "Narzędzia dla programistów",
+        "benefits_subtext3": "Najbardziej zaawansowane, a jednocześnie proste w obsłudze interfejsy API tłumaczeń do ciągłej lokalizacji, wyodrębniania treści z 71 formatów plików, adaptacyjne tłumaczenie maszynowe wykorzystujące sieci neuronowe i o wiele więcej.",
+        "benefits_link3": "Dowiedz się więcej",
+
+        
+        "review_text": "Petrol",
+        "review_subtext": "Carter Barloy, Manager",
+        "review_desc": "“There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet.”",
+        "cta_text": "Nasi klienci",
+        "cta_subtext": "Największe firmy na całym świecie zwracają się do nas o pomoc w wejściu na nowe rynki i dotarciu do globalnej rzeszy odbiorców. Handel, turystyka, finanse czy nauki przyrodnicze – Gettranslation to lider na rynku tłumaczeń w różnych dziedzinach. Tłumaczymy na ponad 190 języków i współpracujemy z grupą ponad 50 000 starannie wyselekcjonowanych lingwistów.",
+        "cta_link": "Zapoznaj się z opiniami klientów",
+
+        "our_maintext": "Nasze profesjonalne usługi",
+        "our_text1": "Strona www",
+        "our_subtext1": "W pełni zarządzane rozwiązania, dzięki którym Twoja strona internetowa może się pochwalić inną kulturą – od wielojęzycznych witryn Wordpress po złożone architektury.",
+        "our_text2": "Tłumaczenie reklam Google",
+        "our_subtext2": "Od 2017 roku jesteśmy głównym partnerem Google w tłumaczeniu tysięcy reklam i słów kluczowych.",
+        "our_text3": "Napisy do filmów",
+        "our_subtext3": "Dostosowaliśmy ponad 10 000 godzin filmów i programów telewizyjnych, wyposażając je w napisy, podkłady głosowe i dubbing.",
+        "our_text4": "Lokalizacja oprogramowania",
+        "our_subtext4": "Lokalizujemy oryginalne pliki aplikacji mobilnej lub oprogramowania na komputer, następnie je testujemy, oszczędzając kłopotów związanych z kopiowaniem i wklejaniem.",
+        "our_text5": "Wielojęzyczna usługa DTP",
+        "our_subtext5": "Publikowanie w 140 językach, w tym azjatyckich, z zapisem od prawej do lewej, w celu dostarczenia gotowego do druku pliku.",
+        "our_text6": "Tłumaczenia urzędowe",
+        "our_subtext6": "Nasze profesjonalne tłumaczenia mogą być poświadczone lub zaprzysiężone w sądzie, w zależności od kraju, w którym należy przedstawić dokument.",
+        "our_text7": "Niestandardowe rozwiązania lokalizacyjne",
+        "our_subtext7": "Od najbardziej zaawansowanego szkolenia tłumaczy, dopasowanego do preferowanego stylu, do interfejsów API i niestandardowego projektowania przepływu prac.",
+        "our_text8": "Wielojęzyczne chatboty",
+        "our_subtext8": "Integracja z platformami chatbot, oprogramowaniem CMS i oprogramowaniem obsługi klienta, rozszerzeniem zestawu danych i testowaniem postlokalizacyjnym.",
+        "our_text9": "Tłumaczenia pilne",
+        "our_subtext9": "Dzięki naszej rozległej sieci tłumaczy wspieranych przez zoptymalizowane technologie możemy tłumaczyć duże objętości w ciągu kilku godzin i małe teksty w zaledwie kilka minut.",
+        "our_text10": "Tłumaczenie prostych dokumentów",
+        "our_subtext10": "Wykorzystaj naszą ofertę internetową, aby móc szybko i łatwo otrzymać dokumenty przetłumaczone na 190 języków od 2017 roku.",
+    
+        "key_maintext": "Główne korzyści",
+        "key_mainsubtext": "Łączymy zaawansowaną sztuczną inteligencję z ludzkimi redaktorami, aby uzyskać szybkie, wydajne i wysokiej jakości tłumaczenia, które z czasem stają się coraz bardziej inteligentne.",
+        "key_text1": "Doświadczenie i zaufanie",
+        "key_subtext1": "Od roku 2017 dostarczyliśmy 400 000 tłumaczeń w 190 językach 50 000 klientom w 40 makrodomenach, wzmacniając strategię globalizacji najbardziej wymagających klientów.",
+        "key_link1": "Referencje",
+        "key_text2": "Zapewnienie jakości",
+        "key_subtext2": "Your multilingual communication and content for global markets will meet the ISO 17100:2015 standard – tailored to your audience, business terminology and tone of voice.",
+        "key_link2": "Proces produkcji",
+        "key_text3": "O jeden krok dalej",
+        "key_subtext3": "Oferujemy szeroki zakres usług lingwistycznych, które obejmują wszystkie Twoje przyszłe potrzeby: tłumaczenie reklam Google, lokalizacja oprogramowania, napisy i interfejsy API w celu zintegrowania tłumaczenia wykonywanego przez ludzi w dowolnym miejscu.",
+        "key_link3": "Nasze usługi",
+        
+        "embrace_text": "Poznaj naszą rodzinę",
+        "embrace_subtext": "Siłą naszej organizacji jest kadra. Gettranslation to więcej niż firma tłumaczeniowa: to grupa osób zaangażowanych w ułatwianie globalnej komunikacji na najwyższym poziomie.",
+        "embrace_link": "O nas",
+
+        "more_text": "Masz duży projekt? Skontaktuj się z nami.",
+        "more_subtext": "Porozmawiaj z jednym z naszych doradców klienta, aby znaleźć rozwiązanie dla Twoich potrzeb tłumaczeniowych.",
+        "more_btn": "Skontaktuj się z nami",
+        "more_img_text": "Witaj, jestem Lisa. W czym mogę pomóc?",
+        "more_img_subtext": " - Starszy doradca klienta",
+        "more_bold": "Lisa",
+
+        "instant_text": "Poproś o natychmiastową wycenę",
+        "instant_subtext": "Choose from a basic, professional or premium translation. Simple, accurate, secure.",
+        "instant_btn": "Natychmiastowa wycena"
+    },
+    "enterprises" : {
+        "banner_text": "Bezproblemowe rozwiązania dla Twojej firmy",
+        "banner_subtext": "Trusted partnerships, reliable support and accessible solutions at scale. Our expertise and solutions are always tailored to your specific business, markets and goals.",
+        "accuracy_maintext": "Accuracy starts with processes",
+        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
+        "accuracy_link": "Production Process"
+    },
+    "developers" : {
+        "banner_text": "Bezproblemowe narzędzia dla inżynierów globalizacji",
+        "banner_subtext": "Interfejsy API tłumaczenia dla ciągłej lokalizacji, zaawansowane wykorzystywanie powtarzania, wyodrębnianie treści z 71 formatów plików i 21 rodzajów plików źródłowych, adaptacyjne tłumaczenie maszynowe wykorzystujące sieci neuronowe i o wiele więcej.",
+     
+        "sup_maintext": "Obsługiwane formaty plików",
+        "sup_text1": "Formaty wymiany",
+        "sup_subtext1": "xliff, sdlxliff, tmx, ttx, xlf",
+        "sup_text2": "Mała poligrafia",
+        "sup_subtext2": "mif, idml, icml, xml, dita",
+        "sup_text3": "Skanowane pliki",
+        "sup_subtext3": "pdf, bmp, png, gif, jpeg, jpg, tiff",
+        "sup_text4": "Projektowanie stron",
+        "sup_subtext4": "htm, html, xhtml, dtd, json, yaml, yml",
+        "sup_text5": "Oprogramowanie",
+        "sup_subtext5": "properties, resx, xml, sxml, txml, dita, strings, Android xml, rt, wix, po, g",
+        "sup_text6": "Formaty tekstowe",
+        "sup_subtext6": "MS Word, MS Excel, MS Power Point, MS Access, MS OneNote, MS Publisher, Open Office, Google Docs, Google Sheets, Google Slides, Zip",
+
+        "work_maintext": "Pracuj z nami",
+        "work_text": "Nieustannie poszukujemy najlepszych i globalnie myślących projektantów. Zajmujemy się najtrudniejszym problemem związanym z sztuczną inteligencją: językiem człowieka. Postępujemy przy tym zgodnie z etyką i szybko, tworząc bezprecedensową symbiozę między ludźmi i maszynami.",
+        "work_link": "Złóż wniosek"
+
+    },
+    "about" : {
+        "text1": "Seamless multilingual solutions",
+        "subtext11": "We offer solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
+        "subtext12": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
+        "subtext13": "Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
+        
+        "text2": "Our story",
+        "subtext21": "Gettranslation was established in 2017 in Estonia by a group of linguists with more than 20 years of experience in the field of linguistic services.",
+        "subtext22": "Shortly after, we decided to do something unusual for online businesses: to allow our customers to pay after the translation was delivered.",
+        "subtext23": "For the last 5 years we have been growing at a steady rate, increasing our production from an average of 50,000 translations delivered in 2017, to 400,000 in 2022.",
+        
+        "text3": "Our vision",
+        "subtext31": "Gettranslation’s vision is to be the world's premier provider of global language and business solutions.",
+        "subtext32": "We will accomplish this by applying all of our passion, dedication, and innovation to help our clients and partners improve their businesses and achieve their goals.",
+        "subtext33": "Ultimately, our daily commitment is about helping human potential thrive and encouraging diversity in all its forms."
+    },
+    "buttons": {
+        "quote": "Natychmiastowa wycena",
+        "about": "O nas"
+    },
+    "quote": {
+        "banner_text": "Professional translations in a few clicks",
+        "banner_subtext": "The easy way to get your documents translated fast. Simple, accurate, secure.",
+
+        "calc_label1": "From",
+        "calc_label2": "To",
+        "calc_label3": "Word count",
+        "calc_label4": "Subject",
+        "calc_label5": "Delivery date",
+
+        "pay_item1": "Pay after delivery",
+        "pay_item2": "We trust you:",
+        "pay_item3": "feel free to pay within 5 days from delivery via bank transfer, credit card, or PayPal.",
+        "pay_item4": "Learn more",
+
+        "mod_text_word": "Word count tool",
+        "mod_text_date": "Select the delivery date",
+        "best_price_label": "Auto (best price)",
+        "guaranteed_label": "Delivery guaranteed by",
+        "option_timezone_label1": "(EET) Eastern European Time",
+        "option_timezone_label2": "(CET) Central European Time",
+
+        "loading_label": "Choosing the best available translator",
+        "upload_mod_status_word_process": "Counting...",
+        "submitted_label": "Choose your solution",
+        "done_btn": "Done",
+
+        "tag_card": "Best Seller",
+        "card_title1": "Premium",
+        "card_title2": "Professional",
+        "card_title3": "Basic",
+        "card_points1": "Translator",
+        "card_points2": "Specialized Reviser",
+        "card_points3": "Quality control",
+        "card_points4": "Machine translation",
+        "card_points5": "Light review",
+        "delivery_label": "delivery guaranteed by",
+        "needfast_label": "Need it faster?",
+        "about_label1": "about €0,15 / word",
+        "about_label2": "about €0,10 / word",
+        "about_label3": "about €0,04 / word",
+        "submit_order": "Order",
+        "detail1_text1": "Translation by a native professional translator. Full revision by a second native professional translator. Final quality control by a dedicated project manager. Translation memory and glossary included upon request. High-quality translation for publication purposes.",
+        "detail1_text2": "Translation by a native professional translator. Quality evaluation by a second native professional translator. Final quality control by a dedicated project manager. Translation memory included upon request. Professional translation for standard projects.",
+        "detail1_text3": "Light edit of a machine generated translation by a native professional translator to remove the most serious errors only. Not available for scanned PDFs and images. Valuable translation for understanding or personal use. Not suitable for publication purposes.",
+        "moredetails_label": "More details",
+
+        "status_error1": "Unfortunately we could not count the words for this file.",
+        "status_error2": "Please insert the estimated word count:",
+        "status_error3": "if you wish us to count words for you.",
+        "status_error3_bold": "Contact us",
+
+        "more_text": "Have a large project? Get in touch.",
+        "more_subtext": "We will help you get a quote for complex documents, PDFs, websites, software, and more.",
+        "more_btn": "Contact us",
+        "more_img_text": "Hello, I'm Lisa. How can I help you?",
+        "more_img_subtext": " - Senior Account Manager",
+        "more_bold": "Lisa"
+    },
+    "whychoose": {
+        "title": "Why choose us",
+        "description": "We pride ourselves in being considered one of the best companies to work with by translators. We pay them rapidly and fairly, wherever they are in the world.",
+        "card_text1": "Guaranteed Quality",
+        "card_subtext1": "We support the world’s best translators with advanced quality assurance processes. And that’s not all: we provide a free comprehensive translation review if you happen to be unsatisfied.",
+
+        "card_text2": "On-Time Delivery",
+        "card_subtext2": "We offer the best performance levels in the industry, with an optimized workflow that guarantees over 95% of deliveries on time. Plus, in the unlikely event we miss a deadline, we will refund the translation up to its full cost.",
+
+        "card_text3": "Pay After Delivery",
+        "card_subtext3": "We genuinely trust our clients, which is why we have created the Pay After Delivery model. With Pay After Delivery, you can pay within five days of the translation’s delivery via credit card, bank transfer or Paypal.",
+
+        "card_link": "Read our terms"
+
+    }
+}

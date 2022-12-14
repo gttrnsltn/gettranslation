@@ -1,0 +1,492 @@
+@import '../../responsive.scss';
+
+.banner {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1168px;
+    height: auto;
+    margin: 96px auto 0px;
+
+    @include desktop-down {
+        margin: 96px 64px 140px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 69px 64px 140px;
+    }
+
+    @include tablet-portrait-down {
+        margin: 48px 24px 104px;
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    @include mobile-only {
+        margin: 48px 24px 104px;
+    }
+}
+
+.banner_container {
+    max-width: 607px;
+    width: 100%;
+    margin: 0;
+    @include tablet-landscape-down {
+        max-width: 310px;
+    }
+    @media (max-width: 804px)  {
+        max-width: 300px;
+    }   
+    @include tablet-portrait-down {
+        max-width: 100%;
+    }    
+    @include mobile-only {
+        max-width: 360px;
+    }
+}
+
+.banner_text {
+    height: auto;
+    margin-top: 30px;
+
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-size: 76px;
+    line-height: 78px;
+    color: #161616;
+    @include desktop-down{
+        font-size: 62px;
+        line-height: 70px;
+    }
+    @include tablet-landscape-down {
+        font-size: 48px;
+        line-height: 52px;
+    }
+    @media (max-width: 775px)  {
+        font-size: 46px;
+        line-height: 50px;
+    }
+    @include tablet-portrait-down{
+        height: auto;
+        font-size: 48px;
+        line-height: 52px;
+        margin-top: 48px;
+        word-wrap: break-word;
+    }
+}
+
+.banner_subtext {
+    margin-top: 16px;
+    height: auto;
+
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-size: 16px;
+    line-height: 22px;
+    color: #161616;
+    @include tablet-landscape-down{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    @include tablet-portrait-down{
+        height: auto;
+        margin-top: 10px;
+    }
+}
+
+
+.buttons {
+    margin: 24px 0 0 0;
+    @include tablet-portrait-down{
+        display: flex;
+        margin: 0;
+    }
+}
+
+.btn_instant {
+    width: auto;
+    height: 48px;
+    padding: 0 35.5px;
+
+    background: #4247E5;
+    border-radius: 12px;
+
+    border: none;
+    color: #FFFFFF;
+
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0em;
+    @include tablet-landscape-down{
+        padding: 12px 32px;
+    }
+    @include tablet-portrait-down{
+        margin: 20px 0 0 0;
+        padding: 12px 26px;
+        width: auto;
+        margin-right: 8px;
+    }
+}
+
+.btn_instant:hover {
+    background: #3135CD;
+}
+
+.btn_about {
+    margin-left: 24px;
+    width: 172px;
+    height: 48px;
+
+    background: #ECEDFC;
+    border: none;
+    color: #4247E5;
+    border-radius: 12px;
+
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+
+    line-height: 24px;
+    letter-spacing: 0em;
+    @include tablet-landscape-down{
+        margin-left: 16px;
+        width: 166px;
+    }    
+    @include tablet-portrait-down{
+        margin: 20px 0 0 16px;
+        padding: 12px 27px;
+        width: auto;
+    }
+}
+
+.btn_about:hover {
+    border: 1px solid #4247E5;
+}
+
+.illustration_cont {
+    display: flex;
+    margin-left: 37px;
+    max-width: 588px;
+    width: 100%;
+    height: 512px;
+
+    @include desktop-down {
+        max-width: 420px;
+        height: unset;
+    }
+
+    @include tablet-landscape-down {
+        max-width: 306px;  
+        margin: 0 0 0 20px;
+
+    }
+    @media (max-width: 804px)  {
+        max-width: 280px;
+    }
+
+    @include tablet-portrait-down {
+        max-width: 100%;
+        height: 284px;
+        margin-top: 34px;
+    }
+
+    @include mobile-only {
+        max-width: 327px;
+        margin: 34px 0 0 0;
+    }
+}
+
+.illustration {
+    width: 100%;
+    height: auto;
+    
+}
+
+
+.flex {
+    width: 1152px;
+    margin-top: 112px;
+}
+
+.accuracy_maintext {
+    width: 308px;
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px;
+    margin-right: 84px;
+}
+
+.accuracy_block {
+    width: 760px;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    padding: 32px;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.accuracy_img {
+    height: 72px;
+    width: 72px;    
+}
+
+.accuracy_column {
+    display: flex;
+    flex-direction: column;
+    margin-left: 24px;
+}
+
+.accuracy_text {
+    font-family: 'Nexa Book';
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.accuracy_link {
+    font-family: 'Nexa XBold';
+    font-size: 14px;
+    line-height: 22px;
+    color: #4247E5;
+    margin-left: 0;
+    margin-top: 6px;
+}
+
+
+.flex {
+    width: 1152px;
+    margin-top: 168px;
+}
+
+.sup_maintext {
+    width: 327px;
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 0;
+}
+
+.blocks {
+    width: 760px;
+    display: flex;
+    justify-content: space-between; 
+    flex-wrap: wrap;
+    margin-left: 65px;
+    margin: 0;
+    margin-top: -24px;
+
+}
+
+.block {
+    min-height: 204px;
+    width: 368px;    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin: 0;
+    margin-top: 24px;
+    padding: 24px;
+}
+
+.block:hover {
+    box-shadow: 0px 4px 14px rgba(6, 7, 7, 0.15);
+    transition-duration: .2s;
+}
+
+.img {
+    width: 48px;
+    height: 48px;
+}
+
+.text {
+    font-family: 'Nexa XBold';
+    font-size: 18px;
+    line-height: 26px;
+    margin-top: 16px;
+}
+
+.subtext {
+    font-family: 'Nexa Book';
+    font-size: 14px;
+    line-height: 20px; 
+    margin-top: 6px;
+}
+
+
+.work {
+   margin-top: 168px;
+   width: 1152px;
+   display: flex;
+   justify-content: space-between; 
+}
+
+.work_maintext {
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 0;
+    width: 253px;
+}
+
+.work_block {
+    width: 760px; 
+    margin-left: 139px;
+}
+
+.work_text {
+    width: 760px;
+    font-family: 'Nexa Book';
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.work_link {
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    line-height: 24px;
+    color: #4247E5;
+    margin-top: 10px;
+}
+
+
+@media (max-width: 430px) {
+    * { 
+        max-width: 326px;
+        margin: 0 auto;
+    }
+    .banner_text {
+        height: auto;
+        font-size: 48px;
+        line-height: 52px;
+        margin-top: 48px;
+        word-wrap: break-word;
+    }
+    .banner_subtext {
+        height: auto;
+        font-size: 14px;
+        line-height: 20px;
+        margin-top: 10px;
+    }
+
+    .btn_instant {
+        margin-top: 20px;
+        padding: 12px 27px;
+        width: auto;
+        margin-right: 8px;
+    }
+
+    .btn_about {
+        margin: auto;
+        margin-top: 20px;
+        margin-left: 0px;
+        padding: 12px 44px;
+        width: auto;
+    }
+    .banner {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .illustration {
+        width: 327px;
+        height: 284px;
+        margin: 0;
+        margin-top: 34px;
+    }
+
+    .accuracy_maintext {
+        width: 327px;
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0;
+    }
+
+    .flex {
+        flex-wrap: wrap;
+        height: auto;
+    }
+
+    .accuracy_block {
+        margin-top: 32px;
+        width: 327px;
+        padding: 24px;
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .accuracy_img {
+        margin-left: 0;
+    }
+
+    .accuracy_column {
+        margin-left: 0;
+    }
+
+    .accuracy_text {
+        margin-top: 16px;
+    }
+
+    .accuracy_link {
+        margin-top: 4px;
+    }
+
+
+
+
+    .flex {
+        margin-top: 140px;
+        flex-wrap: wrap;
+    }
+
+    .sup_maintext {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .blocks {
+        margin-top: 32px;
+    }
+
+    .block {
+        min-height: auto;
+        width: 327px;         
+    }
+
+    .mob-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    .text {
+        margin: 0;
+        margin-left: 16px;
+    }
+
+    .img {
+        margin: 0;
+    }
+
+    .work {
+       margin-top: 144px;
+       width: 327px;
+       flex-wrap: wrap;
+    }
+
+    .work_maintext {
+        font-size: 36px;
+        line-height: 44px;
+        margin-left: 0;
+        width: 253px;
+    }
+
+    .work_block {
+        margin-top: 14px;
+        width: 327px;
+        margin-left: 0;
+    }
+
+    .work_link {
+        margin-top: 12px;
+    }
+}

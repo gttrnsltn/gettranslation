@@ -1,0 +1,39 @@
+<div class="key_benefits_container">
+    <div class="naming_section">
+        <div class="key_benefits_title">{{ 'home.key_maintext' | translate }}</div>
+        <div class="key_benefits_descr">{{ 'home.key_mainsubtext' | translate }}</div>
+    </div>
+
+    <div class="key_benefits_cards">
+        <a class="benefit_card" [routerLink]="['/сase-studies']">
+                <img class="benefit_icon" src="../../assets/key benefits/Group 188.svg" alt="">
+                <div class="benefit_descr">
+                    <div class="benefit_text">{{ 'home.key_text1' | translate }}</div>
+                    <div class="benefit_subtext">{{ 'home.key_subtext1' | translate }}</div>
+                    <a [routerLink]="['/сase-studies']" class="link link_hover">
+                        {{ 'home.key_link1' | translate }}
+                    </a>
+                </div>
+        </a>
+        <a  class="benefit_card" [routerLink]="['/production-process']">
+                <img class="benefit_icon" src="../../assets/key benefits/process.svg" alt="">
+                <div class="benefit_descr">
+                    <div class="benefit_text">{{ 'home.key_text2' | translate }}</div>
+                    <div class="benefit_subtext">{{ 'home.key_subtext2' | translate }}</div>
+                    <a [routerLink]="['/production-process']" class="link link_hover">
+                        {{ 'home.key_link2' | translate }}
+                    </a>
+                </div>
+        </a>
+        <a class="benefit_card" [routerLink]="['/professional-translation-services']">
+                <img class="benefit_icon" src="../../assets/key benefits/Group 189.svg" alt="">
+                <div class="benefit_descr">
+                    <div class="benefit_text">{{ 'home.key_text3' | translate }}</div>
+                    <div class="benefit_subtext">{{ 'home.key_subtext3' | translate }}</div>
+                    <a [routerLink]="['/professional-translation-services']" class="link link_hover">
+                        {{ 'home.key_link3' | translate }}
+                    </a>
+                </div>
+        </a>
+    </div>
+</div>

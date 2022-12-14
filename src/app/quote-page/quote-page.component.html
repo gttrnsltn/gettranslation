@@ -1,0 +1,383 @@
+<app-header></app-header>
+
+<div class="main_content" *ngIf="quote">
+    <h1 class="maintext"> {{ 'quote.banner_text' | translate }}</h1>
+    <p class="subtext"> {{ 'quote.banner_subtext' | translate }}</p>
+</div>
+
+<div *ngIf="!quote">
+    <div class="urgent_maintext">
+        Urgent professional translations
+    </div>
+    <div class="urgent_subtext">
+        <p>The easy way to get your documents translated fast.</p>
+        <p>Simple, accurate, secure.</p>
+    </div>
+</div>
+
+
+
+<div class="calculate">
+    <!-- <div *ngIf="!submitted" class="block"></div> -->
+    <!-- <div *ngIf="submitted" class="block_res"></div> -->
+    <!-- <div *ngIf="loading" class="block_load"></div> -->
+
+
+    <div class="calculate_item">
+        <div class="label_item">{{ 'quote.calc_label1' | translate }}</div>
+        <select class="box_item" [(ngModel)]="from" name="from" id="from">
+            <option *ngFor="let lang of languages_code_list;" value="{{ lang }}">{{ lang }}</option>
+        </select>
+        <img class="arrow_item" src="../../assets/arrow.svg">
+    </div>
+
+    <div class="calculate_item">
+        <div class="label_item">{{ 'quote.calc_label2' | translate }}</div>
+        <div class="to_drop">
+            <div (click)="openDropdown()" id="dropdown" tabindex="1">
+                <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox"
+                    id="selected-item"></label>
+                <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'"
+                    [style.transform]="!arrowCheckbox ? 'rotate(45deg)': 'rotate(225deg)'"></span>
+            </div>
+            <form [formGroup]="formOrder" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdown === false}">
+                <div>
+                    <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search"
+                        placeholder="Search">
+                </div>
+                <div id="dropdown-list">
+                    <label *ngFor="let data of languages_code_list; let i=index" class="dropdown-item">
+                        <input (change)="onCheckboxChange($event)" [value]="data" type="checkbox"
+                            class="custom-checkbox">
+                        {{data}}
+                    </label>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="calculate_item">
+        <div class="label_item">{{ 'quote.calc_label3' | translate }}</div>
+        <input class="box_item" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000" maxlength="7"
+            (keydown)="onKeydown($event)">
+
+        <div *ngIf="!orderServ.fileName">
+            <div class="line"></div>
+            <div class="or">or</div>
+
+            <img class="upload" src="../../assets/upload files.svg" alt="">
+            <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)"></a>
+
+        </div>
+
+        <div *ngIf="orderServ.fileName">
+            <div class="order_line"></div>
+            <img class="order_img" src="../../assets/quote/attach-paperclip-symbol(2) 1.svg" alt="">
+            <div class="order_file_count">{{ fileCountStr }}</div>
+            <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">Edit</a>
+        </div>
+    </div>
+
+    <div class="calculate_item">
+        <div class="label_item">{{ 'quote.calc_label4' | translate }}</div>
+
+        <select class="box_item" [(ngModel)]="subject" name="subject" id="subject">
+            <option class="subject" *ngFor="let subject of specializations_code_list;" value="{{ subject }}">{{ subject
+                }}</option>
+        </select>
+        <img class="arrow_item" src="../../assets/arrow.svg">
+    </div>
+
+    <div class="calculate_item">
+        <div class="label_item">{{ 'quote.calc_label5' | translate }}</div>
+        <input class="box_item" [(ngModel)]="delivery" (click)="DateModOpen()" value="Auto (Best price)" type="text">
+        <img class="arrow_item" src="../../assets/schedule.png" alt="">
+    </div>
+
+    <div *ngIf="date_mod" class="date_mod">
+        <div class="date_mod_close" (click)="DateModClose()">
+            <img class="date_mod_closeicon" src="../../assets/close.svg" alt="">
+        </div>
+        <div class="date_mod_text">{{ 'quote.mod_text_date' | translate }}</div>
+
+        <div class="date_mod_block1" [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+            <input [(ngModel)]="delivery_mod" class="date_mod_radiobtn" type="radio" id="auto" name="delivery"
+                value="Auto (best price)" checked>
+            <label class="date_mod_label" for="auto">{{ 'quote.best_price_label' | translate }}</label>
+        </div>
+
+        <div class="date_mod_block2" [ngClass]="{'date_mod_block2_st2': delivery_mod=='Delivery guaranteed by'}">
+            <div class="date_mod_addblock">
+                <input [(ngModel)]="delivery_mod" class="date_mod_radiobtn" type="radio" id="guaranteed" name="delivery"
+                    value="Delivery guaranteed by">
+                <label class="date_mod_label" for="guaranteed">{{ 'quote.guaranteed_label' | translate }}</label>
+            </div>
+
+            <div class="mod_date_selections">
+                <div class="mod_date_select"
+                    [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+                    <input [(ngModel)]="mod_date" class="mod_date_input" type="date" id="start" name="trip-start"
+                        [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}" />
+                    <div class="mod_date_arrow"><img class="mod_arrow" src="../../assets/arrow.svg"></div>
+                </div>
+                <div class="mod_date_select mod_time"
+                    [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+                    <input [(ngModel)]="mod_time" class="mod_date_input" type="time" id="appt" name="appt"
+                        [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+                    <div class="mod_date_arrow"><img class="mod_arrow" src="../../assets/arrow.svg"></div>
+                </div>
+
+                <div class="mod_date_select mod_type"
+                    [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+                    <select [(ngModel)]="mod_type" class="mod_date_input" name="type" id="type"
+                        [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
+                        <option value="EET">{{ 'quote.option_timezone_label1' | translate }}</option>
+                        <option value="CET" selected>{{ 'quote.option_timezone_label2' | translate }}</option>
+                    </select>
+                    <div class="mod_date_arrow"><img class="mod_arrow" src="../../assets/arrow.svg"></div>
+                </div>
+            </div>
+        </div>
+
+        <button (click)="DateModClose()" class="date_mod_done">{{ 'quote.done_btn' | translate }}</button>
+
+    </div>
+
+    <div class="show_button">
+        <button class="show" [class.white]="submitted" (click)="submitLoad()">{{ btn_text }}</button>
+    </div>
+
+
+    <div class="pay_item">
+        <div class="pay">{{ 'quote.pay_item1' | translate }}</div>
+        <div class="terms_container">
+            <p class="terms"><span class="bold">{{ 'quote.pay_item2' | translate }}</span> {{ 'quote.pay_item3' |
+                translate }}
+                <a href="https://gettranslation.io/faq#payments" class="link"> {{ 'quote.pay_item4' | translate }}</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="loading_container" *ngIf="loading">
+        <!-- <span class="sr-only loader" id="loading"></span> -->
+        <div class="spinner">
+            <div class="spinner__circle">
+                <div class="spinner__circle-gradient"></div>
+
+                <div class="spinner__circle-inner"></div>
+            </div>
+        </div>
+        <div class="choose_load">{{ 'quote.loading_label' | translate }}</div>
+    </div>
+
+    <div class="submitted_container" *ngIf="submitted">
+        <div class="choose">{{ 'quote.submitted_label' | translate }}</div>
+        <div class="flex_submitted_container">
+            <div class="suggested_card">
+                <div class="title_card">{{ 'quote.card_title1' | translate }}</div>
+                <div class="points_of_card">
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
+                        <p>{{ 'quote.card_points1' | translate }}</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(7) 1.svg" alt="">
+                        <p>{{ 'quote.card_points2' | translate }}</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/quality 1.svg" alt="">
+                        <p>{{ 'quote.card_points3' | translate }}</p>
+                    </div>
+                </div>
+                <div class="delivery_label">{{ 'quote.delivery_label' | translate }}</div>
+
+                <!--- TODO(dan): Sync up the time based on IP data-->
+                <div class="date_item">{{ date1s }} {{ timezone }}</div>
+
+                <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
+                <div class="price_label">€{{ price1 }}</div>
+                <div class="about_label">{{ 'quote.about_label1' | translate }}</div>
+
+                <button class="submit_order" (click)="order('Premium')">{{ 'quote.submit_order' | translate }}</button>
+                <div class="position_detail">
+                    <div class="detail_container" *ngIf="detail1">
+                        <p class="detail_text">{{ 'quote.detail1_text1' | translate }}</p>
+                    </div>
+                    <a class="moredetails_item" (mouseover)="detail1=true" (mouseout)="detail1=false">{{
+                        'quote.moredetails_label' | translate }}</a>
+                </div>
+
+            </div>
+
+            <div class="suggested_card">
+                <img class="tag_image" src="../../assets/quote/Rectangle 60.svg" alt="">
+                <div class="tag_card">{{ 'quote.tag_card' | translate }}</div>
+                <div class="title_card tag_margin">{{ 'quote.card_title2' | translate }}</div>
+                <div class="points_of_card">
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
+                        <p>{{ 'quote.card_points1' | translate }}</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/quality 1.svg" alt="">
+                        <p>{{ 'quote.card_points3' | translate }}</p>
+                    </div>
+                    <div class="point_item">
+                        <p></p>
+                    </div>
+                </div>
+                <div class="delivery_label">{{ 'quote.delivery_label' | translate }}</div>
+
+                <!--- TODO(dan): Sync up the time based on IP data-->
+                <div class="date_item">{{ date2s }} {{ timezone }}</div>
+
+                <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
+                <div class="price_label">€{{ price2 }}</div>
+                <div class="about_label">{{ 'quote.about_label2' | translate }}</div>
+
+                <button class="submit_order" (click)="order('Professional')">{{ 'quote.submit_order' | translate
+                    }}</button>
+                <div class="position_detail">
+                    <div class="detail_container" *ngIf="detail2">
+                        <p class="detail_text">{{ 'quote.detail1_text2' | translate }}</p>
+                    </div>
+                    <a class="moredetails_item" (mouseover)="detail2=true" (mouseout)="detail2=false">{{
+                        'quote.moredetails_label' | translate }}</a>
+                </div>
+            </div>
+
+            <div class="suggested_card">
+                <div class="title_card">{{ 'quote.card_title3' | translate }}</div>
+                <div class="points_of_card">
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/flash 1.svg" alt="">
+                        <p>{{ 'quote.card_points4' | translate }}</p>
+                    </div>
+                    <div class="point_item">
+                        <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
+                        <p>{{ 'quote.card_points5' | translate }}</p>
+                    </div>
+                </div>
+
+                <div class="delivery_label">{{ 'quote.delivery_label' | translate }}</div>
+
+                <!--- TODO(dan): Sync up the time based on IP data-->
+                <div class="date_item">{{ date3s }} {{ timezone }}</div>
+
+                <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
+                <div class="price_label">€{{ price3 }}</div>
+                <div class="about_label">{{ 'quote.about_label3' | translate }}</div>
+
+                <button class="submit_order" (click)="order('Basic')">Order</button>
+                <div class="position_detail">
+                    <div class="detail_container" *ngIf="detail3">
+                        <p class="detail_text">{{ 'quote.detail1_text3' | translate }}</p>
+                    </div>
+                    <a class="moredetails_item" (mouseover)="detail3=true" (mouseout)="detail3=false">{{'quote.moredetails_label' | translate }}</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div (click)="allModalClose()" [ngClass]="{'popup-fade': upload_mod || date_mod }"></div>
+    <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdown }"></div>
+    <div class="logo_block"><img alt="logo gettranslation" class="logo_img" src="../../assets/logo_gettrans.svg"/> </div>
+</div>
+<div class="liza">
+    <div class="liza_information">
+        <img class="liza_photo" src="../../assets/Ellipse 9.png" alt="">
+        <div class="liza_introduce">
+            <p class="liza_maintext">{{ 'quote.more_img_text' | translate }}</p>
+            <p class="liza_mainsubtext"><span class="bold">{{ 'quote.more_bold' | translate }} </span>{{
+                'quote.more_img_subtext' | translate }}</p>
+        </div>
+    </div>
+    <div class="liza_additional">
+        <div class="liza_question">
+            <p class="liza_maintext">{{ 'quote.more_text' | translate }}</p>
+            <p class="liza_mainsubtext">{{ 'quote.more_subtext' | translate }}</p>
+
+        </div>
+        <button [routerLink]="['/contact']" class="liza_btn">{{ 'quote.more_btn' | translate }}</button>
+    </div>
+</div>
+
+<div *ngIf="quote">
+    <app-why-choouse *ngIf="!submitted" class="why_choose"></app-why-choouse>
+    <app-logo-block class="logo_block"></app-logo-block>
+    <app-our-clients class="our_clients"></app-our-clients>
+    <app-key-benefits class="key_benefits"></app-key-benefits>
+    <app-our-professional class="our_professional"></app-our-professional>
+    <app-embrace class="embrace"></app-embrace>
+    <app-more class="more"></app-more>
+
+    <app-footer class="footer"></app-footer>
+</div>
+
+<div *ngIf="!quote">
+    <app-why-choouse *ngIf="!submitted" class="urgent_why_choose"></app-why-choouse>
+    <app-logo-block class="urgent_logo_block"></app-logo-block>
+    <app-embrace class="urgent_embrace"></app-embrace>
+    <app-more class="urgent_more"></app-more>
+    <app-instant class="urgent_instant"></app-instant>
+    <app-footer class="urgent_footer"></app-footer>
+    <div class="urgent_space"></div>
+</div>
+
+<div *ngIf="upload_mod" class="upload_mod"
+    [ngClass]="{'upload_mod_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}">
+    <div class="date_mod_close" (click)="UploudModClose()">
+        <img class="date_mod_closeicon" src="../../assets/close.svg" alt="">
+    </div>
+
+    <div class="date_mod_text">{{ 'quote.mod_text_word' | translate }}</div>
+
+    <div *ngIf="upload_mod_status == 'OK' || upload_mod_status =='ERROR'" class="upload_mod_status">
+        <div class="upload_filename">
+            <p class="upload_mod_status_name">{{ orderServ.fileName }}</p>
+            <a (click)="deleteFile()" class="upload_mod_status_delete">
+                <img src="../../assets/Frame 38.svg" alt="">
+            </a>
+        </div>
+        <div class="upload_mod_status_word">({{ word }} words)</div>
+    </div>
+
+    <div *ngIf=" upload_mod_status == 'IN_PROCESS'" class="upload_mod_status_progress">
+        <div class="upload_mod_filename">
+            <p class="upload_mod_status_name_process">{{ orderServ.fileName }}</p>
+            <!-- <a (click)="deleteFile()" class="upload_mod_status_delete">
+                <img  src="../../assets/Frame 38.svg" alt="">
+            </a> -->
+            <div class="upload_mod_status_word_process">{{ 'quote.upload_mod_status_word_process' | translate }}</div>
+        </div>
+        <div class="loader-line"></div>
+    </div>
+
+    <div class="upload_mod_err_container" *ngIf="upload_mod_status == 'ERROR'">
+        <p class="upload_mod_status_error status_error_red">{{ 'quote.status_error1' | translate }}</p>
+        <div class="upload_mod_insert">
+            <p class="upload_mod_status_error status_error_margin">{{ 'quote.status_error2' | translate }}</p>
+            <input class="upload_mod_status_input" [(ngModel)]="word" value="1000" type="number" size="7" max="1000000"
+                maxlength="7" (keydown)="onKeydown($event)">
+        </div>
+        <div class="upload_mod_contact">
+            <span class="upload_mod_status_error"> 
+                <a [routerLink]="['/contact']" class="upload_mod_link">{{ 'quote.status_error3_bold' | translate }}</a> 
+                {{ 'quote.status_error3' | translate }}</span>
+        </div>
+    </div>
+
+    <div class="upload_mod_file">
+        <img class="upload_mod_img"
+            [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}"
+            src="../../assets/upload_file.svg" alt="">
+        <input class="upload_mod_btn"
+            [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}" type="file"
+            (change)="changeListener($event)">
+    </div>
+
+    <button (click)="UploudModClose()"
+        [ngClass]="{'upload_mod_done_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_done_error': upload_mod_status =='ERROR'}"
+        class="date_mod_done">{{ 'quote.done_btn' | translate }}</button>
+
+    <!-- <span *ngIf="upload_mod_status == 'IN_PROCESS'" class="sr-only loading"  id="loading"></span> -->
+</div>

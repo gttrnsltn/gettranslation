@@ -1,0 +1,107 @@
+.text {
+    position: absolute;
+    width: 577px;
+    height: 48px;
+    left: 512px;
+    top: 208px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    text-align: center;
+    
+    color: #161616;
+    left:50%; 
+    margin-left: -288px
+}
+
+.subtext {
+    position: absolute;
+    width: 321px;
+    height: 26px;
+    left: 639.5px;
+    top: 272px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    text-align: center;
+    
+    color: #161616;
+    left:50%; 
+    margin-left: -160px
+}
+
+.img {
+    height: 417px;
+    width: 588px;
+    left: 506px;
+    top: 330px;
+    border-radius: 0px;
+    
+    position: absolute;
+    width: 588px;
+    height: 417px;
+    left: 506px;
+    top: 330px;
+    left:50%; 
+    margin-left: -253px
+}
+
+.btn_home {
+    border: none;
+    height: 48px;
+    width: 220px;
+    left: 690px;
+    top: 781px;
+    border-radius: 12px;
+
+    position: absolute;
+    width: 220px;
+    height: 48px;
+    left: 690px;
+    top: 781px;
+    
+    background: #4247E5;
+    border-radius: 12px;
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    color: #FFFFFF;
+    left:50%; 
+    margin-left: -110px
+}
+
+.footer {
+    position: absolute;
+    width: 1152px;
+    height: 150px;
+    left: 224px;
+    top: 1021px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.space {
+    position: absolute;
+    width: 1152px;
+    height: 32px;
+    left: 224px;
+    top: 1171px; 
+    left:50%; 
+    margin-left:-576px
+}

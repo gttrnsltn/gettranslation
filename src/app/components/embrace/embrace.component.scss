@@ -1,0 +1,95 @@
+@import '../../../responsive.scss';
+
+.embrance_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down {
+        margin: 0 48px 140px;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+    }
+    @include tablet-portrait-down {
+        margin: 0 24px 140px;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+}
+
+.img {
+    display: flex;
+    min-height: 420px;
+    max-width: 564px;
+    width: 100%;
+    margin: 0;
+
+    @include desktop-down {
+        max-width: 520px;
+    }
+
+    @include tablet-landscape-down {
+        min-height: 260px;
+        max-width: 335px;
+    }
+
+    @include tablet-portrait-down {
+        min-height: 244px;
+        max-width: 327px;
+        margin: 0 0 48px 0;
+    }
+}
+
+.block {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    max-width: 452px;
+    width: 100%;
+    margin: 0 0 0 24px;
+
+    @include tablet-landscape-down {
+        margin: 0 24px 0 0;
+        max-width: 100%;
+    }
+    @include tablet-portrait-down {
+        margin: 0;
+        max-width: 100%;
+    }
+}
+
+.text {
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px;
+    margin: 0 0 16px 0;
+
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 40px;
+        margin: 0 0 14px 0;
+    }    
+    @include tablet-landscape-down {
+        width: 60%;
+    }
+}
+
+.subtext {
+    font-family: 'Nexa Book';
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.link {
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    line-height: 24px;
+    color: #4247E5;
+    margin-top: 16px;
+    margin-left: 0;
+}

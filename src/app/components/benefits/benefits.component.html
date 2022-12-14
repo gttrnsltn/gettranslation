@@ -1,0 +1,27 @@
+<div class="benefits_container">
+    <a class="block" [routerLink]="['/quote']">
+        <div >
+            <img class="img" src="../../assets/benefits/icon 3.svg" alt="">
+            <div class="text">{{ 'home.benefits_text1' | translate }}</div>
+            <div class="subtext">{{ 'home.benefits_subtext1' | translate }}</div>
+            <a [routerLink]="['/quote']" class="link link_hover">{{ 'home.benefits_link1' | translate }}</a>
+        </div>
+    </a>
+    <a class="block" [routerLink]="['/enterprises']">
+        <div>
+            <img class="img" src="../../assets/benefits/icon.svg" alt="">
+            <div class="text">{{ 'home.benefits_text2' | translate }}</div>
+            <div class="subtext">{{ 'home.benefits_subtext2' | translate }}</div>
+            <a [routerLink]="['/enterprises']" class="link link_hover">{{ 'home.benefits_link2' | translate }}</a>
+        </div>
+    </a>
+    <a  class="block" [routerLink]="['/developers']">
+        <div >
+            <img class="img" src="../../assets/benefits/icon-1.svg" alt="">
+            <div class="text">{{ 'home.benefits_text3' | translate }}</div>
+            <div class="subtext">{{ 'home.benefits_subtext3' | translate }}</div>
+            <a [routerLink]="['/developers']" class="link link_hover">{{ 'home.benefits_link3' | translate }}</a>
+        </div>
+    </a>
+</div>
+

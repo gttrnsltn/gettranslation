@@ -1,0 +1,148 @@
+
+<nav class="header">
+    <img (click)="onRoute()" [routerLink]="['/']" class="logo" src="../../assets/logo/Group 128.svg" alt="">
+    
+    <ul [ngClass]="{'links_quote': quote == true || contact == true}" class="links">
+        <li>
+            <a  [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
+        </li>
+        <li>
+            <a (click)="onRoute()" [routerLink]="['/developers']">{{ 'header.developers' | translate }}</a>
+        </li>
+        <li>
+            <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
+        </li>
+        <li>
+            <a (mouseover)="service_hover=true" (mouseout)="service_hover=false" [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
+                <img *ngIf="service" class="serviceActive" src="../../assets/menu/Frame 12 (1).svg" alt="">
+                <img *ngIf="!service && !service_hover" class="serviceStandart" src="../../assets/Frame 12 (2)_1.svg" alt="">
+                <img *ngIf="!service && service_hover" class="serviceStandart" src="../../assets/Frame 12 (2).svg" alt="">
+            </a>
+        </li>
+       
+    </ul>
+
+    <div (click)="onRoute()" [ngClass]="{'user_quote': quote == true || contact == true}" class="user">
+        <a (mouseover)="user_img=true" (mouseout)="user_img=false" (click)="onLoginMod()">
+            <img *ngIf="!user_img" class="user_img" src="../../assets/icon/user.svg" alt="">
+            <img *ngIf="user_img" class="user_img" src="../../assets/user.svg" alt="">
+        </a>
+    </div>
+
+    <ul class="buttons">
+        <li *ngIf="contact == false">
+            <button (click)="onRoute()" class="btn1" [routerLink]="['/contact']">{{ 'header.contact' | translate }}</button>
+        </li>
+        <li *ngIf="quote == false">
+            <button (click)="onRoute()" [ngClass]="{'btn1_contact': contact == true}" class="btn2 bg_blue" [routerLink]="['/quote']">{{ 'header.instant' | translate }}</button>
+        </li>
+    </ul>
+</nav>
+
+<div *ngIf="login_mod" class="login_mod">
+    <a (click)="loginModClose()">
+        <img class="login_mod_close" src="../../assets/close.svg" alt="">
+    </a>
+ 
+    <div class="login_mod_text">Client Sign in</div>
+
+    <a class="login_btn1">Client</a>
+    <a href="https://app.gettranslation.io/en/sign-in" target="_blank" class="login_btn2">
+        Translator
+    </a>
+    <a>
+    <img href="https://app.gettranslation.io/en/sign-in" target="_blank" class="redirect2" src="../../assets/redirect.svg" alt="">
+    </a>
+    <a href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="login_btn3">
+        Employee
+    </a>
+    <a>
+        <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect3" src="../../assets/redirect.svg" alt="">
+    </a>
+
+    <div class="line1"></div>
+    <div class="line2"></div>
+    <div class="line3"></div>
+
+
+    <div class="label1">E-mail address</div>
+    <input [formControl]="email"  placeholder="example@domain.com" class="input1"  id="email" required>
+    <div *ngIf="email.errors &&(email.touched || email.dirty)" class ="text-error">
+        <div class="valid_error">
+            E-mail entered incorrectly
+        </div>
+    </div>
+    <div *ngIf="!email.errors &&(email.touched || email.dirty)">
+        <div class="valid_normal">E-mail entered correctly</div>
+    </div>
+
+   
+    
+    <div class="label2">Password</div>
+    <input id="password" class="input2" type="password">
+    <img (click)="showPassword()" class="eye" src="../../assets/Frame 11.svg" alt="">
+
+    <a class="forgot" href="">Forgot username or password?</a>
+
+    <button type="submit"  class="login_mod_done">Log in to continue</button>
+</div>
+
+<div (click)="allModalClose()" [ngClass]="{'popup-fade': login_mod, 'popup': service}"></div>
+
+
+<!-- Service -->
+<div *ngIf="service">
+    <div class="menu"></div>
+
+    <div class="menu_line1"></div>
+    <div class="menu_line2"></div>
+    <div class="menu_line3"></div>
+    <div class="menu_line4"></div>
+    
+    <a (click)="onService()" [routerLink]="['/website-localization']">
+        <img class="img1" src="../../assets/menu/icon (5).svg" alt="">
+        <div class="text1">Website Localization</div>
+    </a>
+    <a (click)="onService()" [routerLink]="['/web-software-localization']">
+        <img class="img2" src="../../assets/menu/icon (6).svg" alt="">
+        <div class="text2">Software Localization</div>  
+    </a>
+    <a (click)="onService()" [routerLink]="['/custom-localization-solutions']">
+        <img class="img3" src="../../assets/menu/icon (7).svg" alt="">
+        <div class="text3">Custom Localization Solutions</div>
+    </a>
+    
+    <a (click)="onService()" [routerLink]="['/adwords-localization']">
+        <img class="img4" src="../../assets/menu/icon (8).svg" alt="">
+        <div class="text4">Google Ads Translation</div>
+    </a>
+    <a (click)="onService()" [routerLink]="['/multilingual-dtp-services']">
+        <img class="img5" src="../../assets/menu/icon (9).svg" alt="">
+        <div class="text5">Multilingual DTP</div>
+    </a>
+    <a (click)="onService()" [routerLink]="['/multilingual-chatbot-services']">
+        <img class="img6" src="../../assets/menu/Group 259.svg" alt="">
+        <div class="text6">Multilingual Chatbots</div>
+    </a>
+    
+    
+    <a (click)="onService()" [routerLink]="['/transcription-subtitle-translation']">
+        <img class="img7" src="../../assets/menu/icon (11).svg" alt="">
+        <div class="text7">Video Subtitling</div>
+    </a>
+    <a (click)="onService()" [routerLink]="['/sworn-certified-official-translation']">
+        <img class="img8" src="../../assets/menu/icon (12).svg" alt="">
+        <div class="text8">Official Translations</div>
+    </a>
+    <a (click)="onService()" [routerLink]="['/urgent-translations']">
+        <img class="img9" src="../../assets/menu/icon (13).svg" alt="">
+        <div class="text9">Urgent Translations</div>
+    </a>
+</div>
+
+
+
+
+
+
+

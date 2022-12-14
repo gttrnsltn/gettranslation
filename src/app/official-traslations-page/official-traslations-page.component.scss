@@ -1,0 +1,1231 @@
+.maintext {
+    position: absolute;
+    width: 390px;
+    height: 48px;
+    left: 605px;
+    top: 180px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    text-align: center;
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-195px
+}
+
+.subtext {
+    position: absolute;
+    width: 760px;
+    height: 88px;
+    left: 420px;
+    top: 244px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    text-align: center;
+    
+    color: #180A24;
+    left:50%; 
+    margin-left:-380px 
+}
+
+.space_top {
+    margin-top: .5rem;
+}
+
+.table {
+    position: absolute;
+    width: 1152px;
+    height: 426px;
+    left: 224px;
+    top: 364px;
+    
+    background: #ECEDFC;
+    border-radius: 14px;  
+    left:50%; 
+    margin-left:-576px 
+}
+
+.line10 {
+    position: absolute;
+    width: 77px;
+    height: 22px;
+    left: 254px;
+    top: 451px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-546px 
+}
+.line20 {
+    position: absolute;
+    width: 76px;
+    height: 22px;
+    left: 254px;
+    top: 507px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    
+    left:50%; 
+    margin-left:-546px 
+}
+.line30 {
+    position: absolute;
+    width: 60px;
+    height: 22px;
+    left: 254px;
+    top: 563px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-546px 
+}
+.line40 {
+    position: absolute;
+    width: 93px;
+    height: 22px;
+    left: 254px;
+    top: 619px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-546px 
+}
+.line50 {
+    position: absolute;
+    width: 71px;
+    height: 22px;
+    left: 254px;
+    top: 675px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-546px 
+}
+.info {
+    position: absolute;
+    width: 995px;
+    height: 40px;
+    left: 254px;
+    top: 728px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* or 167% */
+    
+    
+    color: #383A5E;
+    
+    opacity: 0.3;
+    left:50%; 
+    margin-left:-546px 
+}
+
+.header1 {
+    position: absolute;
+    width: 150px;
+    height: 24px;
+    left: 494px;
+    top: 390px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-306px  
+}
+.line11 {
+    position: absolute;
+    width: 111px;
+    height: 22px;
+    left: 494px;
+    top: 451px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-306px  
+}
+.line21 {
+    position: absolute;
+    width: 71px;
+    height: 22px;
+    left: 494px;
+    top: 507px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-306px  
+}
+.line31 {
+    position: absolute;
+    width: 58px;
+    height: 22px;
+    left: 494px;
+    top: 563px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-306px  
+}
+.line41 {
+    position: absolute;
+    width: 63px;
+    height: 22px;
+    left: 494px;
+    top: 619px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;    
+    left:50%; 
+    margin-left:-306px  
+}
+.line51 {
+    position: absolute;
+    width: 81px;
+    height: 22px;
+    left: 494px;
+    top: 675px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-306px  
+}
+
+.header2 {
+    position: absolute;
+    width: 150px;
+    height: 24px;
+    left: 788px;
+    top: 390px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-12px  
+}
+.line12 {
+    position: absolute;
+    width: 111px;
+    height: 22px;
+    left: 788px;
+    top: 451px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    
+    left:50%; 
+    margin-left:-12px  
+}
+.line22 {
+    position: absolute;
+    width: 58px;
+    height: 22px;
+    left: 788px;
+    top: 507px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-12px  
+}
+.line32 {
+    position: absolute;
+    width: 58px;
+    height: 22px;
+    left: 788px;
+    top: 563px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-12px  
+}
+.line42 {
+    position: absolute;
+    width: 7px;
+    height: 22px;
+    left: 788px;
+    top: 619px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-12px  
+}
+.line52 {
+    position: absolute;
+    width: 67px;
+    height: 22px;
+    left: 788px;
+    top: 675px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    
+    left:50%; 
+    margin-left:-12px  
+}
+
+
+.header3 {
+    position: absolute;
+    width: 160px;
+    height: 24px;
+    left: 1082px;
+    top: 390px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 282px; 
+}
+.line13 {
+    position: absolute;
+    width: 111px;
+    height: 22px;
+    left: 1082px;
+    top: 451px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 282px;  
+}
+.line23 {
+    position: absolute;
+    width: 67px;
+    height: 22px;
+    left: 1082px;
+    top: 493px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 282px; 
+}
+.line33 {
+    position: absolute;
+    width: 58px;
+    height: 22px;
+    left: 1082px;
+    top: 563px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;    
+    left:50%; 
+    margin-left: 282px; 
+}
+.line43 {
+    position: absolute;
+    width: 7px;
+    height: 22px;
+    left: 1082px;
+    top: 619px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 282px; 
+}
+.line53 {
+    position: absolute;
+    width: 70px;
+    height: 22px;
+    left: 1082px;
+    top: 675px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 282px; 
+}
+
+.add1 {
+    position: absolute;
+    width: 52px;
+    height: 20px;
+    left: 652px;
+    top: 392px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    
+    
+    color: #383A5E;
+    
+    opacity: 0.3;
+    left:50%; 
+    margin-left:-148px; 
+}
+.add2 {
+    position: absolute;
+    width: 98px;
+    height: 20px;
+    left: 946px;
+    top: 392px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    
+    
+    color: #383A5E;
+    
+    opacity: 0.3;
+    left:50%; 
+    margin-left: 146px; 
+}
+.add3 {
+    position: absolute;
+    width: 221px;
+    height: 28px;
+    left: 1082px;
+    top: 515px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    /* or 140% */
+    
+    
+    /* #383A5E */
+    
+    color: #383A5E;
+    
+    opacity: 0.3;
+    left:50%; 
+    margin-left: 282px; 
+}
+.add4 {
+    position: absolute;
+    width: 56px;
+    height: 20px;
+    left: 1148px;
+    top: 564px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    
+    
+    color: #383A5E;
+    
+    opacity: 0.3;
+    left:50%; 
+    margin-left: 348px; 
+}
+.add5 {
+    position: absolute;
+    width: 114px;
+    height: 20px;
+    left: 565px;
+    top: 620px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 20px;
+    /* identical to box height, or 167% */
+    
+    
+    color: #383A5E;
+    
+    opacity: 0.3;
+    left:50%; 
+    margin-left: -235px; 
+}
+
+.how_main {
+    position: absolute;
+    width: 370px;
+    height: 48px;
+    left: 224px;
+    top: 958px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: -576px; 
+}
+
+.how_sub {
+    position: absolute;
+    width: 368px;
+    height: 176px;
+    left: 224px;
+    top: 1014px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: -576px; 
+}
+
+.link {
+    color: #4247E5;
+    font-family: 'Nexa XBold';
+}
+
+.how1 {
+    position: absolute;
+    width: 760px;
+    height: 120px;
+    left: 616px;
+    top: 958px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    left:50%; 
+    margin-left: -184px; 
+}
+.how2 {
+    position: absolute;
+    width: 760px;
+    height: 120px;
+    left: 616px;
+    top: 1102px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    left:50%; 
+    margin-left: -184px; 
+}
+.how3 {
+    position: absolute;
+    width: 760px;
+    height: 120px;
+    left: 616px;
+    top: 1246px;
+    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    left:50%; 
+    margin-left: -184px; 
+}
+
+.how_img1 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 640px;
+    top: 982px;
+    left:50%; 
+    margin-left: -160px; 
+}
+.how_img2 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 640px;
+    top: 1126px;
+    left:50%; 
+    margin-left: -160px; 
+}
+.how_img3 {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    left: 640px;
+    top: 1262px;
+    left:50%; 
+    margin-left: -160px; 
+}
+
+.how_text1 {
+    position: absolute;
+    width: 425px;
+    height: 26px;
+    left: 692px;
+    top: 982px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #180A24;
+    left:50%; 
+    margin-left: -108px; 
+}
+.how_text2 {
+    position: absolute;
+    width: 370px;
+    height: 26px;
+    left: 692px;
+    top: 1126px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #180A24;
+    
+    left:50%; 
+    margin-left: -108px; 
+}
+.how_text3 {
+    position: absolute;
+    width: 212px;
+    height: 26px;
+    left: 692px;
+    top: 1260px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #180A24;
+    left:50%; 
+    margin-left: -108px; 
+}
+
+.how_sub1 {
+    position: absolute;
+    width: 600px;
+    height: 40px;
+    left: 692px;
+    top: 1014px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #180A24;
+    left:50%; 
+    margin-left: -108px; 
+}
+.how_sub2 {
+    position: absolute;
+    width: 600px;
+    height: 40px;
+    left: 692px;
+    top: 1158px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #180A24;
+    left:50%; 
+    margin-left: -108px; 
+}
+.how_sub3 {
+    position: absolute;
+    width: 644px;
+    height: 60px;
+    left: 692px;
+    top: 1292px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #180A24;
+    left:50%; 
+    margin-left: -108px; 
+}
+
+.logo_app {
+    position: absolute;
+    width: 1138px;
+    height: 153px;
+    left: 231px;
+    top: 1534px;    
+    
+    left:50%; 
+    margin-left:-576px
+}
+
+.why {
+    position: absolute;
+    width: 1152px;
+    height: 456px;
+    left: 224px;
+    top: 1855px;
+
+    left:50%; 
+    margin-left:-576px
+}
+
+.logo_block {
+    position: absolute;
+    width: 1152px;
+    height: 104px;
+    left: 224px;
+    top: 2479px;
+
+    left:50%; 
+    margin-left:-576px
+}
+
+.frequently {
+    position: absolute;
+    width: 342px;
+    height: 96px;
+    left: 224px;
+    top: 2751px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* or 120% */
+    
+    
+    color: #161616;    
+    left:50%; 
+    margin-left:-576px 
+}
+
+.l1 {
+    position: absolute;
+    width: 760px;
+    height: 0px;
+    left: 616px;
+    top: 2751px;
+    
+    border: 1px solid #000000;
+    left:50%; 
+    margin-left:-184px 
+}
+.t1 {
+    position: absolute;
+    height: 24.019916534423828px;
+    width: 237px;
+    left: 616px;
+    top: 2769.32275390625px;
+    
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px 
+}
+.i1 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 1356px;
+    top: 2769px;
+    
+    left:50%; 
+    margin-left:556px 
+}
+
+
+.l2 {
+    position: absolute;
+    width: 760px;
+    height: 0px;
+    left: 616px;
+    top: 2807px;
+    
+    border: 1px solid #000000;
+    left:50%; 
+    margin-left:-184px 
+}
+.t2 {
+    position: absolute;
+    height: 24.019916534423828px;
+    width: 344px;
+    left: 616px;
+    top: 2825.369384765625px;
+    
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px 
+}
+.i2 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 1356px;
+    top: 2825px;
+    left:50%; 
+    margin-left:556px 
+}
+
+.l3 {
+    position: absolute;
+    width: 760px;
+    height: 0px;
+    left: 616px;
+    top: 2863px;
+    
+    border: 1px solid #000000;
+    left:50%; 
+    margin-left:-184px 
+}
+.t3 {
+    position: absolute;
+    height: 24.019916534423828px;
+    width: 531px;
+    left: 616px;
+    top: 2881.415771484375px;
+    
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px 
+}
+.i3 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 1356px;
+    top: 2881px;
+    
+    left:50%; 
+    margin-left:556px 
+}
+
+.l4 {
+    position: absolute;
+    width: 760px;
+    height: 0px;
+    left: 616px;
+    top: 2919px;
+    
+    border: 1px solid #000000;
+    left:50%; 
+    margin-left:-184px 
+}
+.t4 {
+    position: absolute;
+    height: 24.019916534423828px;
+    width: 498px;
+    left: 616px;
+    top: 2937.462158203125px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px 
+}
+.i4 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 1356px;
+    top: 2937px;
+    left:50%; 
+    margin-left:556px 
+}
+
+.l5 {
+    position: absolute;
+    width: 760px;
+    height: 0px;
+    left: 616px;
+    top: 2975px;
+    
+    border: 1px solid #000000;
+    left:50%; 
+    margin-left:-184px 
+}
+.t5 {
+    position: absolute;
+    height: 24.019916534423828px;
+    width: 284px;
+    left: 616px;
+    top: 2993.5087890625px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    /* or 150% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-184px 
+}
+.i5 {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 1356px;
+    top: 2993px;
+    left:50%; 
+    margin-left:556px 
+}
+
+.l6 {
+    position: absolute;
+    width: 760px;
+    height: 0px;
+    left: 616px;
+    top: 3031px;
+    
+    border: 1px solid #000000;
+    left:50%; 
+    margin-left:-184px 
+}
+
+.discover {
+    position: absolute;
+    width: 1040px;
+    height: 420px;
+    left: 224px;
+    top: 3199px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.more {
+    position: absolute;
+    width: 1035px;
+    height: 208px;
+    left: 224px;
+    top: 3786px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.instant {
+    position: absolute;
+    width: 1152px;
+    height: 280px;
+    left: 224px;
+    top: 4162px;
+    left:50%; 
+    margin-left:-576px
+}
+
+
+.footer{
+    overflow: unset;
+    position: absolute;
+    width: 1152px;
+    height: 150px;
+    left: 224px;
+    top: 4610px;
+    left:50%; 
+    margin-left:-576px
+}
+
+.space {
+    position: absolute;
+    width: 1152px;
+    height: 32px;
+    left: 224px;
+    top: 4760px;
+    left:50%; 
+    margin-left:-576px
+}

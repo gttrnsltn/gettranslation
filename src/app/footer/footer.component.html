@@ -1,0 +1,70 @@
+<div class="footer">
+    <div class="flex">
+        <img class="logo" src="../../assets/social media (footer)/android-chrome-512x512.png" alt="">
+        <div class="block">
+            <div class="text">We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.</div>
+            <div class="right">© Gettranslation · VAT EE102173754</div>        
+        </div>
+        <div class="flex-column">
+            <a [routerLink]="['/enterprises']" class="menu">Enterprises</a>
+            <a [routerLink]="['/developers']" class="menu">Developers</a>
+            <a [routerLink]="['/translators']" class="menu">Translators</a>
+            <a [routerLink]="['/сase-studies']" class="menu">Case studies</a>
+            <a [routerLink]="['/quote']" class="menu">Quote</a>        
+        </div>
+        <div class="flex-column">
+            <a [routerLink]="['/about']" class="menu">About us</a>
+            <a [routerLink]="['/contact']" class="menu">Contact us</a>
+            <a [routerLink]="['/terms']" class="menu">Terms of sale</a>
+            <a [routerLink]="['/privacy']" class="menu">Privacy</a>
+            <a [routerLink]="['/faq']" class="menu">FAQ</a>
+        </div>
+
+        <div class="block_btn">
+            <div class="btns">
+                <select (click)="changeLang()" [(ngModel)]="lang" class="btn_lang" name="from" id="from">
+                    <option value="de">Deutsch</option>
+                    <option value="en" selected="selected">English</option>
+                    <option value="es">Español</option>
+                    <option value="fr">Français</option>
+                    <option value="nl">Nederlands</option>
+                    <option value="pl">Polski</option>
+                    <option value="ru">Русский</option>
+                    <option value="sv">Svenska</option>
+                    <option value="tr">Türkçe</option>
+                    <option value="ko">한국어</option>
+                    <option value="no">Norsk</option>
+                    <option value="da">Dansk</option>
+                    <option value="fi">Suomi</option>
+                </select>
+            
+                <select class="btn_curr" name="from" id="from">
+                    <option value="Euro (EUR)">Euro (EUR)</option>
+                    <option value="US dollar (USD)" selected="selected">Dollar (USD)</option>
+                    <option value="Złoty (PLN)">Złoty (PLN)</option>
+                </select>    
+            </div>
+            
+            <div class="flex social">
+                <a href="mailto: hello@gettranslation.io">
+                    <img  class="img" src="../../assets/social media (footer)/mail.svg" alt="">
+                </a>
+                <a href="callto: +44 20 4577 3740">
+                    <img  class="img" src="../../assets/social media (footer)/phone.svg" alt="">
+                </a>
+                <a href="https://www.facebook.com/gettranslatio" target="_blank">
+                    <img class="img" src="../../assets/social media (footer)/facebook.svg" alt="">
+                </a>
+                <a href="https://instagram.com/gettranslation" target="_blank">
+                    <img  class="img" src="../../assets/social media (footer)/instagram.svg" alt="">
+                </a>
+                <a href="https://linkedin.com/company/gettranslatio" target="_blank">
+                    <img class="img" src="../../assets/social media (footer)/linkedin.svg" alt="">
+                </a>
+                <a href="https://m.me/gettranslatio" target="_blank">
+                    <img class="img" src="../../assets/social media (footer)/whatsapp.svg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+</div>    

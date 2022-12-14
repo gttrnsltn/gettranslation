@@ -1,0 +1,845 @@
+.text {
+    overflow: unset;
+    
+    position: absolute;
+    width: 341px;
+    height: 48px;
+    left: 630px;
+    top: 180px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    text-align: center;
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-170px 
+}
+
+.subtext {
+    position: absolute;
+    width: 441px;
+    height: 26px;
+    left: 580px;
+    top: 236px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    text-align: center;
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-220px 
+}
+
+.link {
+    position: absolute;
+    width: 204px;
+    height: 26px;
+    left: 698px;
+    top: 270px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    text-align: center;
+    
+    /* #4247E5 */
+    
+    color: #4247E5;
+    left:50%; 
+    margin-left:-102px 
+}
+
+//
+.contact_form {
+    height: 638px;
+    width: 564px;
+    left: 224px;
+    top: 352px;
+    border-radius: 12px;    
+    
+    position: absolute;
+    width: 564px;
+    height: 638px;
+    left: 224px;
+    top: 352px;
+    
+    background: #ECEDFC;
+    border-radius: 12px;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.label1 {
+    position: absolute;
+    width: 110px;
+    height: 22px;
+    left: 256px;
+    top: 388px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #161616;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+.red {
+    color: #E33C5C; 
+}
+
+.input1 {
+    position: absolute;
+    width: 476px;
+    height: 54px;
+    left: 256px;
+    top: 418px;
+    
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: none;
+
+    padding-left: 24px;
+
+    
+    font-family: 'Nexa Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+.label2 {
+    position: absolute;
+    width: 73px;
+    height: 22px;
+    left: 256px;
+    top: 496px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #161616;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+.input2 {
+    position: absolute;
+    width: 476px;
+    height: 54px;
+    left: 256px;
+    top: 526px;
+    
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: none;
+
+    padding-left: 24px;
+
+    
+    font-family: 'Nexa Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+.label3 {
+    position: absolute;
+    width: 61px;
+    height: 22px;
+    left: 256px;
+    top: 604px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #161616;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+.input3 {
+    position: absolute;
+    width: 476px;
+    height: 89px;
+    left: 256px;
+    top: 634px;
+    
+    background: #FFFFFF;
+    border-radius: 6px;
+    border: none;
+
+    padding-left: 24px;
+    padding-top: 15px;
+
+    
+    font-family: 'Nexa Light';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+// .input4 {
+//     box-sizing: border-box;
+
+//     position: absolute;
+//     width: 500px;
+//     height: 64px;
+//     left: 256px;
+//     top: 766px;
+    
+//     border: 1px dashed rgba(66, 71, 229, 0.15);
+//     border-radius: 6px;
+
+//     height: 638px;
+//     width: 564px;
+//     left: 224px;
+//     top: 352px;
+//     border-radius: 12px;
+    
+// }
+
+input::placeholder {
+    opacity: .2;
+}
+
+textarea::placeholder {
+    opacity: .2;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+
+.upload {
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 500px;
+    height: 64px;
+    left: 256px;
+    top: 766px;
+    
+    border: 1px dashed rgba(66, 71, 229, 0.15);
+    border-radius: 6px;
+    background-color: #ECEDFC;
+    left:50%; 
+    margin-left:-544px 
+}
+
+.checkbox {
+    height: 20px;
+    width: 20px;
+    left: 256px;
+    top: 854px;
+    border-radius: 6px;
+    
+    box-sizing: border-box;
+
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    left: 256px;
+    top: 854px;
+    
+    background: #FFFFFF;
+    border: 1px solid rgba(66, 71, 229, 0.15);
+    border-radius: 6px;
+    accent-color: #4247E5;
+
+    left:50%; 
+    margin-left:-544px 
+}
+
+input[type=checkbox]:checked + label {
+    color: blue;
+  }
+  
+input[type=checkbox]:checked + label{
+    background-color: #aaa;
+  }
+  input[type=checkbox]:checked + label:after{
+    background-color: blue;
+  }
+
+
+.right {
+    position: absolute;
+    width: 290px;
+    height: 22px;
+    left: 288px;
+    top: 854px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    color: #161616;
+    
+    left:50%; 
+    margin-left:-512px 
+}
+
+.right_link {
+    font-family: 'Nexa XBold';
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    color: #4247E5;
+}
+
+.btn_send {
+    border: none;
+    height: 48px;
+    width: 172px;
+    left: 420px;
+    top: 902px;
+    border-radius: 12px;
+    
+    position: absolute;
+    width: 172px;
+    height: 48px;
+    left: 420px;
+    top: 902px;
+    
+    background: #4247E5;
+    border-radius: 12px; 
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    
+    
+    color: #FFFFFF;
+    left:50%; 
+    margin-left:-380px 
+}
+//
+.img {
+    height: 18px;
+    width: 18px;
+    left: 836px;
+    top: 356px;
+    border-radius: 0px;
+    
+
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 836px;
+    top: 356px;
+
+    left:50%; 
+    margin-left:36px
+    
+}
+.office {
+    position: absolute;
+    width: 129px;
+    height: 32px;
+    left: 862px;
+    top: 352px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    
+    text-align: center;
+    
+    color: #161616;
+
+    left:50%; 
+    margin-left:62px
+}
+
+.img1{
+    height: 14px;
+    width: 14px;
+    left: 834px;
+    top: 414px;
+    border-radius: 0px;
+    
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 834px;
+    top: 414px;
+
+    left:50%; 
+    margin-left: 34px;
+}
+
+.office1 {
+    position: absolute;
+    width: 66px;
+    height: 26px;
+    left: 854px;
+    top: 410px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    /* #161616 */
+    
+    color: #161616; 
+    left:50%; 
+    margin-left: 54px;
+}
+
+.type1 {
+    position: absolute;
+    width: 97px;
+    height: 20px;
+    left: 836px;
+    top: 442px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 34px;
+}
+
+.address1{
+    height: 40px;
+    width: 146px;
+    left: 836px;
+    top: 464px;
+    
+    position: absolute;
+    width: 146px;
+    height: 40px;
+    left: 836px;
+    top: 464px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 34px;
+}
+
+.link1 {
+    position: absolute;
+    width: 68px;
+    height: 20px;
+    left: 836px;
+    top: 512px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    
+    /* #4247E5 */
+    
+    color: #4247E5;
+    left:50%; 
+    margin-left: 34px;    
+}
+
+.img2 {
+    height: 14px;
+    width: 14px;
+    left: 1095px;
+    top: 414px;
+    border-radius: 0px;
+
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    left: 1095px;
+    top: 414px;
+
+    left:50%; 
+    margin-left: 295px;
+}
+
+.office2 {
+    position: absolute;
+    width: 140px;
+    height: 26px;
+    left: 1115px;
+    top: 410px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 315px;
+}
+
+.type2 {
+    position: absolute;
+    width: 80px;
+    height: 20px;
+    left: 1098px;
+    top: 442px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 295px;
+}
+
+.address2 {
+    height: 40px;
+    width: 126px;
+    left: 1098px;
+    top: 464px;
+
+    position: absolute;
+    width: 126px;
+    height: 40px;
+    left: 1098px;
+    top: 464px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    /* or 143% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 295px;
+}
+
+.link2 {
+    position: absolute;
+    width: 68px;
+    height: 20px;
+    left: 1098px;
+    top: 512px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+    /* identical to box height, or 143% */
+    
+    
+    /* #4247E5 */
+    
+    color: #4247E5;
+    left:50%; 
+    margin-left: 295px;
+}
+
+.line {
+    height: 0px;
+    width: 540.000000000002px;
+    left: 836px;
+    top: 580px;
+    border-radius: 0px;
+    
+    position: absolute;
+    width: 540px;
+    height: 0px;
+    left: 836px;
+    top: 580px;
+    
+    border: 0.5px solid rgba(66, 71, 229, 0.15); 
+
+    left:50%; 
+    margin-left: 36px;  
+
+    opacity: .3;
+}
+
+.img3 {
+    height: 18px;
+    width: 18px;
+    left: 836px;
+    top: 635px;
+    border-radius: 0px;
+
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 836px;
+    top: 635px;
+    left:50%; 
+    margin-left: 34px;
+}
+
+.office3 {
+    position: absolute;
+    width: 151px;
+    height: 32px;
+    left: 866px;
+    top: 628px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 32px;
+    /* identical to box height, or 133% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 66px;
+}
+
+.point3 {
+    height: 4px;
+    width: 4px;
+    left: 836px;
+    top: 681px;
+    border-radius: 50%;
+    
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    left: 836px;
+    top: 681px;
+    
+    /* #E33C5C */
+    
+    background: #E33C5C; 
+    left:50%; 
+    margin-left: 34px;  
+}
+
+.type3 {
+    position: absolute;
+    width: 142px;
+    height: 22px;
+    left: 846px;
+    top: 672px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616;
+    left:50%; 
+    margin-left: 46px;
+}
+
+.address3 {
+    height: 22px;
+    width: 345px;
+    left: 836px;
+    top: 700px;
+    
+    position: absolute;
+    width: 345px;
+    height: 22px;
+    left: 836px;
+    top: 700px;
+    
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #161616 */
+    
+    color: #161616; 
+    left:50%; 
+    margin-left: 34px;
+}
+
+.link3{
+    position: absolute;
+    width: 126px;
+    height: 22px;
+    left: 836px;
+    top: 732px;
+    
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 22px;
+    /* identical to box height, or 157% */
+    
+    
+    /* #4247E5 */
+    
+    color: #4247E5; 
+    left:50%; 
+    margin-left: 34px; 
+}
+//
+.logo_block {
+    position: absolute;
+    width: 1152px;
+    height: 104px;
+    left: 224px;
+    top: 1158px;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.our_clients {
+    overflow: unset;
+    position: absolute;
+    width: 1152px;
+    height: 402px;
+    left: 224px;
+    top: 1430px;
+    overflow: unset;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.more {
+    position: absolute;
+    width: 1035px;
+    height: 208px;
+    left: 224px;
+    top: 2000px;
+    overflow: unset;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.instant {
+    position: absolute;
+    width: 1152px;
+    height: 280px;
+    left: 224px;
+    top: 2376px;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.footer {
+    overflow: unset;
+    position: absolute;
+    width: 1152px;
+    height: 150px;
+    left: 224px;
+    top: 2824px;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.space {
+    position: absolute;
+    width: 1152px;
+    height: 32px;
+    left: 224px;
+    top: 2974px;
+    left:50%; 
+    margin-left:-576px 
+}
+
+.bold {
+    font-family: 'Nexa XBold';
+}

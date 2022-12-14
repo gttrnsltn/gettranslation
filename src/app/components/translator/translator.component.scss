@@ -1,0 +1,89 @@
+.translator {
+    height: 280px;
+    width: 1152px;
+    border-radius: 14px;
+    
+    background: #ECEDFC;
+    border-radius: 14px;
+    }
+    
+    .translator_text {
+        height: 48px;
+        width: 414px;
+        left: 72px;
+        top: 88px;
+    
+        position: absolute;
+    left: 6.25%;
+    right: 58.85%;
+    top: 31.43%;
+    bottom: 51.43%;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    
+    color: #161616;
+    white-space: nowrap; 
+    }
+    
+    .translator_subtext {
+        height: 44px;
+        width: 579px;
+        left: 72px;
+        top: 148px; 
+    
+    position: absolute;
+    left: 6.25%;
+    right: 57.29%;
+    top: 52.86%;
+    bottom: 31.43%;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616;
+    white-space: nowrap; 
+    }
+    
+    .translator_btn {
+    
+        height: 58px;
+        width: 240px;
+        left: 838px;
+        top: 111px;
+        border-radius: 14px;        
+        border: none;
+        
+    
+    
+        position: absolute;
+        left: 67.71%;
+        right: 6.25%;
+        top: 39.64%;
+        bottom: 39.64%;
+        
+        background: #4247E5;
+        border-radius: 14px; 
+    
+        font-family: 'Nexa XBold';
+    font-style: normal;
+    
+    font-size: 18px;
+    line-height: 26px;
+    /* identical to box height, or 144% */
+    
+    
+    color: #FFFFFF;
+    }
+    
+    

@@ -1,0 +1,35 @@
+<app-header></app-header>
+
+<div class="banner">
+    <div class="flex-column">
+    <div class="banner_container">
+        <div class="banner_text">{{ 'enterprises.banner_text' | translate }}</div>
+        <div class="banner_subtext">{{ 'enterprises.banner_subtext' | translate }}</div>    
+    </div>
+    <div class="buttons">
+        <button [routerLink]="['/quote']" class="btn_instant">{{ 'buttons.quote' | translate }}</button>
+        <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+    </div>
+</div>
+    <div class="illustration_cont"><img class="illustration"  src="../../assets/illustrations/illustration-1.svg" alt=""></div>
+
+</div>
+
+<div class="accuracy_container">
+    <div class="accuracy_maintext">{{ 'enterprises.accuracy_maintext' | translate }}</div>
+    <div class="accuracy_block">
+        <img class="accuracy_img" src="../../assets/accuracy/icon.svg" alt="">
+        <div class="accuracy_column">
+            <p class="accuracy_text">{{ 'enterprises.accuracy_text' | translate }}</p>
+            <a [routerLink]="['/production-process']" class="accuracy_link link_hover">{{ 'enterprises.accuracy_link' | translate }}</a>
+        </div>
+    </div>
+</div>
+
+<app-logo-block></app-logo-block>
+<app-our-clients></app-our-clients>
+<app-our-professional></app-our-professional>
+<app-embrace></app-embrace>
+<app-more></app-more>
+<app-instant></app-instant>
+<app-footer class="footer"></app-footer>

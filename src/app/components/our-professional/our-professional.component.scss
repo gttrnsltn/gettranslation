@@ -1,0 +1,115 @@
+@import '../../../responsive.scss';
+
+.profservices_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    justify-content: space-between;
+    @include desktop-down{
+        margin: 0 56px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 140px;
+        flex-direction: column;
+    }
+    @include tablet-portrait-down{
+        margin: 0 24px 140px;
+    }
+}
+
+.maintext {
+    display: flex;
+    margin: 0 16px 0 0;
+
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 38px;
+    line-height: 48px;
+
+    color: #161616;
+    @include desktop-down {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+        width: 100%;
+        margin: 0 0 32px 0;
+    }
+}
+
+.blocks {
+    max-width: 780px;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    margin: 0;
+    @include tablet-landscape-down {
+        justify-content: space-around;
+    }
+
+}
+
+.block {
+    height: auto;
+    max-width: 368px;
+    width: 100%;    
+    background: #FFFFFF;
+    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
+    border-radius: 12px;
+    box-sizing: border-box;
+    margin: 0 16px 16px 0;
+    padding: 24px;
+    @include desktop-down {
+        max-width: 294px;
+        margin: 0 12px 12px 0;
+    }
+    @include tablet-landscape-down {
+        max-width: 100%;
+        margin: 0 16px 16px 0;
+        max-width: 327px;
+    }
+}
+
+.block:hover {
+    box-shadow: 0px 4px 14px rgba(6, 7, 7, 0.15);
+    transition-duration: .2s;
+}
+
+.img {
+    width: 72px;
+    height: 72px; 
+    margin: 0 0 16px 0;
+    @include tablet-portrait-down{
+        margin: 0;
+    }
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    font-family: 'Nexa XBold';
+    font-size: 18px;
+    line-height: 26px;
+    margin:  0 16px 0 0;
+    @include tablet-portrait-down{
+        margin: 0 0 0 16px;
+    };
+}
+
+.subtext {
+    font-family: 'Nexa Book';
+    font-size: 14px;
+    line-height: 20px; 
+    margin-top: 6px;
+}
+.mob-flex{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    @include tablet-portrait-down{
+        flex-direction: row;
+    };
+}

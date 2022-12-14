@@ -1,0 +1,76 @@
+
+.about {
+    margin-top: 8px;
+    width: 1152px;
+}
+
+.block {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 88px;
+}
+
+.text {
+    width: 230px;
+    font-family: 'Nexa Heavy';
+    font-size: 40px;
+    line-height: 48px;
+    margin-left: 0;
+    margin-right: 162px;
+}
+
+.subtext {
+    width: 760px;
+    font-family: 'Nexa Book';
+    font-size: 16px;
+    line-height: 22px;
+}
+
+p {
+    margin-bottom: 8px;
+}
+
+@media (max-width: 430px) {
+    * { 
+        max-width: 327px;
+        margin: 0 auto;
+    }
+
+    .about {
+        width: 327px;
+        flex-wrap: wrap;
+    }
+
+    .block {
+        margin-top: 40px;
+        flex-wrap: wrap;
+    }
+
+    .text {
+        width: 327px;
+        font-size: 36px;
+        line-height: 44px;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .subtext {
+        width: 327px;
+        font-size: 16px;
+        line-height: 22px;
+        margin-left: 0;
+        margin-top: 14px;
+    }
+
+}
+
+.footer {
+    overflow: unset;
+    position: absolute;
+    width: 1152px;
+    height: 150px;
+    left: 224px;
+    top: 3930px;
+    left:50%; 
+    margin-left:-576px    
+}

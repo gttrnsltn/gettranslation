@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Gettranslation</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GTMQYTWEQW"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-GTMQYTWEQW');
+  </script>
+  <script type="text/javascript" src="//widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js" async></script>
+  <script src="https://checkout.stripe.com/checkout.js"></script>
+</head>
+<body>
+  <app-root></app-root>
+</body>
+
+<!-- Отзывы -->
+
+
+<script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+<!-- <script type="text/javascript">
+  (function(d, w, s) {
+      var widgetHash = 'ite9r26WUb5dBjgLyDrL', bch = d.createElement(s); bch.type = 'text/javascript'; bch.async = true;
+      bch.src = '//widgets.binotel.com/chat/widgets/' + widgetHash + '.js';
+      var sn = d.getElementsByTagName(s)[0]; sn.parentNode.insertBefore(bch, sn);
+  })(document, window, 'script');
+  </script> -->
+
+<!-- Кнопка поднятия -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+ 
+  $(function() {
+  $(window).scroll(function() {
+  if($(this).scrollTop() > 800) {
+  $('#toTop').fadeIn();
+  } else {
+  $('#toTop').fadeOut();
+  }
+  });
+  $('#toTop').click(function() {
+  $('body,html').animate({scrollTop:0},800);
+  });
+  });
+  </script>
+
+<!-- мульти выбор языков   -->
+<script type="text/javascript">
+    let multiselect_block = document.querySelectorAll(".multiselect_block");
+    multiselect_block.forEach(parent => {
+        let label = parent.querySelector(".field_multiselect");
+        let select = parent.querySelector(".field_select");
+        let text = label.innerHTML;
+        select.addEventListener("change", function(element) {
+            let selectedOptions = this.selectedOptions;
+            label.innerHTML = "";
+            for (let option of selectedOptions) {
+                let button = document.createElement("button");
+                button.type = "button";
+                button.className = "btn_multiselect";
+                button.textContent = option.value;
+                button.onclick = _ => {
+                    option.selected = false;
+                    button.remove();
+                    if (!select.selectedOptions.length) label.innerHTML = text
+                };
+                label.append(button);
+            }
+        })
+    })
+  </script>
+</html>
+

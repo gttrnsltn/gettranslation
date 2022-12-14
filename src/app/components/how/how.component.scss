@@ -1,0 +1,56 @@
+.maintext {
+    position: absolute;
+    width: 250px;
+    height: 48px;
+    left: 224px;
+    top: 2381px;
+    
+    font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 48px;
+    /* identical to box height, or 120% */
+    
+    
+    color: #161616;
+    left:50%; 
+    margin-left:-576px
+}
+
+.text {
+    height: 422px;
+    width: 760px;
+    left: 616px;
+    top: 2381px;
+    
+    position: absolute;
+    width: 760px;
+    height: 422px;
+    left: 616px;
+    top: 2381px;
+    
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 22px;
+    /* or 138% */
+    
+    
+    color: #161616; 
+    left:50%; 
+    margin-left:-184px
+}
+
+.bold {
+    font-family: 'Nexa XBold';
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 22px;
+    letter-spacing: 0em;
+    text-align: left;
+
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}

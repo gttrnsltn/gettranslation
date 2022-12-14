@@ -1,0 +1,105 @@
+@import '../../../responsive.scss';
+
+img {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: gray; 
+    opacity: .3;
+}
+
+img:hover {
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+    filter: none; 
+    opacity: 1;
+}
+
+.container_partners {
+    display: flex;
+    flex-direction: column;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+
+    align-items: center;
+    width: 100%;
+    @include desktop-down {
+        margin: 0 64px 140px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 0 48px 140px;
+    }
+
+    @include tablet-portrait-down {
+        margin: 0 44px 140px;
+    }
+    @include mobile-only{
+        margin: 0 28px 140px;
+        width: 100%;
+    }
+}
+.logo_partners {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: auto;
+    margin: 0;
+    width: 100%;
+    @include desktop-down{
+        width: 55%;
+    }
+    @include tablet-landscape-down{
+        width: 100%;
+    }
+    @include tablet-portrait-down{
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-around;
+    }    
+    @include mobile-only{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+.img {
+    width: 104px;
+    margin: 5px 10px;
+    @include tablet-landscape-down{
+        width: 64px;
+        margin: auto auto 18px;
+    }   
+     @include tablet-portrait-down{
+        width: 128px;
+        margin: auto auto 32px;
+    }
+}
+
+.imgs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+    @include desktop-down{
+        flex-wrap: wrap;
+    }
+    @include tablet-landscape-down{
+        height: 56px;
+    }
+    @include tablet-portrait-down{
+        flex-wrap: unset;
+        height: unset;
+        align-items: center;
+        flex-direction: column;
+    }
+    @include mobile-only{
+      flex-wrap: wrap;
+      align-items: center;
+    }
+}
