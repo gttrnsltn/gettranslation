@@ -61,8 +61,7 @@
         <input class="box_item" [(ngModel)]="word" value="1000" type="number" min="0" inputmode="numeric" pattern="[0-9]*" size="7" max="1000000" maxlength="7"
             (keydown)="onKeydown($event)">
 
-        <div *ngIf="!orderServ.fileName">
-            <div class="line"></div>
+        <div  class="order_file_container" *ngIf="!orderServ.fileName">
             <div class="or">or</div>
             <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">
                 <img class="upload_icon" alt="icon upload files" src="../../assets/cloud_arrow.svg"> 
