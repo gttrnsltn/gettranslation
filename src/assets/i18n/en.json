@@ -7,6 +7,12 @@
         "contact": "Contact us",
         "instant": "Instant quote"
     },
+    "cookies": {
+        "description": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
+        "link": "Learn more",
+        "button1": "Learn more",
+        "button2" : "Close"
+    },
     "home": {
         "banner_text": "Seamless multilingual solutions",
         "banner_subtext": "Solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
