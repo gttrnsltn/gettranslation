@@ -67,7 +67,6 @@
                 <img class="upload_icon" alt="icon upload files" src="../../assets/cloud_arrow.svg"> 
                 <p class="upload_text">{{ 'quote.order_upload' | translate }}</p>
             </a>
-
         </div>
 
         <div class="order_file_container" *ngIf="orderServ.fileName">
@@ -79,7 +78,7 @@
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label4' | translate }}</div>
 
-        <select class="box_item" [(ngModel)]="subject" name="subject" id="subject">
+        <select class="box_item hidden_text" [(ngModel)]="subject" name="subject" id="subject">
             <option class="subject" *ngFor="let subject of specializations_code_list;" value="{{ subject }}">{{ subject
                 }}</option>
         </select>

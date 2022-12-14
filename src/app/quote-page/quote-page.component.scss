@@ -144,10 +144,10 @@
     }
 }
 
-input:focus,
-select:focus {
-    outline: none;
-}
+// input:focus,
+// select:focus {
+//     outline: none;
+// }
 
 .calculate_item {
     display: flex;
@@ -182,7 +182,11 @@ select:focus {
     font-size: 14px;
     line-height: 22px;
 }
-
+.hidden_text{
+    text-overflow: ellipsis;
+    padding: 12px 24px;
+    -webkit-padding-end: 48px !important;
+}
 .box_item {
     width: 340px;
     height: 54px;
