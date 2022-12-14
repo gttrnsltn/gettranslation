@@ -145,7 +145,7 @@ export class OrderPageComponent implements OnInit {
       default:
     }
     
-    let task_type_id = "382"
+    let task_type_id = "";
     switch (this.orderServ.service) {
       case 'Basic':
         task_type_id = "7270";
