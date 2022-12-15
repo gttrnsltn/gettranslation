@@ -5,7 +5,7 @@
     justify-content: space-between;
     max-width: 1168px;
     height: auto;
-    margin: 96px auto 0px;
+    margin: 96px auto 140px;
 
     @include desktop-down {
         margin: 96px 64px 140px;
@@ -87,7 +87,6 @@
         font-size: 14px;
         line-height: 20px;
     }
-
     @include tablet-portrait-down{
         height: auto;
         margin-top: 10px;
@@ -202,40 +201,85 @@
 }
 
 
-.flex {
-    width: 1152px;
-    margin-top: 168px;
+.suppotred_files_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    justify-content: space-between;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+        flex-direction: column;
+    }
+    @include tablet-portrait-down{
+        margin: 0 24px 140px;
+
+    }
 }
 
 .sup_maintext {
-    width: 327px;
+    display: flex;
+    margin: 0 32px 0 0;
+
     font-family: 'Nexa Heavy';
+    font-style: normal;
+    font-weight: 900;
     font-size: 40px;
     line-height: 48px;
-    margin-left: 0;
+
+    color: #161616;
+    @include desktop-down {
+        font-size: 36px;
+        line-height: 44px;
+    }
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+        width: 100%;
+        margin: 0 0 32px 0;
+    }
 }
 
 .blocks {
-    width: 760px;
+    max-width: 780px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: flex-end;
     flex-wrap: wrap;
-    margin-left: 65px;
     margin: 0;
-    margin-top: -24px;
-
+    @include tablet-landscape-down {
+        justify-content: space-around;
+    }
 }
 
 .block {
-    min-height: 204px;
-    width: 368px;    
+    height: auto;
+    max-width: 368px;
+    width: 100%;    
     background: #FFFFFF;
     box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
     border-radius: 12px;
     box-sizing: border-box;
-    margin: 0;
-    margin-top: 24px;
+    margin: 0 16px 16px 0;
     padding: 24px;
+    @include desktop-down {
+        max-width: 294px;
+        margin: 0 12px 12px 0;
+    }
+    @include tablet-landscape-down {
+        max-width: 100%;
+        padding: 20px;
+        margin: 0 16px 16px 0;
+        max-width: 202px;
+        min-height: 216px;
+    }
+    @include mobile-only{
+        min-width: 317px;
+        max-width: 100%;
+        min-height: 132px;
+        margin: 0 0 16px 0;
+    }
 }
 
 .block:hover {
@@ -243,16 +287,46 @@
     transition-duration: .2s;
 }
 
+.block_content{
+    @include tablet-landscape-down{
+        display: flex;
+        flex-direction: column;
+    }
+    @include mobile-only{
+        flex-direction: row;
+        align-items: center;
+        margin: 0 0 16px 0;
+    }
+}
 .img {
     width: 48px;
     height: 48px;
+    @include tablet-landscape-down{
+        margin: 0;
+        width: 32px;
+        height: 32px;
+    }
+    @include mobile-only{
+        margin: 0 16px 0 0;
+    }
 }
 
 .text {
     font-family: 'Nexa XBold';
     font-size: 18px;
     line-height: 26px;
-    margin-top: 16px;
+    margin: 16px 0 0 0;
+    @include tablet-landscape-down{
+        margin: 12px 0 0 0;
+        font-size: 14px;
+        line-height: 22px;
+    }
+    @include mobile-only{
+        margin: 0;
+        font-size: 18px;
+        line-height: unset;
+        word-break: break-word;
+    }
 }
 
 .subtext {
@@ -260,6 +334,14 @@
     font-size: 14px;
     line-height: 20px; 
     margin-top: 6px;
+    @include tablet-landscape-down{
+        font-size: 12px;
+        line-height: 18px;
+    }
+    @include mobile-only{
+        font-size: 14px;
+        line-height: 20px;   
+    }
 }
 
 
@@ -323,123 +405,4 @@
     line-height: 24px;
     color: #4247E5;
     margin: 12px 0 0 0;
-}
-
-
-@media (max-width: 430px) {
-    * { 
-        max-width: 326px;
-        margin: 0 auto;
-    }
-    .banner_text {
-        height: auto;
-        font-size: 48px;
-        line-height: 52px;
-        margin-top: 48px;
-        word-wrap: break-word;
-    }
-    .banner_subtext {
-        height: auto;
-        font-size: 14px;
-        line-height: 20px;
-        margin-top: 10px;
-    }
-
-    .btn_instant {
-        margin-top: 20px;
-        padding: 12px 27px;
-        width: auto;
-        margin-right: 8px;
-    }
-
-    .btn_about {
-        margin: auto;
-        margin-top: 20px;
-        margin-left: 0px;
-        padding: 12px 44px;
-        width: auto;
-    }
-    .banner {
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .illustration {
-        width: 327px;
-        height: 284px;
-        margin: 0;
-        margin-top: 34px;
-    }
-
-    .accuracy_maintext {
-        width: 327px;
-        font-size: 36px;
-        line-height: 44px;
-        margin: 0;
-    }
-
-    .flex {
-        flex-wrap: wrap;
-        height: auto;
-    }
-
-    .accuracy_block {
-        margin-top: 32px;
-        width: 327px;
-        padding: 24px;
-        flex-direction: column;
-        margin-left: 0;
-    }
-
-    .accuracy_img {
-        margin-left: 0;
-    }
-
-    .accuracy_column {
-        margin-left: 0;
-    }
-
-    .accuracy_text {
-        margin-top: 16px;
-    }
-
-    .accuracy_link {
-        margin-top: 4px;
-    }
-
-
-
-
-    .flex {
-        margin-top: 140px;
-        flex-wrap: wrap;
-    }
-
-    .sup_maintext {
-        font-size: 36px;
-        line-height: 44px;
-    }
-
-    .blocks {
-        margin-top: 32px;
-    }
-
-    .block {
-        min-height: auto;
-        width: 327px;         
-    }
-
-    .mob-flex {
-        display: flex;
-        align-items: center;
-    }
-
-    .text {
-        margin: 0;
-        margin-left: 16px;
-    }
-
-    .img {
-        margin: 0;
-    }
 }
