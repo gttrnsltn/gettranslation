@@ -4,7 +4,6 @@
     display: flex;
     max-width: 1168px;
     margin: 0 auto 140px;
-    width: 100%;
     justify-content: space-between;
     @include desktop-down {
         margin: 0 64px 140px;

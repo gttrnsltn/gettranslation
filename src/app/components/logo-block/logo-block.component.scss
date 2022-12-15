@@ -27,7 +27,6 @@ img:hover {
     margin: 0 auto 140px;
 
     align-items: center;
-    width: 100%;
     @include desktop-down {
         margin: 0 64px 140px;
     }
@@ -41,7 +40,6 @@ img:hover {
     }
     @include mobile-only{
         margin: 0 28px 140px;
-        width: 100%;
     }
 }
 .logo_partners {

@@ -16,13 +16,13 @@
     }
 
     @include tablet-portrait-down {
-        margin: 48px 24px 104px;
+        margin: 48px 24px 120px;
         flex-wrap: wrap;
         height: auto;
     }
 
     @include mobile-only {
-        margin: 48px 24px 104px;
+        margin: 48px 24px 120px;
     }
 }
 
@@ -96,6 +96,10 @@
 
 .buttons {
     margin: 24px 0 0 0;
+    @include tablet-portrait-down{
+        display: flex;
+        margin: 0;
+    }    
     @include tablet-portrait-down{
         display: flex;
         margin: 0;

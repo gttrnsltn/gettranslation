@@ -16,13 +16,13 @@
     }
 
     @include tablet-portrait-down {
-        margin: 48px 24px 104px;
+        margin: 48px 24px 120px;
         flex-wrap: wrap;
         height: auto;
     }
 
     @include mobile-only {
-        margin: 48px 24px 104px;
+        margin: 48px 24px 120px;
     }
 }
 
@@ -199,57 +199,6 @@
 .illustration {
     width: 100%;
     height: auto;
-    
-}
-
-
-.flex {
-    width: 1152px;
-    margin-top: 112px;
-}
-
-.accuracy_maintext {
-    width: 308px;
-    font-family: 'Nexa Heavy';
-    font-size: 40px;
-    line-height: 48px;
-    margin-right: 84px;
-}
-
-.accuracy_block {
-    width: 760px;
-    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
-    border-radius: 12px;
-    padding: 32px;
-    display: flex;
-    align-items: center;
-    box-sizing: border-box;
-}
-
-.accuracy_img {
-    height: 72px;
-    width: 72px;    
-}
-
-.accuracy_column {
-    display: flex;
-    flex-direction: column;
-    margin-left: 24px;
-}
-
-.accuracy_text {
-    font-family: 'Nexa Book';
-    font-size: 14px;
-    line-height: 20px;
-}
-
-.accuracy_link {
-    font-family: 'Nexa XBold';
-    font-size: 14px;
-    line-height: 22px;
-    color: #4247E5;
-    margin-left: 0;
-    margin-top: 6px;
 }
 
 
@@ -315,27 +264,54 @@
 
 
 .work {
-   margin-top: 168px;
-   width: 1152px;
-   display: flex;
-   justify-content: space-between; 
+    max-width: 1168px;
+    height: auto; 
+    margin: 0 auto 120px;
+    display: flex;
+    justify-content: space-between;
+    @include desktop-down {
+        margin: 0 64px 140px;
+    }
+    @include tablet-landscape-down {
+        margin: 0 48px 120px;
+        flex-direction: column; 
+    }
+    @include tablet-portrait-down {
+        margin: 0 32px 140px;
+    }
 }
 
 .work_maintext {
+    display: flex;
+    max-width: 308px;
     font-family: 'Nexa Heavy';
     font-size: 40px;
     line-height: 48px;
-    margin-left: 0;
-    width: 253px;
+    margin: 0 32px 0 0;
+    @include tablet-landscape-down{
+        margin: 0 0 32px 0;
+        max-width: 99%;
+        font-size: 36px;
+        line-height: 44px; 
+    }
 }
 
 .work_block {
-    width: 760px; 
-    margin-left: 139px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+
+    max-width: 760px;
+    width: 100%;
+    margin: 0;
+    @include tablet-landscape-down{
+    }
+    @include tablet-portrait-down{
+
+    }
 }
 
 .work_text {
-    width: 760px;
     font-family: 'Nexa Book';
     font-size: 16px;
     line-height: 22px;
@@ -346,7 +322,7 @@
     font-size: 16px;
     line-height: 24px;
     color: #4247E5;
-    margin-top: 10px;
+    margin: 12px 0 0 0;
 }
 
 
@@ -465,28 +441,5 @@
 
     .img {
         margin: 0;
-    }
-
-    .work {
-       margin-top: 144px;
-       width: 327px;
-       flex-wrap: wrap;
-    }
-
-    .work_maintext {
-        font-size: 36px;
-        line-height: 44px;
-        margin-left: 0;
-        width: 253px;
-    }
-
-    .work_block {
-        margin-top: 14px;
-        width: 327px;
-        margin-left: 0;
-    }
-
-    .work_link {
-        margin-top: 12px;
     }
 }
