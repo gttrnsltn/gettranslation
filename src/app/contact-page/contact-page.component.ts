@@ -3,6 +3,7 @@ import { Component, HostBinding, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { routingAnimation } from '../shared/animation/routing-animation';
 import { IpInfoAPI } from "../ip-api/ipapi.service";
+import { OrderService } from '../order.service';
 
 @Component({
   animations: [routingAnimation],
@@ -15,12 +16,22 @@ export class ContactPageComponent implements OnInit {
   date1 =  new Date();
   date1s! : string | null;
   timezone: string = "";
-  
+
+
+  //для формы
+  email = "";
+  name = "";
+  message = "";
+  file!: File ;
+  agree = "";
+  request_id = "";
+
   constructor(
     private datePipe: DatePipe,
     private titleService: Title,  
     private metaTagService: Meta,
-    private ipAPI: IpInfoAPI
+    private ipAPI: IpInfoAPI,
+    private orderServ: OrderService
   ) { }
 
   ngOnInit(): void {
@@ -69,23 +80,37 @@ export class ContactPageComponent implements OnInit {
       this.date1s = this.datePipe.transform(tomorrow,'h:mm a');
       this.date1s = 'today at ' + this.date1s
     }
-//    
-
-// // создаем новый объект `Date`
-// var today = new Date();
- 
-// // получаем время в локали en-US
-// var now = today.toLocaleTimeString('en-US');
-// now = now.slice(0,4);
-// alert(now);
-
-// today.getMinutes()
-// if ( today.getMinutes() ) {
-
-// } 
-//     this.date1.setTime(today.getDate()+ 30 );
-
-//     this.date1s = this.datePipe.transform(this.date1,'h:mm a');
   }
 
+  
+  send() {
+  var form = new FormData();
+  form.append("agency_id", "16");
+  form.append("filial_id", "26");
+  form.append("from_language", "Английский");
+  form.append("to_language[]", "Английский");
+  // form.append("task_type", "7270");
+  form.append("reason", this.message);
+  form.append("email", this.email);
+  form.append("name", this.name);
+  form.append("comment", this.message);
+
+  if (this.file != undefined ) {
+    form.append("files[]", this.file)
+  }
+
+  this.orderServ.create(form).subscribe(res => {
+    console.log(res)
+    this.request_id = res.toString()
+  })
+
+  }
+
+  changeListener($event:any): void {
+    this.readThis($event.target);
+  }
+
+  readThis(inputValue: any): void {
+    this.file = inputValue.files[0];
+  }
 }

@@ -262,7 +262,7 @@ textarea:focus {
 }
 
 
-.upload {
+.upload_img {
     box-sizing: border-box;
 
     position: absolute;
@@ -276,6 +276,40 @@ textarea:focus {
     background-color: #ECEDFC;
     left:50%; 
     margin-left:-544px 
+}
+
+.upload {
+    box-sizing: border-box;
+    opacity: 0;
+    cursor: pointer;
+
+    position: absolute;
+    width: 500px;
+    height: 64px;
+    left: 256px;
+    top: 766px;
+    
+    border: 1px dashed rgba(66, 71, 229, 0.15);
+    border-radius: 6px;
+    background-color: #ECEDFC;
+    left:50%; 
+    margin-left:-544px 
+}
+
+.file_name {
+    position: absolute;
+    width: 500px;
+    height: 64px;
+    left: 256px;
+    top: 766px;
+    
+    border: 1px dashed rgba(66, 71, 229, 0.15);
+    border-radius: 6px;
+    background-color: #ECEDFC;
+    left:50%; 
+    margin-left:-544px;
+    padding-top: 22px;
+    padding-left: 22px;
 }
 
 .checkbox {

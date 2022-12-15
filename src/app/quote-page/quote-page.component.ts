@@ -445,8 +445,8 @@ onCheckboxChange(e: any) {
 
 onSearchInputChange(event: any) {
   if (event.target.value != "") {
-    this.Order = this.Order.filter(res => {
-      return res.name.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
+    this.languages_code_list = this.languages_code_list.filter((res: any) => {
+      return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
     });
   }
   else if(event.target.value == "") {
