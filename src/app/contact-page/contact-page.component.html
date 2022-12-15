@@ -6,25 +6,35 @@
 
 <div class="contact_form"></div>
 <div class="label1">E-mail address<span class="red">*</span></div>
-<input placeholder="example@domain.com" class="input1" type="text">
+<input [(ngModel)]="email" placeholder="example@domain.com" class="input1" type="text">
 
 <div class="label2">Your name</div>
-<input placeholder="John Doe" class="input2" type="text">
+<input [(ngModel)]="name" placeholder="John Doe" class="input2" type="text">
 
 <div class="label3">Message</div>
-<textarea style="resize: none;"  class="input3" placeholder="Write your message..."></textarea>
+<textarea [(ngModel)]="message" style="resize: none;"  class="input3" placeholder="Write your message..."></textarea>
 
-
-<button class="upload">
+<div *ngIf="!file">
+<button class="upload_img">
     <img class="btn_text" src="../../assets/order/upload file.svg" alt="">
 </button>
+<input class="upload" type="file" (change)="changeListener($event)">
+</div>
+
+<div *ngIf="file" class="file_name">{{ file.name }}</div>
+<!-- <div *ngIf="file.name == ''">
+    <button class="upload">
+        <img class="btn_text" src="../../assets/order/upload file.svg" alt="">
+    </button>
+    <input class="upload" type="file" (change)="changeListener($event)">
+</div>   -->
 
 <!-- <input class="input4" type="file"> -->
 
-<input class="checkbox" type="checkbox">
+<input [(ngModel)]="agree" class="checkbox" type="checkbox">
 <div class="right">I have read and agree to the <a class="right_link" href="https://gettranslation.io/privacy" target="blank">Privacy Policy</a></div>
 
-<button class="btn_send">Send</button>
+<button class="btn_send" (click)="send()">Send</button>
 
 
 <img class="img" src="../../assets/contact/pin.svg" alt="">

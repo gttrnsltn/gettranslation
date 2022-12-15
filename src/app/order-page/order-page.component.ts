@@ -328,7 +328,7 @@ submite () {
   window.scrollTo(0, 0)
 
  
-  let task_type_id = "382"
+  let task_type_id = ""
   switch (this.orderServ.service) {
     case 'Basic':
       task_type_id = "7270";
@@ -386,9 +386,9 @@ submite () {
   form.append("email", this.email);
   form.append("phone_number", this.phone_number);
   form.append("name", this.name);
-  // form.append("task_type_id", task_type_id);
-  //form.append("to_language", "Английский");
+  form.append("task_type_id[]", task_type_id);
   form.append("from_language", from_id);
+  console.log(task_type_id)
 
   let address = this.address1 + this.address2;
   form.append("address", address);
@@ -402,19 +402,18 @@ submite () {
   //form.append("files[]", this.file);
 
 
-  let city_id = ""
-  this.orderServ.getCities(country_id).subscribe( res  => {
-    this.cities_code_list = Object.values(res)
-    let keys = Object.keys(res)
-    for (var i = 0, l = keys.length; i < l; i++) {
-      if (i = this.cities_code_list.indexOf(this.city)) {
-        city_id = keys[i]
-      }
-    // obj[keys[i]] - а это свойство, доступное по этому ключу
-    }
-  })
-
-  form.append("city_id", city_id);
+  // let city_id = ""
+  // this.orderServ.getCities(country_id).subscribe( res  => {
+  //   this.cities_code_list = Object.values(res)
+  //   let keys = Object.keys(res)
+  //   for (var i = 0, l = keys.length; i < l; i++) {
+  //     if (i = this.cities_code_list.indexOf(this.city)) {
+  //       city_id = keys[i]
+  //     }
+  //   // obj[keys[i]] - а это свойство, доступное по этому ключу
+  //   }
+  // })
+  // form.append("city_id", city_id);
 
 
   this.files = this.orderServ.files;
