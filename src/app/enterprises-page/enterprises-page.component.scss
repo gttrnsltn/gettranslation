@@ -30,16 +30,16 @@
     width: 100%;
     margin: 0;
     @include tablet-landscape-down {
-        max-width: 303px;
+        max-width: 310px;
     }
     @media (max-width: 804px)  {
         max-width: 300px;
     }   
     @include tablet-portrait-down {
-        max-width: 100%;
+        max-width: 420px;
     }    
     @include mobile-only {
-        max-width: 360px;
+        max-width: 100%;
     }
 }
 
@@ -92,16 +92,18 @@
     }
 }
 
-
 .buttons {
     margin: 24px 0 0 0;
-    @include tablet-portrait-down{
+    @include tablet-landscape-down{
         display: flex;
-        margin: 0;
-    }    
+        flex-direction: column;
+    }
     @include tablet-portrait-down{
-        display: flex;
         margin: 0;
+    }
+    @include mobile-only{
+        width: 100%;
+        align-items: center;
     }
 }
 
@@ -122,12 +124,15 @@
     letter-spacing: 0em;
     @include tablet-landscape-down{
         padding: 12px 32px;
+        margin: 0 0 14px 0;
     }
     @include tablet-portrait-down{
         margin: 20px 0 0 0;
         padding: 12px 26px;
-        width: auto;
-        margin-right: 8px;
+        width: 320px;
+    }
+    @include mobile-only{
+        width: 100%;
     }
 }
 
@@ -137,9 +142,9 @@
 
 .btn_about {
     margin-left: 24px;
-    width: 172px;
+    min-width: 166px;
+    width: auto;
     height: 48px;
-
     background: #ECEDFC;
     border: none;
     color: #4247E5;
@@ -151,13 +156,15 @@
     line-height: 24px;
     letter-spacing: 0em;
     @include tablet-landscape-down{
-        margin-left: 16px;
-        width: 166px;
+        margin: 0 0 14px 0;
     }    
     @include tablet-portrait-down{
-        margin: 20px 0 0 16px;
+        margin: 20px 0 0 0;
         padding: 12px 27px;
-        width: auto;
+        width: 320px;
+    }
+    @include mobile-only{
+        width: 100%;
     }
 }
 
@@ -191,9 +198,8 @@
         height: 284px;
         margin-top: 34px;
     }
-
     @include mobile-only {
-        max-width: 327px;
+        align-items: center;
         margin: 34px 0 0 0;
     }
 }
@@ -201,7 +207,9 @@
 .illustration {
     width: 100%;
     height: auto;
-    
+    @include mobile-only {
+        max-width: 327px;
+    }
 }
 
 
