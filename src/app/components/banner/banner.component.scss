@@ -96,8 +96,11 @@
 
 .buttons {
     margin: 24px 0 0 0;
-    @include tablet-portrait-down{
+    @include tablet-landscape-down{
         display: flex;
+        flex-direction: column;
+    }
+    @include tablet-portrait-down{
         margin: 0;
     }
 }
@@ -119,12 +122,15 @@
     letter-spacing: 0em;
     @include tablet-landscape-down{
         padding: 12px 32px;
+        margin: 0 0 14px 0;
     }
     @include tablet-portrait-down{
         margin: 20px 0 0 0;
         padding: 12px 26px;
-        width: auto;
-        margin-right: 8px;
+        width: 50%;
+    }
+    @include mobile-only{
+        width: 100%
     }
 }
 
@@ -134,9 +140,9 @@
 
 .btn_about {
     margin-left: 24px;
-    width: 172px;
+    min-width: 166px;
+    width: auto;
     height: 48px;
-
     background: #ECEDFC;
     border: none;
     color: #4247E5;
@@ -148,13 +154,15 @@
     line-height: 24px;
     letter-spacing: 0em;
     @include tablet-landscape-down{
-        margin-left: 16px;
-        width: 166px;
+        margin: 0 0 14px 0;
     }    
     @include tablet-portrait-down{
-        margin: 20px 0 0 16px;
+        margin: 20px 0 0 0;
         padding: 12px 27px;
-        width: auto;
+        width: 50%;
+    }
+    @include mobile-only{
+        width: 100%
     }
 }
 
@@ -173,16 +181,11 @@
         max-width: 420px;
         height: unset;
     }
-
     @include tablet-landscape-down {
-        max-width: 306px;  
+        max-width: 336px;  
         margin: 0 0 0 20px;
 
     }
-    @media (max-width: 804px)  {
-        max-width: 280px;
-    }
-
     @include tablet-portrait-down {
         max-width: 100%;
         height: 284px;
