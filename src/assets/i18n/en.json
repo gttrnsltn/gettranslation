@@ -101,11 +101,32 @@
         "sup_subtext6": "MS Word, MS Excel, MS Power Point, MS Access, MS OneNote, MS Publisher, Open Office, Google Docs, Google Sheets, Google Slides, Zip",
         "work_maintext": "Work with us",
         "work_text": "We are constantly looking to hire great engineers with a global mindset. We are tackling the most difficult issue relating to AI: human language. We are doing it with ethics and speed by creating an unprecedented symbiosis between humans and machines.",
-        "work_link": "Apply now"
+        "work_link": "Apply now",
+
+        "why_maintext": "Why Gettranslation?",
+        "why_text1": "Experience and Trust",
+        "why_subtext1": "We have delivered 400,000 translations in 190 languages to 50,000 clients in 40 macro-domains since 2017, powering the globalization strategy of the most demanding clients.",
+        "why_text2": "Open Technology",
+        "why_subtext2": "We work hard to make translation services more effective by enhancing our production processes with great technology and talented people. Our APIs help you integrate human translation anywhere and anytime you need.",
+        "why_text3": "Dedicated Human Support",
+        "why_subtext3": "Localization experts to support your internationalization journey and linguistic services that cover all your future needs."
     },
     "translators": {
         "banner_text": "Seamless working environment",
-        "banner_subtext": "Get the chance to work on interesting projects, at your own pace, and deciding your own rate. We provide the technology for free, and support your career with continuous education programs."
+        "banner_subtext": "Get the chance to work on interesting projects, at your own pace, and deciding your own rate. We provide the technology for free, and support your career with continuous education programs.",
+        
+        "recruit_langtalent": "We are recruiting language talent",
+        "recruit_subtext1": "Rated as the best company to work with",
+        "recruit_subtext2": "Hundreds of interesting jobs assigned per hour",
+        "recruit_subtext3": "Free to decide your own rate per word",
+        "recruit_subtext4": "Get paid end of the month, as fast as an employee",
+        "recruit_subtext5": "Free to work with us from anywhere and anytime",
+        "recruit_subtext6": "Free educational programs",
+
+        "translator_text": "Apply as a translator",
+        "translator_subtext1": "Apply to work with us as a freelancer translator.",
+        "translator_subtext2": "We welcome young talents, experienced professionals, and domain experts.",
+        "translator_btn": "Apply now"
     },
     "about": {
         "text1": "Seamless multilingual solutions",

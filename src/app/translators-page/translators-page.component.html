@@ -2,51 +2,81 @@
 
 <div class="banner">
     <div class="flex-column">
-    <div class="banner_container">
-        <div class="banner_text">{{ 'translators.banner_text' | translate }}</div>
-        <div class="banner_subtext">{{ 'translators.banner_subtext' | translate }}</div>    
+        <div class="banner_container">
+            <div class="banner_text">{{ 'translators.banner_text' | translate }}</div>
+            <div class="banner_subtext">{{ 'translators.banner_subtext' | translate }}</div>
+        </div>
+        <div class="buttons">
+            <button [routerLink]="['/quote']" class="btn_instant">
+                <a class="white" href="https://app.gettranslation.io/en/translator/sign-up?id=16&filial=26"
+                    target="_blank">
+                    {{ 'buttons.translator' | translate }}
+                </a>
+            </button>
+            <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+        </div>
     </div>
-    <div class="buttons">
-        <button [routerLink]="['/quote']" class="btn_instant">
-            <a class="white" href="https://app.gettranslation.io/en/translator/sign-up?id=16&filial=26" target="_blank">
-                {{ 'buttons.translator' | translate }}
-            </a>
-        </button>
-        <button [routerLink]="['/about']" class="btn_about">{{ 'buttons.about' | translate }}</button>
+    <div class="illustration_cont"><img class="illustration" src="../../assets/illustrations/illustration-3.svg" alt="">
     </div>
 </div>
-    <div class="illustration_cont"><img class="illustration" src="../../assets/illustrations/illustration-3.svg" alt=""></div>
+
+<div class="recruit_langtalent_container">
+    <div class="recruit_maintext">{{ 'translators.recruit_langtalent' | translate }}</div>
+
+    <div class="blocks">
+        <div class="block">
+            <div class="block_content">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+            </div>
+            <p class="subtext"> {{ 'translators.recruit_subtext1' | translate }}</p>
+        </div>
+        <a class="block" [routerLink]="['/adwords-localization']">
+            <div class="block_content">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+            </div>
+            <p class="subtext">
+                {{ 'translators.recruit_subtext2' | translate }}
+            </p>
+        </a>
+        <a class="block" [routerLink]="['/transcription-subtitle-translation']">
+            <div class="block_content">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+            </div>
+            <p class="subtext">
+                {{ 'translators.recruit_subtext3' | translate }}
+            </p>
+        </a>
+        <a class="block" [routerLink]="['/web-software-localization']">
+            <div class="block_content">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+            </div>
+            <p class="subtext">
+                {{ 'translators.recruit_subtext4' | translate }}
+            </p>
+        </a>
+        <a class="block" [routerLink]="['/multilingual-dtp-services']">
+            <div class="block_content">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+            </div>
+            <p class="subtext">
+                {{ 'translators.recruit_subtext5' | translate }}
+            </p>
+        </a>
+        <a class="block" [routerLink]="['/sworn-certified-official-translation']">
+            <div class="block_content">
+                <img class="img" src="../../assets/supported/done.svg" alt="">
+            </div>
+            <p class="subtext">
+                {{ 'translators.recruit_subtext6' | translate }}
+            </p>
+        </a>
+    </div>
 </div>
 
-<div class="supported_maintext">We are recruiting language talent</div>
-<div class="supported_block1"></div>
-<img class="supported_img1" src="../../assets/supported/done.svg" alt="">
-<div class="supported_subtext1">Rated as the best company to work with</div>
-
-<div class="supported_block2"></div>
-<img class="supported_img2" src="../../assets/supported/done.svg" alt="">
-<div class="supported_subtext2">Hundreds of interesting jobs assigned per hour</div>
-
-<div class="supported_block3"></div>
-<img class="supported_img3" src="../../assets/supported/done.svg" alt="">
-<div class="supported_subtext3">Free to decide your own rate per word</div>
-
-<div class="supported_block4"></div>
-<img class="supported_img4" src="../../assets/supported/done.svg" alt="">
-<div class="supported_subtext4">Get paid end of the month, as fast as an employee</div>
-
-<div class="supported_block5"></div>
-<img class="supported_img5" src="../../assets/supported/done.svg" alt="">
-<div class="supported_subtext5">Free to work with us from anywhere and anytime</div>
-
-<div class="supported_block6"></div>
-<img class="supported_img6" src="../../assets/supported/done.svg" alt="">
-<div class="supported_subtext6">Free educational programs</div>
-
-<app-why class="why"></app-why>
-<app-logo-block class="logo_block"></app-logo-block>
-<app-our-clients class="our_clients"></app-our-clients>
-<app-embrace class="embrace"></app-embrace>
-<app-more class="more"></app-more>
-<app-translator class="translator"></app-translator>
-<app-footer class="footer"></app-footer>
+<app-why></app-why>
+<app-logo-block></app-logo-block>
+<app-our-clients></app-our-clients>
+<app-embrace></app-embrace>
+<app-more></app-more>
+<app-translator></app-translator>
+<app-footer></app-footer>
