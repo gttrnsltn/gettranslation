@@ -25,6 +25,11 @@
         margin: 48px 24px 120px;
     }
 }
+.banner_width{
+    @include mobile-only{
+        width: 100%;
+    }
+}
 
 .banner_container {
     width: 100%;
@@ -36,10 +41,10 @@
         max-width: 300px;
     }   
     @include tablet-portrait-down {
-        max-width: 100%;
+        max-width: 420px;
     }    
     @include mobile-only {
-        max-width: 360px;
+        max-width: 100%;
     }
 }
 
@@ -69,7 +74,6 @@
         font-size: 48px;
         line-height: 52px;
         margin-top: 48px;
-        word-wrap: break-word;
     }
 }
 
@@ -103,6 +107,10 @@
     @include tablet-portrait-down{
         margin: 0;
     }
+    @include mobile-only{
+        width: 100%;
+        align-items: center;
+    }
 }
 
 .btn_instant {
@@ -127,10 +135,10 @@
     @include tablet-portrait-down{
         margin: 20px 0 0 0;
         padding: 12px 26px;
-        width: 50%;
+        width: 320px;
     }
     @include mobile-only{
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -159,10 +167,10 @@
     @include tablet-portrait-down{
         margin: 20px 0 0 0;
         padding: 12px 27px;
-        width: 50%;
+        width: 320px;
     }
     @include mobile-only{
-        width: 100%
+        width: 100%;
     }
 }
 
@@ -193,7 +201,7 @@
     }
 
     @include mobile-only {
-        max-width: 327px;
+        align-items: center;
         margin: 34px 0 0 0;
     }
 }
@@ -201,5 +209,7 @@
 .illustration {
     width: 100%;
     height: auto;
-    
+    @include mobile-only {
+        max-width: 327px;
+    }
 }

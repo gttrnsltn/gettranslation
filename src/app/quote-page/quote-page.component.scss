@@ -193,7 +193,7 @@
 
     background: #FFFFFF;
     border-radius: 6px;
-    border: none;
+    border: 2px solid transparent;
     padding: 12px 24px;
 
     font-family: 'Nexa Regular';
@@ -212,7 +212,7 @@
 }
 
 .box_item:focus {
-    outline: 2px solid #4247E5;
+    border: 2px solid #4247E5;
 }
 
 .box_item:hover {
@@ -1503,6 +1503,11 @@ input::-webkit-inner-spin-button {
     }
 
     @include tablet-portrait-down {
+        max-width: 440px;
+        padding: 40px 16px;
+        min-height: 298px;
+    }    
+    @include mobile-only {
         max-width: 327px;
         padding: 40px 16px;
         min-height: 298px;
@@ -1540,14 +1545,13 @@ input::-webkit-inner-spin-button {
 
 .upload_mod_img {
     width: 50%;
-
     @include tablet-portrait-down {
         width: 80%;
     }
 }
 
 .upload_mod_ok {
-    height: 440px;
+    min-height: 290px;
 }
 
 .upload_mod_error {
@@ -1620,7 +1624,6 @@ input::-webkit-inner-spin-button {
 }
 
 .upload_mod_status_name {
-    display: flex;
     margin: 0;
 
     font-family: 'Nexa Regular';
@@ -1630,6 +1633,15 @@ input::-webkit-inner-spin-button {
     line-height: 22px;
 
     color: #161616;
+    @include tablet-portrait-down{
+        width: 192px;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    @include mobile-only{
+        width: 122px;
+    }
 }
 
 .upload_mod_status_delete {
@@ -2138,7 +2150,7 @@ input::-webkit-inner-spin-button {
     width: 340px;
     height: 54px;
     // margin: 4px;
-
+    border: 2px solid transparent;
     border-radius: 6px;
     background: #FFFFFF;
     cursor: pointer;
@@ -2154,7 +2166,7 @@ input::-webkit-inner-spin-button {
 }
 
 #dropdown:focus-within {
-    outline: 2px solid #4247E5;
+    border: 2px solid #4247E5;
 }
 
 #dropdown label {

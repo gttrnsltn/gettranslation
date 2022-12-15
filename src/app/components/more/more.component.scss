@@ -3,6 +3,7 @@
 .more_container {
     display: flex;
     max-width: 1168px;
+    width: 100%;
     margin: 0 auto 140px;
     justify-content: space-between;
     @include desktop-down {
@@ -10,7 +11,7 @@
     }
 
     @include tablet-landscape-down {
-        margin: 0 64px 120px; 
+        margin: 0 48px 120px; 
     }
 
     @include tablet-portrait-down {
@@ -27,11 +28,9 @@
     width: 100%;
     @include tablet-landscape-down {
         max-width: 380px;
-        margin: 0 0 0 16px;
     }
     @include tablet-portrait-down {
         max-width: 100%;
-        margin: 0;
         justify-content: center;
     }
 }
