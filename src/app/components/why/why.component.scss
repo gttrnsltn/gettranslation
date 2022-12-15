@@ -1,240 +1,145 @@
-.why_maintext {
-    overflow: unset;
-    height: 96px;
-    width: 310px;
-    left: 0px;
-    top: 0px;
 
-    position: absolute;
-    left: 0%;
-    right: 73.09%;
-    top: 0%;
-    bottom: 78.95%;
-    
+@import '../../../responsive.scss';
+
+.why_benefits_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    justify-content: space-between;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+        flex-direction: column;
+    }
+    @include tablet-portrait-down{
+        margin: 0 24px 140px;
+    }
+}
+
+.naming_section {
+    display: flex;
+    flex-direction: column;
+    max-width: 360px;
+    margin: 0 24px 0 0;
+    color: #161616;
+
+    @include tablet-landscape-down {
+        max-width: 100%;
+        margin: 0 0 32px 0;
+    }
+}
+
+.why_benefits_cards {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 766px;
+
+    @include tablet-landscape-down {
+        flex-direction: row;
+    }
+    @include tablet-portrait-down {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.why_benefits_title {    
+    display: flex;
+    margin: 0;
+
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 38px;
     line-height: 48px;
-    /* or 120% */
-    
-    
+
     color: #161616;
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+    }
 }
 
+.benefit_card {
+    display: flex;
+    align-items: center;
+    min-height: 136px;
 
-.why_block1 {
-    height: 136px;
-    width: 760px;
-    left: 392px;
-    top: 0px;
+    width: 100%;
     border-radius: 12px;
-    
-    position: absolute;
-    left: 34.03%;
-    right: 0%;
-    top: 0%;
-    bottom: 70.18%;
-    
+    padding: 24px 32px;
+
     background: #FFFFFF;
     box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
     border-radius: 12px;
+    margin: 0 0 24px 0;
+
+    @include tablet-landscape-down {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 14px 0 0;
+    }
+    @include tablet-portrait-down {
+        margin: 0  0 16px 0;
+        max-width: 327px;
+    }
 }
 
-.why_img1 {
+.benefit_icon {
     height: 72px;
     width: 72px;
-    left: 424px;
-    top: 34px;
-    border-radius: 0px;
-    
-    position: absolute;
-    left: 36.81%;
-    right: 56.94%;
-    top: 7.46%;
-    bottom: 76.75%;
+    margin-right: 24px;
+
+    @include tablet-landscape-down {
+        margin: 0 0 12px 0;
+    }
+    @include tablet-portrait-down {
+        margin-right: 24px;
+    }
 }
 
-.why_text1 {
-    position: absolute;
-    left: 45.14%;
-    right: 38.8%;
-    top: 7.02%;
-    bottom: 87.28%;
-    
+.benefit_descr {
+    display: flex;
+    flex-direction: column;
+    color: #161616;
+}
+
+.benefit_text {
+    margin: 0 0 6px 0;
+
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    color: #161616;
 }
-.why_subtext1 {
-    height: 40px;
-    width: 600px;
-    left: 520px;
-    top: 64px;
-    
-    position: absolute;
-    left: 45.14%;
-    right: 2.78%;
-    top: 14.04%;
-    bottom: 77.19%;
-    
+
+.benefit_subtext {
+    margin: 0 0 6px 0;
+
     font-family: 'Nexa Book';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
-    /* or 143% */
-    
-    
-    color: #161616;
+
+    @include tablet-landscape-down {
+        font-size: 12px;
+        line-height: 18px;
+    }    
+    @include tablet-portrait-down {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }
 
-.why_block2 {
-    height: 136px;
-    width: 760px;
-    left: 392px;
-    top: 160px;
-    border-radius: 12px;
-    
-    position: absolute;
-    left: 34.03%;
-    right: 0%;
-    top: 35.09%;
-    bottom: 35.09%;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
-    border-radius: 12px;
-}
-
-.why_img2 {
-    height: 72px;
-    width: 72px;
-    left: 424px;
-    top: 192px;
-    border-radius: 0px;
-    
-    position: absolute;
-    left: 36.81%;
-    right: 56.94%;
-    top: 42.11%;
-    bottom: 42.11%;
-}
-
-.why_text2 {
-    position: absolute;
-    left: 45.14%;
-    right: 41.93%;
-    top: 39.91%;
-    bottom: 54.39%;
-    
+.link {
     font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    color: #161616;
-}
-.why_subtext2 {
-    height: 60px;
-    width: 600px;
-    left: 520px;
-    top: 214px;
-    
-    position: absolute;
-    left: 45.14%;
-    right: 2.78%;
-    top: 46.93%;
-    bottom: 39.91%;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    
-    
-    color: #161616;
-}
-
-.why_block3 {
-    height: 136px;
-    width: 760px;
-    left: 392px;
-    top: 320px;
-    border-radius: 12px;
-    
-    position: absolute;
-    left: 34.03%;
-    right: 0%;
-    top: 70.18%;
-    bottom: 0%;
-    
-    background: #FFFFFF;
-    box-shadow: 0px 4px 14px rgba(180, 187, 207, 0.15);
-    border-radius: 12px;
-}
-
-.why_img3 {
-    height: 72px;
-    width: 72px;
-    left: 424px;
-    top: 352px;
-    border-radius: 0px;
-    
-    position: absolute;
-    left: 36.81%;
-    right: 56.94%;
-    top: 77.19%;
-    bottom: 7.02%;
-}
-
-.why_text3 {
-    position: absolute;
-    left: 45.14%;
-    right: 34.55%;
-    top: 77.19%;
-    bottom: 17.11%;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    color: #161616;
-}
-.why_subtext3 {
-    height: 40px;
-    width: 600px;
-    left: 520px;
-    top: 384px;
-    
-    position: absolute;
-    left: 45.14%;
-    right: 2.78%;
-    top: 84.21%;
-    bottom: 7.02%;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    
-    
-    color: #161616;
+    line-height: 22px;
+    color: #4247E5;
+    margin: 6px 0 0 0;
 }
