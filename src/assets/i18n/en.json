@@ -224,5 +224,38 @@
         "card_subtext3": "We genuinely trust our clients, which is why we have created the Pay After Delivery model. With Pay After Delivery, you can pay within five days of the translation’s delivery via credit card, bank transfer or Paypal.",
 
         "card_link": "Read our terms"
+    },
+    "footer": {
+        "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
+        "footer_note": "© Gettranslation · VAT EE102173754",
+        "menu_item1": "Enterprises",
+        "menu_item2": "Developers",
+        "menu_item3": "Translators",
+        "menu_item4": "Case studies",
+        "menu_item5": "Quote",
+        "menu_item6": "About us",
+        "menu_item7": "Contact us",
+        "menu_item8": "Terms of sale",
+        "menu_item9": "Privacy",
+        "menu_item10": "FAQ",
+
+        "de": "Deutsch",
+        "en": "English",
+        "es": "Español",
+        "fr": "Français",
+        "nl": "Nederlands",
+        "pl": "Polski",
+        "ru": "Русский",
+        "sv": "Svenska",
+        "tr": "Türkçe",
+        "ko": "한국어",
+        "no": "Norsk",
+        "da": "Dansk",
+        "fi": "Suomi",
+
+        "curr_euro": "Euro (EUR)",
+        "curr_dollar": "Dollar (USD)",
+        "curr_zloty": "Złoty (PLN)"
+
     }
 }
