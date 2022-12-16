@@ -15,12 +15,12 @@
     },
     "home": {
         "banner_text": "Seamless multilingual solutions",
-        "banner_subtext": "Solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
+        "banner_subtext": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
         "benefits_text1": "Professional Translation",
-        "benefits_subtext1": "Tailored solutions that blend tech solutions with skilled language professionals to enhance the way you work with language.",
+        "benefits_subtext1": "Translation of documents of all types, including highly technical and industry-specific documents, into over 190 languages.",
         "benefits_link1": "Instant quote",
         "benefits_text2": "Enterprise Solutions",
-        "benefits_subtext2": "Execute translations seamlessly on a global scale with workflows and tech that accelerate time to market and boost overall efficiency.",
+        "benefits_subtext2": "Plan, execute and manage your global campaign ensuring messages are well targeted for your international audiences.",
         "benefits_link2": "Learn more",
         "benefits_text3": "Developers' Tools",
         "benefits_subtext3": "The most sophisticated, yet simple to use, translation APIs for continuous localization, content extraction from 71 file formats.",
@@ -53,12 +53,12 @@
         "our_text10": "Simple Document Translation",
         "our_subtext10": "Use our online quote to experience the fast and easy way to translate your documents in 190 languages, since 2017.",
         "key_maintext": "Key benefits",
-        "key_mainsubtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
+        "key_mainsubtext": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
         "key_text1": "Experience and Trust",
-        "key_subtext1": "We have delivered 400,000 translations in 190 languages to 50,000 clients in 40 macro-domains since 2017, powering the globalization strategy of the most demanding clients.",
+        "key_subtext1": "We have delivered 1.1 million translations in 190 languages to 100,000 clients in 40 macro-domains since 2017, powering the globalization strategy of the most demanding clients.",
         "key_link1": "Case studies",
-        "key_text2": "Quality Assurance",
-        "key_subtext2": "Your multilingual communication and content for global markets will meet the ISO 17100:2015 standard – tailored to your audience, business terminology and tone of voice.",
+        "key_text2": "Process Efficiency",
+        "key_subtext2": "We work hard to make translation services more effective, by enhancing our production processes with great technologies and talented people. A perfect example is Alisa™, the system that instantly matches your content with the most qualified translator for the job.",
         "key_link2": "Production process",
         "key_text3": "One Step Ahead",
         "key_subtext3": "We offer a wide range of linguistic services that cover all your future needs: Google Ads translation, software localization, subtitling, and APIs to integrate human translation anywhere you need.",
@@ -66,21 +66,21 @@
         "embrace_text": "Embrace our family",
         "embrace_subtext": "Our strength is our people, and we are more than just a translation company. We're a family of committed individuals dedicated to being the world's leading enabler of global communications.",
         "embrace_link": "About us",
-        "more_text": "Have a large project? Get in touch.",
-        "more_subtext": "Speak to one of our account managers to find a solution to your translation needs.",
+        "more_text": "Kickstart your global strategy",
+        "more_subtext": "Our specialized industry experts know your business inside and out.",
         "more_btn": "Contact us",
         "more_img_text": "Hello, I'm Lisa. How can I help you?",
         "more_img_subtext": " - Senior Account Manager",
         "more_bold": "Lisa",
         "instant_text": "Get an instant quote",
-        "instant_subtext": "Choose from a basic, professional or premium translation. Simple, accurate, secure.",
+        "instant_subtext": "The easy way to get your documents translated fast. Buy online in a few clicks.",
         "instant_btn": "Instant quote"
     },
     "enterprises": {
         "banner_text": "Seamless solutions for your business",
-        "banner_subtext": "Trusted partnerships, reliable support and accessible solutions at scale. Our expertise and solutions are always tailored to your specific business, markets and goals.",
-        "accuracy_maintext": "Accuracy starts with processes",
-        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
+        "banner_subtext": "Our specialized enterprise division provides a suite of solutions to help you grow your brand online. From international search to global social media and marketplaces, visit the website for more information.",
+        "accuracy_maintext": "Excellence starts with processes",
+        "accuracy_text": "We work hard to make translation services more effective by powering our production processes with great technologies and talented people.",
         "accuracy_link": "Production Process"
     },
     "developers": {
@@ -130,17 +130,17 @@
     },
     "about": {
         "text1": "Seamless multilingual solutions",
-        "subtext11": "We offer solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
-        "subtext12": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
-        "subtext13": "Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
+        "subtext11": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
+        "subtext12": "We’re a partner that can take you from planning to execution through our services, technology, consulting, and industry expertise. Our tailor-made solutions help you reach these new markets quickly, efficiently, effectively, and in a way that maximizes gains for your business.",
+        "subtext13": "That’s why the world’s top companies turn to us when they want their global goals to become their worldwide achievements.",
         "text2": "Our story",
-        "subtext21": "Gettranslation was established in 2017 in Estonia by a group of linguists with more than 20 years of experience in the field of linguistic services.",
-        "subtext22": "Shortly after, we decided to do something unusual for online businesses: to allow our customers to pay after the translation was delivered.",
-        "subtext23": "For the last 5 years we have been growing at a steady rate, increasing our production from an average of 50,000 translations delivered in 2017, to 400,000 in 2022.",
+        "subtext21": "Gettranslation was founded in 2017 with a simple mission to provide the highest quality language services to leading organizations worldwide.",
+        "subtext22": "Our success is the result of the hard work and commitment of the most loyal and dedicated team of employees in the industry; they are the ones most responsible for creating and sustaining our culture of growth.",
+        "subtext23": "Our strength is our people, and we are more than just a translation company. We're a family of committed individuals dedicated to being the world's leading enabler of global communications.",
         "text3": "Our vision",
-        "subtext31": "Gettranslation’s vision is to be the world's premier provider of global language and business solutions.",
-        "subtext32": "We will accomplish this by applying all of our passion, dedication, and innovation to help our clients and partners improve their businesses and achieve their goals.",
-        "subtext33": "Ultimately, our daily commitment is about helping human potential thrive and encouraging diversity in all its forms."
+        "subtext31": "One of the privileges of being a successful business is having the opportunity to give back.",
+        "subtext32": "Gettranslation's commitment to good corporate citizenship has played a key role in shaping our culture and the way we conduct our business every day.",
+        "subtext33": "At Gettranslation, we are involved in a variety of causes, including supporting local communities and a diverse group of non-profit organizations. We also commit both time and money to our employees' efforts to make a difference in the world."
     },
     "buttons": {
         "quote": "Instant quote",
@@ -148,8 +148,8 @@
         "translator": "Apply as a translator"
     },
     "quote": {
-        "banner_text": "Professional translations in a few clicks",
-        "banner_subtext": "The easy way to get your documents translated fast. Simple, accurate, secure.",
+        "banner_text": "Excel in the global marketplace with our translation services",
+        "banner_subtext": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
 
         "calc_label1": "From",
         "calc_label2": "To",
@@ -162,7 +162,7 @@
         "pay_item3": "feel free to pay within 5 days from delivery via bank transfer, credit card, or PayPal.",
         "pay_item4": "Learn more",
 
-        "mod_text_word": "Word count tool",
+        "mod_text_word": "WORD COUNT TOOL",
         "mod_text_date": "Select the delivery date",
         "best_price_label": "Auto (best price)",
         "guaranteed_label": "Delivery guaranteed by",
@@ -170,7 +170,7 @@
         "option_timezone_label2": "(CET) Central European Time",
 
         "loading_label": "Choosing the best available translator",
-        "upload_mod_status_word_process": "Counting...",
+        "upload_mod_status_word_process": "Counting",
         "submitted_label": "Choose your solution",
         "done_btn": "Done",
 
@@ -224,6 +224,5 @@
         "card_subtext3": "We genuinely trust our clients, which is why we have created the Pay After Delivery model. With Pay After Delivery, you can pay within five days of the translation’s delivery via credit card, bank transfer or Paypal.",
 
         "card_link": "Read our terms"
-
     }
 }
