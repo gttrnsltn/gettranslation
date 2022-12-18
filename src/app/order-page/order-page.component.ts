@@ -3,8 +3,8 @@ import { UrlSerializer } from '@angular/router';
 import { OrderService } from '../order.service';
 import { routingAnimation } from '../shared/animation/routing-animation';
 
-import { IpInfoAPI } from "../ip-api/ipapi.service";
-import { VatValidator } from '../ip-api/vatvalidate.service';
+import { IpInfoAPI } from "../rest/ipinfo/ipapi.service";
+import { VatValidator } from '../rest/vatval/vatvalidate.service';
 
 // declare var StripeCheckout: StripeCheckoutStatic;
 

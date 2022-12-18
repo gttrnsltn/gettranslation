@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
-import { IpInfoAPI } from "../ip-api/ipapi.service"
+import { IpInfoAPI } from "../rest/ipinfo/ipapi.service";
+import { CurrencyAPI } from "../rest/currencyinfo/currency.service";
 
 @Component({
   selector: 'app-header',
@@ -25,7 +26,8 @@ export class HeaderComponent implements OnInit {
 
   constructor(
     private activeRoute: ActivatedRoute,
-    private ipAPI: IpInfoAPI
+    private ipAPI: IpInfoAPI,
+    private currencyAPI: CurrencyAPI
   ) { }
 
   ngOnInit(): void {

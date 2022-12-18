@@ -7,7 +7,8 @@ import { delay, raceWith } from 'rxjs';
 import { OrderService } from '../order.service';
 import { routingAnimation } from '../shared/animation/routing-animation';
 
-import { IpInfoAPI } from "../ip-api/ipapi.service";
+import { IpInfoAPI } from "../rest/ipinfo/ipapi.service";
+import { CurrencyAPI } from "../rest/currencyinfo/currency.service"
 
 interface IOrder {
   name: string;
@@ -62,6 +63,8 @@ export class QuotePageComponent implements OnInit {
   to = 'German'
   from = 'English (USA)'
   timezone = "CET";
+  currency = "EUR"
+  eur_exch_rate: number = 1;
   price1!: number;
   price2!: number;
   price3!: number;
@@ -94,7 +97,8 @@ export class QuotePageComponent implements OnInit {
     private metaTagService: Meta ,
     private activeRoute: ActivatedRoute,
     private fb: FormBuilder,
-    private ipAPI: IpInfoAPI
+    private ipAPI: IpInfoAPI,
+    private currencyAPI: CurrencyAPI
   ) { 
     this.fileString;
 
@@ -139,7 +143,10 @@ export class QuotePageComponent implements OnInit {
 
     this.ipAPI.locationData.subscribe((value) => {
       this.timezone = value.timezone;
+      this.currencyAPI.getEURLiveRates(value.currency);
     });
+
+
 
   }
 
@@ -153,6 +160,10 @@ export class QuotePageComponent implements OnInit {
 
   }
   submit() {
+    this.currencyAPI.currencyData.subscribe((value) => {
+      this.eur_exch_rate = value.euro_exch_rate;
+      this.currency = value.currency_code;
+    })
     this.submitted = true;
     this.btn_text = 'Update prices';
 
@@ -160,9 +171,11 @@ export class QuotePageComponent implements OnInit {
     if (this.word < 250) {
       this.word = 250
     }
-    this.price1 = Math.floor(this.word * 0.17 * 100) / 100;
-    this.price2 = Math.floor(this.word * 0.12 * 100) / 100;
-    this.price3 = Math.floor(this.word * 0.04 * 100) / 100;
+
+    this.price1 = Math.round((Math.floor(this.word * 0.17 * 100) / 100)/this.eur_exch_rate)
+    this.price2 = Math.round((Math.floor(this.word * 0.12 * 100) / 100)/this.eur_exch_rate)
+    this.price3 = Math.round((Math.floor(this.word * 0.04 * 100) / 100)/this.eur_exch_rate)
+    console.log("Exchange rate: " + this.eur_exch_rate);
 
 
     this.date1n = Math.round(this.word / 10000 ) - 1;

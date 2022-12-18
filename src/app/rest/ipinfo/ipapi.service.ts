@@ -37,8 +37,10 @@ export class IpInfoAPI {
                     postalCode: res.postal_code,
                     city: res.city,
                     ip: res.ip_address,
-                    timezone: res.timezone.abbreviation
+                    timezone: res.timezone.abbreviation,
+                    currency: res.currency.currency_code
                 };
+                console.log(data)
                 this.location.next(data);
                 this.loc_recieved = true;
             }, error => {

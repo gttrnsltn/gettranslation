@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 
-import { IpInfoAPI } from "../ip-api/ipapi.service";
+import { IpInfoAPI } from "../rest/ipinfo/ipapi.service";
 
 let user_manual_lang = "";
 

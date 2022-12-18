@@ -7,4 +7,5 @@ export interface LocationData {
     city: string;
     ip: string;
     timezone: string;
+    currency: string;
 }

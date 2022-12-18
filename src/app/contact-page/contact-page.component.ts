@@ -2,7 +2,7 @@ import { DatePipe } from '@angular/common';
 import { Component, HostBinding, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
 import { routingAnimation } from '../shared/animation/routing-animation';
-import { IpInfoAPI } from "../ip-api/ipapi.service";
+import { IpInfoAPI } from "../rest/ipinfo/ipapi.service";
 import { OrderService } from '../order.service';
 
 @Component({
