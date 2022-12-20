@@ -275,6 +275,53 @@
         "how_works_mail": "hello@gettranslation.io."
 
     },
+    "subtitling":{
+        "title": "Subtitling, closed captions and transcription services",
+        "description": "Videos are becoming an ever-present medium in the digital era, whether it's social media campaigns, video tutorials, webinars and much more. Consumers and businesses are constantly creating, watching, and sharing more and more video contents.",
+
+        "point_text1": "E-learning courses",
+        "point_text2": "Corporate promotional videos",
+        "point_text3": "Video ads",
+        "point_text4": "Corporate social media channels",
+        "point_text5": "Movies",
+        "point_text6": "Documentaries",
+        "point_text7": "Video tutorials and lessons",
+        "point_text8": "Seminars",
+        "point_text9": "Interviews",
+        "point_text10": "Medical/scientific transcription",
+        "point_text11": "Legal transcription",
+        "point_text12": "Police transcription",
+        "point_text13": "Video Conferences and meetings",
+        "point_text14": "Music videos",
+
+        "multi_title": "Multilingual subtitles",
+        "multi_subtext1": "Translating subtitles, titles, and descriptions of your videos is a very effective way to get your message across to an international audience and boost your site/channel views on a global scale.",
+        "multi_subtext2": "Subtitle translation is a technical specialization that requires the skills and experience of expert linguists. They must be able to convey the original message without leaving out any relevant information. In addition to translating the words themselves, subtitlers must adapt the text to the limited number of characters per second (and per line) as well as following spacing rules. There are many factors to be taken into account to ensure that your target audience can easily read and understand your subtitles.",
+        "multi_subtext3": "What format will I receive my subtitles in?",
+        "multi_subtext4": "Subtitles can be provided in .srt, .ssa, .ttml, .sbv, .dfxp, .vtt, .txt, and all the other most commonly used subtitles files.",
+
+        "trans_title": "Transcriptions or closed captions?",
+        "trans_text": "What’s the difference?",
+        "trans_subtext": "Transcription is the process in which speech or audio is converted into a written text document, whereas closed caption divides transcript text into into time-coded chunks, known as “caption frames.” While transcription forms the basis for captioning, they each have different use cases.",
+
+        "audio_title": "Audio and video transcription",
+        "audio_subtext1": "Transcription is the conversion of an audio or video file into text format. Generally, this is a 'word for word' or 'verbatim' transcription that is 100% faithful to the original recording.",
+        "audio_subtext2": "In some special cases, as for example, when creating video subtitles, it is sometimes necessary to produce an 'abridged' (not fully word for word) transcription in order to respect the limitations of the space available.",
+        "audio_subtext3": "Our expert translators can assess your file and provide you with the type of transcription you need.",
+        "audio_subtext4": "What format will I receive my audio and video transcriptions in?",
+        "audio_subtext5": "We will deliver the transcribed file in your preferred format (Word, .txt), without timestamps.",
+
+        "close_title": "Closed captions",
+        "close_subtext1": "Engage more users by adding closed captions to your videos even when they don’t have the possibility to turn the volume on.",
+        "close_subtext2": "Closed captions are very useful as they allow your audience to fully understand the content and of course to boost your presence on the web, with a positive impact on SEO.",
+        "close_subtext3": "Especially on Social Medias, adding closed captions to your videos increases user views by 12%.",
+        "close_subtext4": "What format will I receive my closed captions in?",
+        "close_subtext5": "We will deliver the transcribed file in your preferred format (.srt, .ssa, .ttml, .sbv, .dfxp, .vtt, .txt), with timestamps.",
+
+        "why_title": "Why we are a good fit for your needs?",
+        "why_subtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world."
+
+    },
     "footer": {
         "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
         "footer_note": "© Gettranslation · VAT EE102173754",
