@@ -96,7 +96,6 @@
     line-height: 22px;
   
     @include mobile-only {
-        font-size: 14px;
         line-height: 20px;
     }
 }

@@ -259,6 +259,22 @@
         "discover_subtext": "Translation APIs for continuous localization, advanced repetition leveraging, content extraction from 71 file formats and 21 content sources, neural adaptive machine translation, and much more.",
         "discover_link": "Learn more"
     },
+    "adwords":{
+        "title": "Google Ads campaigns translations",
+
+        "how_works_title": "How it works",
+        "how_works_text1": "1. Choose languages and markets",
+        "how_works_subtext1": "In which countries and which languages will you advertise your products? Identify the most appropriate market-language combination for your investment, taking into account the customer base and online sales potential.",      
+        "how_works_text2": "2. Prepare your Google Ads material for translation",
+        "how_works_subtext21": "Basic mode: send us a simple Word or Excel document containing the campaign to translate or give us access to your AdWord panel by adding a new temporary user. Please do not forget to organize your file in ad groups in order to help our translators understand the campaign structure.",
+        "how_works_subtext22": "Expert mode: download AdWords Editor, the free Google application for managing AdWords campaigns, in order to generate an .aea file. With its clear and friendly interface, it takes about 5 minutes to open your AdWords account in the editor, download the campaign you want to localize, and export the backup in .aea format.",
+        "how_works_text3": "3. Get a quote",
+        "how_works_subtext31": "Get an instant quote",
+        "how_works_subtext32": "or send us the files to translate at",
+        "how_works_link": "here",
+        "how_works_mail": "hello@gettranslation.io."
+
+    },
     "footer": {
         "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
         "footer_note": "© Gettranslation · VAT EE102173754",
