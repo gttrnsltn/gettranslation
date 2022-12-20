@@ -3,7 +3,6 @@
 .more_container {
     display: flex;
     max-width: 1168px;
-    width: 100%;
     margin: 0 auto 140px;
     justify-content: space-between;
     @include desktop-down {
@@ -30,7 +29,7 @@
         max-width: 380px;
     }
     @include tablet-portrait-down {
-        max-width: 100%;
+        max-width: unset;
         justify-content: center;
     }
 }
@@ -39,8 +38,7 @@
     font-family: 'Nexa Heavy';
     font-size: 40px;
     line-height: 48px;
-    margin-left: 0;
-    padding: 0;
+    margin: 0 0 14px 0;
 
     @include tablet-landscape-down {
         font-size: 36px;
@@ -53,6 +51,7 @@
     font-size: 16px;
     line-height: 22px;
     margin-top: 10px;
+    margin: 0;
     @include tablet-portrait-down{
         margin-top: 14px;
     }

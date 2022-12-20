@@ -35,7 +35,7 @@
     display: flex;
     flex-direction: column;
     margin: 0;
-    max-width: 766px;
+    max-width: 800px;
 
     @include tablet-landscape-down {
         flex-direction: row;

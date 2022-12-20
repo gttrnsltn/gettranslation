@@ -225,6 +225,40 @@
 
         "card_link": "Read our terms"
     },
+    "website_service": {
+        "title": "Website & E-commerce Translations",
+        "description_text1": "Translating a website lets you reach thousands  of new visitors and potential clients online. Offering your products or services to an international audience provides exposure and significant growth potential for your business.",
+        "description_text2": "According to a study conducted by",
+        "description_text3": ", 76% of consumers prefer to find information on websites and e-commerce platforms in their own language, while 40% state that they would never buy from websites in a language other than their own.",
+        "description_link": "CSA Research",
+
+        "point_text1": "Personal websites",
+        "point_text2": "Community building websites",
+        "point_text3": "Photo sharing websites",
+        "point_text4": "Mobile device websites",
+        "point_text5": "Writers / authors websites",
+        "point_text6": "Blogs",
+        "point_text7": "Informational websites",
+        "point_text8": "Online business brochure",
+        "point_text9": "Directory websites",
+        "point_text10": "E-commerce websites",
+
+        "how_works_title": "How it works",
+        "how_works_introduce": "Our website translation services entail several ways to carry out the translation process, depending on your needs and convenience.",
+        "how_works_text1": "1. Translation of original files",
+        "how_works_subtext1": "We can translate directly into your website's source code (HTML, PHP, XML, or any other format) while respecting tags' integrity, thanks to the use of our proprietary translation software. This solution is ideal for a quick process, as it does not require the manual integration of texts into source files once the translation is delivered.",      
+        "how_works_text2": "2. Translation of contents in text format",
+        "how_works_subtext2": "We can translate the website contents in any editable text format (such as Word or Excel). On request, we can also localize all the multimedia content of your website (images, graphics, downloadable pdfs, etc.) during the translation process.",
+        "how_works_text3": "3. Translation within a CMS",
+        "how_works_subtext3": "If your website is managed by a CMS (WordPress, Joomla!, Prestashop, etc.), we can insert the translations within the latter, via API or directly within the system if you provide us with access. Once you have inserted the translation into your staging site or into production, we can check the content in its final context to assess the need to adapt the content to the layout, on request and free of charge.",
+
+        "why_title": "Why should you translate your website?",
+        "why_description": "The translation of a website lets you reach thousands of new visitors and potential clients online. Offering your products or services to an international audience provides exposure and important growth potential for your business. Numerous studies have found that consumers are more likely to complete a purchase if they can find information in their own language. You can ensure a good browsing experience to your foreign visitors and gain market share in your industry at a limited cost. Our native speaking translators will adapt the content of your website to the culture and target audience, maintaining your brand identity while you expand into new markets.",
+
+        "discover_text": "Discover our technologies",
+        "discover_subtext": "Translation APIs for continuous localization, advanced repetition leveraging, content extraction from 71 file formats and 21 content sources, neural adaptive machine translation, and much more.",
+        "discover_link": "Learn more"
+    },
     "footer": {
         "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
         "footer_note": "© Gettranslation · VAT EE102173754",

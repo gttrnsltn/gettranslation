@@ -1,56 +1,102 @@
-.maintext {
-    position: absolute;
-    width: 250px;
-    height: 48px;
-    left: 224px;
-    top: 2381px;
-    
+
+@import '../../../responsive.scss';
+
+.how_works_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    justify-content: space-between;
+    @include desktop-down{
+        margin: 0 64px 140px;
+    }    
+    @include tablet-landscape-down{
+        margin: 0 48px 120px;
+        flex-direction: column;
+    }
+    @include tablet-portrait-down{
+        margin: 0 24px 140px;
+    }
+}
+
+.naming_section {
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    width: 100%;
+    max-width: 360px;
+    margin: 0 24px 0 0;
+    color: #161616;
+
+    @include tablet-landscape-down {
+        max-width: 100%;
+        margin: 0 0 14px 0;
+    }
+    @include mobile-only{
+        margin: 0 0 16px 0;
+    }
+}
+
+.how_works_points {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    max-width: 780px;
+
+    @include tablet-landscape-down{
+        max-width: 100%;
+    }
+}
+
+.how_works_title {    
+    display: flex;
+    margin: 0;
+
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
-    font-size: 40px;
+    font-size: 38px;
     line-height: 48px;
-    /* identical to box height, or 120% */
-    
-    
     color: #161616;
-    left:50%; 
-    margin-left:-576px
+
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+    }
 }
 
-.text {
-    height: 422px;
-    width: 760px;
-    left: 616px;
-    top: 2381px;
-    
-    position: absolute;
-    width: 760px;
-    height: 422px;
-    left: 616px;
-    top: 2381px;
-    
+.point_content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    color: #161616;
+
+    @include tablet-landscape-down {
+        align-items: flex-start;
+        margin: 0 14px 0 0;
+    }
+}
+
+.point_text {
+    margin: 0 0 6px 0;
+
+    font-family: 'Nexa XBold';
+    font-style: normal;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 22px;
+}
+
+.point_subtext {
+    margin: 0 0 6px 0;
+
     font-family: 'Nexa Book';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 22px;
-    /* or 138% */
-    
-    
-    color: #161616; 
-    left:50%; 
-    margin-left:-184px
-}
-
-.bold {
-    font-family: 'Nexa XBold';
-    font-size: 16px;
-    font-weight: 800;
-    line-height: 22px;
-    letter-spacing: 0em;
-    text-align: left;
-
-    margin-top: .5rem;
-    margin-bottom: .5rem;
+  
+    @include mobile-only {
+        font-size: 14px;
+        line-height: 20px;
+    }
 }

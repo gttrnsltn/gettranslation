@@ -3,15 +3,16 @@
 
 .instant_container {
     display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 88px 72px;
     max-width: 1168px;
-    width: 100%;
     min-height: 240px;
+
     background: #ECEDFC;
     border-radius: 14px;
-    align-items: center;
-    padding: 88px 72px;
     box-sizing: border-box;
-    justify-content: space-between;
+
     margin: 0 auto 140px;
     @include desktop-down {
         margin: 0 64px 140px;
@@ -26,11 +27,10 @@
 
     @include tablet-portrait-down {
         margin: 0 32px 140px;
-        flex-wrap: wrap;
         justify-content: center;
         align-items: center;
         padding: 48px 22px;
-        min-width: 327px;
+        min-width: 312px;
     }
 }
 
@@ -53,8 +53,8 @@
     line-height: 48px;
     @include tablet-landscape-down{
         font-size: 28px;
-line-height: 36px;
-margin-bottom: 6px;
+        line-height: 36px;
+        margin-bottom: 6px;
     }
 }
 
@@ -63,18 +63,16 @@ margin-bottom: 6px;
     font-family: 'Nexa Book';
     font-size: 16px;
     line-height: 22px;
-    margin-top: 12px;
-    margin-left: 0;
+    margin: 12px 0 0 0;
     @include tablet-landscape-down{
         font-size: 14px;
         line-height: 22px;
     }
     @include tablet-portrait-down{
-            width: 283px;
+            max-width: 283px;
             font-size: 14px;
             line-height: 20px;
-            margin: auto;
-            margin-top: 6px;
+            margin: 0;
     }
 }
 
@@ -99,6 +97,8 @@ margin-bottom: 6px;
     }
     @include mobile-only{
         width: 100%;
+        height: auto;
+        min-width: 240px;
     }
 }
 
