@@ -53,15 +53,28 @@
 }
 
 .urgent_maintext {
+    max-width: 690px;
+    width: 100%;
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
     line-height: 48px;
-
+    margin: 0 0 16px 0;
     text-align: center;
 
     color: #161616;
+
+    @include tablet-portrait-down {
+        max-width: 460px;
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    @include mobile-only {
+        max-width: 250px;
+        margin-bottom: 10px;
+    }
 }
 
 .subtext {
@@ -82,28 +95,20 @@
 }
 
 .urgent_subtext {
-    height: 40px;
-    width: 352px;
-    left: 623.5px;
-    top: 244px;
-
-    position: absolute;
-    width: 352px;
-    height: 40px;
-    left: 623.5px;
-    top: 244px;
-
     font-family: 'Nexa Book';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 20px;
+    max-width: 560px;
 
     text-align: center;
 
     color: #161616;
-    left: 50%;
-    margin-left: -176.5px
+
+    @include mobile-only {
+        max-width: 320px;
+    }
 }
 
 .calculate {

@@ -5,10 +5,8 @@
     <p class="subtext"> {{ 'quote.banner_subtext' | translate }}</p>
 </div>
 
-<div *ngIf="!quote">
-    <div class="urgent_maintext">
-        Urgent professional translations
-    </div>
+<div class="main_content" *ngIf="!quote">
+    <h1 class="urgent_maintext"> Urgent professional translations </h1>
     <div class="urgent_subtext">
         <p>The easy way to get your documents translated fast.</p>
         <p>Simple, accurate, secure.</p>
@@ -313,13 +311,12 @@
 </div>
 
 <div *ngIf="!quote">
-    <app-why-choouse *ngIf="!submitted" class="urgent_why_choose"></app-why-choouse>
-    <app-logo-block class="urgent_logo_block"></app-logo-block>
-    <app-embrace class="urgent_embrace"></app-embrace>
-    <app-more class="urgent_more"></app-more>
-    <app-instant class="urgent_instant"></app-instant>
-    <app-footer class="urgent_footer"></app-footer>
-    <div class="urgent_space"></div>
+    <app-why-choouse *ngIf="!submitted" ></app-why-choouse>
+    <app-logo-block></app-logo-block>
+    <app-embrace></app-embrace>
+    <app-more></app-more>
+    <app-instant></app-instant>
+    <app-footer></app-footer>
 </div>
 
 <div *ngIf="upload_mod" class="upload_mod"
