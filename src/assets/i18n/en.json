@@ -347,9 +347,24 @@
         "test_title": "We can test and fine-tune your software",
         "test_subtext1": "A challenge when testing software is that each language is meant for users from different cultures. Aspects such as text direction, measurements, and currency must therefore be considered, and your software’s sentences must be specifically adapted to the local cultural context, guaranteeing that the translation is accurate and understandable in the target country: a genuine localization process.",
         "test_subtext2": "We can test your localized software, taking care of test environment setup, test case design, test execution, and fine-tuning translations."
-
-
     },
+    "custom_localization":{
+        "title": "Custom localization solutions",
+        "description": "From the high-touch training of translators to match your preferred style, to APIs and custom workflow design. We address the needs of thousands of different clients in all industries.",
+
+        "point_text1": "Localization workflows",
+        "point_text2": "Translators recruitment",
+        "point_text3": "High-touch translators training",
+        "point_text4": "Translation APIs",
+        "point_text5": "Third party integrations",
+        "point_text6": "Filters for content extraction",
+        "point_text7": "Machine Translation training",
+
+        "accuracy_maintext": "Accuracy starts with processes",
+        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
+        "accuracy_link": "Production Process"
+    },
+
     "footer": {
         "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
         "footer_note": "© Gettranslation · VAT EE102173754",
