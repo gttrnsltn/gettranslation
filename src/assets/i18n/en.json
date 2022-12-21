@@ -322,6 +322,34 @@
         "why_subtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world."
 
     },
+    "websoftware": {
+        "title": "Web software localization",
+        "description": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
+        
+        "point_text1": "Static web applications",
+        "point_text2": "Dynamic web applications",
+        "point_text3": "Online stores or e-commerce",
+        "point_text4": "Portal web app",
+        "point_text5": "Animated web application",
+        "point_text6": "CMS (Wordpress, Joomla)",
+
+        "accessible_title": "We make your products accessible to anyone",
+        "accessible_text1": "Localization is the process of adapting a product to meet the needs (especially linguistic and cultural) of a given place or market (LISA, Localization Industry Standards Association).",
+        "accessible_text2": "Translated works with almost all hardware and software platforms on the market. It also develops filters for extracting and re-inserting texts for proprietary environments, preferring open technologies such as XML and UNICODE.",
+        "accessible_text3": "The strengths of our localization process are:",
+        "accessible_subtext1": "Tested and reproducible methodologies",
+        "accessible_subtext2": "Extraction of terminology and style from your existing documentation",
+        "accessible_subtext3": "Translation in environments which include spell checkers, translation memories, and terminology management",
+        "accessible_subtext4": "Total compliance with international standards and industry terminology",
+        "accessible_subtext5": "In-house product testing",
+        "accessible_subtext6": "Experience with millions of localized words, for major software producers",
+
+        "test_title": "We can test and fine-tune your software",
+        "test_subtext1": "A challenge when testing software is that each language is meant for users from different cultures. Aspects such as text direction, measurements, and currency must therefore be considered, and your software’s sentences must be specifically adapted to the local cultural context, guaranteeing that the translation is accurate and understandable in the target country: a genuine localization process.",
+        "test_subtext2": "We can test your localized software, taking care of test environment setup, test case design, test execution, and fine-tuning translations."
+
+
+    },
     "footer": {
         "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
         "footer_note": "© Gettranslation · VAT EE102173754",
