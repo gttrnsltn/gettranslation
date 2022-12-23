@@ -5,19 +5,19 @@
     margin: 0;
     justify-content: space-between;
     max-width: 1168px;
-    margin: 60px auto 160px;
+    margin: 0px auto 160px;
 
     @include desktop-down {
-        margin: 60px 64px 160px;
+        margin: 0px 64px 160px;
     }
 
     @include tablet-landscape-down {
-        margin: 48px 48px 140px;
+        margin: 0 48px 140px;
         flex-direction: column;
     }
 
     @include tablet-portrait-down {
-        margin: 32px 32px 144px;
+        margin: 0 32px 144px;
     }    
     @include mobile-only {
         margin: 0 24px 144px;
