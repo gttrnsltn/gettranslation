@@ -28,8 +28,7 @@ export class IpInfoAPI {
         // TODO: Add proper http error handlinga (use observable -> follow intelisense suggestion)
         if (!this.loc_recieved) {
             this.http.get(this.API_PATH + this.PRIVATE_KEY).subscribe((res: any) => {
-                console.log(res);
-                console.log(this.loc_recieved);
+                console.log(res)
                 let data: LocationData = {
                     countryName: res.country,
                     countryCode: res.country_code,
@@ -40,7 +39,6 @@ export class IpInfoAPI {
                     timezone: res.timezone.abbreviation,
                     currency: res.currency.currency_code
                 };
-                console.log(data)
                 this.location.next(data);
                 this.loc_recieved = true;
             }, error => {
