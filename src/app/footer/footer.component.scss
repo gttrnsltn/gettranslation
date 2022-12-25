@@ -1,19 +1,85 @@
+@import '../../responsive.scss';
+
 .footer {
-    padding-bottom: 22px;
+    display: flex;
+    justify-content: space-between;
     max-width: 1168px;
-   //margin-top: 168px;
+    height: auto;
+    margin: 0 auto 32px;
+
+    @include desktop-down {
+        margin: 0 64px 32px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 0 48px 32px;
+    }
+
+    @include tablet-portrait-down {
+        margin: 0 24px 64px;
+    }
 }
 
-.flex {
+
+.footer_container {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0;
+    width: 100%;
+    @include tablet-landscape-down{
+        flex-direction: column;
+        align-items: flex-end;
+    }
+    @include tablet-portrait-down{
+        align-items: flex-start;
+    }
+
+}
+.footer_flex{
+    display: flex;
+    margin: 0 24px 0 0;
+    justify-content: space-between;
+    width: 100%;
+    @include tablet-landscape-down{
+        margin: 0;
+    }
+    @include tablet-portrait-down{
+        flex-direction: column;
+    }
+}
+.footer_pages_container{
+    display: flex;
+    justify-content: space-between;
+    max-width: 300px;
+    width: 100%;
+    @include desktop-down{
+        max-width: 232px;
+    }
+    @include tablet-landscape-down{
+        max-width: 276px;
+        width: 276px;
+        margin: 0;
+    }
+    @include tablet-portrait-down{
+        max-width: 80%;
+        width: unset;
+        justify-content: space-around;
+
+    }
+    @include mobile-only{
+        justify-content: flex-start;
+        max-width: 100%;
+    }
 }
 
-.flex-column {
+.footer_pages {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    margin: 0;
+    @include tablet-portrait-down{
+        margin: 0 48px 0 0;
+    }
 }
 
 a:hover {
@@ -25,23 +91,35 @@ a:hover {
     width: 40px;
     margin: 0;
 }
-
+.footer_info_block{
+    display: flex;
+    margin: 0 24px 0 0;
+    @include tablet-portrait-down{
+        margin: 0 0 32px 0;
+    }
+}
 .block {
-    margin-left: 24px;
-    width: 328px;
+    margin: 0 0 0 24px;
+    max-width: 328px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    @include tablet-landscape-down{
+        max-width: 260px;
+    }
+    @include tablet-portrait-down{
+        max-width: 100%;
+    }
 }
 
-.text {
+.footer_text {
     font-family: 'Nexa Book';
     font-style: normal;
     font-size: 14px;
     line-height: 20px;
 }
 
-.right {
+.footer_note {
     margin-top: 10px;
     font-family: 'Nexa Book';
     font-style: normal;
@@ -50,25 +128,41 @@ a:hover {
     margin-left: 0;
 }
 
-.menu {
+.page_item {
     font-family: 'Nexa XBold';
     font-style: normal;
     font-size: 14px;
     line-height: 22px;
-    margin-bottom: 10px;
-    margin-left: 0;
+    margin: 0 0 10px 0;
 }
 
 .block_btn {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-right: 0;
+    margin: 0;
+    @include tablet-landscape-down{
+        margin: 20px 0 0 0;
+    }
+    @include mobile-only{
+        width: 100%;
+    }
 }
 
 .btns {
     display: flex;
     justify-content: space-between;
+    @include mobile-only{
+        flex-direction: column;
+        margin: 0;
+    }
+}
+.select_container{
+    position: relative;
+    margin: 0;
+    @include mobile-only{
+        margin: 0 0 20px;
+    }
 }
 
 .btn_lang {
@@ -82,6 +176,19 @@ a:hover {
     font-style: normal;
     font-size: 14px;
     line-height: 22px;
+    @include tablet-landscape-down{
+        width: 130px;
+    }
+    @include tablet-portrait-down{
+        width: 155px;
+    }
+    @include mobile-only{
+        width: 100%;
+        margin: 0;
+    }
+}
+.btn_lang:focus{
+    border: 2px solid #4247E5;
 }
 
 .btn_curr {
@@ -90,28 +197,56 @@ a:hover {
     height: 44px;
     width: 138px;
     padding-left: 16px;
-    margin-left: 18px;
-
+    margin: 0 0 0 16px;
 
     font-family: 'Nexa Regular';
     font-style: normal;
     font-size: 14px;
     line-height: 22px; 
+    @include tablet-landscape-down{
+        width: 130px;
+    }
+    @include tablet-portrait-down{
+        width: 155px;
+    }
+    @include mobile-only{
+        width: 100%;
+        margin: 0;
+    }
+}
+.btn_curr:focus{
+    border: 2px solid #4247E5;
+}
+
+.arrow_item {
+    position: absolute;
+    right: 8%;
+    top: 25%;
+
+    @include mobile-only {
+        right: 6%;
+    }
 }
 
 
 .social {
-    margin-left: 0;
-    margin-top: 24px;
+    margin: 24px 0 0 0;
     width: 184px;
     height: 24px;
+    @include mobile-only{
+        margin: 4px 0 0 0;
+    }
 }
 
 .img {
     width: 24px;
     height: 24px;
 }
-
+select{
+    -moz-appearance:none; /* Firefox */
+    -webkit-appearance:none; /* Safari and Chrome */
+    appearance:none;
+}
 select:focus {
     outline: none;
 }

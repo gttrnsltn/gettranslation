@@ -15,12 +15,12 @@
     },
     "home": {
         "banner_text": "Seamless multilingual solutions",
-        "banner_subtext": "Solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
+        "banner_subtext": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
         "benefits_text1": "Professional Translation",
-        "benefits_subtext1": "Tailored solutions that blend tech solutions with skilled language professionals to enhance the way you work with language.",
+        "benefits_subtext1": "Translation of documents of all types, including highly technical and industry-specific documents, into over 190 languages.",
         "benefits_link1": "Instant quote",
         "benefits_text2": "Enterprise Solutions",
-        "benefits_subtext2": "Execute translations seamlessly on a global scale with workflows and tech that accelerate time to market and boost overall efficiency.",
+        "benefits_subtext2": "Plan, execute and manage your global campaign ensuring messages are well targeted for your international audiences.",
         "benefits_link2": "Learn more",
         "benefits_text3": "Developers' Tools",
         "benefits_subtext3": "The most sophisticated, yet simple to use, translation APIs for continuous localization, content extraction from 71 file formats.",
@@ -53,12 +53,12 @@
         "our_text10": "Simple Document Translation",
         "our_subtext10": "Use our online quote to experience the fast and easy way to translate your documents in 190 languages, since 2017.",
         "key_maintext": "Key benefits",
-        "key_mainsubtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
+        "key_mainsubtext": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
         "key_text1": "Experience and Trust",
-        "key_subtext1": "We have delivered 400,000 translations in 190 languages to 50,000 clients in 40 macro-domains since 2017, powering the globalization strategy of the most demanding clients.",
+        "key_subtext1": "We have delivered 1.1 million translations in 190 languages to 100,000 clients in 40 macro-domains since 2017, powering the globalization strategy of the most demanding clients.",
         "key_link1": "Case studies",
-        "key_text2": "Quality Assurance",
-        "key_subtext2": "Your multilingual communication and content for global markets will meet the ISO 17100:2015 standard – tailored to your audience, business terminology and tone of voice.",
+        "key_text2": "Process Efficiency",
+        "key_subtext2": "We work hard to make translation services more effective, by enhancing our production processes with great technologies and talented people. A perfect example is Alisa™, the system that instantly matches your content with the most qualified translator for the job.",
         "key_link2": "Production process",
         "key_text3": "One Step Ahead",
         "key_subtext3": "We offer a wide range of linguistic services that cover all your future needs: Google Ads translation, software localization, subtitling, and APIs to integrate human translation anywhere you need.",
@@ -66,21 +66,21 @@
         "embrace_text": "Embrace our family",
         "embrace_subtext": "Our strength is our people, and we are more than just a translation company. We're a family of committed individuals dedicated to being the world's leading enabler of global communications.",
         "embrace_link": "About us",
-        "more_text": "Have a large project? Get in touch.",
-        "more_subtext": "Speak to one of our account managers to find a solution to your translation needs.",
+        "more_text": "Kickstart your global strategy",
+        "more_subtext": "Our specialized industry experts know your business inside and out.",
         "more_btn": "Contact us",
         "more_img_text": "Hello, I'm Lisa. How can I help you?",
         "more_img_subtext": " - Senior Account Manager",
         "more_bold": "Lisa",
         "instant_text": "Get an instant quote",
-        "instant_subtext": "Choose from a basic, professional or premium translation. Simple, accurate, secure.",
+        "instant_subtext": "The easy way to get your documents translated fast. Buy online in a few clicks.",
         "instant_btn": "Instant quote"
     },
     "enterprises": {
         "banner_text": "Seamless solutions for your business",
-        "banner_subtext": "Trusted partnerships, reliable support and accessible solutions at scale. Our expertise and solutions are always tailored to your specific business, markets and goals.",
-        "accuracy_maintext": "Accuracy starts with processes",
-        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
+        "banner_subtext": "Our specialized enterprise division provides a suite of solutions to help you grow your brand online. From international search to global social media and marketplaces, visit the website for more information.",
+        "accuracy_maintext": "Excellence starts with processes",
+        "accuracy_text": "We work hard to make translation services more effective by powering our production processes with great technologies and talented people.",
         "accuracy_link": "Production Process"
     },
     "developers": {
@@ -130,17 +130,17 @@
     },
     "about": {
         "text1": "Seamless multilingual solutions",
-        "subtext11": "We offer solutions and tools for efficient, precise communication on a global or local scale. Fluent in over 190 languages, we offer more than 50,000 translators and language specialists on hand.",
-        "subtext12": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
-        "subtext13": "Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
+        "subtext11": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
+        "subtext12": "We’re a partner that can take you from planning to execution through our services, technology, consulting, and industry expertise. Our tailor-made solutions help you reach these new markets quickly, efficiently, effectively, and in a way that maximizes gains for your business.",
+        "subtext13": "That’s why the world’s top companies turn to us when they want their global goals to become their worldwide achievements.",
         "text2": "Our story",
-        "subtext21": "Gettranslation was established in 2017 in Estonia by a group of linguists with more than 20 years of experience in the field of linguistic services.",
-        "subtext22": "Shortly after, we decided to do something unusual for online businesses: to allow our customers to pay after the translation was delivered.",
-        "subtext23": "For the last 5 years we have been growing at a steady rate, increasing our production from an average of 50,000 translations delivered in 2017, to 400,000 in 2022.",
+        "subtext21": "Gettranslation was founded in 2017 with a simple mission to provide the highest quality language services to leading organizations worldwide.",
+        "subtext22": "Our success is the result of the hard work and commitment of the most loyal and dedicated team of employees in the industry; they are the ones most responsible for creating and sustaining our culture of growth.",
+        "subtext23": "Our strength is our people, and we are more than just a translation company. We're a family of committed individuals dedicated to being the world's leading enabler of global communications.",
         "text3": "Our vision",
-        "subtext31": "Gettranslation’s vision is to be the world's premier provider of global language and business solutions.",
-        "subtext32": "We will accomplish this by applying all of our passion, dedication, and innovation to help our clients and partners improve their businesses and achieve their goals.",
-        "subtext33": "Ultimately, our daily commitment is about helping human potential thrive and encouraging diversity in all its forms."
+        "subtext31": "One of the privileges of being a successful business is having the opportunity to give back.",
+        "subtext32": "Gettranslation's commitment to good corporate citizenship has played a key role in shaping our culture and the way we conduct our business every day.",
+        "subtext33": "At Gettranslation, we are involved in a variety of causes, including supporting local communities and a diverse group of non-profit organizations. We also commit both time and money to our employees' efforts to make a difference in the world."
     },
     "buttons": {
         "quote": "Instant quote",
@@ -148,8 +148,8 @@
         "translator": "Apply as a translator"
     },
     "quote": {
-        "banner_text": "Professional translations in a few clicks",
-        "banner_subtext": "The easy way to get your documents translated fast. Simple, accurate, secure.",
+        "banner_text": "Excel in the global marketplace with our translation services",
+        "banner_subtext": "We enable our clients to reach new markets globally by connecting with their audiences and providing the best possible customer experience — in any language.",
 
         "calc_label1": "From",
         "calc_label2": "To",
@@ -162,7 +162,7 @@
         "pay_item3": "feel free to pay within 5 days from delivery via bank transfer, credit card, or PayPal.",
         "pay_item4": "Learn more",
 
-        "mod_text_word": "Word count tool",
+        "mod_text_word": "WORD COUNT TOOL",
         "mod_text_date": "Select the delivery date",
         "best_price_label": "Auto (best price)",
         "guaranteed_label": "Delivery guaranteed by",
@@ -170,7 +170,7 @@
         "option_timezone_label2": "(CET) Central European Time",
 
         "loading_label": "Choosing the best available translator",
-        "upload_mod_status_word_process": "Counting...",
+        "upload_mod_status_word_process": "Counting",
         "submitted_label": "Choose your solution",
         "done_btn": "Done",
 
@@ -224,6 +224,177 @@
         "card_subtext3": "We genuinely trust our clients, which is why we have created the Pay After Delivery model. With Pay After Delivery, you can pay within five days of the translation’s delivery via credit card, bank transfer or Paypal.",
 
         "card_link": "Read our terms"
+    },
+    "website_service": {
+        "title": "Website & E-commerce Translations",
+        "description_text1": "Translating a website lets you reach thousands  of new visitors and potential clients online. Offering your products or services to an international audience provides exposure and significant growth potential for your business.",
+        "description_text2": "According to a study conducted by",
+        "description_text3": ", 76% of consumers prefer to find information on websites and e-commerce platforms in their own language, while 40% state that they would never buy from websites in a language other than their own.",
+        "description_link": "CSA Research",
+
+        "point_text1": "Personal websites",
+        "point_text2": "Community building websites",
+        "point_text3": "Photo sharing websites",
+        "point_text4": "Mobile device websites",
+        "point_text5": "Writers / authors websites",
+        "point_text6": "Blogs",
+        "point_text7": "Informational websites",
+        "point_text8": "Online business brochure",
+        "point_text9": "Directory websites",
+        "point_text10": "E-commerce websites",
+
+        "how_works_title": "How it works",
+        "how_works_introduce": "Our website translation services entail several ways to carry out the translation process, depending on your needs and convenience.",
+        "how_works_text1": "1. Translation of original files",
+        "how_works_subtext1": "We can translate directly into your website's source code (HTML, PHP, XML, or any other format) while respecting tags' integrity, thanks to the use of our proprietary translation software. This solution is ideal for a quick process, as it does not require the manual integration of texts into source files once the translation is delivered.",      
+        "how_works_text2": "2. Translation of contents in text format",
+        "how_works_subtext2": "We can translate the website contents in any editable text format (such as Word or Excel). On request, we can also localize all the multimedia content of your website (images, graphics, downloadable pdfs, etc.) during the translation process.",
+        "how_works_text3": "3. Translation within a CMS",
+        "how_works_subtext3": "If your website is managed by a CMS (WordPress, Joomla!, Prestashop, etc.), we can insert the translations within the latter, via API or directly within the system if you provide us with access. Once you have inserted the translation into your staging site or into production, we can check the content in its final context to assess the need to adapt the content to the layout, on request and free of charge.",
+
+        "why_title": "Why should you translate your website?",
+        "why_description": "The translation of a website lets you reach thousands of new visitors and potential clients online. Offering your products or services to an international audience provides exposure and important growth potential for your business. Numerous studies have found that consumers are more likely to complete a purchase if they can find information in their own language. You can ensure a good browsing experience to your foreign visitors and gain market share in your industry at a limited cost. Our native speaking translators will adapt the content of your website to the culture and target audience, maintaining your brand identity while you expand into new markets.",
+
+        "discover_text": "Discover our technologies",
+        "discover_subtext": "Translation APIs for continuous localization, advanced repetition leveraging, content extraction from 71 file formats and 21 content sources, neural adaptive machine translation, and much more.",
+        "discover_link": "Learn more"
+    },
+    "adwords":{
+        "title": "Google Ads campaigns translations",
+
+        "how_works_title": "How it works",
+        "how_works_text1": "1. Choose languages and markets",
+        "how_works_subtext1": "In which countries and which languages will you advertise your products? Identify the most appropriate market-language combination for your investment, taking into account the customer base and online sales potential.",      
+        "how_works_text2": "2. Prepare your Google Ads material for translation",
+        "how_works_subtext21": "Basic mode: send us a simple Word or Excel document containing the campaign to translate or give us access to your AdWord panel by adding a new temporary user. Please do not forget to organize your file in ad groups in order to help our translators understand the campaign structure.",
+        "how_works_subtext22": "Expert mode: download AdWords Editor, the free Google application for managing AdWords campaigns, in order to generate an .aea file. With its clear and friendly interface, it takes about 5 minutes to open your AdWords account in the editor, download the campaign you want to localize, and export the backup in .aea format.",
+        "how_works_text3": "3. Get a quote",
+        "how_works_subtext31": "Get an instant quote",
+        "how_works_subtext32": "or send us the files to translate at",
+        "how_works_link": "here",
+        "how_works_mail": "hello@gettranslation.io."
+
+    },
+    "subtitling":{
+        "title": "Subtitling, closed captions and transcription services",
+        "description": "Videos are becoming an ever-present medium in the digital era, whether it's social media campaigns, video tutorials, webinars and much more. Consumers and businesses are constantly creating, watching, and sharing more and more video contents.",
+
+        "point_text1": "E-learning courses",
+        "point_text2": "Corporate promotional videos",
+        "point_text3": "Video ads",
+        "point_text4": "Corporate social media channels",
+        "point_text5": "Movies",
+        "point_text6": "Documentaries",
+        "point_text7": "Video tutorials and lessons",
+        "point_text8": "Seminars",
+        "point_text9": "Interviews",
+        "point_text10": "Medical/scientific transcription",
+        "point_text11": "Legal transcription",
+        "point_text12": "Police transcription",
+        "point_text13": "Video Conferences and meetings",
+        "point_text14": "Music videos",
+
+        "multi_title": "Multilingual subtitles",
+        "multi_subtext1": "Translating subtitles, titles, and descriptions of your videos is a very effective way to get your message across to an international audience and boost your site/channel views on a global scale.",
+        "multi_subtext2": "Subtitle translation is a technical specialization that requires the skills and experience of expert linguists. They must be able to convey the original message without leaving out any relevant information. In addition to translating the words themselves, subtitlers must adapt the text to the limited number of characters per second (and per line) as well as following spacing rules. There are many factors to be taken into account to ensure that your target audience can easily read and understand your subtitles.",
+        "multi_subtext3": "What format will I receive my subtitles in?",
+        "multi_subtext4": "Subtitles can be provided in .srt, .ssa, .ttml, .sbv, .dfxp, .vtt, .txt, and all the other most commonly used subtitles files.",
+
+        "trans_title": "Transcriptions or closed captions?",
+        "trans_text": "What’s the difference?",
+        "trans_subtext": "Transcription is the process in which speech or audio is converted into a written text document, whereas closed caption divides transcript text into into time-coded chunks, known as “caption frames.” While transcription forms the basis for captioning, they each have different use cases.",
+
+        "audio_title": "Audio and video transcription",
+        "audio_subtext1": "Transcription is the conversion of an audio or video file into text format. Generally, this is a 'word for word' or 'verbatim' transcription that is 100% faithful to the original recording.",
+        "audio_subtext2": "In some special cases, as for example, when creating video subtitles, it is sometimes necessary to produce an 'abridged' (not fully word for word) transcription in order to respect the limitations of the space available.",
+        "audio_subtext3": "Our expert translators can assess your file and provide you with the type of transcription you need.",
+        "audio_subtext4": "What format will I receive my audio and video transcriptions in?",
+        "audio_subtext5": "We will deliver the transcribed file in your preferred format (Word, .txt), without timestamps.",
+
+        "close_title": "Closed captions",
+        "close_subtext1": "Engage more users by adding closed captions to your videos even when they don’t have the possibility to turn the volume on.",
+        "close_subtext2": "Closed captions are very useful as they allow your audience to fully understand the content and of course to boost your presence on the web, with a positive impact on SEO.",
+        "close_subtext3": "Especially on Social Medias, adding closed captions to your videos increases user views by 12%.",
+        "close_subtext4": "What format will I receive my closed captions in?",
+        "close_subtext5": "We will deliver the transcribed file in your preferred format (.srt, .ssa, .ttml, .sbv, .dfxp, .vtt, .txt), with timestamps.",
+
+        "why_title": "Why we are a good fit for your needs?",
+        "why_subtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world."
+
+    },
+    "websoftware": {
+        "title": "Web software localization",
+        "description": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time.",
+        
+        "point_text1": "Static web applications",
+        "point_text2": "Dynamic web applications",
+        "point_text3": "Online stores or e-commerce",
+        "point_text4": "Portal web app",
+        "point_text5": "Animated web application",
+        "point_text6": "CMS (Wordpress, Joomla)",
+
+        "accessible_title": "We make your products accessible to anyone",
+        "accessible_text1": "Localization is the process of adapting a product to meet the needs (especially linguistic and cultural) of a given place or market (LISA, Localization Industry Standards Association).",
+        "accessible_text2": "Translated works with almost all hardware and software platforms on the market. It also develops filters for extracting and re-inserting texts for proprietary environments, preferring open technologies such as XML and UNICODE.",
+        "accessible_text3": "The strengths of our localization process are:",
+        "accessible_subtext1": "Tested and reproducible methodologies",
+        "accessible_subtext2": "Extraction of terminology and style from your existing documentation",
+        "accessible_subtext3": "Translation in environments which include spell checkers, translation memories, and terminology management",
+        "accessible_subtext4": "Total compliance with international standards and industry terminology",
+        "accessible_subtext5": "In-house product testing",
+        "accessible_subtext6": "Experience with millions of localized words, for major software producers",
+
+        "test_title": "We can test and fine-tune your software",
+        "test_subtext1": "A challenge when testing software is that each language is meant for users from different cultures. Aspects such as text direction, measurements, and currency must therefore be considered, and your software’s sentences must be specifically adapted to the local cultural context, guaranteeing that the translation is accurate and understandable in the target country: a genuine localization process.",
+        "test_subtext2": "We can test your localized software, taking care of test environment setup, test case design, test execution, and fine-tuning translations."
+    },
+    "custom_localization":{
+        "title": "Custom localization solutions",
+        "description": "From the high-touch training of translators to match your preferred style, to APIs and custom workflow design. We address the needs of thousands of different clients in all industries.",
+
+        "point_text1": "Localization workflows",
+        "point_text2": "Translators recruitment",
+        "point_text3": "High-touch translators training",
+        "point_text4": "Translation APIs",
+        "point_text5": "Third party integrations",
+        "point_text6": "Filters for content extraction",
+        "point_text7": "Machine Translation training",
+
+        "accuracy_maintext": "Accuracy starts with processes",
+        "accuracy_text": "We are helping the world become more connected by offering expert human translations provided by native speakers, certified professionals, and cutting-edge technology to enable you communicate more clearly.",
+        "accuracy_link": "Production Process"
+    },
+    "footer": {
+        "footer_text": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
+        "footer_note": "© Gettranslation · VAT EE102173754",
+        "menu_item1": "Enterprises",
+        "menu_item2": "Developers",
+        "menu_item3": "Translators",
+        "menu_item4": "Case studies",
+        "menu_item5": "Quote",
+        "menu_item6": "About us",
+        "menu_item7": "Contact us",
+        "menu_item8": "Terms of sale",
+        "menu_item9": "Privacy",
+        "menu_item10": "FAQ",
+
+        "de": "Deutsch",
+        "en": "English",
+        "es": "Español",
+        "fr": "Français",
+        "nl": "Nederlands",
+        "pl": "Polski",
+        "ru": "Русский",
+        "sv": "Svenska",
+        "tr": "Türkçe",
+        "ko": "한국어",
+        "no": "Norsk",
+        "da": "Dansk",
+        "fi": "Suomi",
+
+        "curr_euro": "Euro (EUR)",
+        "curr_dollar": "Dollar (USD)",
+        "curr_zloty": "Złoty (PLN)"
 
     }
 }

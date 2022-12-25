@@ -49,6 +49,7 @@
             <a [routerLink]="['/faq']" class="menu">FAQ</a>
         </div>
 
+
         <div class="block_btn">
             <div class="btns">
                 <select (click)="changeLang()" [(ngModel)]="lang" class="btn_lang" name="from" id="from">
@@ -69,26 +70,21 @@
             
                 <select class="btn_curr" (click)="changeCurrency()" [(ngModel)]="currency" name="from" id="from">
                     <option *ngFor="let curr_currency of currency_list;" value="{{ curr_currency }}">{{ curr_currency }}</option>
-                    <!--
-                    <option value="Euro (EUR)">Euro (EUR)</option>
-                    <option value="US dollar (USD)" selected="selected">Dollar (USD)</option>
-                    <option value="Złoty (PLN)">Złoty (PLN)</option>
-                    -->
                 </select>    
             </div>
-            
+
             <div class="flex social">
                 <a href="mailto: hello@gettranslation.io">
-                    <img  class="img" src="../../assets/social media (footer)/mail.svg" alt="">
+                    <img class="img" src="../../assets/social media (footer)/mail.svg" alt="">
                 </a>
                 <a href="callto: +44 20 4577 3740">
-                    <img  class="img" src="../../assets/social media (footer)/phone.svg" alt="">
+                    <img class="img" src="../../assets/social media (footer)/phone.svg" alt="">
                 </a>
                 <a href="https://www.facebook.com/gettranslatio" target="_blank">
                     <img class="img" src="../../assets/social media (footer)/facebook.svg" alt="">
                 </a>
                 <a href="https://instagram.com/gettranslation" target="_blank">
-                    <img  class="img" src="../../assets/social media (footer)/instagram.svg" alt="">
+                    <img class="img" src="../../assets/social media (footer)/instagram.svg" alt="">
                 </a>
                 <a href="https://linkedin.com/company/gettranslatio" target="_blank">
                     <img class="img" src="../../assets/social media (footer)/linkedin.svg" alt="">
@@ -99,4 +95,4 @@
             </div>
         </div>
     </div>
-</div>    
+</div>

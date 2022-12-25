@@ -1,21 +1,39 @@
 <app-header></app-header>
-<div class="maintext">Google Ads campaigns translations</div>
+<div class="adwords_container">
+    <h1 class="title">{{ 'adwords.title' | translate }}</h1>
+</div>
 
 <app-logo-app></app-logo-app>
-<app-why class="why"></app-why>
-<app-logo-block class="logo_block"></app-logo-block>
-<div class="how_maintext">How it works</div>
-<div class="how_text">
-    <p class="bold">1. Choose languages and markets</p>
-    <p>In which countries and which languages will you advertise your products? Identify the most appropriate market-language combination for your investment, taking into account the customer base and online sales potential.</p>
-    <p class="bold">2. Prepare your Google Ads material for translation</p>
-    <p>Basic mode: send us a simple Word or Excel document containing the campaign to translate or give us access to your AdWord panel by adding a new temporary user. Please do not forget to organize your file in ad groups in order to help our translators understand the campaign structure.</p>
-    <p class="p">Expert mode: download AdWords Editor, the free Google application for managing AdWords campaigns, in order to generate an .aea file. With its clear and friendly interface, it takes about 5 minutes to open your AdWords account in the editor, download the campaign you want to localize, and export the backup in .aea format.</p>
-    <p class="bold">3. Get a quote</p>
-    <p>Get an instant quote <a  [routerLink]="['/quote']" class="link">here</a> or send us the files to translate at <a class="link" href="mailto:hello@gettranslation.io">hello@gettranslation.io.</a></p>
+<app-why></app-why>
+<app-logo-block></app-logo-block>
+
+<div class="how_works_container">
+    <div class="naming_section">
+        <h3 class="how_works_title">{{ 'adwords.how_works_title' | translate }}</h3>
+    </div>
+
+    <div class="how_works_points">
+        <div class="point_content">
+            <p class="point_text">{{ 'adwords.how_works_text1' | translate }}</p>
+            <p class="point_subtext">{{ 'adwords.how_works_subtext1' | translate }}</p>
+        </div>
+        <div class="point_content">
+            <p class="point_text">{{ 'adwords.how_works_text2' | translate }}</p>
+            <p class="point_subtext">{{ 'adwords.how_works_subtext21' | translate }}</p>
+            <p class="point_subtext">{{ 'adwords.how_works_subtext22' | translate }}</p>
+        </div>
+        <div class="point_content">
+            <p class="point_text">{{ 'adwords.how_works_text3' | translate }}</p>
+            <p class="point_subtext">{{ 'adwords.how_works_subtext31' | translate }}
+                <a class="link" [routerLink]="['/quote']">{{ 'adwords.how_works_link' | translate }}</a>
+                {{ 'adwords.how_works_subtext32' | translate }}
+                <a class="link" href="mailto:hello@gettranslation.io">{{ 'adwords.how_works_mail' | translate }}</a>
+            </p>
+        </div>
+    </div>
 </div>
-<app-discover class="discover"></app-discover>
-<app-more class="more"></app-more>
-<app-instant class="instant"></app-instant>
-<app-footer class="footer"></app-footer>
-<div class="space"></div>
+
+<app-discover></app-discover>
+<app-more></app-more>
+<app-instant></app-instant>
+<app-footer></app-footer>
