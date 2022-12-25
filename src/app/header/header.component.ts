@@ -3,6 +3,7 @@ import { FormControl, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { IpInfoAPI } from "../rest/ipinfo/ipapi.service";
 import { CurrencyAPI } from "../rest/currencyinfo/currency.service";
+import { NONE_TYPE } from '@angular/compiler';
 
 @Component({
   selector: 'app-header',
@@ -32,6 +33,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
     this.ipAPI.initIpBasedInfo();
+    //this.currencyAPI.getSupportedCurrencies();
     let route = '';
     this.quote = false;
     this.contact = false;

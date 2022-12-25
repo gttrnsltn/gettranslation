@@ -24,7 +24,7 @@ interface IOrder {
 export class QuotePageComponent implements OnInit {
   @HostBinding('@routingAnimation') private routing: any;
   closeDropdown = false;
-  valueCheckbox: any = "Choose a language...";
+  valueCheckbox: any = "Japanese";
   arrowCheckbox = false;
 
   Order: IOrder[] = [];
@@ -58,10 +58,10 @@ export class QuotePageComponent implements OnInit {
   detail2 = false
   detail3 = false
 
-  word = 1000;
+  word = 250;
   subject = 'General';
-  to = 'German'
-  from = 'English (USA)'
+  to = 'Japanese'
+  from = 'English'
   timezone = "CET";
   currency = "EUR"
   eur_exch_rate: number = 1;
@@ -142,15 +142,19 @@ export class QuotePageComponent implements OnInit {
     }
 
     this.ipAPI.locationData.subscribe((value) => {
-      this.timezone = value.timezone;
-      this.currencyAPI.getEURLiveRates(value.currency);
+      this.timezone = value.timezone
+      console.log("Location load: " + this.currency);
     });
 
-
+    this.currencyAPI.userSelectedCurrency.subscribe((value) =>{
+      this.currency = value;
+      console.log("Footer load: " + this.currency)
+    })
 
   }
 
   submitLoad() {
+    this.currencyAPI.getLiveRates(this.currency)
     this.submitted = false;
     this.loading = true
     window.scrollTo(0, 200)
@@ -443,7 +447,7 @@ onCheckboxChange(e: any) {
   }
 
   if (this.formOrder.value.country.length === 0) {
-    this.valueCheckbox = "Choose a place...";
+    this.valueCheckbox = "Japanese";
   }
   if (this.formOrder.value.country.length === 1) {
     this.valueCheckbox = this.formOrder.value.country[0];

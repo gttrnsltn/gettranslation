@@ -5,7 +5,7 @@
       <div class="popup_content"> 
         <img class="popup_icon" src="./assets/gettrans_icon.svg" />
         <div class="popup_margin">
-          <p class="popup_title">Do you want change lang?</p>
+          <p class="popup_title">Do you want change {{ lang }}?</p>
           <div class="popup_buttons">
             <button (click)="popLangChange()" class="button_change">Switch language</button>
             <button (click)="popLangLeave()" class="button_nochange">No, thanks</button>
@@ -67,10 +67,13 @@
                     <option value="fi">Suomi</option>
                 </select>
             
-                <select class="btn_curr" name="from" id="from">
+                <select class="btn_curr" (click)="changeCurrency()" [(ngModel)]="currency" name="from" id="from">
+                    <option *ngFor="let curr_currency of currency_list;" value="{{ curr_currency }}">{{ curr_currency }}</option>
+                    <!--
                     <option value="Euro (EUR)">Euro (EUR)</option>
                     <option value="US dollar (USD)" selected="selected">Dollar (USD)</option>
                     <option value="Złoty (PLN)">Złoty (PLN)</option>
+                    -->
                 </select>    
             </div>
             
