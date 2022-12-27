@@ -32,6 +32,7 @@ export class IpInfoAPI {
                 let data: LocationData = {
                     countryName: res.country,
                     countryCode: res.country_code,
+                    countryEmoji: res.flag.emoji,
                     lang: res.country_code.toLowerCase(),
                     postalCode: res.postal_code,
                     city: res.city,

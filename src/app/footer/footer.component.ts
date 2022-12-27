@@ -14,11 +14,15 @@ let user_manual_currency = "";
   styleUrls: ['./footer.component.scss']
 })
 export class FooterComponent implements OnInit {
+  // cookies 
+  cookiePopup!: any;
+  
   // langauge
   lang = ""
   lang_prev = ""
   lang_browser = navigator.language.split('-')[0]
-  langDiv!: any
+  langPopup!: any
+  ipBasedLangEmoji!: string;
 
   // currency
   currency = "EUR"
@@ -33,19 +37,18 @@ export class FooterComponent implements OnInit {
 
   ngOnInit(): void {
     // TODO: Validate that language is supported
-    this.langDiv = this.elementRef.nativeElement.querySelector(".popup_container")
+    this.langPopup = this.elementRef.nativeElement.querySelector(".popup_container")
     if (!user_manual_lang) {
       this.ipAPI.locationData.subscribe((value) => {
         this.lang = value.lang
-        console.log(this.currency)
+        this.ipBasedLangEmoji = value.countryEmoji
         if (!user_manual_currency) {
           this.currency = value.currency;
-          console.log(value.currency)
           this.currencyAPI.push_to_user_select(this.currency);
         }
         this.changeLang()
         if (this.lang_browser != this.lang) {
-          this.langDiv.style.display = "block"
+          this.langPopup.style.display = "block"
         }
       });
     } else {
@@ -74,6 +77,9 @@ export class FooterComponent implements OnInit {
       window.scrollTo(0, 0)
       this.translate.use(this.lang)
       user_manual_lang = this.lang
+      if (this.langPopup && this.langPopup.style.display == "block") {
+        this.langPopup.style.display = "none"
+      }
     }
   }
 
@@ -91,17 +97,17 @@ export class FooterComponent implements OnInit {
   popLangChange()
   {
     console.log("Switch lang")
-    if (this.langDiv && this.lang_browser) {
+    if (this.langPopup && this.lang_browser) {
       this.lang = this.lang_browser
       this.changeLang()
-      this.langDiv.style.display = "none"
+      this.langPopup.style.display = "none"
     }
   }
 
   popLangLeave()
   {
-    if (this.langDiv) {
-      this.langDiv.style.display = "none";
+    if (this.langPopup) {
+      this.langPopup.style.display = "none";
     }
   }
 
@@ -109,6 +115,14 @@ export class FooterComponent implements OnInit {
   {
     user_manual_currency = this.currency;
     this.currencyAPI.push_to_user_select(this.currency)
+  }
+
+  cookiePopupClose()
+  {
+    this.cookiePopup = this.elementRef.nativeElement.querySelector(".cookie_container")
+    if (this.cookiePopup.style.display != "none") {
+      this.cookiePopup.style.display = "none"
+    }
   }
 
 }

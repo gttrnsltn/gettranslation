@@ -45,6 +45,10 @@ export class QuotePageComponent implements OnInit {
   delivery = "Auto (Best price)"
   delivery_mod = "Auto (best price)";
 
+  about_price1: string = "0.15";
+  about_price2: string = "0.10";
+  about_price3: string = "0.04";
+
   to_arr = [];
 
   quote = true
@@ -159,10 +163,8 @@ export class QuotePageComponent implements OnInit {
     this.loading = true
     window.scrollTo(0, 200)
     setTimeout(() => {  this.loading = false; this.submit(); }, 1500);
-
-
-
   }
+
   submit() {
     this.currencyAPI.currencyData.subscribe((value) => {
       this.eur_exch_rate = value.euro_exch_rate;
@@ -171,6 +173,11 @@ export class QuotePageComponent implements OnInit {
     this.submitted = true;
     this.btn_text = 'Update prices';
 
+    console.log(+this.about_price1/this.eur_exch_rate)
+    console.log(this.about_price1)
+    this.about_price1 = String((+this.about_price1/this.eur_exch_rate).toFixed(2))
+    this.about_price2 = String((+this.about_price2/this.eur_exch_rate).toFixed(2))
+    this.about_price3 = String((+this.about_price3/this.eur_exch_rate).toFixed(2))
 
     if (this.word < 250) {
       this.word = 250
@@ -184,7 +191,7 @@ export class QuotePageComponent implements OnInit {
 
     this.date1n = Math.round(this.word / 10000 ) - 1;
     this.date2n = Math.round(this.word / 10000 ) - 1;
-    this.date3n = Math.round(this.word / 10000 ) - 1;
+    this.date3n = Math.round(this.word / 10000 ) - 1; 
 
     
     var today = new Date();
@@ -200,7 +207,6 @@ export class QuotePageComponent implements OnInit {
 
  
     
-
     //, { 
     
     //   behavior: 'smooth', // и плавно 
@@ -221,6 +227,7 @@ export class QuotePageComponent implements OnInit {
 
   order(file:any) {
     if (file == 'Premium') {
+      console.log(this.eur_exch_rate)
       this.orderServ.price = '€0,15 / word'
       this.orderServ.delivery = this.date1s
       this.orderServ.total = this.price1
