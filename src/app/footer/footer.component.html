@@ -64,7 +64,7 @@
         <div class="block_btn">
             <div class="btns">
                 <div class="select_container">
-                    <select (click)="changeLang()" [(ngModel)]="lang" class="btn_lang" name="from" id="from">
+                <select (click)="userChangeLang()" [(ngModel)]="lang" class="btn_lang" name="from" id="from">
                         <option value="de">{{ 'footer.de' | translate }}</option>
                         <option value="en" selected="selected">{{ 'footer.en' | translate }}</option>
                         <option value="es">{{ 'footer.es' | translate }}</option>
@@ -83,14 +83,11 @@
                 </div>
 
                 <div class="select_container">
-                    <select class="btn_curr" name="from" id="from">
-                        <option value="Euro (EUR)">{{ 'footer.curr_euro' | translate }}</option>
-                        <option value="US dollar (USD)" selected="selected">{{ 'footer.curr_dollar' | translate }}</option>
-                        <option value="Złoty (PLN)">{{ 'footer.curr_zloty' | translate }}</option>
-                    </select>
+                    <select class="btn_curr" (click)="changeCurrency()" [(ngModel)]="currency" name="from" id="from">
+                      <option *ngFor="let curr_currency of currency_list;" value="{{ curr_currency }}">{{ curr_currency }}</option>
+                  </select>   
                     <img class="arrow_item" src="../../assets/arrow.svg">
                 </div>
-
             </div>
 
             <div class="flex social">
