@@ -190,8 +190,8 @@
                 <div class="date_item">{{ date1s }} {{ timezone }}</div>
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
-                <div class="price_label">{{ price1 }} {{ currency }}</div>
-                <div class="about_label">{{ 'quote.about_label1' | translate }}</div>
+                <div class="price_label">{{ currency }} {{ price1 }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{currency }} {{ about_price1 }} {{ 'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Premium')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
@@ -227,8 +227,8 @@
                 <div class="date_item">{{ date2s }} {{ timezone }}</div>
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
-                <div class="price_label">{{ price2 }} {{ currency }}</div>
-                <div class="about_label">{{ 'quote.about_label2' | translate }}</div>
+                <div class="price_label">{{ currency }} {{ price2 }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ about_price2 }} {{ 'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Professional')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
@@ -259,8 +259,8 @@
                 <div class="date_item">{{ date3s }} {{ timezone }}</div>
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
-                <div class="price_label">{{ price3 }} {{ currency }}</div>
-                <div class="about_label">{{ 'quote.about_label3' | translate }}</div>
+                <div class="price_label">{{ currency }} {{ price3 }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ about_price3 }} {{ 'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Basic')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
