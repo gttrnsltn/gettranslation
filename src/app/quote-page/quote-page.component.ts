@@ -379,18 +379,18 @@ Statistics(file_id: any) {
 
 UploudModOpen() {
   this.upload_mod = true;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 UploudModClose() {
   this.upload_mod = false;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 
 DateModOpen() {
   this.date_mod = true;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 DateModClose() {
@@ -402,7 +402,7 @@ DateModClose() {
   }
 
   this.date_mod = false;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 onKeydown(event: { key: string; preventDefault: () => void; }) {

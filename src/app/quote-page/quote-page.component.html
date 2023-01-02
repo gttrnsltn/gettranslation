@@ -16,14 +16,10 @@
 
 
 <div class="calculate">
-    <!-- <div *ngIf="!submitted" class="block"></div> -->
-    <!-- <div *ngIf="submitted" class="block_res"></div> -->
-    <!-- <div *ngIf="loading" class="block_load"></div> -->
-
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label1' | translate }}</div>
-        <select class="box_item" [(ngModel)]="from" name="from" id="from">
+        <select class="box_item hidden_text" [(ngModel)]="from" name="from" id="from">
             <option *ngFor="let lang of languages_code_list;" value="{{ lang }}">{{ lang }}</option>
         </select>
         <img class="arrow_item" src="../../assets/arrow.svg">
@@ -124,7 +120,7 @@
 
                 <div class="mod_date_select mod_type"
                     [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
-                    <select [(ngModel)]="mod_type" class="mod_date_input" name="type" id="type"
+                    <select [(ngModel)]="mod_type" class="mod_date_input hidden_text" name="type" id="type"
                         [ngClass]="{'date_mod_block1_st2': delivery_mod=='Delivery guaranteed by'}">
                         <option value="EET">{{ 'quote.option_timezone_label1' | translate }}</option>
                         <option value="CET" selected>{{ 'quote.option_timezone_label2' | translate }}</option>
@@ -205,7 +201,6 @@
             </div>
 
             <div class="suggested_card">
-                <img class="tag_image" src="../../assets/quote/Rectangle 60.svg" alt="">
                 <div class="tag_card">{{ 'quote.tag_card' | translate }}</div>
                 <div class="title_card tag_margin">{{ 'quote.card_title2' | translate }}</div>
                 <div class="points_of_card">
@@ -217,9 +212,7 @@
                         <img class="point_img" src="../../assets/quote/quality 1.svg" alt="">
                         <p>{{ 'quote.card_points3' | translate }}</p>
                     </div>
-                    <div class="point_item">
-                        <p></p>
-                    </div>
+                    <div class="point_space"></div>
                 </div>
                 <div class="delivery_label">{{ 'quote.delivery_label' | translate }}</div>
 
@@ -251,6 +244,7 @@
                         <img class="point_img" src="../../assets/quote/user(6) 1.svg" alt="">
                         <p>{{ 'quote.card_points5' | translate }}</p>
                     </div>
+                    <div class="point_space"></div>
                 </div>
 
                 <div class="delivery_label">{{ 'quote.delivery_label' | translate }}</div>
@@ -299,13 +293,13 @@
 </div>
 
 <div *ngIf="quote">
-    <app-why-choouse *ngIf="!submitted" class="why_choose"></app-why-choouse>
-    <app-logo-block class="logo_block"></app-logo-block>
-    <app-our-clients class="our_clients"></app-our-clients>
-    <app-key-benefits class="key_benefits"></app-key-benefits>
-    <app-our-professional class="our_professional"></app-our-professional>
-    <app-embrace class="embrace"></app-embrace>
-    <app-more class="more"></app-more>
+    <app-why-choouse *ngIf="!submitted"></app-why-choouse>
+    <app-logo-block></app-logo-block>
+    <app-our-clients></app-our-clients>
+    <app-key-benefits></app-key-benefits>
+    <app-our-professional></app-our-professional>
+    <app-embrace></app-embrace>
+    <app-more></app-more>
 
     <app-footer></app-footer>
 </div>
