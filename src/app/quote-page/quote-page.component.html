@@ -23,16 +23,39 @@
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label1' | translate }}</div>
+        <div class="to_drop">
+            <div (click)="openDropdownFrom()" id="dropdown" tabindex="1">
+                <label class="selected-item" [(ngModel)]="valueCheckboxFrom" [innerHTML]="valueCheckboxFrom"
+                    id="selected-item"></label>
+                <span id="dropdown-arrow" [style.margin]="!arrowCheckboxFrom ? '20px 24px': '25px 24px'"
+                    [style.transform]="!arrowCheckboxFrom ? 'rotate(45deg)': 'rotate(225deg)'"></span>
+            </div>
+            <form [formGroup]="fromLanguageForm" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdownFrom === false}">
+                <div>
+                    <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search"
+                        placeholder="Search">
+                </div>
+                <div id="dropdown-list">
+                    <label *ngFor="let data of fromLanguageList; let i=index" class="dropdown-item">
+                        <input (change)="onCheckboxChangeFrom($event)" [value]="data.name" type="checkbox" [checked]="data.value"
+                            class="custom-checkbox">
+                        {{data.name}}
+                    </label>
+                </div>
+            </form>
+        </div>
+        <!--
         <select class="box_item" [(ngModel)]="from" name="from" id="from">
             <option *ngFor="let lang of languages_code_list;" value="{{ lang }}">{{ lang }}</option>
         </select>
         <img class="arrow_item" src="../../assets/arrow.svg">
+        -->
     </div>
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label2' | translate }}</div>
         <div class="to_drop">
-            <div (click)="openDropdown()" id="dropdown" tabindex="1">
+            <div (click)="openDropdownTo()" id="dropdown" tabindex="1">
                 <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox"
                     id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'"
@@ -191,7 +214,7 @@
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
                 <div class="price_label">{{ currency }} {{ price1 }}</div>
-                <div class="about_label">{{ 'quote.about_label' | translate }} {{currency }} {{ about_price1 }} {{ 'quote.word_label' | translate }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{currency }} {{ label_price1 }} {{ 'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Premium')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
@@ -228,7 +251,7 @@
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
                 <div class="price_label">{{ currency }} {{ price2 }}</div>
-                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ about_price2 }} {{ 'quote.word_label' | translate }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ label_price2 }} {{ 'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Professional')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
@@ -260,7 +283,7 @@
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
                 <div class="price_label">{{ currency }} {{ price3 }}</div>
-                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ about_price3 }} {{ 'quote.word_label' | translate }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ label_price3 }} {{ 'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Basic')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
@@ -274,6 +297,7 @@
     </div>
     <div (click)="allModalClose()" [ngClass]="{'popup-fade': upload_mod || date_mod }"></div>
     <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdown }"></div>
+    <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdownFrom }"></div>
     <div class="logo_powerblock">
         <p class="logo_label">{{ 'quote.logo_label' | translate }}</p>
         <img alt="logo gettranslation" class="logo_img" src="../../assets/logo_gettrans.svg"/>
