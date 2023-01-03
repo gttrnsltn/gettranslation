@@ -112,14 +112,17 @@ export class HeaderComponent implements OnInit {
   
   onShowMobileMenu(){
     if (this.showMobileMenu === false ) {
-      this.showMobileMenu = true
+      this.showMobileMenu = true;
+      document.body.style.overflow = 'hidden';
     }else {
-      this.showMobileMenu = false
+      this.showMobileMenu = false;
+      document.body.style.overflow = 'unset';
     }
   }
 
   allModalClose() {
-    this.loginModClose()
+    this.loginModClose();
+    this.onShowMobileMenu();
     this.service = false
   }
 

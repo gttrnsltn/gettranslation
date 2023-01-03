@@ -45,9 +45,11 @@
         </li>
     </ul>
 
-    <div class="mobileview_container" [ngClass]="{'mobileview-fade': showMobileMenu === true}">
+    <div (click)="allModalClose()" [ngClass]="{'mobileview-fade': showMobileMenu }"></div>
+
+    <div class="mobileview_container">
         <img (click)="onShowMobileMenu()" class="mobile_menu_icon" src="../../assets/menu-hamburger.svg">
-        <div  class="mobileview_menu" [ngClass]="{'mobileview_animation': showMobileMenu === true}">
+        <div class="mobileview_menu" [ngClass]="{'mobileview_animation': showMobileMenu === true}">
             <ul class="menu_list">
                 <img (click)="onShowMobileMenu()" class="menu_close" src="../../assets/close_black.svg"
                     alt="close menu">
@@ -66,30 +68,40 @@
                     <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
                 </li>
                 <li class="menu_item">
-                    <a (mouseover)="service_hover=true" (mouseout)="service_hover=false" (click)="onServiceMobile()">{{
-                        'header.services' | translate }}
-                        <img [ngClass]="{'service_icon_animation': serviceMobile == true}" class="service_icondown" src="../../assets/Frame 12 (2)_1.svg"
-                            alt="">
+                    <a (click)="onServiceMobile()">{{ 'header.services' | translate }}
+                        <img [ngClass]="{'service_icon_animation': serviceMobile == true}" class="service_icondown"
+                            src="../../assets/Frame 12 (2)_1.svg" alt="">
                     </a>
+                    <ul class="mobile_service_menu" *ngIf="serviceMobile">
+                        <li class="service_menu">
+                            <a class="service_item" (click)="onService()" [routerLink]="['/website-localization']">{{
+                                'header.service_item1' | translate }}</a>
+                            <a class="service_item" (click)="onService()"
+                                [routerLink]="['/web-software-localization']">{{ 'header.service_item2' | translate
+                                }}</a>
+                            <a class="service_item" (click)="onService()"
+                                [routerLink]="['/custom-localization-solutions']">{{ 'header.service_item3' | translate
+                                }}</a>
+                            <a class="service_item" (click)="onService()" [routerLink]="['/adwords-localization']">{{
+                                'header.service_item4' | translate }}</a>
+                            <a class="service_item" (click)="onService()"
+                                [routerLink]="['/multilingual-dtp-services']">{{ 'header.service_item5' | translate
+                                }}</a>
+                            <a class="service_item" (click)="onService()"
+                                [routerLink]="['/multilingual-chatbot-services']">{{ 'header.service_item6' | translate
+                                }}</a>
+                            <a class="service_item" (click)="onService()"
+                                [routerLink]="['/transcription-subtitle-translation']">{{ 'header.service_item7' |
+                                translate }}</a>
+                            <a class="service_item" (click)="onService()"
+                                [routerLink]="['/sworn-certified-official-translation']">{{ 'header.service_item8' |
+                                translate }}</a>
+                            <a class="service_item" (click)="onService()" [routerLink]="['/urgent-translations']">{{
+                                'header.service_item9' | translate }}</a>
+                        </li>
+                    </ul>
                 </li>
-                <div class="mobile_service_menu" *ngIf="serviceMobile">
-                    <li class="service_menu">
-                        <a class="service_item" (click)="onService()" [routerLink]="['/website-localization']">{{ 'header.service_item1' | translate }}</a>
-                        <a class="service_item" (click)="onService()"
-                            [routerLink]="['/web-software-localization']">{{ 'header.service_item2' | translate }}</a>
-                        <a class="service_item" (click)="onService()" [routerLink]="['/custom-localization-solutions']">{{ 'header.service_item3' | translate }}</a>
-                        <a class="service_item" (click)="onService()" [routerLink]="['/adwords-localization']">{{ 'header.service_item4' | translate }}</a>
-                        <a class="service_item" (click)="onService()"
-                            [routerLink]="['/multilingual-dtp-services']">{{ 'header.service_item5' | translate }}</a>
-                        <a class="service_item" (click)="onService()"
-                            [routerLink]="['/multilingual-chatbot-services']">{{ 'header.service_item6' | translate }}</a>
-                        <a class="service_item" (click)="onService()"
-                            [routerLink]="['/transcription-subtitle-translation']">{{ 'header.service_item7' | translate }}</a>
-                        <a class="service_item" (click)="onService()"
-                            [routerLink]="['/sworn-certified-official-translation']">{{ 'header.service_item8' | translate }}</a>
-                        <a class="service_item" (click)="onService()" [routerLink]="['/urgent-translations']">{{ 'header.service_item9' | translate }}</a>
-                    </li>
-                </div>
+
                 <div class="buttons_menu">
                     <a [routerLink]="['/contact']" class="btn_contact">{{ 'header.contact' | translate }}</a>
                     <a [routerLink]="['/quote']" class="btn_instant">{{ 'header.instant' | translate }}</a>
@@ -194,7 +206,6 @@
         <img class="img6" src="../../assets/menu/Group 259.svg" alt="">
         <div class="text6">{{ 'header.service_item6' | translate }}</div>
     </a>
-
 
     <a (click)="onService()" [routerLink]="['/transcription-subtitle-translation']">
         <img class="img7" src="../../assets/menu/icon (11).svg" alt="">

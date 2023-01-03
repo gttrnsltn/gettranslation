@@ -377,12 +377,11 @@ select {
     display: flex;
     align-items: center;
     border-left: 1px solid #D4D6F3;
-    ;
     height: 30px;
     position: absolute;
-    right: 0;
+    right: 24px;
     bottom: 35%;
-    padding: 0 48px 0 15px;
+    padding: 0 22px 0 15px;
 
     @include tablet-landscape-down {
         padding: 0 34px 0 8px;
@@ -655,6 +654,7 @@ select {
     }
 }
 
+
 .suggested_card {
     position: relative;
     display: flex;
@@ -926,6 +926,9 @@ select {
     color: #FFFFFF;
     border: none;
 }
+.submit_order:hover{
+    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
+}
 
 .moredetails_item {
     display: flex;
@@ -978,10 +981,13 @@ select {
 }
 
 .white {
+    margin: 3px 0 0 0px;
     background-color: #FFFFFF;
-    border: none;
-    border-radius: 12px;
+    border-radius: 6px;
     color: #4247E5;
+}
+.white:hover{
+    box-shadow: unset !important;
 }
 
 //helper Liza
