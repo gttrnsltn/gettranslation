@@ -251,15 +251,6 @@ select:focus {
     outline: none;
 }
 
-@media (max-width: 430px) {
-    * { 
-        max-width: 327px;
-        margin: 0 auto;
-        display: none;
-    }
-}
-
-@import '../../responsive.scss';
 
 //Cookies and switch language
 .cookie_container{
@@ -451,18 +442,3 @@ select:focus {
     border: none;
     background-color: transparent;
 }
-
-// @media (min-width: 374px) {
-//     * {
-//         padding-left: 24px;
-//         padding-right: 24px;
-//         width: 100%;
-//     }
-// }
-
-// @media mobile (max-width: 430px) {
-//     * {
-//         max-width: 327px;
-//         margin: 0 auto;
-//     }
-// }

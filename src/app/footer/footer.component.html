@@ -1,81 +1,96 @@
 <div class="footer">
-    <!-- Language popup -->
-    <div class="popup_container" style="display:none">
-      <img class="popup_close" src="./assets/close.svg" alt="close icon">
-      <div class="popup_content"> 
-        <img class="popup_icon" src="./assets/gettrans_icon.svg" />
-        <div class="popup_margin">
-          <div *ngIf="ipBasedLangEmoji">
-            <p class="popup_title">Do you want change from {{ ipBasedLangEmoji }}?</p>
-          </div>
-          <div *ngIf="!ipBasedLangEmoji">
-            <p class="popup_title">Do you want change to browerser default language?</p>
-          </div>
-          <div class="popup_buttons">
-            <button (click)="popLangChange()" class="button_change">Switch language</button>
-            <button (click)="popLangLeave()" class="button_nochange">No, thanks</button>
+      <!-- Language popup -->
+      <div class="popup_container" style="display:none">
+        <img class="popup_close" src="./assets/close.svg" alt="close icon">
+        <div class="popup_content"> 
+          <img class="popup_icon" src="./assets/gettrans_icon.svg" />
+          <div class="popup_margin">
+            <div *ngIf="ipBasedLangEmoji">
+              <p class="popup_title">Do you want change from {{ ipBasedLangEmoji }}?</p>
+            </div>
+            <div *ngIf="!ipBasedLangEmoji">
+              <p class="popup_title">Do you want change to browerser default language?</p>
+            </div>
+            <div class="popup_buttons">
+              <button (click)="popLangChange()" class="button_change">Switch language</button>
+              <button (click)="popLangLeave()" class="button_nochange">No, thanks</button>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <!-- Cookie banner -->
-    <div class="cookie_container">
-      <div class="cookie_body">
-        <div class="cookie_content">
-          <p class="cookie_descr">We use cookies to enhance your experience. By continuing to visit this site you agree to
-            our use of cookies.</p>
-          <a class="coookie_learn_more" href="/privacy">Learn more</a>
+      <!-- Cookie banner -->
+      <div class="cookie_container">
+        <div class="cookie_body">
+          <div class="cookie_content">
+            <p class="cookie_descr">We use cookies to enhance your experience. By continuing to visit this site you agree to
+              our use of cookies.</p>
+            <a class="coookie_learn_more" href="/privacy">Learn more</a>
+          </div>
+            <img class="cookie_close" (click)="cookiePopupClose()" src="./assets/close_white.svg" alt="close icon">
         </div>
-          <img class="cookie_close" (click)="cookiePopupClose()" src="./assets/close_white.svg" alt="close icon">
+        <div class="buttons_mobile_view">
+          <a class="button_learn" href="/privacy">Learn more</a>
+          <button (click)="cookiePopupClose()" class="button_close">Close</button>
+        </div>
       </div>
-      <div class="buttons_mobile_view">
-        <a class="button_learn" href="/privacy">Learn more</a>
-        <button (click)="cookiePopupClose()" class="button_close">Close</button>
-      </div>
-    </div>
-    <div class="flex">
-        <img class="logo" src="../../assets/social media (footer)/android-chrome-512x512.png" alt="">
-        <div class="block">
-            <div class="text">We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.</div>
-            <div class="right">© Gettranslation · VAT EE102173754</div>        
+  
+    <div class="footer_container">
+        <div class="footer_flex">
+            <div class="footer_info_block">
+                <img class="logo" src="../../assets/social media (footer)/android-chrome-512x512.png" alt="">
+                <div class="block">
+                    <p class="footer_text">{{ 'footer.footer_text' | translate }}</p>
+                    <p class="footer_note">{{ 'footer.footer_note' | translate }}</p>
+                </div>
+            </div>
+            <div class="footer_pages_container">
+                <div class="footer_pages">
+                    <a [routerLink]="['/enterprises']" class="page_item">{{ 'footer.menu_item1' | translate }}</a>
+                    <a [routerLink]="['/developers']" class="page_item">{{ 'footer.menu_item2' | translate }}</a>
+                    <a [routerLink]="['/translators']" class="page_item">{{ 'footer.menu_item3' | translate }}</a>
+                    <a [routerLink]="['/сase-studies']" class="page_item">{{ 'footer.menu_item4' | translate }}</a>
+                    <a [routerLink]="['/quote']" class="page_item">{{ 'footer.menu_item5' | translate }}</a>
+                </div>
+                <div class="footer_pages">
+                    <a [routerLink]="['/about']" class="page_item">{{ 'footer.menu_item6' | translate }}</a>
+                    <a [routerLink]="['/contact']" class="page_item">{{ 'footer.menu_item7' | translate }}</a>
+                    <a [routerLink]="['/terms']" class="page_item">{{ 'footer.menu_item8' | translate }}</a>
+                    <a [routerLink]="['/privacy']" class="page_item">{{ 'footer.menu_item9' | translate }}</a>
+                    <a [routerLink]="['/faq']" class="page_item">{{ 'footer.menu_item10' | translate }}</a>
+                </div>
+            </div>
         </div>
-        <div class="flex-column">
-            <a [routerLink]="['/enterprises']" class="menu">Enterprises</a>
-            <a [routerLink]="['/developers']" class="menu">Developers</a>
-            <a [routerLink]="['/translators']" class="menu">Translators</a>
-            <a [routerLink]="['/сase-studies']" class="menu">Case studies</a>
-            <a [routerLink]="['/quote']" class="menu">Quote</a>        
-        </div>
-        <div class="flex-column">
-            <a [routerLink]="['/about']" class="menu">About us</a>
-            <a [routerLink]="['/contact']" class="menu">Contact us</a>
-            <a [routerLink]="['/terms']" class="menu">Terms of sale</a>
-            <a [routerLink]="['/privacy']" class="menu">Privacy</a>
-            <a [routerLink]="['/faq']" class="menu">FAQ</a>
-        </div>
-
 
         <div class="block_btn">
             <div class="btns">
-                <select (click)="userChangeLang()" [(ngModel)]="lang" class="btn_lang" name="from" id="from">
-                    <option value="de">Deutsch</option>
-                    <option value="en" selected="selected">English</option>
-                    <option value="es">Español</option>
-                    <option value="fr">Français</option>
-                    <option value="nl">Nederlands</option>
-                    <option value="pl">Polski</option>
-                    <option value="ru">Русский</option>
-                    <option value="sv">Svenska</option>
-                    <option value="tr">Türkçe</option>
-                    <option value="ko">한국어</option>
-                    <option value="no">Norsk</option>
-                    <option value="da">Dansk</option>
-                    <option value="fi">Suomi</option>
-                </select>
-            
-                <select class="btn_curr" (click)="changeCurrency()" [(ngModel)]="currency" name="from" id="from">
-                    <option *ngFor="let curr_currency of currency_list;" value="{{ curr_currency }}">{{ curr_currency }}</option>
-                </select>    
+                <div class="select_container">
+                    <select (click)="changeLang()" [(ngModel)]="lang" class="btn_lang" name="from" id="from">
+                        <option value="de">{{ 'footer.de' | translate }}</option>
+                        <option value="en" selected="selected">{{ 'footer.en' | translate }}</option>
+                        <option value="es">{{ 'footer.es' | translate }}</option>
+                        <option value="fr">{{ 'footer.fr' | translate }}</option>
+                        <option value="nl">{{ 'footer.nl' | translate }}</option>
+                        <option value="pl">{{ 'footer.pl' | translate }}</option>
+                        <option value="ru">{{ 'footer.ru' | translate }}</option>
+                        <option value="sv">{{ 'footer.sv' | translate }}</option>
+                        <option value="tr">{{ 'footer.tr' | translate }}</option>
+                        <option value="ko">{{ 'footer.ko' | translate }}</option>
+                        <option value="no">{{ 'footer.no' | translate }}</option>
+                        <option value="da">{{ 'footer.da' | translate }}</option>
+                        <option value="fi">{{ 'footer.fi' | translate }}</option>
+                    </select>
+                    <img class="arrow_item" src="../../assets/arrow.svg">
+                </div>
+
+                <div class="select_container">
+                    <select class="btn_curr" name="from" id="from">
+                        <option value="Euro (EUR)">{{ 'footer.curr_euro' | translate }}</option>
+                        <option value="US dollar (USD)" selected="selected">{{ 'footer.curr_dollar' | translate }}</option>
+                        <option value="Złoty (PLN)">{{ 'footer.curr_zloty' | translate }}</option>
+                    </select>
+                    <img class="arrow_item" src="../../assets/arrow.svg">
+                </div>
+
             </div>
 
             <div class="flex social">
