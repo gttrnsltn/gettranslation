@@ -5,7 +5,18 @@
         "translators": "Translators",
         "services": "Services",
         "contact": "Contact us",
-        "instant": "Instant quote"
+        "instant": "Instant quote",
+        "login": "Login",
+
+        "service_item1": "Website Localization",
+        "service_item2": "Software Localization",
+        "service_item3": " Custom Localization Solutions ",
+        "service_item4": "Google Ads Translation",
+        "service_item5": "Multilingual DTP",
+        "service_item6": "Multilingual Chatbots",
+        "service_item7": "Video Subtitling",
+        "service_item8": "Official Translations",
+        "service_item9": "Urgent Translations"
     },
     "cookies": {
         "description": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
@@ -393,6 +404,5 @@
         "no": "Norsk",
         "da": "Dansk",
         "fi": "Suomi"
-
     }
 }
