@@ -392,11 +392,7 @@
         "ko": "한국어",
         "no": "Norsk",
         "da": "Dansk",
-        "fi": "Suomi",
-
-        "curr_euro": "Euro (EUR)",
-        "curr_dollar": "Dollar (USD)",
-        "curr_zloty": "Złoty (PLN)"
+        "fi": "Suomi"
 
     }
 }

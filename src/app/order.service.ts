@@ -19,6 +19,7 @@ export class OrderService {
   service!: string;
   price!: string;
   delivery!: string | null;
+  currency!: string;
   total!: number;
   to_arr = [];
 

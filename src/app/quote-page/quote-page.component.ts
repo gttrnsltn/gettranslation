@@ -1,5 +1,5 @@
 import { DatePipe } from '@angular/common';
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit, ElementRef } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import { Meta, Title } from '@angular/platform-browser';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -23,9 +23,20 @@ interface IOrder {
 })
 export class QuotePageComponent implements OnInit {
   @HostBinding('@routingAnimation') private routing: any;
+
+  // to language
+  to = 'Japanese'
   closeDropdown = false;
   valueCheckbox: any = "Japanese";
   arrowCheckbox = false;
+
+  // from language
+  from = 'English (USA)'
+  closeDropdownFrom = false;
+  valueCheckboxFrom: any = "English (USA)"
+  arrowCheckboxFrom = false;
+  fromLanguageForm!: FormGroup;
+  fromLanguageList: IOrder[] = [];
 
   Order: IOrder[] = [];
 
@@ -45,9 +56,13 @@ export class QuotePageComponent implements OnInit {
   delivery = "Auto (Best price)"
   delivery_mod = "Auto (best price)";
 
-  about_price1: string = "0.15";
-  about_price2: string = "0.10";
-  about_price3: string = "0.04";
+  about_price1: number = 0.15;
+  about_price2: number = 0.10;
+  about_price3: number = 0.04;
+
+  label_price1: string = "0.15"
+  label_price2: string = "0.10"
+  label_price3: string = "0.04"
 
   to_arr = [];
 
@@ -64,8 +79,6 @@ export class QuotePageComponent implements OnInit {
 
   word = 250;
   subject = 'General';
-  to = 'Japanese'
-  from = 'English'
   timezone = "CET";
   currency = "EUR"
   eur_exch_rate: number = 1;
@@ -102,22 +115,30 @@ export class QuotePageComponent implements OnInit {
     private activeRoute: ActivatedRoute,
     private fb: FormBuilder,
     private ipAPI: IpInfoAPI,
-    private currencyAPI: CurrencyAPI
+    private currencyAPI: CurrencyAPI,
+    private elementRef: ElementRef
   ) { 
     this.fileString;
 
     this.formOrder = this.fb.group({
       country: this.fb.array([])
     });
+
+    this.fromLanguageForm = this.fb.group({
+      language: this.fb.array([])
+    })
   }
 
   ngOnInit(): void {
     //Получение списка значений языка
     this.orderServ.getAll().subscribe((value : any) => {
-      console.log(value)
       this.languages_code_list = Object.values(value.languages)
       this.specializations_code_list = Object.values(value.specializations)
+      this.languages_code_list.forEach(element => {
+        this.fromLanguageList.push({name: element, value: false})
+      })
     });
+
 
     this.titleService.setTitle("Professional translations in a few clicks");  
    
@@ -173,11 +194,9 @@ export class QuotePageComponent implements OnInit {
     this.submitted = true;
     this.btn_text = 'Update prices';
 
-    console.log(+this.about_price1/this.eur_exch_rate)
-    console.log(this.about_price1)
-    this.about_price1 = String((+this.about_price1/this.eur_exch_rate).toFixed(2))
-    this.about_price2 = String((+this.about_price2/this.eur_exch_rate).toFixed(2))
-    this.about_price3 = String((+this.about_price3/this.eur_exch_rate).toFixed(2))
+    this.label_price1 = String((this.about_price1/this.eur_exch_rate).toFixed(2))
+    this.label_price2 = String((this.about_price2/this.eur_exch_rate).toFixed(2))
+    this.label_price3 = String((this.about_price3/this.eur_exch_rate).toFixed(2))
 
     if (this.word < 250) {
       this.word = 250
@@ -228,17 +247,17 @@ export class QuotePageComponent implements OnInit {
   order(file:any) {
     if (file == 'Premium') {
       console.log(this.eur_exch_rate)
-      this.orderServ.price = '€0,15 / word'
+      this.orderServ.price = this.currency + " " + this.label_price1 + " / word"
       this.orderServ.delivery = this.date1s
       this.orderServ.total = this.price1
     }
     else if (file == 'Professional') {
-      this.orderServ.price = '€0,10 / word'
+      this.orderServ.price = this.currency + " " + this.label_price2 + " / word"
       this.orderServ.delivery = this.date2s
       this.orderServ.total = this.price2
     }
     else if (file == 'Basic') {
-      this.orderServ.price = '€0,04 / word'
+      this.orderServ.price = this.currency + " " + this.label_price3 + " / word"
       this.orderServ.delivery = this.date3s
       this.orderServ.total = this.price3
     }
@@ -247,6 +266,7 @@ export class QuotePageComponent implements OnInit {
     this.orderServ.subject = this.subject
     this.orderServ.from = this.from
     this.orderServ.to = this.to
+    this.orderServ.currency = this.currency;
 
 
     this.orderServ.to_arr = this.to_arr;
@@ -379,18 +399,18 @@ Statistics(file_id: any) {
 
 UploudModOpen() {
   this.upload_mod = true;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 UploudModClose() {
   this.upload_mod = false;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 
 DateModOpen() {
   this.date_mod = true;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 DateModClose() {
@@ -402,7 +422,7 @@ DateModClose() {
   }
 
   this.date_mod = false;
-  window.scrollTo(0, 100)
+  //window.scrollTo(0, 100)
 }
 
 onKeydown(event: { key: string; preventDefault: () => void; }) {
@@ -433,6 +453,8 @@ allModalClose() {
   this.UploudModClose();
   this.closeDropdown = false;
   this.arrowCheckbox = false;
+  this.closeDropdownFrom = false;
+  this.arrowCheckboxFrom = false;
 }
 
 
@@ -466,6 +488,40 @@ onCheckboxChange(e: any) {
   this.to_arr = country.value
 }
 
+// dropdown from 
+onCheckboxChangeFrom(e: any) {
+  const languages: FormArray = this.fromLanguageForm.get('language') as FormArray
+  console.log(e.target.checked)
+  if (e.target.checked) {
+    for (var lang of this.fromLanguageList) {
+      if (lang.name == this.from) {
+        console.log("Found previous lange: " + lang.name)
+        lang.value = false
+      }
+    }
+    this.from = e.target.value
+    this.valueCheckboxFrom = this.from
+    languages.push(new FormControl(this.from))
+  } else {
+    let i: number = 0;
+    languages.controls.forEach((item: any) => {
+      if (item.value == e.target.value) {
+        languages.removeAt(i);
+        return;
+      }
+      i++;
+    });
+  }
+
+  console.log("Language from array size: " + this.fromLanguageForm.value.language.length)
+  console.log("Language instance array size: " + languages.length)
+
+  if (this.fromLanguageForm.value.language.length == 0) {
+    this.valueCheckboxFrom = "English (USA)"
+  }
+
+}
+
 
 onSearchInputChange(event: any) {
   if (event.target.value != "") {
@@ -478,7 +534,7 @@ onSearchInputChange(event: any) {
   }
 }
 
-openDropdown() {
+openDropdownTo() {
   if (this.closeDropdown === false) {
     this.closeDropdown = true;
     this.arrowCheckbox = true;
@@ -489,5 +545,14 @@ openDropdown() {
   }
 }
 
+openDropdownFrom() {
+  if (this.closeDropdownFrom === false) {
+    this.closeDropdownFrom = true;
+    this.arrowCheckboxFrom = true;
+  } else {
+    this.closeDropdownFrom = false;
+    this.arrowCheckboxFrom = false;
+  }
+}
 
 }

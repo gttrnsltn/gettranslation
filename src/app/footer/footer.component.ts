@@ -36,24 +36,26 @@ export class FooterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    // TODO: Validate that language is supported
     this.langPopup = this.elementRef.nativeElement.querySelector(".popup_container")
-    if (!user_manual_lang) {
-      this.ipAPI.locationData.subscribe((value) => {
+    this.ipAPI.locationData.subscribe((value) => {
+      // lang autodetect or set user option
+      if (!user_manual_lang) {
+        // TODO: Validate that language from location API is supported
         this.lang = value.lang
         this.ipBasedLangEmoji = value.countryEmoji
-        if (!user_manual_currency) {
-          this.currency = value.currency;
-          this.currencyAPI.push_to_user_select(this.currency);
-        }
-        this.changeLang()
         if (this.lang_browser != this.lang) {
           this.langPopup.style.display = "block"
         }
-      });
-    } else {
-      this.lang = user_manual_lang
-    }
+      } else {
+        this.lang = user_manual_lang
+      }
+      this.changeLang()
+      // currency autodetect
+      if (!user_manual_currency && this.currency_list.indexOf(value.currency) != -1) {
+        this.currency = value.currency;
+        this.currencyAPI.push_to_user_select(this.currency);
+      }
+    });
     this.currencyAPI.supportedCurrencies.subscribe((value) => {
       if (this.currency_list.length == 1) {
         for (var i = 0; i < value.length; ++i) {
