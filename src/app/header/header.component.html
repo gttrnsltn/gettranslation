@@ -1,10 +1,12 @@
-
 <nav class="header">
-    <img (click)="onRoute()" [routerLink]="['/']" class="logo" src="../../assets/logo/Group 128.svg" alt="">
-    
+    <div (click)="onRoute()" [routerLink]="['/']" class="logo_container">
+        <img src="../../assets/gettrans_icon.svg" alt="Logo icon">
+        <img class="logo_name" src="../../assets/gettrans_name.svg" alt="Logo name">
+    </div>
+
     <ul [ngClass]="{'links_quote': quote == true || contact == true}" class="links">
         <li>
-            <a  [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
+            <a [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
         </li>
         <li>
             <a (click)="onRoute()" [routerLink]="['/developers']">{{ 'header.developers' | translate }}</a>
@@ -13,13 +15,16 @@
             <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
         </li>
         <li>
-            <a (mouseover)="service_hover=true" (mouseout)="service_hover=false" [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
+            <a (mouseover)="service_hover=true" (mouseout)="service_hover=false"
+                [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
                 <img *ngIf="service" class="serviceActive" src="../../assets/menu/Frame 12 (1).svg" alt="">
-                <img *ngIf="!service && !service_hover" class="serviceStandart" src="../../assets/Frame 12 (2)_1.svg" alt="">
-                <img *ngIf="!service && service_hover" class="serviceStandart" src="../../assets/Frame 12 (2).svg" alt="">
+                <img *ngIf="!service && !service_hover" class="serviceStandart" src="../../assets/Frame 12 (2)_1.svg"
+                    alt="">
+                <img *ngIf="!service && service_hover" class="serviceStandart" src="../../assets/Frame 12 (2).svg"
+                    alt="">
             </a>
         </li>
-       
+
     </ul>
 
     <div (click)="onRoute()" [ngClass]="{'user_quote': quote == true || contact == true}" class="user">
@@ -31,19 +36,82 @@
 
     <ul class="buttons">
         <li *ngIf="contact == false">
-            <button (click)="onRoute()" class="btn1" [routerLink]="['/contact']">{{ 'header.contact' | translate }}</button>
+            <button (click)="onRoute()" class="btn1" [routerLink]="['/contact']">{{ 'header.contact' | translate
+                }}</button>
         </li>
         <li *ngIf="quote == false">
-            <button (click)="onRoute()" [ngClass]="{'btn1_contact': contact == true}" class="btn2 bg_blue" [routerLink]="['/quote']">{{ 'header.instant' | translate }}</button>
+            <button (click)="onRoute()" [ngClass]="{'btn1_contact': contact == true}" class="btn2 bg_blue"
+                [routerLink]="['/quote']">{{ 'header.instant' | translate }}</button>
         </li>
     </ul>
+
+    <div class="mobileview_container" [ngClass]="{'mobileview-fade': showMobileMenu === true}">
+        <img (click)="onShowMobileMenu()" class="mobile_menu_icon" src="../../assets/menu-hamburger.svg">
+        <div  class="mobileview_menu" [ngClass]="{'mobileview_animation': showMobileMenu === true}">
+            <ul class="menu_list">
+                <img (click)="onShowMobileMenu()" class="menu_close" src="../../assets/close_black.svg"
+                    alt="close menu">
+
+                <div (click)="onRoute()" class="menu_login">
+                    <a (click)="onLoginMod()">{{ 'header.login' | translate }}</a>
+                </div>
+
+                <li class="menu_item">
+                    <a [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
+                </li>
+                <li class="menu_item">
+                    <a (click)="onRoute()" [routerLink]="['/developers']">{{ 'header.developers' | translate }}</a>
+                </li>
+                <li class="menu_item">
+                    <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
+                </li>
+                <li class="menu_item">
+                    <a (mouseover)="service_hover=true" (mouseout)="service_hover=false" (click)="onServiceMobile()">{{
+                        'header.services' | translate }}
+                        <img [ngClass]="{'service_icon_animation': serviceMobile == true}" class="service_icondown" src="../../assets/Frame 12 (2)_1.svg"
+                            alt="">
+                    </a>
+                </li>
+                <div class="mobile_service_menu" *ngIf="serviceMobile">
+                    <li class="service_menu">
+                        <a class="service_item" (click)="onService()" [routerLink]="['/website-localization']">{{ 'header.service_item1' | translate }}</a>
+                        <a class="service_item" (click)="onService()"
+                            [routerLink]="['/web-software-localization']">{{ 'header.service_item2' | translate }}</a>
+                        <a class="service_item" (click)="onService()" [routerLink]="['/custom-localization-solutions']">{{ 'header.service_item3' | translate }}</a>
+                        <a class="service_item" (click)="onService()" [routerLink]="['/adwords-localization']">{{ 'header.service_item4' | translate }}</a>
+                        <a class="service_item" (click)="onService()"
+                            [routerLink]="['/multilingual-dtp-services']">{{ 'header.service_item5' | translate }}</a>
+                        <a class="service_item" (click)="onService()"
+                            [routerLink]="['/multilingual-chatbot-services']">{{ 'header.service_item6' | translate }}</a>
+                        <a class="service_item" (click)="onService()"
+                            [routerLink]="['/transcription-subtitle-translation']">{{ 'header.service_item7' | translate }}</a>
+                        <a class="service_item" (click)="onService()"
+                            [routerLink]="['/sworn-certified-official-translation']">{{ 'header.service_item8' | translate }}</a>
+                        <a class="service_item" (click)="onService()" [routerLink]="['/urgent-translations']">{{ 'header.service_item9' | translate }}</a>
+                    </li>
+                </div>
+                <div class="buttons_menu">
+                    <a [routerLink]="['/contact']" class="btn_contact">{{ 'header.contact' | translate }}</a>
+                    <a [routerLink]="['/quote']" class="btn_instant">{{ 'header.instant' | translate }}</a>
+                </div>
+            </ul>
+            <div class="menu_footer">
+                <img class="logo" src="../../assets/social media (footer)/android-chrome-512x512.png" alt="">
+                <div class="block">
+                    <p class="footer_text">{{ 'footer.footer_text' | translate }}</p>
+                    <p class="footer_note">{{ 'footer.footer_note' | translate }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
 </nav>
 
 <div *ngIf="login_mod" class="login_mod">
     <a (click)="loginModClose()">
         <img class="login_mod_close" src="../../assets/close.svg" alt="">
     </a>
- 
+
     <div class="login_mod_text">Client Sign in</div>
 
     <a class="login_btn1">Client</a>
@@ -51,13 +119,15 @@
         Translator
     </a>
     <a>
-    <img href="https://app.gettranslation.io/en/sign-in" target="_blank" class="redirect2" src="../../assets/redirect.svg" alt="">
+        <img href="https://app.gettranslation.io/en/sign-in" target="_blank" class="redirect2"
+            src="../../assets/redirect.svg" alt="">
     </a>
     <a href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="login_btn3">
         Employee
     </a>
     <a>
-        <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect3" src="../../assets/redirect.svg" alt="">
+        <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect3"
+            src="../../assets/redirect.svg" alt="">
     </a>
 
     <div class="line1"></div>
@@ -66,8 +136,8 @@
 
 
     <div class="label1">E-mail address</div>
-    <input [formControl]="email"  placeholder="example@domain.com" class="input1"  id="email" required>
-    <div *ngIf="email.errors &&(email.touched || email.dirty)" class ="text-error">
+    <input [formControl]="email" placeholder="example@domain.com" class="input1" id="email" required>
+    <div *ngIf="email.errors &&(email.touched || email.dirty)" class="text-error">
         <div class="valid_error">
             E-mail entered incorrectly
         </div>
@@ -76,15 +146,15 @@
         <div class="valid_normal">E-mail entered correctly</div>
     </div>
 
-   
-    
+
+
     <div class="label2">Password</div>
     <input id="password" class="input2" type="password">
     <img (click)="showPassword()" class="eye" src="../../assets/Frame 11.svg" alt="">
 
     <a class="forgot" href="">Forgot username or password?</a>
 
-    <button type="submit"  class="login_mod_done">Log in to continue</button>
+    <button type="submit" class="login_mod_done">Log in to continue</button>
 </div>
 
 <div (click)="allModalClose()" [ngClass]="{'popup-fade': login_mod, 'popup': service}"></div>
@@ -98,51 +168,44 @@
     <div class="menu_line2"></div>
     <div class="menu_line3"></div>
     <div class="menu_line4"></div>
-    
+
     <a (click)="onService()" [routerLink]="['/website-localization']">
         <img class="img1" src="../../assets/menu/icon (5).svg" alt="">
-        <div class="text1">Website Localization</div>
+        <div class="text1">{{ 'header.service_item1' | translate }}</div>
     </a>
     <a (click)="onService()" [routerLink]="['/web-software-localization']">
         <img class="img2" src="../../assets/menu/icon (6).svg" alt="">
-        <div class="text2">Software Localization</div>  
+        <div class="text2">{{ 'header.service_item2' | translate }}</div>
     </a>
     <a (click)="onService()" [routerLink]="['/custom-localization-solutions']">
         <img class="img3" src="../../assets/menu/icon (7).svg" alt="">
-        <div class="text3">Custom Localization Solutions</div>
+        <div class="text3">{{ 'header.service_item3' | translate }}</div>
     </a>
-    
+
     <a (click)="onService()" [routerLink]="['/adwords-localization']">
         <img class="img4" src="../../assets/menu/icon (8).svg" alt="">
-        <div class="text4">Google Ads Translation</div>
+        <div class="text4">{{ 'header.service_item4' | translate }}</div>
     </a>
     <a (click)="onService()" [routerLink]="['/multilingual-dtp-services']">
         <img class="img5" src="../../assets/menu/icon (9).svg" alt="">
-        <div class="text5">Multilingual DTP</div>
+        <div class="text5">{{ 'header.service_item5' | translate }}</div>
     </a>
     <a (click)="onService()" [routerLink]="['/multilingual-chatbot-services']">
         <img class="img6" src="../../assets/menu/Group 259.svg" alt="">
-        <div class="text6">Multilingual Chatbots</div>
+        <div class="text6">{{ 'header.service_item6' | translate }}</div>
     </a>
-    
-    
+
+
     <a (click)="onService()" [routerLink]="['/transcription-subtitle-translation']">
         <img class="img7" src="../../assets/menu/icon (11).svg" alt="">
-        <div class="text7">Video Subtitling</div>
+        <div class="text7">{{ 'header.service_item7' | translate }}</div>
     </a>
     <a (click)="onService()" [routerLink]="['/sworn-certified-official-translation']">
         <img class="img8" src="../../assets/menu/icon (12).svg" alt="">
-        <div class="text8">Official Translations</div>
+        <div class="text8">{{ 'header.service_item8' | translate }}</div>
     </a>
     <a (click)="onService()" [routerLink]="['/urgent-translations']">
         <img class="img9" src="../../assets/menu/icon (13).svg" alt="">
-        <div class="text9">Urgent Translations</div>
+        <div class="text9">{{ 'header.service_item9' | translate }}</div>
     </a>
 </div>
-
-
-
-
-
-
-

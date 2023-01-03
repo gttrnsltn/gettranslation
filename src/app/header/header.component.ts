@@ -18,6 +18,8 @@ export class HeaderComponent implements OnInit {
   contact = false;
   login_mod = false;
   service = false;
+  showMobileMenu = false;
+  serviceMobile = false;
 
 
   email= new FormControl('',[
@@ -98,6 +100,22 @@ export class HeaderComponent implements OnInit {
       this.service = false
     }
 
+  }    
+  onServiceMobile() {
+    this.login_mod = false
+    if (this.serviceMobile === false ) {
+      this.serviceMobile = true
+    }else {
+      this.serviceMobile = false
+    }
+  }
+  
+  onShowMobileMenu(){
+    if (this.showMobileMenu === false ) {
+      this.showMobileMenu = true
+    }else {
+      this.showMobileMenu = false
+    }
   }
 
   allModalClose() {
