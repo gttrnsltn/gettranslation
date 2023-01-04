@@ -198,6 +198,7 @@ a:hover {
     top: 0;
     width: 100%;
     height: 100%;
+    z-index: 99;
 }
 .mobileview_menu{
     position: fixed;
@@ -210,9 +211,10 @@ a:hover {
     padding: 40px 24px 24px;
     right: 0px;
     top: 0px;
+    overflow: scroll;
     
     background: #FFFFFF;
-    transform: translate(150%);
+    transform: translateX(150%);
     transition: transform 0.5s ease-in-out;
     z-index: 999;
     @include tablet-portrait-down{
@@ -220,11 +222,11 @@ a:hover {
     }
 }
 .mobileview_animation{
-    transform: translateY(0); 
+    transform: translateX(0); 
 }
 .mobile_service_menu{
     display: flex;
-    margin: -8px 0;
+    margin: 8px 0 0 0;
 }
 .service_menu{
     display: flex;
@@ -299,7 +301,7 @@ a:hover {
 .buttons_menu{
     display: flex;
     flex-direction: column;
-    margin: 40px 0 0 0;
+    margin: 40px 0 48px 0;
 }
 .btn_instant {
     display: flex;
