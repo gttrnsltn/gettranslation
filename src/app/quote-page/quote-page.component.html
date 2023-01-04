@@ -26,15 +26,16 @@
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckboxFrom ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckboxFrom ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
-            <form [formGroup]="fromLanguageForm" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdownFrom === false}">
+            <form [formGroup]="fromLanguageForm" novalidate id="dropdown-menu"
+                [ngClass]="{'close' : closeDropdownFrom === false}">
                 <div>
                     <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search"
-                        placeholder="Search">
+                        placeholder="{{ 'quote.calc_search' | translate }}">
                 </div>
                 <div id="dropdown-list">
                     <label *ngFor="let data of fromLanguageList; let i=index" class="dropdown-item">
-                        <input (change)="onCheckboxChangeFrom($event)" [value]="data.name" type="checkbox" [checked]="data.value"
-                            class="custom-checkbox">
+                        <input (change)="onCheckboxChangeFrom($event)" [value]="data.name" type="checkbox"
+                            [checked]="data.value" class="custom-checkbox">
                         {{data.name}}
                     </label>
                 </div>
@@ -54,7 +55,7 @@
             <form [formGroup]="formOrder" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdown === false}">
                 <div>
                     <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search"
-                        placeholder="Search">
+                        placeholder="{{ 'quote.calc_search' | translate }}">
                 </div>
                 <div id="dropdown-list">
                     <label *ngFor="let data of languages_code_list; let i=index" class="dropdown-item">
@@ -69,20 +70,21 @@
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label3' | translate }}</div>
-        <input class="box_item" [(ngModel)]="word" value="1000" type="number" min="0" inputmode="numeric" pattern="[0-9]*" size="7" max="1000000" maxlength="7"
-            (keydown)="onKeydown($event)">
+        <input class="box_item" [(ngModel)]="word" value="1000" type="number" min="0" inputmode="numeric"
+            pattern="[0-9]*" size="7" max="1000000" maxlength="7" (keydown)="onKeydown($event)">
 
-        <div  class="upload_file_container" *ngIf="!orderServ.fileName">
+        <div class="upload_file_container" *ngIf="!orderServ.fileName">
             <div class="or">{{ 'quote.order_or' | translate }}</div>
             <a class="upload_btn" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">
-                <img class="upload_icon" alt="icon upload files" src="../../assets/cloud_arrow.svg"> 
+                <img class="upload_icon" alt="icon upload files" src="../../assets/cloud_arrow.svg">
                 <p class="upload_text">{{ 'quote.order_upload' | translate }}</p>
             </a>
         </div>
 
         <div class="order_file_container" *ngIf="orderServ.fileName">
             <div class="order_file_count">{{ fileCountStr }}</div>
-            <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">{{ 'quote.order_edit' | translate }}</a>
+            <a class="order_edit" type="file" (click)="UploudModOpen()" (change)="changeListener($event)">{{
+                'quote.order_edit' | translate }}</a>
         </div>
     </div>
 
@@ -204,7 +206,8 @@
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
                 <div class="price_label">{{ currency }} {{ price1 }}</div>
-                <div class="about_label">{{ 'quote.about_label' | translate }} {{currency }} {{ label_price1 }} {{ 'quote.word_label' | translate }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{currency }} {{ label_price1 }} {{
+                    'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Premium')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
@@ -238,9 +241,11 @@
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
                 <div class="price_label">{{ currency }} {{ price2 }}</div>
-                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ label_price2 }} {{ 'quote.word_label' | translate }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ label_price2 }} {{
+                    'quote.word_label' | translate }}</div>
 
-                <button class="submit_order" (click)="order('Professional')">{{ 'quote.submit_order' | translate }}</button>
+                <button class="submit_order" (click)="order('Professional')">{{ 'quote.submit_order' | translate
+                    }}</button>
                 <div class="position_detail">
                     <div class="detail_container" *ngIf="detail2">
                         <p class="detail_text">{{ 'quote.detail1_text2' | translate }}</p>
@@ -271,14 +276,16 @@
 
                 <div class="needfast_item" (click)="DateModOpen()">{{ 'quote.needfast_label' | translate }}</div>
                 <div class="price_label">{{ currency }} {{ price3 }}</div>
-                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ label_price3 }} {{ 'quote.word_label' | translate }}</div>
+                <div class="about_label">{{ 'quote.about_label' | translate }} {{ currency }} {{ label_price3 }} {{
+                    'quote.word_label' | translate }}</div>
 
                 <button class="submit_order" (click)="order('Basic')">{{ 'quote.submit_order' | translate }}</button>
                 <div class="position_detail">
                     <div class="detail_container" *ngIf="detail3">
                         <p class="detail_text">{{ 'quote.detail1_text3' | translate }}</p>
                     </div>
-                    <a class="moredetails_item" (mouseover)="detail3=true" (mouseout)="detail3=false">{{'quote.moredetails_label' | translate }}</a>
+                    <a class="moredetails_item" (mouseover)="detail3=true"
+                        (mouseout)="detail3=false">{{'quote.moredetails_label' | translate }}</a>
                 </div>
             </div>
         </div>
@@ -288,8 +295,8 @@
     <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdownFrom }"></div>
     <div class="logo_powerblock">
         <p class="logo_label">{{ 'quote.logo_label' | translate }}</p>
-        <img alt="logo gettranslation" class="logo_img" src="../../assets/logo_gettrans.svg"/>
-     </div>
+        <img alt="logo gettranslation" class="logo_img" src="../../assets/logo_gettrans.svg" />
+    </div>
 </div>
 <div class="liza">
     <div class="liza_information">
@@ -323,7 +330,7 @@
 </div>
 
 <div *ngIf="!quote">
-    <app-why-choouse *ngIf="!submitted" ></app-why-choouse>
+    <app-why-choouse *ngIf="!submitted"></app-why-choouse>
     <app-logo-block></app-logo-block>
     <app-embrace></app-embrace>
     <app-more></app-more>
@@ -342,19 +349,14 @@
     <div *ngIf="upload_mod_status == 'OK' || upload_mod_status =='ERROR'" class="upload_mod_status">
         <div class="upload_filename">
             <p class="upload_mod_status_name">{{ orderServ.fileName }}</p>
-            <a (click)="deleteFile()" class="upload_mod_status_delete">
-                <img src="../../assets/Frame 38.svg" alt="">
-            </a>
+            <div (click)="deleteFile()" class="upload_mod_status_delete"></div>
         </div>
         <div class="upload_mod_status_word">({{ word }} words)</div>
     </div>
 
-    <div *ngIf=" upload_mod_status == 'IN_PROCESS'" class="upload_mod_status_progress">
+    <div *ngIf="upload_mod_status == 'IN_PROCESS'" class="upload_mod_status_progress">
         <div class="upload_mod_filename">
             <p class="upload_mod_status_name_process">{{ orderServ.fileName }}</p>
-            <!-- <a (click)="deleteFile()" class="upload_mod_status_delete">
-                <img  src="../../assets/Frame 38.svg" alt="">
-            </a> -->
             <div class="upload_mod_status_word_process">{{ 'quote.upload_mod_status_word_process' | translate }}</div>
         </div>
         <div class="loader-line"></div>
@@ -368,24 +370,27 @@
                 maxlength="7" (keydown)="onKeydown($event)">
         </div>
         <div class="upload_mod_contact">
-            <span class="upload_mod_status_error"> 
-                <a [routerLink]="['/contact']" class="upload_mod_link">{{ 'quote.status_error3_bold' | translate }}</a> 
+            <span class="upload_mod_status_error">
+                <a [routerLink]="['/contact']" class="upload_mod_link">{{ 'quote.status_error3_bold' | translate }}</a>
                 {{ 'quote.status_error3' | translate }}</span>
         </div>
     </div>
 
     <div class="upload_mod_file">
-        <img class="upload_mod_img"
-            [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}"
-            src="../../assets/upload_file.svg" alt="">
         <input class="upload_mod_btn"
             [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}" type="file"
             (change)="changeListener($event)">
+        <div class="upload_note"
+            [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}">
+            <img class="upload_mod_img" src="../../assets/upload_cloud.svg" alt="" />
+            <p class="upload_mod_text">{{ 'quote.mod_text_upload1' | translate }}</p><span class="upload_mod_text_bold">{{ 'quote.mod_text_upload2' | translate }}</span>
+        </div>
     </div>
 
     <button (click)="UploudModClose()"
         [ngClass]="{'upload_mod_done_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS', 'upload_mod_done_error': upload_mod_status =='ERROR'}"
-        class="date_mod_done">{{ 'quote.done_btn' | translate }}</button>
+        class="date_mod_done">{{ 'quote.done_btn' | translate }}
+    </button>
 
     <!-- <span *ngIf="upload_mod_status == 'IN_PROCESS'" class="sr-only loading"  id="loading"></span> -->
 </div>

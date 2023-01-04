@@ -167,6 +167,7 @@
         "calc_label3": "Word count",
         "calc_label4": "Subject",
         "calc_label5": "Delivery date",
+        "calc_search": "Search",
 
         "pay_item1": "Pay after delivery",
         "pay_item2": "We trust you:",
@@ -175,6 +176,8 @@
 
         "mod_text_word": "WORD COUNT TOOL",
         "mod_text_date": "Select the delivery date",
+        "mod_text_upload1": "Drag & drop files here or",
+        "mod_text_upload2": "browse",
         "best_price_label": "Auto (best price)",
         "guaranteed_label": "Delivery guaranteed by",
         "option_timezone_label1": "(EET) Eastern European Time",

@@ -45,7 +45,6 @@
         </li>
     </ul>
 
-    <div (click)="allModalClose()" [ngClass]="{'mobileview-fade': showMobileMenu }"></div>
 
     <div class="mobileview_container">
         <img (click)="onShowMobileMenu()" class="mobile_menu_icon" src="../../assets/menu-hamburger.svg">
@@ -118,6 +117,9 @@
         </div>
     </div>
 </nav>
+
+<!-- Close mobile menu -->
+<div (click)="allModalClose()" [ngClass]="{'mobileview-fade': showMobileMenu }"></div>
 
 <div *ngIf="login_mod" class="login_mod">
     <a (click)="loginModClose()">
