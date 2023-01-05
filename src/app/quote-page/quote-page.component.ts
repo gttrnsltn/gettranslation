@@ -37,11 +37,16 @@ export class QuotePageComponent implements OnInit {
   arrowCheckboxFrom = false;
   fromLanguageForm!: FormGroup;
   fromLanguageList: IOrder[] = [];
-
-  Order: IOrder[] = [];
-
   formOrder!: FormGroup;
 
+  // order type
+  subject = "General"
+  valueCheckboxType = "General"
+  closeDropdownType = false;
+  arrowCheckboxType = false;
+  typeOrderForm!: FormGroup;
+
+  Order: IOrder[] = [];
 
   loading = false
   loaded = false
@@ -78,7 +83,7 @@ export class QuotePageComponent implements OnInit {
   detail3 = false
 
   word = 250;
-  subject = 'General';
+  subjectType = 'General';
   timezone = "CET";
   currency = "EUR"
   eur_exch_rate: number = 1;
@@ -126,6 +131,10 @@ export class QuotePageComponent implements OnInit {
 
     this.fromLanguageForm = this.fb.group({
       language: this.fb.array([])
+    })
+  
+    this.typeOrderForm = this.fb.group({
+      subject: this.fb.array([])
     })
   }
 
@@ -455,6 +464,8 @@ allModalClose() {
   this.arrowCheckbox = false;
   this.closeDropdownFrom = false;
   this.arrowCheckboxFrom = false;
+  this.closeDropdownType = false;
+  this.arrowCheckboxType = false;
 }
 
 
@@ -522,6 +533,40 @@ onCheckboxChangeFrom(e: any) {
 
 }
 
+onCheckboxChangeType(e: any) {
+  const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
+  console.log(e.target.checked)
+  if (e.target.checked) {
+    /*
+    for (var lang of this.fromLanguageList) {
+      if (lang.name == this.from) {
+        console.log("Found previous lange: " + lang.name)
+        lang.value = false
+      }
+    }
+    */
+    this.subjectType = e.target.value
+    this.valueCheckboxType = this.subjectType
+    subjects.push(new FormControl(this.subjectType))
+  } else {
+    let i: number = 0;
+    subjects.controls.forEach((item: any) => {
+      if (item.value == e.target.value) {
+        subjects.removeAt(i);
+        return;
+      }
+      i++;
+    });
+  }
+
+  console.log("Subject from array size: " + this.typeOrderForm.value.subject.length)
+  console.log("Subject instance array size: " + subjects.length)
+
+  if (this.typeOrderForm.value.subject.length == 0) {
+    this.valueCheckboxType = "General"
+  }
+}
+
 
 onSearchInputChange(event: any) {
   if (event.target.value != "") {
@@ -530,6 +575,16 @@ onSearchInputChange(event: any) {
     });
   }
   else if(event.target.value == "") {
+    this.ngOnInit();
+  }
+}
+
+onSearchInputChangeType(event: any) {
+  if (event.target.value != "") {
+    this.specializations_code_list = this.specializations_code_list.filter((res: any) => {
+      return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
+    })
+  } else if (event.target.value == "") {
     this.ngOnInit();
   }
 }
@@ -552,6 +607,16 @@ openDropdownFrom() {
   } else {
     this.closeDropdownFrom = false;
     this.arrowCheckboxFrom = false;
+  }
+}
+
+openDropdownType() {
+  if (this.closeDropdownType === false) {
+    this.closeDropdownType = true;
+    this.arrowCheckboxType = true;
+  } else {
+    this.closeDropdownType = false;
+    this.arrowCheckboxType = false;
   }
 }
 
