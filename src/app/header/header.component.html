@@ -171,7 +171,7 @@
 <!-- Close mobile menu -->
 <div (click)="allModalClose()" [ngClass]="{'mobileview-fade': showMobileMenu }"></div>
 
-<div *ngIf="true" class="login_mod">
+<div *ngIf="login_mod" class="login_mod">
     <button class="login_mod_close" (click)="loginModClose()"> </button>
 
     <p class="login_mod_text">{{ 'header.login_mod_title' | translate }}</p>
