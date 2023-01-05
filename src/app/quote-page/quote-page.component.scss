@@ -160,7 +160,7 @@
     position: relative;
 
     height: 110px;
-    padding-right: 24px;
+    padding-right: 30px;
     padding-bottom: 24px;
     margin: 0px;
 
@@ -174,6 +174,21 @@
         width: 100%;
     }
 
+}
+
+.calculate_item_padding {
+    padding-right: 0px;
+
+    @include desktop-down {
+        padding-right: 30px;
+    }
+
+    @include tablet-landscape-down {
+        padding-right: 18px;
+    }
+    @include mobile-only {
+        padding-right: 0px;
+    }
 }
 
 .label_item {
@@ -196,7 +211,7 @@
 
 .box_item {
     outline: none;
-    width: 340px;
+    width: 347px;
     height: 54px;
 
     background: #FFFFFF;
@@ -241,7 +256,7 @@
 
 .to_drop {
     height: 54px;
-    width: 340px;
+    width: 347px;
 
     border-radius: 6px;
 
@@ -394,6 +409,7 @@ select {
         right: 16px;
         border-left: none;
     }
+
     @include mobile-only {
         padding: 0;
     }
@@ -457,9 +473,11 @@ select {
 .show_button {
     display: flex;
     flex-direction: column;
-
-    padding-right: 24px;
     margin: 0px;
+
+    @include desktop-down {
+        padding-right: 24px;
+    }
 
     @include tablet-landscape-down {
         padding-right: 18px;
@@ -476,7 +494,7 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 340px;
+    width: 347px;
     height: 54px;
     margin: 0;
 
@@ -665,7 +683,7 @@ select {
     align-items: center;
     justify-content: space-between;
     min-height: 488px;
-    width: 340px;
+    width: 346px;
     border-radius: 12px;
     padding: 46px 32px 24px;
     transition: 0.2s;
@@ -676,7 +694,7 @@ select {
     margin: 0 auto 0 0;
 
     @include desktop-down {
-        max-width: 300px;
+        max-width: 325px;
         width: 100%;
         padding: 32px 24px 24px;
         margin: 0 16px 0 0;
@@ -692,6 +710,10 @@ select {
         margin: 0 0 24px;
         min-height: 442px;
     }
+}
+
+.suggested_card_margin {
+    margin: 0;
 }
 
 .suggested_card:hover {
@@ -1542,6 +1564,7 @@ input::-webkit-inner-spin-button {
     opacity: 0;
     cursor: pointer;
     z-index: 999;
+
     @include tablet-portrait-down {
         height: 80px;
     }
@@ -1558,7 +1581,8 @@ input::-webkit-inner-spin-button {
     width: 24px;
     height: 17px;
     margin: 0 8px 3px 0;
-    @include tablet-portrait-down{
+
+    @include tablet-portrait-down {
         width: 18px;
         height: 13px;
     }
@@ -1573,19 +1597,22 @@ input::-webkit-inner-spin-button {
     color: #4247E5;
     opacity: 0.6;
     margin: 0 5px 0 0;
-    @include tablet-portrait-down{
+
+    @include tablet-portrait-down {
         font-size: 14px;
         line-height: 22px;
     }
 }
-.upload_mod_text_bold{
+
+.upload_mod_text_bold {
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
     line-height: 24px;
     color: #4247E5;
-    @include tablet-portrait-down{
+
+    @include tablet-portrait-down {
         font-size: 14px;
         line-height: 22px;
     }
@@ -1640,6 +1667,7 @@ input::-webkit-inner-spin-button {
     line-height: 20px;
 
     color: #161616;
+
     @include tablet-portrait-down {
         width: 192px;
         text-overflow: ellipsis;
@@ -2094,7 +2122,7 @@ input::-webkit-inner-spin-button {
     background-color: #4247E5;
     -webkit-animation: lineAnim 4s linear infinite;
     -moz-animation: lineAnim 4s linear infinite;
-    animation: lineAnim 4s infinite linear;  
+    animation: lineAnim 4s infinite linear;
 
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -2102,19 +2130,23 @@ input::-webkit-inner-spin-button {
 }
 
 @keyframes lineAnim {
-    0%{
-      width: 0%;
+    0% {
+        width: 0%;
     }
-    25%{
+
+    25% {
         width: 50%;
     }
-    50%{
+
+    50% {
         width: 75%;
     }
-    75%{
+
+    75% {
         width: 85%;
     }
-    100%{
+
+    100% {
         width: 100%;
     }
 }
@@ -2203,7 +2235,7 @@ input::-webkit-inner-spin-button {
     display: flex;
     justify-content: space-between;
 
-    width: 340px;
+    width: 347px;
     height: 54px;
     // margin: 4px;
     border: 2px solid transparent;
@@ -2267,7 +2299,7 @@ input::-webkit-inner-spin-button {
 }
 
 #dropdown-menu {
-    width: 340px;
+    width: 347px;
     height: 398px;
     padding: 22px 26px;
     margin-top: 4px;

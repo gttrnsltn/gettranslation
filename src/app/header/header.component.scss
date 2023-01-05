@@ -3,7 +3,6 @@
 ul {
     list-style: none;
     display: flex;
-
 }
 
 a:hover {
@@ -11,6 +10,7 @@ a:hover {
 }
 
 .header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,13 +33,16 @@ a:hover {
 }
 
 .links {
-    margin: 0 auto 0 60px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 0 80px;
     font-family: 'Nexa XBold';
     font-style: normal;
     font-size: 16px;
     line-height: 24px;
 
-    width: 440px;
+    min-width: 440px;
+    max-width: 500px;
     @include desktop-down{
         margin: 0 0 0 24px;
     }
@@ -190,15 +193,18 @@ a:hover {
     }
 }
 .mobileview-fade:before {
-    content: '';
-    background: linear-gradient(90deg, rgba(204, 209, 246, 0.3) 43%, rgba(185, 190, 228, 0.3) 58%);
-    backdrop-filter: blur(3.5px);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99;
+    @include tablet-landscape-down{
+        content: '';
+        background: linear-gradient(90deg, rgba(204, 209, 246, 0.3) 43%, rgba(185, 190, 228, 0.3) 58%);
+        backdrop-filter: blur(3.5px);
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 99;
+    }
+
 }
 .mobileview_menu{
     position: fixed;
@@ -769,401 +775,59 @@ input:focus {
     z-index: 9998;
 }
 
-.popup {
-    content: '';
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    // opacity: 0.7;
-    z-index: 9998;
-}
-
-// Service
-.menu {
-    box-sizing: border-box;
-
+// Service menu
+.services_container {
+    display: flex;
+    flex-wrap: wrap;
     position: absolute;
-    width: 1152px;
-    height: 312px;
-    left: 224px;
-    top: 100px;
+    width: 100%;
+    height: 316px;
+    top: 64px;
 
     background: #FFFFFF;
     border: 1px solid #ECEDFC;
     border-radius: 14px;
-    left: 50%;
-    margin-left: -576px;
-    z-index: 9999;
+    z-index: 999;
+    @include tablet-landscape-down{
+        display: none;
+    }
 }
 
-.menu_line1 {
-    position: absolute;
-    width: 1152px;
-    height: 0px;
-    left: 224px;
-    top: 204px;
+.service_block{
+    display: flex;
+    align-items: center;
+    max-width: 388px;
+    width: 100%;
+    height: 104px;
 
-    border-top: 1px solid #ECEDFC;
-    left: 50%;
-    margin-left: -576px;
-    z-index: 9999;
+    padding: 20px 24px;
+    margin: 0;
+}
+.services_blocks{
+    display: flex;
+    margin: 0;
+    width: 100%;
+}
+.service_bottom_line{
+    border-bottom: 1px solid #ECEDFC;
+}
+.service_right_line{
+    border-right: 1px solid #ECEDFC;
 }
 
-.menu_line2 {
-    position: absolute;
-    width: 1152px;
-    height: 0px;
-    left: 224px;
-    top: 308px;
-
-    border-top: 1px solid #ECEDFC;
-    left: 50%;
-    margin-left: -576px;
-    z-index: 9999;
-}
-
-.menu_line3 {
-    position: absolute;
-    width: 312px;
-    height: 0px;
-    left: 608px;
-    top: 256px;
-
-    border-top: 1px solid #ECEDFC;
-    transform: rotate(90deg);
-    left: 50%;
-    margin-left: -348px;
-    z-index: 9999;
-
-}
-
-.menu_line4 {
-    position: absolute;
-    width: 312px;
-    height: 0px;
-    left: 992px;
-    top: 256px;
-
-    border-top: 1px solid #ECEDFC;
-    transform: rotate(90deg);
-    left: 50%;
-    margin-left: 36px;
-    z-index: 9999;
-}
-
-.text1 {
-    position: absolute;
-    height: 22px;
-    width: 141px;
-    left: 332px;
-    top: 141px;
+.service_label {
+    display: flex;
+    margin: 0;
 
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 14px;
     line-height: 22px;
-    /* identical to box height, or 157% */
-
-    color: #161616;
-    left: 50%;
-    margin-left: -468px;
-    z-index: 9999;
 }
 
-.text2 {
-    position: absolute;
-    height: 22px;
-    width: 149px;
-    left: 332px;
-    top: 245px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: -468px;
-    z-index: 9999;
-}
-
-.text3 {
-    position: absolute;
-    height: 22px;
-    width: 203px;
-    left: 332px;
-    top: 349px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: -468px;
-    z-index: 9999;
-}
-
-.text4 {
-    position: absolute;
-    height: 22px;
-    width: 157px;
-    left: 716px;
-    top: 141px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: -84px;
-    z-index: 9999;
-}
-
-.text5 {
-    position: absolute;
-    height: 22px;
-    width: 112px;
-    left: 716px;
-    top: 245px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #4247E5 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: -84px;
-    z-index: 9999;
-}
-
-.text6 {
-    position: absolute;
-    height: 22px;
-    width: 146px;
-    left: 716px;
-    top: 349px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: -84px;
-    z-index: 9999;
-}
-
-.text7 {
-    position: absolute;
-    height: 22px;
-    width: 109px;
-    left: 1100px;
-    top: 141px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: 300px;
-    z-index: 9999;
-}
-
-.text8 {
-    position: absolute;
-    height: 22px;
-    width: 136px;
-    left: 1100px;
-    top: 245px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: 300px;
-    z-index: 9999;
-}
-
-.text9 {
-    position: absolute;
-    height: 22px;
-    width: 135px;
-    left: 1100px;
-    top: 349px;
-
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-
-
-    /* #161616 */
-
-    color: #161616;
-    left: 50%;
-    margin-left: 300px;
-    z-index: 9999;
-}
-
-.img1 {
-    position: absolute;
+.service_image {
     width: 64px;
     height: 64px;
-    left: 248px;
-    top: 120px;
-    left: 50%;
-    margin-left: -552px;
-    z-index: 9999;
-}
-
-.img2 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 248px;
-    top: 224px;
-    left: 50%;
-    margin-left: -552px;
-    z-index: 9999;
-}
-
-.img3 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 248px;
-    top: 328px;
-    left: 50%;
-    margin-left: -552px;
-    z-index: 9999;
-}
-
-.img4 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 632px;
-    top: 120px;
-    left: 50%;
-    margin-left: -168px;
-    z-index: 9999;
-}
-
-.img5 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 632px;
-    top: 224px;
-    left: 50%;
-    margin-left: -168px;
-    z-index: 9999;
-}
-
-.img6 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 632px;
-    top: 328px;
-    left: 50%;
-    margin-left: -168px;
-    z-index: 9999;
-}
-
-.img7 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 1016px;
-    top: 120px;
-    left: 50%;
-    margin-left: 216px;
-    z-index: 9999;
-}
-
-.img8 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 1016px;
-    top: 224px;
-    left: 50%;
-    margin-left: 216px;
-    z-index: 9999;
-}
-
-.img9 {
-    position: absolute;
-    width: 64px;
-    height: 64px;
-    left: 1016px;
-    top: 328px;
-    left: 50%;
-    margin-left: 216px;
-    z-index: 9999;
-}
-
-.text1:hover,
-.text2:hover,
-.text3:hover,
-.text4:hover,
-.text5:hover,
-.text6:hover,
-.text7:hover,
-.text8:hover,
-.text9:hover {
-    color: #4247E5;
+    margin: 0 20px 0 0;
 }
