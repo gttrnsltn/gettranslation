@@ -171,54 +171,46 @@
 <!-- Close mobile menu -->
 <div (click)="allModalClose()" [ngClass]="{'mobileview-fade': showMobileMenu }"></div>
 
-<div *ngIf="login_mod" class="login_mod">
-    <a (click)="loginModClose()">
-        <img class="login_mod_close" src="../../assets/close.svg" alt="">
-    </a>
+<div *ngIf="true" class="login_mod">
+    <button class="login_mod_close" (click)="loginModClose()"> </button>
 
-    <div class="login_mod_text">Client Sign in</div>
+    <p class="login_mod_text">{{ 'header.login_mod_title' | translate }}</p>
 
-    <a class="login_btn1">Client</a>
-    <a href="https://app.gettranslation.io/en/sign-in" target="_blank" class="login_btn2">
-        Translator
-    </a>
-    <a>
-        <img href="https://app.gettranslation.io/en/sign-in" target="_blank" class="redirect2"
-            src="../../assets/redirect.svg" alt="">
-    </a>
-    <a href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="login_btn3">
-        Employee
-    </a>
-    <a>
-        <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect3"
-            src="../../assets/redirect.svg" alt="">
-    </a>
+    <div class="login_type">
+        <a class="login_btn login_underline">{{ 'header.login_btn1' | translate }}</a> 
+        <a class="login_btn" href="https://app.gettranslation.io/en/sign-in" target="_blank">
+            {{ 'header.login_btn2' | translate }}
+            <img class="redirect" href="https://app.gettranslation.io/en/sign-in" src="../../assets/redirect.svg"
+                alt="">
+        </a>
+        <a class="login_btn" href="https://app.gettranslation.io/en/manager/sign-in" target="_blank">
+            {{ 'header.login_btn3' | translate }}
+            <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect"
+                src="../../assets/redirect.svg" alt="">
+        </a>
+    </div>
 
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-
-
-    <div class="label1">E-mail address</div>
-    <input [formControl]="email" placeholder="example@domain.com" class="input1" id="email" required>
-    <div *ngIf="email.errors &&(email.touched || email.dirty)" class="text-error">
-        <div class="valid_error">
-            E-mail entered incorrectly
+    <div class="form_block">
+        <p class="form_label">{{ 'header.email_label' | translate }}</p>
+        <input class="form_input" [formControl]="email" placeholder="example@domain.com" id="email" required>
+        <div *ngIf="email.errors &&(email.touched || email.dirty)" class="text_error">
+            <p class="valid_error"> {{ 'header.email_incorrect' | translate }}</p>
+        </div>
+        <div *ngIf="!email.errors &&(email.touched || email.dirty)" class="text_error">
+            <p class="valid_normal">{{ 'header.email_correct' | translate }}</p>
         </div>
     </div>
-    <div *ngIf="!email.errors &&(email.touched || email.dirty)">
-        <div class="valid_normal">E-mail entered correctly</div>
+
+
+    <div class="form_block">
+        <p class="form_label">{{ 'header.password_label' | translate }}</p>
+        <input class="form_input" id="password" type="password">
+        <img (click)="showPassword()" class="eye" src="../../assets/Frame 11.svg" alt="">
     </div>
 
+    <a class="forgot" href="">{{ 'header.forgot_label' | translate }}</a>
 
-
-    <div class="label2">Password</div>
-    <input id="password" class="input2" type="password">
-    <img (click)="showPassword()" class="eye" src="../../assets/Frame 11.svg" alt="">
-
-    <a class="forgot" href="">Forgot username or password?</a>
-
-    <button type="submit" class="login_mod_done">Log in to continue</button>
+    <button type="submit" class="login_mod_done">{{ 'header.submit_login' | translate }}</button>
 </div>
 
 <div (click)="allModalClose()" [ngClass]="{'popup-fade': login_mod}"></div>
