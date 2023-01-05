@@ -127,4 +127,12 @@ export class FooterComponent implements OnInit {
     }
   }
 
+  langPopupClose()
+  {
+    this.langPopup = this.elementRef.nativeElement.querySelector(".popup_container")
+    if (this.langPopup.style.display != "none") {
+      this.langPopup.style.display = "none"
+    }
+  }
+
 }

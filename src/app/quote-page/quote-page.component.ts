@@ -37,11 +37,16 @@ export class QuotePageComponent implements OnInit {
   arrowCheckboxFrom = false;
   fromLanguageForm!: FormGroup;
   fromLanguageList: IOrder[] = [];
-
-  Order: IOrder[] = [];
-
   formOrder!: FormGroup;
 
+  // order type
+  subject = "General"
+  valueCheckboxType = "General"
+  closeDropdownType = false;
+  arrowCheckboxType = false;
+  typeOrderForm!: FormGroup;
+
+  Order: IOrder[] = [];
 
   loading = false
   loaded = false
@@ -78,7 +83,7 @@ export class QuotePageComponent implements OnInit {
   detail3 = false
 
   word = 250;
-  subject = 'General';
+  subjectType = 'General';
   timezone = "CET";
   currency = "EUR"
   eur_exch_rate: number = 1;
@@ -126,6 +131,10 @@ export class QuotePageComponent implements OnInit {
 
     this.fromLanguageForm = this.fb.group({
       language: this.fb.array([])
+    })
+  
+    this.typeOrderForm = this.fb.group({
+      subject: this.fb.array([])
     })
   }
 
@@ -389,6 +398,7 @@ export class QuotePageComponent implements OnInit {
 
   }
 
+
   UploudModOpen() {
     this.upload_mod = true;
     //window.scrollTo(0, 100)
@@ -418,19 +428,19 @@ export class QuotePageComponent implements OnInit {
   }
 
   onKeydown(event: { key: string; preventDefault: () => void; }) {
-    if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(event.key) && this.word >= 1000000) {
+    if ( ['0','1','2','3','4','5','6','7','8','9'].includes( event.key ) && this.word >= 1000000 ) {
       event.preventDefault()
       this.word = 1000000
     }
 
-    if (((this.word + "").length > 5 && this.word != 1000000 && this.word != 100000)) {
+    if ( ( (this.word + "").length > 5 && this.word != 1000000 && this.word != 100000 ) ) {
       event.preventDefault()
       this.word = 1000000
     }
-    if (['+', '-', 'e', '.'].includes(event.key)) {
+    if( ['+','-','e', '.'].includes( event.key ) ) {
       event.preventDefault()
     }
-
+  
   }
 
   deleteFile() {
@@ -447,8 +457,53 @@ export class QuotePageComponent implements OnInit {
     this.arrowCheckbox = false;
     this.closeDropdownFrom = false;
     this.arrowCheckboxFrom = false;
+    this.closeDropdownType = false;
+    this.arrowCheckboxType = false;
   }
 
+  onCheckboxChangeType(e: any) {
+    const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
+    console.log(e.target.checked)
+    if (e.target.checked) {
+      /*
+      for (var lang of this.fromLanguageList) {
+        if (lang.name == this.from) {
+          console.log("Found previous lange: " + lang.name)
+          lang.value = false
+        }
+      }
+      */
+      this.subjectType = e.target.value
+      this.valueCheckboxType = this.subjectType
+      subjects.push(new FormControl(this.subjectType))
+    } else {
+      let i: number = 0;
+      subjects.controls.forEach((item: any) => {
+        if (item.value == e.target.value) {
+          subjects.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+
+    console.log("Subject from array size: " + this.typeOrderForm.value.subject.length)
+    console.log("Subject instance array size: " + subjects.length)
+
+    if (this.typeOrderForm.value.subject.length == 0) {
+      this.valueCheckboxType = "General"
+    }
+  }
+
+  onSearchInputChangeType(event: any) {
+    if (event.target.value != "") {
+      this.specializations_code_list = this.specializations_code_list.filter((res: any) => {
+        return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
+      })
+    } else if (event.target.value == "") {
+      this.ngOnInit();
+    }
+  }
 
   // dropdown to 
   onCheckboxChange(e: any) {
@@ -544,6 +599,16 @@ export class QuotePageComponent implements OnInit {
     } else {
       this.closeDropdownFrom = false;
       this.arrowCheckboxFrom = false;
+    }
+  }
+
+  openDropdownType() {
+    if (this.closeDropdownType === false) {
+      this.closeDropdownType = true;
+      this.arrowCheckboxType = true;
+    } else {
+      this.closeDropdownType = false;
+      this.arrowCheckboxType = false;
     }
   }
 

@@ -90,12 +90,33 @@
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label4' | translate }}</div>
-
-        <select class="box_item hidden_text" [(ngModel)]="subject" name="subject" id="subject">
-            <option class="subject" *ngFor="let subject of specializations_code_list;" value="{{ subject }}">{{ subject
-                }}</option>
-        </select>
-        <img class="arrow_item" src="../../assets/arrow.svg">
+        <div class="to_drop">
+            <div (click)="openDropdownType()" id="dropdown" tabindex="1">
+                <label class="selected-item" [(ngModel)]="valueCheckboxType" [innerHTML]="valueCheckboxType"
+                    id="selected-item"></label>
+                <span id="dropdown-arrow" [style.margin]="!arrowCheckboxType ? '20px 24px': '25px 24px'"
+                    [style.transform]="!arrowCheckboxType ? 'rotate(45deg)': 'rotate(225deg)'"></span>
+            </div>
+            <form [formGroup]="typeOrderForm" novalidate id="dropdown-menu" [ngClass]="{'close' : closeDropdownType === false}">
+                <div>
+                    <input (input)="onSearchInputChangeType($event)" id="dropdown-search" type="text" name="search"
+                        placeholder="Search">
+                </div>
+                <div id="dropdown-list">
+                    <label *ngFor="let subject of specializations_code_list; let i=index" class="dropdown-item">
+                        <input (change)="onCheckboxChangeType($event)" [value]="subject" type="checkbox"
+                            class="custom-checkbox">
+                        {{subject}}
+                    </label>
+                </div>
+            </form>
+            <!--
+            <select class="box_item hidden_text" [(ngModel)]="subject" name="subject" id="subject">
+                <option class="subject" *ngFor="let subject of specializations_code_list;" value="{{ subject }}">{{ subject
+                    }}</option>
+            </select> 
+            -->
+        </div>
     </div>
 
     <div class="calculate_item">
@@ -293,6 +314,7 @@
     <div (click)="allModalClose()" [ngClass]="{'popup-fade': upload_mod || date_mod }"></div>
     <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdown }"></div>
     <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdownFrom }"></div>
+    <div (click)="allModalClose()" [ngClass]="{'popup': closeDropdownType }"></div>
     <div class="logo_powerblock">
         <p class="logo_label">{{ 'quote.logo_label' | translate }}</p>
         <img alt="logo gettranslation" class="logo_img" src="../../assets/logo_gettrans.svg" />
