@@ -116,109 +116,101 @@
 
         </div>
     </div>
+    <!-- Service -->
+    <div *ngIf="service" class="services_container">
+        <div class="services_blocks service_bottom_line">
+            <a class="service_block service_right_line" (click)="onService()" [routerLink]="['/website-localization']">
+                <img class="service_image" src="../../assets/menu/icon (5).svg" alt="">
+                <div class="service_label">{{ 'header.service_item1' | translate }}</div>
+            </a>
+            <a class="service_block service_right_line" (click)="onService()"
+                [routerLink]="['/web-software-localization']">
+                <img class="service_image" src="../../assets/menu/icon (6).svg" alt="">
+                <div class="service_label">{{ 'header.service_item2' | translate }}</div>
+            </a>
+            <a class="service_block" (click)="onService()" [routerLink]="['/custom-localization-solutions']">
+                <img class="service_image" src="../../assets/menu/icon (7).svg" alt="">
+                <div class="service_label">{{ 'header.service_item3' | translate }}</div>
+            </a>
+        </div>
+        <div class="services_blocks service_bottom_line">
+            <a class="service_block service_right_line" (click)="onService()" [routerLink]="['/adwords-localization']">
+                <img class="service_image" src="../../assets/menu/icon (8).svg" alt="">
+                <div class="service_label">{{ 'header.service_item4' | translate }}</div>
+            </a>
+            <a class="service_block service_right_line" (click)="onService()"
+                [routerLink]="['/multilingual-dtp-services']">
+                <img class="service_image" src="../../assets/menu/icon (9).svg" alt="">
+                <div class="service_label">{{ 'header.service_item5' | translate }}</div>
+            </a>
+            <a class="service_block" (click)="onService()" [routerLink]="['/multilingual-chatbot-services']">
+                <img class="service_image" src="../../assets/menu/Group 259.svg" alt="">
+                <div class="service_label">{{ 'header.service_item6' | translate }}</div>
+            </a>
+        </div>
+        <div class="services_blocks">
+            <a class="service_block service_right_line" (click)="onService()"
+                [routerLink]="['/transcription-subtitle-translation']">
+                <img class="service_image" src="../../assets/menu/icon (11).svg" alt="">
+                <div class="service_label">{{ 'header.service_item7' | translate }}</div>
+            </a>
+            <a class="service_block service_right_line" (click)="onService()"
+                [routerLink]="['/sworn-certified-official-translation']">
+                <img class="service_image" src="../../assets/menu/icon (12).svg" alt="">
+                <div class="service_label">{{ 'header.service_item8' | translate }}</div>
+            </a>
+            <a class="service_block" (click)="onService()" [routerLink]="['/urgent-translations']">
+                <img class="service_image" src="../../assets/menu/icon (13).svg" alt="">
+                <div class="service_label">{{ 'header.service_item9' | translate }}</div>
+            </a>
+        </div>
+    </div>
 </nav>
+
 
 <!-- Close mobile menu -->
 <div (click)="allModalClose()" [ngClass]="{'mobileview-fade': showMobileMenu }"></div>
 
 <div *ngIf="login_mod" class="login_mod">
-    <a (click)="loginModClose()">
-        <img class="login_mod_close" src="../../assets/close.svg" alt="">
-    </a>
+    <button class="login_mod_close" (click)="loginModClose()"> </button>
 
-    <div class="login_mod_text">Client Sign in</div>
+    <p class="login_mod_text">{{ 'header.login_mod_title' | translate }}</p>
 
-    <a class="login_btn1">Client</a>
-    <a href="https://app.gettranslation.io/en/sign-in" target="_blank" class="login_btn2">
-        Translator
-    </a>
-    <a>
-        <img href="https://app.gettranslation.io/en/sign-in" target="_blank" class="redirect2"
-            src="../../assets/redirect.svg" alt="">
-    </a>
-    <a href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="login_btn3">
-        Employee
-    </a>
-    <a>
-        <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect3"
-            src="../../assets/redirect.svg" alt="">
-    </a>
+    <div class="login_type">
+        <a class="login_btn login_underline">{{ 'header.login_btn1' | translate }}</a> 
+        <a class="login_btn" href="https://app.gettranslation.io/en/sign-in" target="_blank">
+            {{ 'header.login_btn2' | translate }}
+            <img class="redirect" href="https://app.gettranslation.io/en/sign-in" src="../../assets/redirect.svg"
+                alt="">
+        </a>
+        <a class="login_btn" href="https://app.gettranslation.io/en/manager/sign-in" target="_blank">
+            {{ 'header.login_btn3' | translate }}
+            <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect"
+                src="../../assets/redirect.svg" alt="">
+        </a>
+    </div>
 
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-
-
-    <div class="label1">E-mail address</div>
-    <input [formControl]="email" placeholder="example@domain.com" class="input1" id="email" required>
-    <div *ngIf="email.errors &&(email.touched || email.dirty)" class="text-error">
-        <div class="valid_error">
-            E-mail entered incorrectly
+    <div class="form_block">
+        <p class="form_label">{{ 'header.email_label' | translate }}</p>
+        <input class="form_input" [formControl]="email" placeholder="example@domain.com" id="email" required>
+        <div *ngIf="email.errors &&(email.touched || email.dirty)" class="text_error">
+            <p class="valid_error"> {{ 'header.email_incorrect' | translate }}</p>
+        </div>
+        <div *ngIf="!email.errors &&(email.touched || email.dirty)" class="text_error">
+            <p class="valid_normal">{{ 'header.email_correct' | translate }}</p>
         </div>
     </div>
-    <div *ngIf="!email.errors &&(email.touched || email.dirty)">
-        <div class="valid_normal">E-mail entered correctly</div>
+
+
+    <div class="form_block">
+        <p class="form_label">{{ 'header.password_label' | translate }}</p>
+        <input class="form_input" id="password" type="password">
+        <img (click)="showPassword()" class="eye" src="../../assets/Frame 11.svg" alt="">
     </div>
 
+    <a class="forgot" href="">{{ 'header.forgot_label' | translate }}</a>
 
-
-    <div class="label2">Password</div>
-    <input id="password" class="input2" type="password">
-    <img (click)="showPassword()" class="eye" src="../../assets/Frame 11.svg" alt="">
-
-    <a class="forgot" href="">Forgot username or password?</a>
-
-    <button type="submit" class="login_mod_done">Log in to continue</button>
+    <button type="submit" class="login_mod_done">{{ 'header.submit_login' | translate }}</button>
 </div>
 
-<div (click)="allModalClose()" [ngClass]="{'popup-fade': login_mod, 'popup': service}"></div>
-
-
-<!-- Service -->
-<div *ngIf="service">
-    <div class="menu"></div>
-
-    <div class="menu_line1"></div>
-    <div class="menu_line2"></div>
-    <div class="menu_line3"></div>
-    <div class="menu_line4"></div>
-
-    <a (click)="onService()" [routerLink]="['/website-localization']">
-        <img class="img1" src="../../assets/menu/icon (5).svg" alt="">
-        <div class="text1">{{ 'header.service_item1' | translate }}</div>
-    </a>
-    <a (click)="onService()" [routerLink]="['/web-software-localization']">
-        <img class="img2" src="../../assets/menu/icon (6).svg" alt="">
-        <div class="text2">{{ 'header.service_item2' | translate }}</div>
-    </a>
-    <a (click)="onService()" [routerLink]="['/custom-localization-solutions']">
-        <img class="img3" src="../../assets/menu/icon (7).svg" alt="">
-        <div class="text3">{{ 'header.service_item3' | translate }}</div>
-    </a>
-
-    <a (click)="onService()" [routerLink]="['/adwords-localization']">
-        <img class="img4" src="../../assets/menu/icon (8).svg" alt="">
-        <div class="text4">{{ 'header.service_item4' | translate }}</div>
-    </a>
-    <a (click)="onService()" [routerLink]="['/multilingual-dtp-services']">
-        <img class="img5" src="../../assets/menu/icon (9).svg" alt="">
-        <div class="text5">{{ 'header.service_item5' | translate }}</div>
-    </a>
-    <a (click)="onService()" [routerLink]="['/multilingual-chatbot-services']">
-        <img class="img6" src="../../assets/menu/Group 259.svg" alt="">
-        <div class="text6">{{ 'header.service_item6' | translate }}</div>
-    </a>
-
-    <a (click)="onService()" [routerLink]="['/transcription-subtitle-translation']">
-        <img class="img7" src="../../assets/menu/icon (11).svg" alt="">
-        <div class="text7">{{ 'header.service_item7' | translate }}</div>
-    </a>
-    <a (click)="onService()" [routerLink]="['/sworn-certified-official-translation']">
-        <img class="img8" src="../../assets/menu/icon (12).svg" alt="">
-        <div class="text8">{{ 'header.service_item8' | translate }}</div>
-    </a>
-    <a (click)="onService()" [routerLink]="['/urgent-translations']">
-        <img class="img9" src="../../assets/menu/icon (13).svg" alt="">
-        <div class="text9">{{ 'header.service_item9' | translate }}</div>
-    </a>
-</div>
+<div (click)="allModalClose()" [ngClass]="{'popup-fade': login_mod}"></div>

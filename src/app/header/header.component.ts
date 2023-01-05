@@ -123,7 +123,7 @@ export class HeaderComponent implements OnInit {
   allModalClose() {
     this.loginModClose();
     this.onShowMobileMenu();
-    this.service = false
+    this.service = false;
   }
 
 }

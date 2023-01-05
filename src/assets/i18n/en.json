@@ -16,7 +16,20 @@
         "service_item6": "Multilingual Chatbots",
         "service_item7": "Video Subtitling",
         "service_item8": "Official Translations",
-        "service_item9": "Urgent Translations"
+        "service_item9": "Urgent Translations",
+
+        "login_mod_title": "Client Sign in",
+        "login_btn1": "Client",
+        "login_btn2": "Translator",
+        "login_btn3": "Employee",
+        "email_label": "E-mail address",
+        "email_correct": "E-mail entered correctly",
+        "email_incorrect": "E-mail entered incorrectly",
+        "password_label": "Password",
+        "forgot_label": "Forgot username or password?",
+        "submit_login": "Log in to continue"
+
+
     },
     "cookies": {
         "description": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",

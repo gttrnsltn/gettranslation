@@ -68,7 +68,7 @@
         </div>
     </div>
 
-    <div class="calculate_item">
+    <div class="calculate_item calculate_item_padding">
         <div class="label_item">{{ 'quote.calc_label3' | translate }}</div>
         <input class="box_item" [(ngModel)]="word" value="1000" type="number" min="0" inputmode="numeric"
             pattern="[0-9]*" size="7" max="1000000" maxlength="7" (keydown)="onKeydown($event)">
@@ -255,7 +255,7 @@
                 </div>
             </div>
 
-            <div class="suggested_card">
+            <div class="suggested_card suggested_card_margin">
                 <div class="title_card">{{ 'quote.card_title3' | translate }}</div>
                 <div class="points_of_card">
                     <div class="point_item">
