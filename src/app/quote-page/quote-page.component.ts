@@ -26,18 +26,18 @@ export class QuotePageComponent implements OnInit {
 
   // to language
   to = 'Japanese'
+  valueCheckbox:any = "Japanese";
   closeDropdown = false;
-  valueCheckbox: any = "Japanese";
   arrowCheckbox = false;
+  formOrder!: FormGroup;
 
   // from language
   from = 'English (USA)'
-  closeDropdownFrom = false;
   valueCheckboxFrom: any = "English (USA)"
+  closeDropdownFrom = false;
   arrowCheckboxFrom = false;
   fromLanguageForm!: FormGroup;
   fromLanguageList: IOrder[] = [];
-  formOrder!: FormGroup;
 
   // order type
   subject = "General"
@@ -487,6 +487,7 @@ onCheckboxChange(e: any) {
   }
 
   if (this.formOrder.value.country.length === 0) {
+    this.to = "Japanese"
     this.valueCheckbox = "Japanese";
   }
   if (this.formOrder.value.country.length === 1) {
@@ -528,6 +529,7 @@ onCheckboxChangeFrom(e: any) {
   console.log("Language instance array size: " + languages.length)
 
   if (this.fromLanguageForm.value.language.length == 0) {
+    this.from = "English (USA)"
     this.valueCheckboxFrom = "English (USA)"
   }
 

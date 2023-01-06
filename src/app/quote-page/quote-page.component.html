@@ -21,8 +21,7 @@
         <div class="label_item">{{ 'quote.calc_label1' | translate }}</div>
         <div class="to_drop">
             <div (click)="openDropdownFrom()" id="dropdown" tabindex="1">
-                <label class="selected-item" [(ngModel)]="valueCheckboxFrom" [innerHTML]="valueCheckboxFrom"
-                    id="selected-item"></label>
+                <label class="selected-item" [innerHTML]="valueCheckboxFrom" id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckboxFrom ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckboxFrom ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
@@ -46,8 +45,7 @@
         <div class="label_item">{{ 'quote.calc_label2' | translate }}</div>
         <div class="to_drop">
             <div (click)="openDropdownTo()" id="dropdown" tabindex="1">
-                <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox"
-                    id="selected-item"></label>
+                <label class="selected-item" [innerHTML]="valueCheckbox" id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckbox ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
