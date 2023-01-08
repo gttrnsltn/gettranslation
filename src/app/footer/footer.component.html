@@ -1,7 +1,7 @@
 <div class="footer">
       <!-- Language popup -->
       <div class="popup_container" style="display:none">
-        <img class="popup_close" (click)="langPopupClose()" src="./assets/close.svg" alt="close icon">
+        <img class="popup_close" (click)="popUpLangClose()" src="./assets/close.svg" alt="close icon">
         <div class="popup_content"> 
           <img class="popup_icon" src="./assets/gettrans_icon.svg" />
           <div class="popup_margin">
@@ -13,7 +13,7 @@
             </div>
             <div class="popup_buttons">
               <button (click)="popLangChange()" class="button_change">Switch language</button>
-              <button (click)="popLangLeave()" class="button_nochange">No, thanks</button>
+              <button (click)="popUpLangClose()" class="button_nochange">No, thanks</button>
             </div>
           </div>
         </div>
