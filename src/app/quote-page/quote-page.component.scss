@@ -210,6 +210,7 @@
 }
 
 .box_item {
+    cursor: pointer;
     outline: none;
     width: 346px;
     height: 54px;
@@ -237,12 +238,6 @@
 .box_item:focus {
     border: 2px solid #4247E5;
 }
-
-.box_item:hover {
-    cursor: pointer;
-    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
-}
-
 
 .arrow_item {
     position: absolute;
@@ -517,7 +512,8 @@ select {
 }
 
 .show:hover {
-    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
+    background: #3135CD;
+    color: #FFFFFF;
 }
 
 .pay_item {
@@ -1258,6 +1254,7 @@ select {
     flex-direction: column;
     position: absolute;
     left: 50%;
+    top: 30%;
     transform: translateX(-50%);
 
     padding: 40px;
@@ -1629,14 +1626,14 @@ input::-webkit-inner-spin-button {
     max-width: 680px;
     width: 100%;
     min-height: 48px;
-    padding: 13px 24px;
+    padding: 12px 24px;
 
     background: #ECEDFC;
     border-radius: 6px;
     margin: 0 0 16px 0;
 
     @include tablet-portrait-down {
-        padding: 13px 20px;
+        padding: 12px 20px;
     }
 }
 
@@ -1647,11 +1644,14 @@ input::-webkit-inner-spin-button {
     max-width: 680px;
     width: 100%;
     min-height: 48px;
-    padding: 13px 24px;
+    padding: 12px 24px;
 
     background: #ECEDFC;
     border-radius: 6px;
     margin: 0 0 16px 0;
+    @include tablet-portrait-down {
+        padding: 12px 20px;
+    }
 }
 
 .upload_mod_status_name_process {
@@ -1671,7 +1671,7 @@ input::-webkit-inner-spin-button {
     }
 
     @include mobile-only {
-        width: 122px;
+        width: 120px;
     }
 }
 
@@ -1718,6 +1718,8 @@ input::-webkit-inner-spin-button {
 
     @include mobile-only {
         width: 122px;
+        font-size: 12px;
+        line-height: 20px;
     }
 }
 
@@ -1727,6 +1729,9 @@ input::-webkit-inner-spin-button {
     width: 20px;
     height: 20px;
     margin: 0 0 0 8px;
+    @include tablet-portrait-down{
+        margin: -2px 0 0 4px;
+    }
 }
 
 .upload_mod_status_word {
@@ -1737,6 +1742,9 @@ input::-webkit-inner-spin-button {
     font-size: 12px;
     line-height: 18px;
     color: #161616;
+    @include tablet-portrait-down{
+        text-align: end;
+    }
 }
 
 .loader-line {
@@ -2252,10 +2260,6 @@ input::-webkit-inner-spin-button {
     border: 2px solid #4247E5;
 }
 
-#dropdown:hover {
-    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
-}
-
 #dropdown label {
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -2332,6 +2336,9 @@ input[type="text"]#dropdown-search {
 
     font-family: "Nexa Regular";
     font-size: 16px;
+    @include tablet-portrait-down{
+        max-width: 100%;
+    }
 
 }
 

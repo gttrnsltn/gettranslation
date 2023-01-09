@@ -43,6 +43,7 @@
     margin-top: 35px;
     margin-left: 0;
     margin-right: 0;
+    transition: 0.2s;
     @include tablet-landscape-down{
         width: 44px;
     }
@@ -50,6 +51,9 @@
         width: 58px;
         height: 58px;
     }
+}
+.img:hover {
+    transform: scale(1.15);
 }
 
 @media (max-width: 430px) {

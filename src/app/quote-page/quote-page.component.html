@@ -373,7 +373,7 @@
             <p class="upload_mod_status_name">{{ orderServ.fileName }}</p>
             <div (click)="deleteFile()" class="upload_mod_status_delete"></div>
         </div>
-        <div class="upload_mod_status_word">({{ word }} words)</div>
+        <p class="upload_mod_status_word">({{ word }} {{ 'quote.upload_mod_status_word' | translate }})</p>
     </div>
 
     <div *ngIf="upload_mod_status == 'IN_PROCESS'" class="upload_mod_status_progress">

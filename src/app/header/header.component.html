@@ -5,18 +5,17 @@
     </div>
 
     <ul [ngClass]="{'links_quote': quote == true || contact == true}" class="links">
-        <li>
-            <a [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
+        <li class="link">
+            <a (click)="onRoute()" [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
         </li>
-        <li>
+        <li class="link">
             <a (click)="onRoute()" [routerLink]="['/developers']">{{ 'header.developers' | translate }}</a>
         </li>
-        <li>
+        <li class="link">
             <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
         </li>
-        <li>
-            <a (mouseover)="service_hover=true" (mouseout)="service_hover=false"
-                [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
+        <li (mouseover)="service_hover=true" (mouseout)="service_hover=false" class="link">
+            <a [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
                 <img *ngIf="service" class="serviceActive" src="../../assets/menu/Frame 12 (1).svg" alt="">
                 <img *ngIf="!service && !service_hover" class="serviceStandart" src="../../assets/Frame 12 (2)_1.svg"
                     alt="">
@@ -177,13 +176,13 @@
     <p class="login_mod_text">{{ 'header.login_mod_title' | translate }}</p>
 
     <div class="login_type">
-        <a class="login_btn login_underline">{{ 'header.login_btn1' | translate }}</a> 
-        <a class="login_btn" href="https://app.gettranslation.io/en/sign-in" target="_blank">
+        <a class="login_btn">{{ 'header.login_btn1' | translate }}</a>
+        <a class="external_btn" href="https://app.gettranslation.io/en/sign-in" target="_blank">
             {{ 'header.login_btn2' | translate }}
             <img class="redirect" href="https://app.gettranslation.io/en/sign-in" src="../../assets/redirect.svg"
                 alt="">
         </a>
-        <a class="login_btn" href="https://app.gettranslation.io/en/manager/sign-in" target="_blank">
+        <a class="external_btn" href="https://app.gettranslation.io/en/manager/sign-in" target="_blank">
             {{ 'header.login_btn3' | translate }}
             <img href="https://app.gettranslation.io/en/manager/sign-in" target="_blank" class="redirect"
                 src="../../assets/redirect.svg" alt="">

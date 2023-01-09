@@ -64,6 +64,7 @@ img:hover {
 .img {
     width: 104px;
     margin: 5px 10px;
+    transition: 0.2s;
     @include tablet-landscape-down{
         width: 64px;
         margin: 25px auto 25px;
@@ -75,6 +76,9 @@ img:hover {
     @include mobile-only{
         width: 126px;
     }
+}
+.img:hover {
+    transform: scale(1.15);
 }
 
 .imgs {
