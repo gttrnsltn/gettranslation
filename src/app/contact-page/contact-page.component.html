@@ -1,69 +1,90 @@
 <app-header></app-header>
-<div class="text">Contact our team</div>
-<div class="subtext">Guaranteed answer by <span class="bold">{{ date1s }} {{ timezone }}.</span></div>
-<a class="link" href="mailto:hello@gettranslation.io">hello@gettranslation.io</a>
-
-
-<div class="contact_form"></div>
-<div class="label1">E-mail address<span class="red">*</span></div>
-<input [(ngModel)]="email" placeholder="example@domain.com" class="input1" type="text">
-
-<div class="label2">Your name</div>
-<input [(ngModel)]="name" placeholder="John Doe" class="input2" type="text">
-
-<div class="label3">Message</div>
-<textarea [(ngModel)]="message" style="resize: none;"  class="input3" placeholder="Write your message..."></textarea>
-
-<div *ngIf="!file">
-<button class="upload_img">
-    <img class="btn_text" src="../../assets/order/upload file.svg" alt="">
-</button>
-<input class="upload" type="file" (change)="changeListener($event)">
+<div class="contact_container">
+    <h1 class="text">{{ 'contact.title' | translate }}</h1>
+    <p class="subtext">{{ 'contact.description' | translate }} <span class="bold">{{ date1s }} {{ timezone }}.</span></p>
+    <a class="link" href="mailto:hello@gettranslation.io">hello@gettranslation.io</a>
 </div>
 
-<div *ngIf="file" class="file_name">{{ file.name }}</div>
-<!-- <div *ngIf="file.name == ''">
-    <button class="upload">
-        <img class="btn_text" src="../../assets/order/upload file.svg" alt="">
-    </button>
-    <input class="upload" type="file" (change)="changeListener($event)">
-</div>   -->
+<div class="contact_form_container">
+    <div class="contact_form">
+        <div class="from_block">
+            <p class="form_label">{{ 'contact.form_email' | translate }}<span class="red">*</span></p>
+            <input class="form_input" [(ngModel)]="email" placeholder="example@domain.com" type="text">
+        </div>
 
-<!-- <input class="input4" type="file"> -->
+        <div class="from_block">
+            <p class="form_label">{{ 'contact.form_name' | translate }}</p>
+            <input class="form_input" [(ngModel)]="name" placeholder="John Doe" type="text">
+        </div>
+        <div class="from_block">
+            <p class="form_label">{{ 'contact.form_message' | translate }}</p>
+            <textarea class="form_input textarea_height" [(ngModel)]="message" style="resize: none;"
+                placeholder="{{ 'contact.form_message_write' | translate }}"></textarea>
+        </div>
 
-<input [(ngModel)]="agree" class="checkbox" type="checkbox">
-<div class="right">I have read and agree to the <a class="right_link" href="https://gettranslation.io/privacy" target="blank">Privacy Policy</a></div>
+        <div class="form_upload" *ngIf="!file">
+            <div class="form_upload_file">
+                <img class="upload_img" src="../../assets/upload_cloud.svg" alt="" />
+                <p class="upload_text">{{ 'contact.form_upload' | translate }}</p>
+            </div>
+            <input class="upload_input" type="file" (change)="changeListener($event)">
+        </div>
 
-<button class="btn_send" (click)="send()">Send</button>
+        <div *ngIf="file" class="file_name">{{ file.name }}</div>
 
+        <div class="form_agree_policy">
+            <div class="form_agree"></div>
+            <input [(ngModel)]="agree" class="checkbox" type="checkbox">
+            <div class="form_link">{{ 'contact.form_agree' | translate }}
+                <a class="right_link" href="https://gettranslation.io/privacy" target="blank">{{ 'contact.form_privacy' | translate }}</a>
+            </div>
+        </div>
 
-<img class="img" src="../../assets/contact/pin.svg" alt="">
-<div class="office">Our offices</div>
+        <button class="btn_send" (click)="send()">{{ 'contact.form_button' | translate }}</button>
+    </div>
+    <div class="offices_container">
+        <div class="info_label">
+            <img class="img_label" src="../../assets/contact/pin.svg" alt="">
+            <p class="container_title">{{ 'contact.offices_title' | translate }}</p>
+        </div>
+<div class="offices_block">
+        <div class="offices_info">
+            <div class="info_label_city">
+                <div class="office_label">
+                    <img class="img_locaion" src="../../assets/contact/pin.svg" alt="">
+                    <p class="office_city">{{ 'contact.office_city1' | translate }}</p>
+                </div>
+                <p class="office_type">{{ 'contact.office_type1' | translate }}</p>
+                <p class="office_address">{{ 'contact.office_address1' | translate }} </p>
+                <a class="office_link" href="https://goo.gl/maps/d52Lh9CBbq5qfXnu8" target="_blank">{{ 'contact.office_map' | translate }}</a>
+            </div>
 
-<img class="img1" src="../../assets/contact/pin.svg" alt="">
-<div class="office1">Estonia</div>
-<div class="type1">Headquarters</div>
-<div class="address1">Vesivärava tn 50/201 10152 Tallinn</div>
-<a class="link1"  href="https://goo.gl/maps/d52Lh9CBbq5qfXnu8" target="_blank">View map</a>
+            <div class="info_label_city">
+                <div class="office_label">
+                    <img class="img_locaion" src="../../assets/contact/pin.svg" alt="">
+                    <p class="office_city">{{ 'contact.office_city2' | translate }}</p>
+                </div>
+                <p class="office_type">{{ 'contact.office_type2' | translate }}</p>
+                <p class="office_address">{{ 'contact.office_address2' | translate }}</p>
+                <a class="office_link" href="https://goo.gl/maps/x8YavKZn9NSXXTW39" target="_blank">{{ 'contact.office_map' | translate }}</a>
+            </div>
+        </div>
 
-<img class="img2" src="../../assets/contact/pin.svg" alt="">
-<div class="office2">United Kingdom</div>
-<div class="type2">Local Office</div>
-<div class="address2">18 Leasowes Road E10 7BE London</div>
-<a class="link2"  href="https://goo.gl/maps/x8YavKZn9NSXXTW39" target="_blank">View map</a>
+        <div class="office_contact">
+            <div class="office_contact_label">
+                <img class="img_label" src="../../assets/contact/phone.svg" alt="">
+                <p class="contact_title">{{ 'contact.office_contact_label' | translate }}</p>
+            </div>
+            <div class="point_type"><p class="office_offline space_offline">{{ 'contact.office_offline' | translate }}</p> </div>
+            <p class="office_offline">{{ 'contact.office_contact_notify' | translate }}</p>
+            <a class="office_link bold" href="callto:+44 20 4577 3740" >+44 20 4577 3740</a>
+        </div>
+</div>
+    </div>
+</div>
 
-<div class="line"></div>
-
-<img class="img3" src="../../assets/contact/phone.svg" alt="">
-<div class="office3">Give us a call</div>
-<div class="type3">We’re not online now</div>
-<div class="point3"></div>
-<div class="address3">Please send us an e-mail or leave a voice message.</div>
-<a href="callto:+44 20 4577 3740" class="link3">+44 20 4577 3740</a>
-
-<app-logo-block class="logo_block"></app-logo-block>
-<app-our-clients class="our_clients"></app-our-clients>
-<app-more class="more"></app-more>
-<app-instant class="instant"></app-instant>
-<app-footer class="footer"></app-footer>
-<div class="space"></div>
+<app-logo-block></app-logo-block>
+<app-our-clients></app-our-clients>
+<app-more></app-more>
+<app-instant></app-instant>
+<app-footer></app-footer>

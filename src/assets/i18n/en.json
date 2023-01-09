@@ -420,5 +420,33 @@
         "no": "Norsk",
         "da": "Dansk",
         "fi": "Suomi"
+    },
+    "contact": {
+        "title": "Contact our team",
+        "description": "Guaranteed answer by",
+
+        "form_email": "E-mail address",
+        "form_name": "Your name",
+        "form_message": "Message",
+        "form_message_write": "Write your message...",
+        "form_upload": "Upload files",
+        "form_agree": "I have read and agree to the",
+        "form_privacy": "Privacy Policy",
+        "form_button": "Send",
+
+        "offices_title": "Our offices",
+        "office_city1" : "Estonia",
+        "office_type1" : "Headquarters",
+        "office_address1": "Vesivärava tn 50/201 10152 Tallinn",
+        "office_map" : "View map",        
+        "office_city2" : "United Kingdom",
+        "office_type2" : "Local Office",
+        "office_address2": "18 Leasowes Road E10 7BE London",
+        "office_contact_label": "Give us a call",
+        "office_offline": "We’re not online now",
+        "office_contact_notify": "Please send us an e-mail or leave a voice message."
+
+
+
     }
 }

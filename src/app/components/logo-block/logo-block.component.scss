@@ -50,20 +50,15 @@ img:hover {
     margin: 0;
     width: 100%;
     @include desktop-down{
-        width: 55%;
+        width: 594px;
     }
     @include tablet-landscape-down{
         width: 100%;
     }
     @include tablet-portrait-down{
-        width: 100%;
         flex-direction: row;
         justify-content: space-around;
     }    
-    @include mobile-only{
-        flex-direction: row;
-        justify-content: space-around;
-    }
 }
 
 .img {
@@ -71,11 +66,14 @@ img:hover {
     margin: 5px 10px;
     @include tablet-landscape-down{
         width: 64px;
-        margin: auto auto 18px;
+        margin: 25px auto 25px;
     }   
      @include tablet-portrait-down{
         width: 128px;
-        margin: auto auto 32px;
+        margin: 0px auto 32px;
+    }
+    @include mobile-only{
+        width: 126px;
     }
 }
 

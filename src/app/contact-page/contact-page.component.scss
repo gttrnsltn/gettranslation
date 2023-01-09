@@ -1,249 +1,158 @@
+@import '../../responsive.scss';
+
+.contact_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 96px 0px 56px;
+
+    @include desktop-down {
+        margin: 96px 64px 56px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 96px 48px 40px;
+    }
+
+    @include tablet-portrait-down {
+        margin: 56px 32px 40px;
+    }
+
+    @include mobile-only {
+        margin: 48px 24px 32px;
+    }
+
+}
+
 .text {
-    overflow: unset;
-    
-    position: absolute;
-    width: 341px;
-    height: 48px;
-    left: 630px;
-    top: 180px;
-    
+    margin: 0 0 8px 0;
+
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
     font-size: 40px;
     line-height: 48px;
-    /* identical to box height, or 120% */
-    
     text-align: center;
-    
-    color: #161616;
-    left:50%; 
-    margin-left:-170px 
+
+    @include tablet-landscape-down {
+        font-size: 36px;
+        line-height: 44px;
+        margin: 0 0 10px 0;
+    }
 }
 
 .subtext {
-    position: absolute;
-    width: 441px;
-    height: 26px;
-    left: 580px;
-    top: 236px;
-    
+    margin: 0 0 8px 0;
+
     font-family: 'Nexa Book';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
     line-height: 26px;
-    /* identical to box height, or 144% */
-    
     text-align: center;
-    
-    color: #161616;
-    left:50%; 
-    margin-left:-220px 
+
+    @include tablet-landscape-down {
+        font-size: 16px;
+        line-height: 22px;
+        max-width: 234px;
+    }
 }
 
 .link {
-    position: absolute;
-    width: 204px;
-    height: 26px;
-    left: 698px;
-    top: 270px;
-    
+    margin: 0;
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 18px;
     line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    text-align: center;
-    
-    /* #4247E5 */
-    
     color: #4247E5;
-    left:50%; 
-    margin-left:-102px 
+
+    @include tablet-landscape-down {
+        font-size: 16px;
+        line-height: 24px;
+    }
 }
 
-//
+//Contact form
+.contact_form_container {
+    display: flex;
+    max-width: 1168px;
+    margin: 0 auto 140px;
+    justify-content: space-between;
+
+    @include desktop-down {
+        margin: 0 56px 140px;
+    }
+
+    @include tablet-landscape-down {
+        margin: 0 48px 140px;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    @include tablet-portrait-down {
+        margin: 0 24px 140px;
+    }
+}
+
 .contact_form {
+    display: flex;
+    flex-direction: column;
     height: 638px;
-    width: 564px;
-    left: 224px;
-    top: 352px;
-    border-radius: 12px;    
-    
-    position: absolute;
-    width: 564px;
-    height: 638px;
-    left: 224px;
-    top: 352px;
-    
-    background: #ECEDFC;
+    max-width: 564px;
+    width: 100%;
+    padding: 36px 32px 40px 32px;
+    margin: 0 48px 0 0;
+
     border-radius: 12px;
-    left:50%; 
-    margin-left:-576px 
+    background: #ECEDFC;
+
+    @include tablet-landscape-down {
+        margin: 0 0 104px 0;
+        max-width: 640px;
+    }
 }
 
-.label1 {
-    position: absolute;
-    width: 110px;
-    height: 22px;
-    left: 256px;
-    top: 388px;
-    
+.from_block {
+    margin: 0 0 24px 0;
+}
+
+.form_label {
+    margin: 0 0 8px 0;
+
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
     font-size: 14px;
     line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    color: #161616;
-
-    left:50%; 
-    margin-left:-544px 
 }
 
 .red {
-    color: #E33C5C; 
+    color: #E33C5C;
 }
 
-.input1 {
-    position: absolute;
-    width: 476px;
+.form_input {
+    width: 100%;
     height: 54px;
-    left: 256px;
-    top: 418px;
-    
+
     background: #FFFFFF;
     border-radius: 6px;
     border: none;
 
     padding-left: 24px;
 
-    
     font-family: 'Nexa Light';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 24px;
-
-    left:50%; 
-    margin-left:-544px 
 }
 
-.label2 {
-    position: absolute;
-    width: 73px;
-    height: 22px;
-    left: 256px;
-    top: 496px;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    color: #161616;
-
-    left:50%; 
-    margin-left:-544px 
-}
-
-.input2 {
-    position: absolute;
-    width: 476px;
-    height: 54px;
-    left: 256px;
-    top: 526px;
-    
-    background: #FFFFFF;
-    border-radius: 6px;
-    border: none;
-
-    padding-left: 24px;
-
-    
-    font-family: 'Nexa Light';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    left:50%; 
-    margin-left:-544px 
-}
-
-.label3 {
-    position: absolute;
-    width: 61px;
-    height: 22px;
-    left: 256px;
-    top: 604px;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    color: #161616;
-
-    left:50%; 
-    margin-left:-544px 
-}
-
-.input3 {
-    position: absolute;
-    width: 476px;
-    height: 89px;
-    left: 256px;
-    top: 634px;
-    
-    background: #FFFFFF;
-    border-radius: 6px;
-    border: none;
-
-    padding-left: 24px;
+.textarea_height {
     padding-top: 15px;
-
-    
-    font-family: 'Nexa Light';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-
-    left:50%; 
-    margin-left:-544px 
+    height: 104px;
 }
-
-// .input4 {
-//     box-sizing: border-box;
-
-//     position: absolute;
-//     width: 500px;
-//     height: 64px;
-//     left: 256px;
-//     top: 766px;
-    
-//     border: 1px dashed rgba(66, 71, 229, 0.15);
-//     border-radius: 6px;
-
-//     height: 638px;
-//     width: 564px;
-//     left: 224px;
-//     top: 352px;
-//     border-radius: 12px;
-    
-// }
 
 input::placeholder {
     opacity: .2;
@@ -261,112 +170,106 @@ textarea:focus {
     outline: none;
 }
 
-
-.upload_img {
-    box-sizing: border-box;
-
-    position: absolute;
-    width: 500px;
+.form_upload {
+    position: relative;
+    display: flex;
+    margin: 0;
+    width: 100%;
     height: 64px;
-    left: 256px;
-    top: 766px;
-    
-    border: 1px dashed rgba(66, 71, 229, 0.15);
+    border: 2px dashed rgba(66, 71, 229, 0.15);
     border-radius: 6px;
     background-color: #ECEDFC;
-    left:50%; 
-    margin-left:-544px 
 }
 
-.upload {
-    box-sizing: border-box;
+.upload_input {
+    position: absolute;
+    width: 100%;
+    height: 64px;
     opacity: 0;
     cursor: pointer;
+    z-index: 99;
+}
 
-    position: absolute;
-    width: 500px;
-    height: 64px;
-    left: 256px;
-    top: 766px;
-    
-    border: 1px dashed rgba(66, 71, 229, 0.15);
-    border-radius: 6px;
-    background-color: #ECEDFC;
-    left:50%; 
-    margin-left:-544px 
+.form_upload_file {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload_img {
+    opacity: 0.2;
+    width: 24px;
+    height: 17px;
+    margin: 0 8px 3px 0;
+
+    @include tablet-portrait-down {
+        width: 18px;
+        height: 13px;
+    }
+}
+
+.upload_text {
+    margin: 0;
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+
+    color: #4247E5;
+    opacity: 0.2;
 }
 
 .file_name {
-    position: absolute;
-    width: 500px;
+    width: 100%;
     height: 64px;
-    left: 256px;
-    top: 766px;
-    
-    border: 1px dashed rgba(66, 71, 229, 0.15);
+
+    border: 2px dashed rgba(66, 71, 229, 0.15);
     border-radius: 6px;
     background-color: #ECEDFC;
-    left:50%; 
-    margin-left:-544px;
+
     padding-top: 22px;
     padding-left: 22px;
 }
 
-.checkbox {
-    height: 20px;
-    width: 20px;
-    left: 256px;
-    top: 854px;
-    border-radius: 6px;
-    
-    box-sizing: border-box;
+.form_agree_policy {
+    display: flex;
+    margin: 24px 0 26px 0;
+    position: relative;
+}
 
-    position: absolute;
-    width: 20px;
+.form_agree {
+    margin: 0;
     height: 20px;
-    left: 256px;
-    top: 854px;
-    
+    width: 20px;
+
     background: #FFFFFF;
     border: 1px solid rgba(66, 71, 229, 0.15);
     border-radius: 6px;
     accent-color: #4247E5;
-
-    left:50%; 
-    margin-left:-544px 
 }
 
-input[type=checkbox]:checked + label {
-    color: blue;
-  }
-  
-input[type=checkbox]:checked + label{
-    background-color: #aaa;
-  }
-  input[type=checkbox]:checked + label:after{
-    background-color: blue;
-  }
-
-
-.right {
+.checkbox {
+    opacity: 0;
     position: absolute;
-    width: 290px;
-    height: 22px;
-    left: 288px;
-    top: 854px;
-    
+    height: 20px;
+    width: 20px;
+
+    background: #FFFFFF;
+    border: 1px solid rgba(66, 71, 229, 0.15);
+    border-radius: 6px;
+    accent-color: #4247E5;
+    z-index: 99;
+}
+
+.form_link {
+    margin: 0 0 0 12px;
     font-family: 'Nexa Regular';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    color: #161616;
-    
-    left:50%; 
-    margin-left:-512px 
 }
 
 .right_link {
@@ -384,494 +287,235 @@ input[type=checkbox]:checked + label{
     border: none;
     height: 48px;
     width: 172px;
-    left: 420px;
-    top: 902px;
-    border-radius: 12px;
-    
-    position: absolute;
-    width: 172px;
-    height: 48px;
-    left: 420px;
-    top: 902px;
-    
+
     background: #4247E5;
-    border-radius: 12px; 
+    border-radius: 12px;
 
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
     line-height: 24px;
-    /* identical to box height, or 150% */
-    
-    
+
     color: #FFFFFF;
-    left:50%; 
-    margin-left:-380px 
 }
-//
-.img {
-    height: 18px;
-    width: 18px;
-    left: 836px;
-    top: 356px;
-    border-radius: 0px;
-    
 
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 836px;
-    top: 356px;
-
-    left:50%; 
-    margin-left:36px
-    
+.checkbox input[type=checkbox]:checked+label {
+    color: blue;
 }
-.office {
-    position: absolute;
-    width: 129px;
-    height: 32px;
-    left: 862px;
-    top: 352px;
-    
+
+input[type=checkbox]:checked+label {
+    background-color: #aaa;
+}
+
+input[type=checkbox]:checked+label:after {
+    background-color: blue;
+}
+
+//Info offices
+.offices_container {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+}
+
+.offices_block {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+
+    @include tablet-landscape-down {
+        flex-direction: row;
+    }
+    @include tablet-portrait-down{
+        flex-direction: column;
+    }
+}
+
+.info_label {
+    display: flex;
+    margin: 0 0 26px 0;
+    @include tablet-landscape-down{
+        margin: 0 0 32px 0;
+    }
+}
+.office_contact_label{
+    display: flex;
+    margin: 0 0 26px 0;
+    @include tablet-landscape-down{
+        margin: 0 0 10px 0;
+    }
+}
+
+.office_label {
+    display: flex;
+    align-items: center;
+    margin: 0 0 10px 0;
+}
+
+.offices_info {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 0 48px 0;
+    width: 90%;
+    border-bottom: 0.5px solid rgba(66, 71, 229, 0.15);
+
+    @include desktop-down {
+        width: 100%;
+    }
+
+    @include tablet-landscape-down {
+        justify-content: flex-start;
+        border-bottom: none;
+        width: 70%;
+        margin: 0;
+    }
+    @include tablet-portrait-down{
+        width: 100%;
+        border-bottom: 0.5px solid rgba(66, 71, 229, 0.15);
+        margin: 0 0 32px 0;
+    }
+}
+
+.info_label_city {
+    display: flex;
+    flex-direction: column;
+    margin: 0 36px 48px 0;
+
+    @include tablet-landscape-down {
+        margin: 0 36px 0 0;
+    }
+    @include tablet-portrait-down{
+        margin: 0 36px 32px 0;
+    }
+}
+
+.info_label_city:last-child{
+    @include tablet-portrait-down{
+        margin: 0 0 32px 0;
+    }
+}
+
+.office_contact {
+    display: flex;
+    flex-direction: column;
+    margin: 0 36px 48px 0;
+
+    @include tablet-landscape-down {
+        margin: 0;
+    }
+}
+
+.img_label {
+    height: 18px;
+    margin: 5px 12px 0 0;
+}
+
+.img_locaion {
+    height: 14px;
+    margin: 0 12px 6px 0;
+}
+
+.container_title {
+    margin: 0;
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 32px;
-    /* identical to box height, or 133% */
-    
+
     text-align: center;
-    
-    color: #161616;
-
-    left:50%; 
-    margin-left:62px
 }
 
-.img1{
-    height: 14px;
-    width: 14px;
-    left: 834px;
-    top: 414px;
-    border-radius: 0px;
-    
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    left: 834px;
-    top: 414px;
-
-    left:50%; 
-    margin-left: 34px;
-}
-
-.office1 {
-    position: absolute;
-    width: 66px;
-    height: 26px;
-    left: 854px;
-    top: 410px;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    /* #161616 */
-    
-    color: #161616; 
-    left:50%; 
-    margin-left: 54px;
-}
-
-.type1 {
-    position: absolute;
-    width: 97px;
-    height: 20px;
-    left: 836px;
-    top: 442px;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-    
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 34px;
-}
-
-.address1{
-    height: 40px;
-    width: 146px;
-    left: 836px;
-    top: 464px;
-    
-    position: absolute;
-    width: 146px;
-    height: 40px;
-    left: 836px;
-    top: 464px;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 34px;
-}
-
-.link1 {
-    position: absolute;
-    width: 68px;
-    height: 20px;
-    left: 836px;
-    top: 512px;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-    
-    
-    /* #4247E5 */
-    
-    color: #4247E5;
-    left:50%; 
-    margin-left: 34px;    
-}
-
-.img2 {
-    height: 14px;
-    width: 14px;
-    left: 1095px;
-    top: 414px;
-    border-radius: 0px;
-
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    left: 1095px;
-    top: 414px;
-
-    left:50%; 
-    margin-left: 295px;
-}
-
-.office2 {
-    position: absolute;
-    width: 140px;
-    height: 26px;
-    left: 1115px;
-    top: 410px;
-    
-    font-family: 'Nexa XBold';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 18px;
-    line-height: 26px;
-    /* identical to box height, or 144% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 315px;
-}
-
-.type2 {
-    position: absolute;
-    width: 80px;
-    height: 20px;
-    left: 1098px;
-    top: 442px;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-    
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 295px;
-}
-
-.address2 {
-    height: 40px;
-    width: 126px;
-    left: 1098px;
-    top: 464px;
-
-    position: absolute;
-    width: 126px;
-    height: 40px;
-    left: 1098px;
-    top: 464px;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    /* or 143% */
-    
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 295px;
-}
-
-.link2 {
-    position: absolute;
-    width: 68px;
-    height: 20px;
-    left: 1098px;
-    top: 512px;
-    
-    font-family: 'Nexa Book';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 20px;
-    /* identical to box height, or 143% */
-    
-    
-    /* #4247E5 */
-    
-    color: #4247E5;
-    left:50%; 
-    margin-left: 295px;
-}
-
-.line {
-    height: 0px;
-    width: 540.000000000002px;
-    left: 836px;
-    top: 580px;
-    border-radius: 0px;
-    
-    position: absolute;
-    width: 540px;
-    height: 0px;
-    left: 836px;
-    top: 580px;
-    
-    border: 0.5px solid rgba(66, 71, 229, 0.15); 
-
-    left:50%; 
-    margin-left: 36px;  
-
-    opacity: .3;
-}
-
-.img3 {
-    height: 18px;
-    width: 18px;
-    left: 836px;
-    top: 635px;
-    border-radius: 0px;
-
-    position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 836px;
-    top: 635px;
-    left:50%; 
-    margin-left: 34px;
-}
-
-.office3 {
-    position: absolute;
-    width: 151px;
-    height: 32px;
-    left: 866px;
-    top: 628px;
-    
+.contact_title {
+    margin: 0;
     font-family: 'Nexa Heavy';
     font-style: normal;
     font-weight: 900;
     font-size: 24px;
     line-height: 32px;
-    /* identical to box height, or 133% */
-    
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 66px;
+
+    text-align: center;
+
+    @include tablet-landscape-down {
+        font-size: 18px;
+        line-height: 26px;
+    }
 }
 
-.point3 {
-    height: 4px;
-    width: 4px;
-    left: 836px;
-    top: 681px;
-    border-radius: 50%;
-    
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    left: 836px;
-    top: 681px;
-    
-    /* #E33C5C */
-    
-    background: #E33C5C; 
-    left:50%; 
-    margin-left: 34px;  
-}
+.office_city {
+    margin: 0;
 
-.type3 {
-    position: absolute;
-    width: 142px;
-    height: 22px;
-    left: 846px;
-    top: 672px;
-    
-    font-family: 'Nexa Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    /* #161616 */
-    
-    color: #161616;
-    left:50%; 
-    margin-left: 46px;
-}
-
-.address3 {
-    height: 22px;
-    width: 345px;
-    left: 836px;
-    top: 700px;
-    
-    position: absolute;
-    width: 345px;
-    height: 22px;
-    left: 836px;
-    top: 700px;
-    
-    font-family: 'Nexa Regular';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    /* #161616 */
-    
-    color: #161616; 
-    left:50%; 
-    margin-left: 34px;
-}
-
-.link3{
-    position: absolute;
-    width: 126px;
-    height: 22px;
-    left: 836px;
-    top: 732px;
-    
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.office_type {
+    margin: 0;
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.office_offline {
+    margin: 0;
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-    /* identical to box height, or 157% */
-    
-    
-    /* #4247E5 */
-    
-    color: #4247E5; 
-    left:50%; 
-    margin-left: 34px; 
-}
-//
-.logo_block {
-    position: absolute;
-    width: 1152px;
-    height: 104px;
-    left: 224px;
-    top: 1158px;
-    left:50%; 
-    margin-left:-576px 
 }
 
-.our_clients {
-    overflow: unset;
-    position: absolute;
-    width: 1152px;
-    height: 402px;
-    left: 224px;
-    top: 1430px;
-    overflow: unset;
-    left:50%; 
-    margin-left:-576px 
+.space_offline {
+    margin: 0 0 0 12px;
 }
 
-.more {
-    position: absolute;
-    width: 1035px;
-    height: 208px;
-    left: 224px;
-    top: 2000px;
-    overflow: unset;
-    left:50%; 
-    margin-left:-576px 
+.point_type {
+    position: relative;
+    margin: 0 0 12px 0;
+    @include tablet-landscape-down{
+        margin: 0 0 10px 0;
+    }
 }
 
-.instant {
+.point_type:before {
+    content: '';
     position: absolute;
-    width: 1152px;
-    height: 280px;
-    left: 224px;
-    top: 2376px;
-    left:50%; 
-    margin-left:-576px 
+    display: flex;
+    margin: 0;
+    height: 4px;
+    width: 4px;
+    top: 7px;
+    border-radius: 50%;
+    background: #E33C5C;
 }
 
-.footer {
-    overflow: unset;
-    position: absolute;
-    width: 1152px;
-    height: 150px;
-    left: 224px;
-    top: 2824px;
-    left:50%; 
-    margin-left:-576px 
+.office_address {
+    margin: 0;
+    max-width: 146px;
+
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
 }
 
-.space {
-    position: absolute;
-    width: 1152px;
-    height: 32px;
-    left: 224px;
-    top: 2974px;
-    left:50%; 
-    margin-left:-576px 
+.office_link {
+    margin: 10px 0 0 0;
+    font-family: 'Nexa Book';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 20px;
+
+    color: #4247E5;
 }
 
 .bold {
