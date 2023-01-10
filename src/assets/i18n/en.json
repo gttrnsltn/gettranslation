@@ -5,7 +5,31 @@
         "translators": "Translators",
         "services": "Services",
         "contact": "Contact us",
-        "instant": "Instant quote"
+        "instant": "Instant quote",
+        "login": "Login",
+
+        "service_item1": "Website Localization",
+        "service_item2": "Software Localization",
+        "service_item3": " Custom Localization Solutions ",
+        "service_item4": "Google Ads Translation",
+        "service_item5": "Multilingual DTP",
+        "service_item6": "Multilingual Chatbots",
+        "service_item7": "Video Subtitling",
+        "service_item8": "Official Translations",
+        "service_item9": "Urgent Translations",
+
+        "login_mod_title": "Client Sign in",
+        "login_btn1": "Client",
+        "login_btn2": "Translator",
+        "login_btn3": "Employee",
+        "email_label": "E-mail address",
+        "email_correct": "E-mail entered correctly",
+        "email_incorrect": "E-mail entered incorrectly",
+        "password_label": "Password",
+        "forgot_label": "Forgot username or password?",
+        "submit_login": "Log in to continue"
+
+
     },
     "cookies": {
         "description": "We use cookies to enhance your experience. By continuing to visit this site you agree to our use of cookies.",
@@ -156,6 +180,7 @@
         "calc_label3": "Word count",
         "calc_label4": "Subject",
         "calc_label5": "Delivery date",
+        "calc_search": "Search",
 
         "pay_item1": "Pay after delivery",
         "pay_item2": "We trust you:",
@@ -164,6 +189,8 @@
 
         "mod_text_word": "WORD COUNT TOOL",
         "mod_text_date": "Select the delivery date",
+        "mod_text_upload1": "Drag & drop files here or",
+        "mod_text_upload2": "browse",
         "best_price_label": "Auto (best price)",
         "guaranteed_label": "Delivery guaranteed by",
         "option_timezone_label1": "(EET) Eastern European Time",
@@ -398,6 +425,5 @@
         "no": "Norsk",
         "da": "Dansk",
         "fi": "Suomi"
-
     }
 }

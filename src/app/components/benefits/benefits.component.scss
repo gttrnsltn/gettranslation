@@ -2,7 +2,6 @@
 
 .benefits_container {
     max-width: 1168px;
-    width: 100%;
     height: auto; 
     margin: 0 auto 120px;
     display: flex;
@@ -48,7 +47,10 @@
         height: auto;
         max-width: 100%;
         min-width: 327px;  
-        margin-bottom: 16px;  
+        margin: 0 0 16px 0;  
+    }
+    @include mobile-only{
+        min-width: 100%; 
     }
 }
 
@@ -95,16 +97,20 @@
     font-size: 14px;
     line-height: 20px;
     color: #161616;
-    margin-top: 8px;
+    margin: 8px 0 8px 0;
     @include tablet-landscape-down{
-        margin-top: 6px;
+        margin: 6px 0 6px 0;
         max-width: 279px;
         font-size: 12px;
         line-height: 18px;
     }
     @include tablet-portrait-down{
+        margin: 6px 0 6px 0;
         font-size: 14px;
         line-height: 20px;
+    }
+    @include mobile-only{
+        max-width: 100%;
     }
 }
 

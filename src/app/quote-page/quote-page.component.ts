@@ -26,7 +26,7 @@ export class QuotePageComponent implements OnInit {
 
   // to language
   to = 'Japanese'
-  valueCheckbox:any = "Japanese";
+  valueCheckbox: any = "Japanese";
   closeDropdown = false;
   arrowCheckbox = false;
   formOrder!: FormGroup;
@@ -52,8 +52,8 @@ export class QuotePageComponent implements OnInit {
   loaded = false
   upload_mod_status = "";
   file!: File
-  files  : File[] = [];
-  fileCount!: number 
+  files: File[] = [];
+  fileCount!: number
   fileCountStr!: string
   mod_date!: string | null;
   mod_type = "CET";
@@ -95,10 +95,10 @@ export class QuotePageComponent implements OnInit {
   date2n!: number;
   date3n!: number;
 
-  today =  new Date();
-  date1 =  new Date();
-  date2 =  new Date();
-  date3 =  new Date();
+  today = new Date();
+  date1 = new Date();
+  date2 = new Date();
+  date3 = new Date();
 
   date1s!: string | null;
   date2s!: string | null;
@@ -109,20 +109,20 @@ export class QuotePageComponent implements OnInit {
   specializations_code_list = []
 
   btn_text = 'Show prices'
-  public fileString :any;
+  public fileString: any;
 
   constructor(
     private datePipe: DatePipe,
     public orderServ: OrderService,
     private router: Router,
-    private titleService: Title,  
-    private metaTagService: Meta ,
+    private titleService: Title,
+    private metaTagService: Meta,
     private activeRoute: ActivatedRoute,
     private fb: FormBuilder,
     private ipAPI: IpInfoAPI,
     private currencyAPI: CurrencyAPI,
     private elementRef: ElementRef
-  ) { 
+  ) {
     this.fileString;
 
     this.formOrder = this.fb.group({
@@ -132,7 +132,7 @@ export class QuotePageComponent implements OnInit {
     this.fromLanguageForm = this.fb.group({
       language: this.fb.array([])
     })
-  
+
     this.typeOrderForm = this.fb.group({
       subject: this.fb.array([])
     })
@@ -140,26 +140,26 @@ export class QuotePageComponent implements OnInit {
 
   ngOnInit(): void {
     //Получение списка значений языка
-    this.orderServ.getAll().subscribe((value : any) => {
+    this.orderServ.getAll().subscribe((value: any) => {
       this.languages_code_list = Object.values(value.languages)
       this.specializations_code_list = Object.values(value.specializations)
       this.languages_code_list.forEach(element => {
-        this.fromLanguageList.push({name: element, value: false})
+        this.fromLanguageList.push({ name: element, value: false })
       })
     });
 
 
-    this.titleService.setTitle("Professional translations in a few clicks");  
-   
-    this.metaTagService.addTags([  
-      { name: 'description', content: 'The easy way to get your documents translated fast. Save time & money, request your free immediate online quote for any language combination.' },  
-      { name: 'keywords', content: 'The easy way to get your documents translated fast. Save time & money, request your free immediate online quote for any language combination.' },  
+    this.titleService.setTitle("Professional translations in a few clicks");
+
+    this.metaTagService.addTags([
+      { name: 'description', content: 'The easy way to get your documents translated fast. Save time & money, request your free immediate online quote for any language combination.' },
+      { name: 'keywords', content: 'The easy way to get your documents translated fast. Save time & money, request your free immediate online quote for any language combination.' },
       { name: 'robots', content: 'index, follow' },
-      { charset: 'UTF-8' }  ]); 
+      { charset: 'UTF-8' }]);
 
 
     this.today = new Date(this.today.getTime());
-    this.todays = this.datePipe.transform(this.today,'yyyy-MM-dd');
+    this.todays = this.datePipe.transform(this.today, 'yyyy-MM-dd');
     this.mod_date = this.todays;
 
 
@@ -180,7 +180,7 @@ export class QuotePageComponent implements OnInit {
       console.log("Location load: " + this.currency);
     });
 
-    this.currencyAPI.userSelectedCurrency.subscribe((value) =>{
+    this.currencyAPI.userSelectedCurrency.subscribe((value) => {
       this.currency = value;
       console.log("Footer load: " + this.currency)
     })
@@ -192,7 +192,7 @@ export class QuotePageComponent implements OnInit {
     this.submitted = false;
     this.loading = true
     window.scrollTo(0, 200)
-    setTimeout(() => {  this.loading = false; this.submit(); }, 1500);
+    setTimeout(() => { this.loading = false; this.submit(); }, 1500);
   }
 
   submit() {
@@ -203,40 +203,40 @@ export class QuotePageComponent implements OnInit {
     this.submitted = true;
     this.btn_text = 'Update prices';
 
-    this.label_price1 = String((this.about_price1/this.eur_exch_rate).toFixed(2))
-    this.label_price2 = String((this.about_price2/this.eur_exch_rate).toFixed(2))
-    this.label_price3 = String((this.about_price3/this.eur_exch_rate).toFixed(2))
+    this.label_price1 = String((this.about_price1 / this.eur_exch_rate).toFixed(2))
+    this.label_price2 = String((this.about_price2 / this.eur_exch_rate).toFixed(2))
+    this.label_price3 = String((this.about_price3 / this.eur_exch_rate).toFixed(2))
 
     if (this.word < 250) {
       this.word = 250
     }
 
-    this.price1 = Math.round((Math.floor(this.word * 0.17 * 100) / 100)/this.eur_exch_rate)
-    this.price2 = Math.round((Math.floor(this.word * 0.12 * 100) / 100)/this.eur_exch_rate)
-    this.price3 = Math.round((Math.floor(this.word * 0.04 * 100) / 100)/this.eur_exch_rate)
+    this.price1 = Math.round((Math.floor(this.word * 0.17 * 100) / 100) / this.eur_exch_rate)
+    this.price2 = Math.round((Math.floor(this.word * 0.12 * 100) / 100) / this.eur_exch_rate)
+    this.price3 = Math.round((Math.floor(this.word * 0.04 * 100) / 100) / this.eur_exch_rate)
     console.log("Exchange rate: " + this.eur_exch_rate);
 
 
-    this.date1n = Math.round(this.word / 10000 ) - 1;
-    this.date2n = Math.round(this.word / 10000 ) - 1;
-    this.date3n = Math.round(this.word / 10000 ) - 1; 
+    this.date1n = Math.round(this.word / 10000) - 1;
+    this.date2n = Math.round(this.word / 10000) - 1;
+    this.date3n = Math.round(this.word / 10000) - 1;
 
-    
+
     var today = new Date();
-    this.date1.setDate(today.getDate()+this.date1n);
-    this.date2.setDate(today.getDate()+this.date2n);
-    this.date3.setDate(today.getDate()+this.date3n);
- 
-    this.date1s = this.datePipe.transform(this.date1,'EEE d MMM h:mm a');
-    this.date2s = this.datePipe.transform(this.date2,'EEE d MMM h:mm a');
-    this.date3s = this.datePipe.transform(this.date3,'EEE d MMM h:mm a');
+    this.date1.setDate(today.getDate() + this.date1n);
+    this.date2.setDate(today.getDate() + this.date2n);
+    this.date3.setDate(today.getDate() + this.date3n);
+
+    this.date1s = this.datePipe.transform(this.date1, 'EEE d MMM h:mm a');
+    this.date2s = this.datePipe.transform(this.date2, 'EEE d MMM h:mm a');
+    this.date3s = this.datePipe.transform(this.date3, 'EEE d MMM h:mm a');
     // this.date1.
     window.scrollTo(0, 650)
 
- 
-    
+
+
     //, { 
-    
+
     //   behavior: 'smooth', // и плавно 
     // });
   }
@@ -253,7 +253,7 @@ export class QuotePageComponent implements OnInit {
     this.detail3 = !this.detail3;
   }
 
-  order(file:any) {
+  order(file: any) {
     if (file == 'Premium') {
       console.log(this.eur_exch_rate)
       this.orderServ.price = this.currency + " " + this.label_price1 + " / word"
@@ -288,57 +288,108 @@ export class QuotePageComponent implements OnInit {
   }
 
 
-  changeListener($event:any): void {
-    if ( $event.target.files[0].name != "" ) { 
+  changeListener($event: any): void {
+    if ($event.target.files[0].name != "") {
       this.upload_mod_status = "IN_PROCESS"
       this.readThis($event.target);
     }
   }
 
-readThis(inputValue: any): void {
+  readThis(inputValue: any): void {
+    let files = []
+    this.file = inputValue.files[0];
 
-  let files = []
-  this.file = inputValue.files[0];
+    for (var file of inputValue.files) {
+      files.push(file)
+    }
 
-  for (var file of inputValue.files) {
-    files.push(file)
+    files.forEach(item => {
+      this.files.push(item)
+    })
+    this.orderServ.fileName = this.file.name
+    this.orderServ.files = this.files
+
+    console.log("Number of files: " + this.files.length)
+
+    var form = new FormData();
+
+
+    let language_id = ""
+    this.orderServ.getAll().subscribe((res: any) => {
+      console.log(res.languages)
+      let keys = Object.keys(res.languages)
+
+      for (var i = 0, l = keys.length; i < l; i++) {
+        if (res.languages[keys[i]] == this.from) {
+          language_id = keys[i]
+        }
+      }
+    })
+
+    form.append("agency_id", "16");
+    form.append("language_id", language_id);
+    console.log(this.files)
+    // TODO: Should there be a file limit
+    for (let i = 0; i < this.files.length; ++i) {
+      console.log("Files left: " + this.files.length)
+      console.log("Current index: " + i)
+
+      form.append("file", this.files[i])
+      this.orderServ.upload(form).subscribe(res => {
+        //console.log(res)
+        if (res.status == "counted") {
+          this.fileCount++
+          this.word += res.wordCount;
+          this.orderServ.word = this.word
+          console.log("Number of words counted: " + this.word)
+          if (this.fileCount > 1) {
+            this.orderServ.fileName = this.fileCount + ' files'
+            this.fileCountStr = this.fileCount + ' files'
+          }
+          else if (this.fileCount = 1) {
+            this.fileCountStr = this.fileCount + ' file'
+          }
+          if (this.word == 0) {
+            this.upload_mod_status = 'ERROR'
+          }
+          else {
+            this.upload_mod_status = "OK"
+          }
+        }
+        else if (res.status == "IN_PROCESS") {
+          do {
+            this.sleep(2000);
+            this.Statistics(res.id)
+          } while (this.upload_mod_status != "IN_PROCESS");
+        }
+        else {
+          this.upload_mod_status = "ERROR"
+          this.word = 0
+        }
+      })
+      this.sleep(100)
+      form.delete("file")
+      this.files.splice(i, 1)
+      --i
+    }
   }
 
-  files.forEach(item => {
-    this.files.push(item)
-  })
-  this.orderServ.fileName = this.file.name
-  this.orderServ.files = this.files
-
-  console.log("Number of files: " + this.files.length)
-
-  var form = new FormData();
-
-
-  let language_id = ""
-  this.orderServ.getAll().subscribe((res: any) => {
-    console.log(res.languages)
-    let keys = Object.keys(res.languages)
-
-    for (var i = 0, l = keys.length; i < l; i++) {
-      if (res.languages[keys[i]] == this.from) {
-        language_id = keys[i]
-      }
+  sleep(millis: any) {
+    var t = (new Date()).getTime();
+    var i = 0;
+    while (((new Date()).getTime() - t) < millis) {
+      i++;
     }
-  })
+  }
 
-  form.append("agency_id", "16");
-  form.append("language_id", language_id);
-  console.log(this.files)
-  // TODO: Should there be a file limit
-  for (let i = 0; i < this.files.length; ++i) {
-    console.log("Files left: " + this.files.length)
-    console.log("Current index: " + i)
+  Statistics(file_id: any) {
+    this.orderServ.statistics(file_id).subscribe(res => {
+      console.log(res)
+      if (res.status == "IN_PROCESS" || res.status == 'waiting') {
+        this.upload_mod_status = "IN_PROCESS"
 
-    form.append("file", this.files[i])
-    this.orderServ.upload(form).subscribe(res => {
-      //console.log(res)
-      if (res.status == "counted") {
+      }
+      else {
         this.fileCount++
         this.word += res.wordCount;
         this.orderServ.word = this.word
@@ -357,267 +408,217 @@ readThis(inputValue: any): void {
           this.upload_mod_status = "OK"
         }
       }
-      else if (res.status == "IN_PROCESS") {
-        do {
-          this.sleep(2000);
-          this.Statistics(res.id)
-        } while (this.upload_mod_status != "IN_PROCESS");
-      }
-      else {
-        this.upload_mod_status = "ERROR"
-        this.word = 0
-      }
     })
-    this.sleep(100)
-    form.delete("file")
-    this.files.splice(i, 1)
-    --i
-  }
-}
 
-sleep(millis:any) {
-  var t = (new Date()).getTime();
-  var i = 0;
-  while (((new Date()).getTime() - t) < millis) {
-      i++;
   }
-}
 
-Statistics(file_id: any) {
-  this.orderServ.statistics(file_id).subscribe( res => { 
-    console.log(res)
-    if (res.status == "IN_PROCESS" || res.status =='waiting') {
-      this.upload_mod_status = "IN_PROCESS"
-      
+  UploudModOpen() {
+    this.upload_mod = true;
+    //window.scrollTo(0, 100)
+  }
+
+  UploudModClose() {
+    this.upload_mod = false;
+    //window.scrollTo(0, 100)
+  }
+
+
+  DateModOpen() {
+    this.date_mod = true;
+    //window.scrollTo(0, 100)
+  }
+
+  DateModClose() {
+    if (this.delivery_mod == 'Delivery guaranteed by') {
+      this.delivery = this.mod_date + " " + this.mod_time + " " + this.mod_type
     }
     else {
-      this.fileCount++
-      this.word += res.wordCount;
-      this.orderServ.word = this.word
-      console.log("Number of words counted: " + this.word)
-      if (this.fileCount > 1) {
-        this.orderServ.fileName = this.fileCount + ' files'
-        this.fileCountStr = this.fileCount + ' files'
-      }
-      else if (this.fileCount = 1) {
-        this.fileCountStr = this.fileCount + ' file'
-      }
-      if (this.word == 0) {
-        this.upload_mod_status = 'ERROR'
-      }
-      else {
-        this.upload_mod_status = "OK"
-      }
+      this.delivery = 'Auto (best price)'
     }
-  })
 
-}
-
-UploudModOpen() {
-  this.upload_mod = true;
-  //window.scrollTo(0, 100)
-}
-
-UploudModClose() {
-  this.upload_mod = false;
-  //window.scrollTo(0, 100)
-}
-
-
-DateModOpen() {
-  this.date_mod = true;
-  //window.scrollTo(0, 100)
-}
-
-DateModClose() {
-  if (this.delivery_mod == 'Delivery guaranteed by') {
-    this.delivery = this.mod_date + " " + this.mod_time + " " + this.mod_type
-  }
-  else {
-    this.delivery = 'Auto (best price)'
+    this.date_mod = false;
+    //window.scrollTo(0, 100)
   }
 
-  this.date_mod = false;
-  //window.scrollTo(0, 100)
-}
-
-onKeydown(event: { key: string; preventDefault: () => void; }) {
-  if ( ['0','1','2','3','4','5','6','7','8','9'].includes( event.key ) && this.word >= 1000000 ) {
-    event.preventDefault()
-    this.word = 1000000
-  }
-
-  if ( ( (this.word + "").length > 5 && this.word != 1000000 && this.word != 100000 ) ) {
-    event.preventDefault()
-    this.word = 1000000
-  }
-  if( ['+','-','e', '.'].includes( event.key ) ) {
-    event.preventDefault()
-  }
- 
-}
-
-deleteFile() {
-  this.upload_mod_status = "";
-  this.orderServ.fileName = "";
-  this.word = 0;
-  this.files = [];
-  this.fileCount = 0
-}
-
-allModalClose() {
-  this.DateModClose();
-  this.UploudModClose();
-  this.closeDropdown = false;
-  this.arrowCheckbox = false;
-  this.closeDropdownFrom = false;
-  this.arrowCheckboxFrom = false;
-  this.closeDropdownType = false;
-  this.arrowCheckboxType = false;
-}
-
-
-// dropdown to 
-onCheckboxChange(e: any) {
-  const country: FormArray = this.formOrder.get('country') as FormArray;
-  if (e.target.checked) {
-    country.push(new FormControl(e.target.value));
-    this.to = e.target.value
-  } else {
-    let i: number = 0;
-    country.controls.forEach((item: any) => {
-      if (item.value == e.target.value) {
-        country.removeAt(i);
-        return;
-      }
-      i++;
-    });
-  }
-
-  if (this.formOrder.value.country.length === 0) {
-    this.to = "Japanese"
-    this.valueCheckbox = "Japanese";
-  }
-  if (this.formOrder.value.country.length === 1) {
-    this.valueCheckbox = this.formOrder.value.country[0];
-  }
-  if (this.formOrder.value.country.length > 1) {
-    this.valueCheckbox = this.formOrder.value.country.length + " languages selected";
-  }
-
-  this.to_arr = country.value
-}
-
-// dropdown from 
-onCheckboxChangeFrom(e: any) {
-  const languages: FormArray = this.fromLanguageForm.get('language') as FormArray
-  console.log(e.target.checked)
-  if (e.target.checked) {
-    for (var lang of this.fromLanguageList) {
-      if (lang.name == this.from) {
-        console.log("Found previous lange: " + lang.name)
-        lang.value = false
-      }
+  onKeydown(event: { key: string; preventDefault: () => void; }) {
+    if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(event.key) && this.word >= 1000000) {
+      event.preventDefault()
+      this.word = 1000000
     }
-    this.from = e.target.value
-    this.valueCheckboxFrom = this.from
-    languages.clear()
-    languages.push(new FormControl(this.from))
-  } else {
-    let i: number = 0;
-    languages.controls.forEach((item: any) => {
-      if (item.value == e.target.value) {
-        languages.removeAt(i);
-        return;
-      }
-      i++;
-    });
+
+    if (((this.word + "").length > 5 && this.word != 1000000 && this.word != 100000)) {
+      event.preventDefault()
+      this.word = 1000000
+    }
+    if (['+', '-', 'e', '.'].includes(event.key)) {
+      event.preventDefault()
+    }
+
   }
 
-  if (this.fromLanguageForm.value.language.length == 0) {
-    this.from = "English (USA)"
-    this.valueCheckboxFrom = "English (USA)"
+  deleteFile() {
+    this.upload_mod_status = "";
+    this.orderServ.fileName = "";
+    this.word = 0;
+    this.files = [];
+    this.fileCount = 0
   }
 
-}
-
-onCheckboxChangeType(e: any) {
-  const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
-  if (e.target.checked) {
-    this.subjectType = e.target.value
-    this.valueCheckboxType = this.subjectType
-    subjects.clear()
-    subjects.push(new FormControl(this.subjectType))
-  } else {
-    let i: number = 0;
-    subjects.controls.forEach((item: any) => {
-      if (item.value == e.target.value) {
-        subjects.removeAt(i);
-        return;
-      }
-      i++;
-    });
-  }
-
-  console.log("Subject from array size: " + this.typeOrderForm.value.subject.length)
-  console.log("Subject instance array size: " + subjects.length)
-
-  if (this.typeOrderForm.value.subject.length == 0) {
-    this.valueCheckboxType = "General"
-  }
-}
-
-
-onSearchInputChange(event: any) {
-  if (event.target.value != "") {
-    this.languages_code_list = this.languages_code_list.filter((res: any) => {
-      return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
-    });
-  }
-  else if(event.target.value == "") {
-    this.ngOnInit();
-  }
-}
-
-onSearchInputChangeType(event: any) {
-  if (event.target.value != "") {
-    this.specializations_code_list = this.specializations_code_list.filter((res: any) => {
-      return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
-    })
-  } else if (event.target.value == "") {
-    this.ngOnInit();
-  }
-}
-
-openDropdownTo() {
-  if (this.closeDropdown === false) {
-    this.closeDropdown = true;
-    this.arrowCheckbox = true;
-  }
-  else {
+  allModalClose() {
+    this.DateModClose();
+    this.UploudModClose();
     this.closeDropdown = false;
     this.arrowCheckbox = false;
-  }
-}
-
-openDropdownFrom() {
-  if (this.closeDropdownFrom === false) {
-    this.closeDropdownFrom = true;
-    this.arrowCheckboxFrom = true;
-  } else {
     this.closeDropdownFrom = false;
     this.arrowCheckboxFrom = false;
-  }
-}
-
-openDropdownType() {
-  if (this.closeDropdownType === false) {
-    this.closeDropdownType = true;
-    this.arrowCheckboxType = true;
-  } else {
     this.closeDropdownType = false;
     this.arrowCheckboxType = false;
   }
-}
+
+
+  // dropdown to 
+  onCheckboxChange(e: any) {
+    const country: FormArray = this.formOrder.get('country') as FormArray;
+    if (e.target.checked) {
+      country.push(new FormControl(e.target.value));
+      this.to = e.target.value
+    } else {
+      let i: number = 0;
+      country.controls.forEach((item: any) => {
+        if (item.value == e.target.value) {
+          country.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+
+    if (this.formOrder.value.country.length === 0) {
+      this.to = "Japanese"
+      this.valueCheckbox = "Japanese";
+    }
+    if (this.formOrder.value.country.length === 1) {
+      this.valueCheckbox = this.formOrder.value.country[0];
+    }
+    if (this.formOrder.value.country.length > 1) {
+      this.valueCheckbox = this.formOrder.value.country.length + " languages selected";
+    }
+
+    this.to_arr = country.value
+  }
+
+  // dropdown from 
+  onCheckboxChangeFrom(e: any) {
+    const languages: FormArray = this.fromLanguageForm.get('language') as FormArray
+    console.log(e.target.checked)
+    if (e.target.checked) {
+      for (var lang of this.fromLanguageList) {
+        if (lang.name == this.from) {
+          console.log("Found previous lange: " + lang.name)
+          lang.value = false
+        }
+      }
+      this.from = e.target.value
+      this.valueCheckboxFrom = this.from
+      languages.clear()
+      languages.push(new FormControl(this.from))
+    } else {
+      let i: number = 0;
+      languages.controls.forEach((item: any) => {
+        if (item.value == e.target.value) {
+          languages.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+
+    if (this.fromLanguageForm.value.language.length == 0) {
+      this.from = "English (USA)"
+      this.valueCheckboxFrom = "English (USA)"
+    }
+
+  }
+
+  onCheckboxChangeType(e: any) {
+    const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
+    if (e.target.checked) {
+      this.subjectType = e.target.value
+      this.valueCheckboxType = this.subjectType
+      subjects.clear()
+      subjects.push(new FormControl(this.subjectType))
+    } else {
+      let i: number = 0;
+      subjects.controls.forEach((item: any) => {
+        if (item.value == e.target.value) {
+          subjects.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+
+    console.log("Subject from array size: " + this.typeOrderForm.value.subject.length)
+    console.log("Subject instance array size: " + subjects.length)
+
+    if (this.typeOrderForm.value.subject.length == 0) {
+      this.valueCheckboxType = "General"
+    }
+  }
+
+  onSearchInputChangeFrom(event: any) {
+    console.log("NOT IMPLEMENTED YET")
+  }
+
+  onSearchInputChange(event: any) {
+    if (event.target.value != "") {
+      this.languages_code_list = this.languages_code_list.filter((res: any) => {
+        return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
+      });
+    }
+    else if (event.target.value == "") {
+      this.ngOnInit();
+    }
+  }
+
+  onSearchInputChangeType(event: any) {
+    if (event.target.value != "") {
+      this.specializations_code_list = this.specializations_code_list.filter((res: any) => {
+        return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
+      })
+    }
+  }
+
+
+  openDropdownTo() {
+    if (this.closeDropdown === false) {
+      this.closeDropdown = true;
+      this.arrowCheckbox = true;
+    }
+    else {
+      this.closeDropdown = false;
+      this.arrowCheckbox = false;
+    }
+  }
+
+  openDropdownFrom() {
+    if (this.closeDropdownFrom === false) {
+      this.closeDropdownFrom = true;
+      this.arrowCheckboxFrom = true;
+    } else {
+      this.closeDropdownFrom = false;
+      this.arrowCheckboxFrom = false;
+    }
+  }
+
+  openDropdownType() {
+    if (this.closeDropdownType === false) {
+      this.closeDropdownType = true;
+      this.arrowCheckboxType = true;
+    } else {
+      this.closeDropdownType = false;
+      this.arrowCheckboxType = false;
+    }
+  }
 
 }
