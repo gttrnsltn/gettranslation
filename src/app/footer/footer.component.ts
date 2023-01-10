@@ -49,14 +49,15 @@ export class FooterComponent implements OnInit {
 
     this.langPopup = this.elementRef.nativeElement.querySelector(".popup_container")
     let cookies_lang = this.cookies.getCookie("lang")
+    let cookies_currency = this.cookies.getCookie("currency")
     console.log("Language from cookies: " + cookies_lang)
 
     // DEBUG(dan):
     // this.cookies.deleteCookie("lang")
 
-    if (cookies_lang == "") {
-      this.ipAPI.locationData.subscribe((value) => {
-        // lang autodetect or set user option
+    this.ipAPI.locationData.subscribe((value) => {
+      // lang autodetect or set user option
+      if (cookies_lang == "") {
         if (!user_manual_lang) {
           if (this.lang_list.indexOf(value.lang) != -1) {
             this.lang = value.lang
@@ -68,18 +69,24 @@ export class FooterComponent implements OnInit {
         } else {
           this.lang = user_manual_lang
         }
-        this.changeLang()
-        // currency autodetect
+      } else {
+        this.lang = cookies_lang
+        this.langPopup.style.display = "none"
+      }
+      this.changeLang()
+
+      // currency autodetect
+      if (cookies_currency == "") {
         if (!user_manual_currency && this.currency_list.indexOf(value.currency) != -1) {
           this.currency = value.currency;
-          this.currencyAPI.push_to_user_select(this.currency);
+          this.currencyAPI.push_to_user_select(this.currency)
         }
-      });
-    } else {
-      this.lang = cookies_lang
-      this.changeLang()
-      this.langPopup.style.display = "none"
-    }
+      } else {
+        this.currency = cookies_currency
+        this.currencyAPI.push_to_user_select(this.currency)
+      }
+
+    });
 
     this.currencyAPI.supportedCurrencies.subscribe((value) => {
       if (this.currency_list.length == 1) {
@@ -145,6 +152,7 @@ export class FooterComponent implements OnInit {
   {
     user_manual_currency = this.currency;
     this.currencyAPI.push_to_user_select(this.currency)
+    this.cookies.setCookie("currency", this.currency)
   }
 
   cookiePopupClose()

@@ -28,12 +28,10 @@ export class HeaderComponent implements OnInit {
   constructor(
     private activeRoute: ActivatedRoute,
     private ipAPI: IpInfoAPI,
-    private currencyAPI: CurrencyAPI
   ) { }
 
   ngOnInit(): void {
     this.ipAPI.initIpBasedInfo();
-    //this.currencyAPI.getSupportedCurrencies();
     let route = '';
     this.quote = false;
     this.contact = false;
