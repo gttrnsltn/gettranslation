@@ -28,6 +28,7 @@ export class FooterComponent implements OnInit {
   // currency
   currency = "EUR"
   currency_list: string[] = ['EUR', 'USD', 'JPY', 'BGN', 'CZK', 'DKK', 'GBP', 'HUF', 'PLN', 'RON', 'SEK', 'CHF', 'ISK', 'NOK', 'HRK', 'RUB', 'TRY', 'AUD', 'BRL', 'CAD', 'CNY', 'HKD', 'IDR', 'ILS', 'INR', 'KRW', 'MXN', 'MYR', 'NZD', 'PHP', 'SGD', 'THB', 'ZAR', 'ARS', 'DZD', 'MAD', 'TWD']
+  lang_list: string[] = ['de', 'en', 'es', 'fr', 'nl', 'pl', 'ru', 'sv', 'tr', 'ko', 'no', 'da', 'fi']
 
   constructor(
     public translate: TranslateService,
@@ -49,16 +50,20 @@ export class FooterComponent implements OnInit {
     this.langPopup = this.elementRef.nativeElement.querySelector(".popup_container")
     let cookies_lang = this.cookies.getCookie("lang")
     console.log("Language from cookies: " + cookies_lang)
-    this.cookies.deleteCookie("lang")
+
+    // DEBUG(dan):
+    // this.cookies.deleteCookie("lang")
+
     if (cookies_lang == "") {
       this.ipAPI.locationData.subscribe((value) => {
         // lang autodetect or set user option
         if (!user_manual_lang) {
-          // TODO: Validate that language from location API is supported
-          this.lang = value.lang
-          this.ipBasedLangEmoji = value.countryEmoji
-          if (this.lang_browser != this.lang) {
-            this.langPopup.style.display = "block"
+          if (this.lang_list.indexOf(value.lang) != -1) {
+            this.lang = value.lang
+            this.ipBasedLangEmoji = value.countryEmoji
+            if (this.lang_browser != this.lang) {
+              this.langPopup.style.display = "block"
+            }
           }
         } else {
           this.lang = user_manual_lang

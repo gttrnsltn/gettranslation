@@ -82,7 +82,7 @@ export class QuotePageComponent implements OnInit {
   detail2 = false
   detail3 = false
 
-  word = 250;
+  word = 0;
   subjectType = 'General';
   timezone = "CET";
   currency = "EUR"
@@ -297,75 +297,82 @@ export class QuotePageComponent implements OnInit {
 
 readThis(inputValue: any): void {
 
-this.file = inputValue.files[0];
+  let files = []
+  this.file = inputValue.files[0];
 
-let files = []
-files.push(this.file)
-files.forEach( item => {
-  this.files.push(item)
-})
-this.orderServ.fileName = this.file.name
-this.orderServ.files = this.files
-
-
-var form = new FormData();
-
-
-let language_id = ""
-this.orderServ.getAll().subscribe( (res: any) => {
-console.log(res.languages)
-let keys = Object.keys(res.languages)
-
-for (var i = 0, l = keys.length; i < l; i++) {
-  if (res.languages[keys[i]] == this.from) {
-    language_id = keys[i]
+  for (var file of inputValue.files) {
+    files.push(file)
   }
-}
-})
 
-form.append("agency_id", "16");
-form.append("language_id", language_id);
-form.append("file", this.file);
-this.orderServ.upload(form).subscribe( res => {
+  files.forEach(item => {
+    this.files.push(item)
+  })
+  this.orderServ.fileName = this.file.name
+  this.orderServ.files = this.files
 
-  if ( res.status == "counted" ) {
-    this.word = this.word + res.wordCount
-    this.orderServ.word = this.word
-    if (this.word == 0) {
-      this.upload_mod_status ='ERROR'
-    }
-    else {
-      this.upload_mod_status = "OK"
-    }
-    this.fileCount = this.files.length
-    if (this.fileCount > 1 ) {
-      this.orderServ.fileName = this.fileCount + ' files'
-      this.fileCountStr = this.fileCount + ' files'
-      this.word = this.word + res.wordCount
-      this.orderServ.word = this.word
-    }
-    else if  (this.fileCount = 1 ) { 
-      this.fileCountStr = this.fileCount + ' file'
-    }
+  console.log("Number of files: " + this.files.length)
 
+  var form = new FormData();
+
+
+  let language_id = ""
+  this.orderServ.getAll().subscribe((res: any) => {
+    console.log(res.languages)
+    let keys = Object.keys(res.languages)
+
+    for (var i = 0, l = keys.length; i < l; i++) {
+      if (res.languages[keys[i]] == this.from) {
+        language_id = keys[i]
+      }
+    }
+  })
+
+  form.append("agency_id", "16");
+  form.append("language_id", language_id);
+  console.log(this.files)
+  // TODO: Should there be a file limit
+  for (let i = 0; i < this.files.length; ++i) {
+    console.log("Files left: " + this.files.length)
+    console.log("Current index: " + i)
+
+    form.append("file", this.files[i])
+    this.orderServ.upload(form).subscribe(res => {
+      //console.log(res)
+      if (res.status == "counted") {
+        this.fileCount++
+        this.word += res.wordCount;
+        this.orderServ.word = this.word
+        console.log("Number of words counted: " + this.word)
+        if (this.fileCount > 1) {
+          this.orderServ.fileName = this.fileCount + ' files'
+          this.fileCountStr = this.fileCount + ' files'
+        }
+        else if (this.fileCount = 1) {
+          this.fileCountStr = this.fileCount + ' file'
+        }
+        if (this.word == 0) {
+          this.upload_mod_status = 'ERROR'
+        }
+        else {
+          this.upload_mod_status = "OK"
+        }
+      }
+      else if (res.status == "IN_PROCESS") {
+        do {
+          this.sleep(2000);
+          this.Statistics(res.id)
+        } while (this.upload_mod_status != "IN_PROCESS");
+      }
+      else {
+        this.upload_mod_status = "ERROR"
+        this.word = 0
+      }
+    })
+    this.sleep(100)
+    form.delete("file")
+    this.files.splice(i, 1)
+    --i
   }
-  else if (res.status == "IN_PROCESS") {
-
-    do {
-      this.sleep(2000);
-      this.Statistics(res.id)
-    } while (this.upload_mod_status != "IN_PROCESS");
-
-    
-   
-  }
-  else {
-    this.upload_mod_status = "ERROR"
-    this.word = 0
-  }
-})
-
-
 }
 
 sleep(millis:any) {
@@ -378,28 +385,28 @@ sleep(millis:any) {
 
 Statistics(file_id: any) {
   this.orderServ.statistics(file_id).subscribe( res => { 
+    console.log(res)
     if (res.status == "IN_PROCESS" || res.status =='waiting') {
       this.upload_mod_status = "IN_PROCESS"
       
     }
     else {
-      this.word = res.wordCount
+      this.fileCount++
+      this.word += res.wordCount;
+      this.orderServ.word = this.word
+      console.log("Number of words counted: " + this.word)
+      if (this.fileCount > 1) {
+        this.orderServ.fileName = this.fileCount + ' files'
+        this.fileCountStr = this.fileCount + ' files'
+      }
+      else if (this.fileCount = 1) {
+        this.fileCountStr = this.fileCount + ' file'
+      }
       if (this.word == 0) {
-        this.upload_mod_status ='ERROR'
+        this.upload_mod_status = 'ERROR'
       }
       else {
         this.upload_mod_status = "OK"
-      }
-
-      this.fileCount = this.files.length
-      if (this.fileCount > 1 ) {
-        this.orderServ.fileName = this.fileCount + ' files'
-        this.fileCountStr = this.fileCount + ' files'
-        this.word = this.word + res.wordCount
-        this.orderServ.word = this.word
-      }
-      else if  (this.fileCount = 1 ) { 
-        this.fileCountStr = this.fileCount + ' file'
       }
     }
   })
@@ -455,6 +462,7 @@ deleteFile() {
   this.orderServ.fileName = "";
   this.word = 0;
   this.files = [];
+  this.fileCount = 0
 }
 
 allModalClose() {
@@ -513,6 +521,7 @@ onCheckboxChangeFrom(e: any) {
     }
     this.from = e.target.value
     this.valueCheckboxFrom = this.from
+    languages.clear()
     languages.push(new FormControl(this.from))
   } else {
     let i: number = 0;
@@ -525,9 +534,6 @@ onCheckboxChangeFrom(e: any) {
     });
   }
 
-  console.log("Language from array size: " + this.fromLanguageForm.value.language.length)
-  console.log("Language instance array size: " + languages.length)
-
   if (this.fromLanguageForm.value.language.length == 0) {
     this.from = "English (USA)"
     this.valueCheckboxFrom = "English (USA)"
@@ -537,18 +543,10 @@ onCheckboxChangeFrom(e: any) {
 
 onCheckboxChangeType(e: any) {
   const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
-  console.log(e.target.checked)
   if (e.target.checked) {
-    /*
-    for (var lang of this.fromLanguageList) {
-      if (lang.name == this.from) {
-        console.log("Found previous lange: " + lang.name)
-        lang.value = false
-      }
-    }
-    */
     this.subjectType = e.target.value
     this.valueCheckboxType = this.subjectType
+    subjects.clear()
     subjects.push(new FormControl(this.subjectType))
   } else {
     let i: number = 0;

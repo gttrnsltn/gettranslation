@@ -380,6 +380,11 @@
         "menu_item9": "Privacy",
         "menu_item10": "FAQ",
 
+        "footer_lang_message": "Do you want to change language ",
+        "footer_browser_lang_msg": "Do you want change to browerser default language?",
+        "footer_switch_lang": "Switch language",
+        "footer_switch_no": "No, thanks",
+
         "de": "Deutsch",
         "en": "English",
         "es": "Español",

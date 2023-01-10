@@ -1,7 +1,7 @@
 
 export interface CookiesData {
     cookies_consent: boolean,
-    experation: number,
+    expiration: number,
     language: string,
     currency: string,
 }

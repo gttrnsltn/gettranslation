@@ -203,5 +203,11 @@
 
         "card_link": "Read our terms"
 
+    },
+    "footer": {
+        "footer_switch_lang": "Zmień język",
+        "footer_lang_msg": "Czy chcesz się wczytać",
+        "footer_broweser_lang_msg": "Czy chcesz zmienić domyślny język przeglądarki?",
+        "footer_switch_no": "Nie, dziękuję"
     }
 }

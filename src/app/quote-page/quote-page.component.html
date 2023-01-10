@@ -88,8 +88,7 @@
         <div class="label_item">{{ 'quote.calc_label4' | translate }}</div>
         <div class="to_drop">
             <div (click)="openDropdownType()" id="dropdown" tabindex="1">
-                <label class="selected-item" [(ngModel)]="valueCheckboxType" [innerHTML]="valueCheckboxType"
-                    id="selected-item"></label>
+                <label class="selected-item" [innerHTML]="valueCheckboxType" id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckboxType ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckboxType ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
@@ -399,7 +398,7 @@
             [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}"
             src="../../assets/upload_file.svg" alt="">
         <input class="upload_mod_btn"
-            [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}" type="file"
+            [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}" type="file" multiple="true"
             (change)="changeListener($event)">
     </div>
 
