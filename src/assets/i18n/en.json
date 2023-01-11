@@ -515,7 +515,50 @@
         "table_item122": "PUB + PDF",        
         "table_item131": "QuarkXPress",
         "table_item132": "QXD + PDF",
-
         "table_note2": "(PDF necessary for quote)"
+    },
+    "chatbot_service": {
+        "title": "Multilingual chatbots solutions",
+        "description": "From the high-touch training of translators to match your preferred style, to APIs and custom workflow design. We address the needs of thousands of different clients in all industries.",
+
+        "make_title": "Make your customer support multilingual",
+        "make_description": "As you grow, long-tail customers in every corner of the world expect to interact with you and your products in their own languages and dialects, especially when it comes to chats. We offer a simple yet powerful Adaptive Neural Machine Translation API that can also be integrated with professional translation services, to seemlessly translate your inbound and outbound messages.",
+
+        "solution_maintext": "Our solutions",
+        "solution_title1": "Pro",
+        "solution_link1": "from $4 / 1000 words",
+        "solution_text1": "A quick and cost-effective solution that allows you to translate any inbound and outbound messages, istantaneously, in 194 languages. All based on the simple yet powerful REST API of",
+        "solution_sublink1": "ModernMT",
+        "solution_subtext1": ", our Adaptive Neural MT system.",    
+        "solution_title2": "Business",
+        "solution_link2": "from $40 / 1000 words",
+        "solution_text2": "In addition to the",
+        "solution_sublink2": "ModernMT",
+        "solution_subtext2": "REST API, we can provide the review and correction of the machine translated output, until your desired CSAT score is reached. You can assign different review budgets to each language.",
+        "solution_title3": "Enterprise",
+        "solution_link3": "from $80 / 1000 words",
+        "solution_text3": "In addition to the",
+        "solution_sublink3": "ModernMT",
+        "solution_subtext3": "REST API, we can provide a professional translation of the whole dataset in any languages you require. This ensures top quality from the very first interaction with your users.",
+
+        "framework_title": "Supported Chatbot Frameworks",
+        "about_title": "About chatbot translations",
+        "about_subtext1": "Chatbots and machine learning are changing the face of business.",
+        "about_subtext2": "A chatbot is an AI-powered program that you can “chat with.” Many businesses have already considered the use of these “virtual assistants” for customer service or tech support purposes, because they make it easy to answer user queries in real-time through a messaging platform using the power of machine learning.",
+        "about_subtext3": "Chatbots typically integrate with messaging apps such as WeChat, Facebook Messenger, WhatsApp, etc., and they seem destined to become the preferred channel for conversational commerce, whether it’s for ordering sushi, booking flights, or buying tickets for a concert – anything goes.",
+        "about_subtext4": "The Artificial Intelligence (AI) and Natural Language Processing (NLP) technology needed to build chatbots is becoming more and more accessible, and these programs can help you understand the root causes underlying your clients’ purchases and their satisfaction (or lack thereof) by learning from the data gleaned from their conversations.",
+        "about_subtext5": "A real digital revolution is happening in the world of communication, and multilingual chatbots are part of it.",
+        "about_text1": "The chatbot marketplace is growing fast",
+        "about_quote1": "'By 2020, clients will manage 85% of their relationship with the enterprise without interacting with a human'",
+        "about_author1": "- Gartner Predicts",
+        "about_text2": "We make your chatbots multilingual",
+        "about_quote2": "'Language is one of the most important components of customer communications, especially when it comes to customer care.'",
+        "about_author2": "- CRM magazine",
+        "about_text3": "We can test and fine-tune your chatbots",
+        "about_subtext11": "There are three types of chatbots: those based on rules, those based on ML (machine learning) technology, and those based on both. The former are more limited and cannot evolve, while chatbots based on ML are smarter and can improve, since they learn from their conversations with users.",
+        "about_subtext21": "As of June 2016, only 26% of the Internet population used English as their browsing or messaging language. However, the bots present on the market today are primarily built and designed exclusively in English. Upgrading your bot to work in multiple languages and for multiple audiences gives your business a great opportunity to expand to non-English speaking markets, but it requires the same cultural awareness needed to design and translate your website to give it a local feel.",
+        "about_subtext31": "One challenge when testing multilingual bots is that each language is meant for users from different cultures. Aspects such as text direction, measurements, and currency must therefore be considered, and your chatbot’s sentences must be specifically adapted to the local cultural context, guaranteeing that the translation is accurate and understandable in the target country: a genuine localization process.",
+        "about_subtext32": "We can test your localized bot, taking care of test environment setup, test case design, test execution, and fine-tuning translations."
+
     }
 }

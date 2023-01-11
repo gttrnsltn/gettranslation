@@ -157,24 +157,6 @@
     }
 }
 
-.naming_section {
-    display: flex;
-    flex-direction: column;
-    min-width: 300px;
-    width: 100%;
-    max-width: 346px;
-    margin: 0 24px 0 0;
-    color: #161616;
-
-    @include tablet-landscape-down {
-        max-width: 100%;
-        margin: 0 0 14px 0;
-    }
-    @include mobile-only{
-        margin: 0 0 16px 0;
-    }
-}
-
 .why_needs_points {
     display: flex;
     flex-direction: column;
@@ -263,7 +245,7 @@
     }
 }
 .table {
-    height: 810px;
+    height: 836px;
 	width: 100%;
 	overflow-y: hidden;
 	overflow-x: auto;
