@@ -87,7 +87,13 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    margin: 0;
+    margin: 0 88px 0 0;
+    @include desktop-down{
+        margin: 0 64px 0 0;
+    }
+    @include tablet-landscape-down{
+        margin: 0;
+    }
     @include tablet-portrait-down {
         flex-direction: row;
         justify-content: unset;

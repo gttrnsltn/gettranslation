@@ -322,6 +322,7 @@ select:focus {
     color: #FFFFFF;
 }
 .cookie_close{
+    cursor: pointer;
     width: 10px;
     height: 10px;
     margin: 0;
@@ -394,8 +395,9 @@ select:focus {
     position: absolute;
     right: 18px;
     top: 18px;
-    width: 9px;
-    height: 9px;
+    width: 10px;
+    height: 10px;
+    cursor: pointer;
 }
 .popup_content{
     display: flex;
@@ -416,9 +418,11 @@ select:focus {
     font-size: 16px;
     line-height: 22px;
     color: #161616;
+    cursor: default;
 }
 .popup_buttons{
     margin: 8px 0 0 0;
+    cursor: pointer;
 }
 .button_change{
     margin: 0 16px 0 0;

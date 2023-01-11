@@ -1,101 +1,164 @@
 <app-header></app-header>
-<div class="maintext">
-    Multilingual DTP services
+<div class="adwords_container">
+    <h1 class="title">{{ 'dtp_services.title' | translate }}</h1>
 </div>
 
 <app-logo-app></app-logo-app>
-<app-why class="why"></app-why>
-<app-logo-block class="logo_block"></app-logo-block>
+<app-why></app-why>
+<app-logo-block></app-logo-block>
 
+<div class="question_dtp_services_container">
+    <div class="naming_section">
+        <h3 class="question_title">{{ 'dtp_services.when_title' | translate }}</h3>
+    </div>
 
-<div class="when_maintext">
-    <p>When is DTP</p>
-    <p>necessary?</p>
-</div>
-<div class="when_text">
-    <p>There are some cases in which you should consider to add a DTP service to your project, particularly if translation is intended for publication, to make sure that the layout matches the original file:</p>
-    <ul class="space_top">
-        <li>Translation from English into latin languages such as French and Spanish, as they tend to expand in word count and require more space or smaller font size.</li>
-        <li>Translation into or from German, Russian and Polish, as words in these languages can be very long, requiring re-sizing of graphics and menu items.</li>
-        <li>Translation into or from right-to-left languages, such as Arabic, Hebrew and Farsi, to adjust the position of text and graphics accordingly.</li>
-        <li>Translation into or from character-based languages, such as Chinese, Japanese and Korean, as they normally require specific versions of the publishing software.</li>
-    </ul>
-    <p class="space_top">If you have any doubts whether you should add a DTP service, feel free to contact us, and we will be happy to find a solution for your specific needs.</p>
-</div>
-
-<div class="how_maintext">
-    <p>How to get</p>
-    <p>a quote</p>
-</div>
-<div class="how_text">
-    Check the table below to see in which format you can export your files, and send them via our <a [routerLink]="['/contact']" class="link">contact form</a> or at <a class="link" href="mailto:hello@gettranslation.io">hello@gettranslation.io</a> to get a quote for translation (either Professional or Premium) and DTP.
+    <div class="question_content">
+        <p class="question_subtext">{{ 'dtp_services.when_text1' | translate }}</p>
+        <ul class="question_subtext space_ul">
+            <li>{{ 'dtp_services.when_subtext1' | translate }}</li>
+            <li>{{ 'dtp_services.when_subtext2' | translate }}</li>
+            <li>{{ 'dtp_services.when_subtext3' | translate }}</li>
+            <li>{{ 'dtp_services.when_subtext4' | translate }}</li>
+        </ul>
+        <p class="question_subtext">{{ 'dtp_services.when_text2' | translate }}</p>
+    </div>
 </div>
 
-<div class="table"></div>
-    <div class="header1">Software</div>
-    <div class="header2">Accepted source files to export</div>
-    <div class="add_info">we will deliver in the same format</div>
+<div class="question_dtp_services_container">
+    <div class="naming_section">
+        <h3 class="question_title">{{ 'dtp_services.how_get_title' | translate }}</h3>
+    </div>
 
-    <div class="line11">Adobe Acrobat</div>
-    <div class="line12">PDF / Spreadsheet / Word / PowerPoint / HTML </div>
+    <div class="question_content table_width">
+        <p class="question_subtext">{{ 'dtp_services.how_get_subtext1' | translate }}<a [routerLink]="['/contact']"
+                class="link">{{ 'dtp_services.how_get_link' | translate }}</a>{{ 'dtp_services.how_get_subtext2' |
+            translate }}
+            <a class="link" href="mailto:hello@gettranslation.io">hello@gettranslation.io</a>{{
+            'dtp_services.how_get_subtext3' | translate }}
+        </p>
 
-    <div class="line21">Adobe Captivate</div>
-    <div class="line22">HTML</div>
+        <div class="table_container">
+            <div class="table scroll-inner">
+                <table class="fix-width">
+                    <thead>
+                        <tr class="table_column table_line">
+                            <th class="table_header table_first_column">{{ 'dtp_services.table_header1' | translate }}
+                            </th>
+                            <th class="table_additional table_header">
+                                <p>{{ 'dtp_services.table_header2' | translate }}</p>
+                                <p class="add_info">{{ 'dtp_services.header_note' | translate }}</p>
+                            </th>
+                        </tr>
+                    </thead>
 
-    <div class="line31">Adobe Dreamweaver</div>
-    <div class="line32">HTML / XML</div>
-  
-    <div class="line41">Adobe Fireworks</div>
-    <div class="line42">HTML / XHTML </div>
-
-    <div class="line51">Adobe FrameMaker</div>
-    <div class="line52">RTF / MIF </div>
-
-    <div class="line61">Adobe Illustrator</div>
-    <div class="line62">PNG / JPEG / TIFF / PDF </div>
-
-    <div class="line71">Adobe InDesign</div>
-    <div class="line72">ICML / IDML / IDAP (recommended) </div>
-
-    <div class="line81">Adobe Photoshop</div>
-    <div class="line82">PNG / JPEG / PDF</div>
-
-    <div class="line91">AutoCAD</div>
-    <div class="line92">DXF / DWG + PDF</div>
-    <div class="add_info1">(PDF necessary for quote)</div>
-
-    <div class="line101">CorelDRAW</div>
-    <div class="line102">CDR / JPG / TIFF + PDF</div>
-    <div class="add_info2">(PDF necessary for quote)</div>
-
-    <div class="line111">MadCap Flare</div>
-    <div class="line112">HTML / XHTML / DITA / PDF / WORD</div>
-
-    <div class="line121">Microsoft Publisher</div>
-    <div class="line122">PUB + PDF </div>
-    <div class="add_info3">(PDF necessary for quote)</div>
-
-    <div class="line131">QuarkXPress</div>
-    <div class="line132">QXD + PDF </div>
-    <div class="add_info4">(PDF necessary for quote)</div>
-
-
-<div class="why_maintext">
-    <p>Why we are</p>
-    <p>a good fit for your</p>
-    <p>needs?</p>
+                    <tbody>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item11' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item12' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item21' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item22' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item31' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item32' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item41' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item42' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item51' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item52' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item61' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item62' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item71' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item72' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item81' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item82' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item91' | translate }}
+                            </td>
+                            <td class="table_additional table_descr">
+                                <p>{{ 'dtp_services.table_item92' | translate }}</p>
+                                <p class="add_info">{{ 'dtp_services.table_note2' | translate }}</p>
+                            </td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item101' | translate }}
+                            </td>
+                            <td class="table_additional table_descr">
+                                <p>{{ 'dtp_services.table_item102' | translate }}</p>
+                                <p class="add_info">{{ 'dtp_services.table_note2' | translate }}</p>
+                            </td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item111' | translate }}
+                            </td>
+                            <td class="table_descr">{{ 'dtp_services.table_item112' | translate }}</td>
+                        </tr>
+                        <tr class="table_column table_line">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item121' | translate }}
+                            </td>
+                            <td class="table_additional table_descr">
+                                <p>{{ 'dtp_services.table_item122' | translate }}</p>
+                                <p class="add_info">{{ 'dtp_services.table_note2' | translate }}</p>
+                            </td>
+                        </tr>
+                        <tr class="table_column">
+                            <td class="table_descr table_first_column">{{ 'dtp_services.table_item131' | translate }}
+                            </td>
+                            <td class="table_additional table_descr">
+                                <p>{{ 'dtp_services.table_item132' | translate }}</p>
+                                <p class="add_info">{{ 'dtp_services.table_note2' | translate }}</p>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
 </div>
-<div class="why_text">
-    <p class="bold">Quote</p>
-    <p class="space_top">Our team will analyze your files and your instructions, and will get back to you with a quote that includes the service you have requested (Basic, Professional or Premium), and the costs of DTP. Note that these can vary, based on the total volume of pages, the quality of the source files and the required delivery turnarounds.</p>
-    <p class="space_top bold">Translation</p>
-    <p class="space_top">Once you have confirmed the order, we take care of the translation first. If available, please provide your style guides and glossaries, as these assets are critical for quality, consistency and conformance to branding.</p>
-    <p class="space_top bold">DTP</p>
-    <p class="space_top">After translation, the project is assigned to a DTP specialist. When possible, we always chose a DTP specialist that is also a speaker of the target language. Otherwise, the translator will have a look at the final output before delivery, to make sure the content has not been compromised and that you have a ready to print file.</p>
+
+
+<div class="why_needs_container">
+    <div class="naming_section">
+        <h3 class="why_needs_title">{{ 'dtp_services.why_needs_title' | translate }}</h3>
+    </div>
+
+    <div class="why_needs_points">
+        <div class="point_content">
+            <p class="point_text">{{ 'dtp_services.why_needs_text1' | translate }}</p>
+            <p class="point_subtext">{{ 'dtp_services.why_needs_subtext1' | translate }}</p>
+        </div>
+        <div class="point_content">
+            <p class="point_text">{{ 'dtp_services.why_needs_text2' | translate }}</p>
+            <p class="point_subtext">{{ 'dtp_services.why_needs_subtext2' | translate }}</p>
+        </div>
+        <div class="point_content">
+            <p class="point_text">{{ 'dtp_services.why_needs_text3' | translate }}</p>
+            <p class="point_subtext">{{ 'dtp_services.why_needs_subtext3' | translate }}</p>
+        </div>
+    </div>
 </div>
 
-<app-discover class="discover"></app-discover>
-<app-more class="more"></app-more>
-<app-instant class="instant"></app-instant>
-<app-footer class="footer"></app-footer>
-<div class="space"></div>
+<app-discover></app-discover>
+<app-more></app-more>
+<app-instant></app-instant>
+<app-footer></app-footer>

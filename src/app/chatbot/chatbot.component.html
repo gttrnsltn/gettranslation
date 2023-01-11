@@ -1,88 +1,126 @@
-
-
 <app-header></app-header>
-<div class="maintext">
-    Multilingual chatbots solutions
-</div>
-<div class="subtext">
-    From the high-touch training of translators to match your preferred style, to APIs and custom workflow design. We address the needs of thousands of different clients in all industries.
-</div>
-
-<div class="make">Make your customer support multilingual</div>
-<div class="make_sub">
-    As you grow, long-tail customers in every corner of the world expect to interact with you and your products in their own languages and dialects, especially when it comes to chats. We offer a simple yet powerful Adaptive Neural Machine Translation API that can also be integrated with professional translation services, to seemlessly translate your inbound and outbound messages.
+<div class="chatbot_container">
+    <h1 class="title">{{ 'chatbot_service.title' | translate }}</h1>
+    <div class="description">
+        <p>{{ 'chatbot_service.description' | translate }}</p>
+    </div>
 </div>
 
-<div class="our">Our solutions</div>
-<div class="our1"></div>
-<img class="our_img1" src="../../assets/chatbot/icon (5).svg" alt="">
-<div class="our_text1">Pro</div>
-<a [routerLink]="['/quote']" class="our_link1">from $4 / 1000 words</a>
-<div class="our_sub1">A quick and cost-effective solution that allows you to translate any inbound and outbound messages, istantaneously, in 194 languages. All based on the simple yet powerful REST API of <a class="link" href="https://www.modernmt.com" target="_blank">ModernMT</a>, our Adaptive Neural MT system.</div>
+<div class="question_make_container">
+    <div class="naming_section">
+        <h3 class="question_title">{{ 'chatbot_service.make_title' | translate }}</h3>
+    </div>
 
-<div class="our2"></div>
-<img class="our_img2" src="../../assets/chatbot/icon (6).svg" alt="">
-<div class="our_text2">Business</div>
-<a [routerLink]="['/quote']" class="our_link2">from $40 / 1000 words</a>
-<div class="our_sub2">In addition to the <a class="link" href="https://www.modernmt.com" target="_blank">ModernMT</a> REST API, we can provide the review and correction of the machine translated output, until your desired CSAT score is reached. You can assign different review budgets to each language.</div>
-
-<div class="our3"></div>
-<img class="our_img3" src="../../assets/chatbot/icon (7).svg" alt="">
-<div class="our_text3">Enterprise</div>
-<a [routerLink]="['/quote']" class="our_link3">from $80 / 1000 words</a>
-<div class="our_sub3">In addition to the <a class="link" href="https://www.modernmt.com" target="_blank">ModernMT</a> REST API, we can provide a professional translation of the whole dataset in any languages you require. This ensures top quality from the very first interaction with your users.</div>
-
-<button [routerLink]="['/contact']" class="our_btn">Contact us</button>
-
-
-<div class="support_text">Supported Chatbot Frameworks</div>
-<img class="s1" src="../../assets/chatbot/logo 1.svg" alt="">
-<img class="s2" src="../../assets/chatbot/logo 2.svg" alt="">
-<img class="s3" src="../../assets/chatbot/logo 3.svg" alt="">
-<img class="s4" src="../../assets/chatbot/logo 4.svg" alt="">
-<img class="s5" src="../../assets/chatbot/logo 5.svg" alt="">
-<img class="s6" src="../../assets/chatbot/logo 6.svg" alt="">
-
-
-<div class="about">About chatbot translations</div>
-<div class="about_text">
-    <p>Chatbots and machine learning are changing the face of business.</p>
-    <p class="space_top">A chatbot is an AI-powered program that you can “chat with.” Many businesses have already considered the use of these “virtual assistants” for customer service or tech support purposes, because they make it easy to answer user queries in real-time through a messaging platform</p> 
-    <p>using the power of machine learning.</p>
-    <p class="space_top">Chatbots typically integrate with messaging apps such as WeChat, Facebook Messenger, WhatsApp, etc., and they seem destined to become the preferred channel for conversational commerce, whether it’s for ordering sushi, booking flights, or buying tickets for a concert</p> 
-    <p>– anything goes.</p>
-    <p class="space_top">The Artificial Intelligence (AI) and Natural Language Processing (NLP) technology needed to build chatbots is becoming more and more accessible, and these programs can help you understand</p>
-    <p>the root causes underlying your clients’ purchases and their satisfaction (or lack thereof)</p>
-    <p>by learning from the data gleaned from their conversations.</p>
-    <p class="space_top">A real digital revolution is happening in the world of communication, and multilingual chatbots</p> 
-    <p>are part of it.</p>
-</div>
-
-<div class="the_text">
-    <p class="bold">The chatbot marketplace is growing fast</p>
-    <p class="space_top regular">"By 2020, clients will manage 85% of their relationship with the enterprise without interacting with a human" - <span class="bold_italic">Gartner Predicts</span></p>
-    <p class="space_top">There are three types of chatbots: those based on rules, those based on ML (machine learning) technology, and those based on both. The former are more limited and cannot evolve, while chatbots based on ML are smarter and can improve, since they learn from their conversations with users.</p>
-</div>
-
-<div class="make_text">
-    <p class="bold">We make your chatbots multilingual
-    <p class="space_top regular">"Language is one of the most important components of customer communications, especially when it comes to customer care." - <span class="bold_italic">CRM magazine</span></p>
-    <p class="space_top">As of June 2016, only 26% of the Internet population used English as their browsing or messaging language. However, the bots present on the market today are primarily built and designed exclusively in English. Upgrading your bot to work in multiple languages and for multiple audiences gives your business a great opportunity to expand to non-English speaking markets, but it requires the same cultural awareness needed to design and translate your website to give it a local feel.</p>
-    <p class="space_top"></p>
-</div>
-
-<div class="can_text">
-    <p class="bold">We can test and fine-tune your chatbots</p>
-    <p class="space_top">One challenge when testing multilingual bots is that each language is meant for users from different cultures. Aspects such as text direction, measurements, and currency must therefore be considered, and your chatbot’s sentences must be specifically adapted to the local cultural context, guaranteeing that the translation is accurate and understandable in the target country: a genuine localization process.</p>
-    <p class="space_top">We can test your localized bot, taking care of test environment setup, test case design, test execution, and fine-tuning translations.</p>
+    <div class="question_content">
+        <p class="question_subtext">{{ 'chatbot_service.make_description' | translate }}</p>
+    </div>
 </div>
 
 <app-logo-app></app-logo-app>
-<app-why class="why"></app-why>
-<app-logo-block class="logo_block"></app-logo-block>
+<app-why></app-why>
+<app-logo-block></app-logo-block>
 
-<app-discover class="discover"></app-discover>
-<app-more class="more"></app-more>
-<app-instant class="instant"></app-instant>
-<app-footer class="footer"></app-footer>
-<div class="space"></div>
+<div class="solutions_container">
+    <h3 class="solutions_title">{{ 'chatbot_service.solution_maintext' | translate }}</h3>
+
+    <div class="solution_cards">
+        <div class="solution_card">
+            <img class="solution_icon" src="../../assets/chatbot/icon (5).svg" alt="">
+            <div class="benefit_descr">
+                <p class="benefit_text">{{ 'chatbot_service.solution_title1' | translate }}</p>
+                <a [routerLink]="['/quote']" class="link">{{ 'chatbot_service.solution_link1' | translate }}</a>
+                <p class="benefit_subtext">{{ 'chatbot_service.solution_text1' | translate }}
+                    <a class="link" href="https://www.modernmt.com" target="_blank">
+                        {{ 'chatbot_service.solution_sublink1' | translate }}
+                    </a>
+                    {{ 'chatbot_service.solution_subtext1' | translate }}
+                </p>
+            </div>
+        </div>
+        <div class="solution_card">
+            <img class="solution_icon" src="../../assets/chatbot/icon (6).svg" alt="">
+            <div class="benefit_descr">
+                <p class="benefit_text">{{ 'chatbot_service.solution_title2' | translate }}</p>
+                <a [routerLink]="['/quote']" class="link">{{ 'chatbot_service.solution_link2' | translate }}</a>
+                <p class="benefit_subtext">{{ 'chatbot_service.solution_text2' | translate }}
+                    <a class="link" href="https://www.modernmt.com" target="_blank">
+                        {{ 'chatbot_service.solution_sublink2' | translate }}
+                    </a>
+                    {{ 'chatbot_service.solution_subtext2' | translate }}
+                </p>
+            </div>
+        </div>
+        <div class="solution_card">
+            <img class="solution_icon" src="../../assets/chatbot/icon (7).svg" alt="">
+            <div class="benefit_descr">
+                <p class="benefit_text">{{ 'chatbot_service.solution_title3' | translate }}</p>
+                <a [routerLink]="['/quote']" class="link">{{ 'chatbot_service.solution_link3' | translate }}</a>
+                <p class="benefit_subtext">{{ 'chatbot_service.solution_text3' | translate }}
+                    <a class="link" href="https://www.modernmt.com" target="_blank">
+                        {{ 'chatbot_service.solution_sublink3' | translate }}
+                    </a>
+                    {{ 'chatbot_service.solution_subtext3' | translate }}
+                </p>
+            </div>
+        </div>
+    </div>
+    <button [routerLink]="['/contact']" class="solution_btn">Contact us</button>
+
+</div>
+
+<div class="framework_container">
+    <div class="naming_section">
+        <h3 class="question_title">{{ 'chatbot_service.framework_title' | translate }}</h3>
+    </div>
+    <div class="framework_content">
+        <div class="img_content">
+            <img class="framework_img" src="../../assets/chatbot/logo 1.svg" alt="">
+            <img class="framework_img" src="../../assets/chatbot/logo 2.svg" alt="">
+            <img class="framework_img" src="../../assets/chatbot/logo 3.svg" alt="">
+        </div>
+        <div class="img_content">
+            <img class="framework_img" src="../../assets/chatbot/logo 4.svg" alt="">
+            <img class="framework_img" src="../../assets/chatbot/logo 5.svg" alt="">
+            <img class="framework_img" src="../../assets/chatbot/logo 6.svg" alt="">
+        </div>
+
+    </div>
+</div>
+
+<div class="about_container">
+    <div class="naming_section">
+        <h3 class="question_title">{{ 'chatbot_service.about_title' | translate }}</h3>
+    </div>
+
+    <div class="about_points">
+        <p class="point_subtext">{{ 'chatbot_service.about_subtext1' | translate }}</p>
+        <p class="point_subtext">{{ 'chatbot_service.about_subtext2' | translate }}</p>
+        <p class="point_subtext">{{ 'chatbot_service.about_subtext3' | translate }}</p>
+        <p class="point_subtext">{{ 'chatbot_service.about_subtext4' | translate }}</p>
+        <p class="point_subtext">{{ 'chatbot_service.about_subtext5' | translate }}</p>
+        <div class="point_content">
+            <p class="point_text">{{ 'chatbot_service.about_text1' | translate }}</p>
+            <p class="point_subtext regular">{{ 'chatbot_service.about_quote1' | translate }} 
+                <span class="bold_italic"> {{ 'chatbot_service.about_author1' | translate }}</span>
+            </p>
+            <p class="point_subtext">{{ 'chatbot_service.about_subtext11' | translate }}</p>
+        </div>
+        <div class="point_content">
+            <p class="point_text">{{ 'chatbot_service.about_text2' | translate }}</p>
+            <p class="point_subtext regular">{{ 'chatbot_service.about_quote2' | translate }} 
+                <span class="bold_italic"> {{ 'chatbot_service.about_author2' | translate }}</span>
+            </p>
+            <p class="point_subtext">{{ 'chatbot_service.about_subtext21' | translate }}</p>
+        </div>
+        <div class="point_content">
+            <p class="point_text">{{ 'chatbot_service.about_text3' | translate }}</p>
+            <p class="point_subtext">{{ 'chatbot_service.about_subtext31' | translate }}</p>
+            <p class="point_subtext">{{ 'chatbot_service.about_subtext32' | translate }}</p>
+        </div>
+    </div>
+</div>
+
+<app-discover></app-discover>
+<app-more></app-more>
+<app-instant></app-instant>
+<app-footer></app-footer>
