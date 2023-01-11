@@ -29,12 +29,10 @@
 .banner_container {
     width: 100%;
     margin: 0;
+    max-width: 600px;
     @include tablet-landscape-down {
         max-width: 310px;
     }
-    @media (max-width: 804px)  {
-        max-width: 300px;
-    }   
     @include tablet-portrait-down {
         max-width: 420px;
     }    
@@ -57,10 +55,6 @@
         line-height: 70px;
     }
     @include tablet-landscape-down {
-        font-size: 48px;
-        line-height: 52px;
-    }
-    @media (max-width: 775px)  {
         font-size: 46px;
         line-height: 50px;
     }
@@ -125,6 +119,7 @@
     @include tablet-landscape-down{
         padding: 12px 32px;
         margin: 0 0 14px 0;
+        min-width: 200px;
     }
     @include tablet-portrait-down{
         margin: 20px 0 0 0;
@@ -175,33 +170,23 @@
 .illustration_cont {
     display: flex;
     margin-left: 37px;
-    max-width: 588px;
+    max-width: 600px;
     width: 100%;
     height: 512px;
 
-    @include desktop-down {
-        max-width: 420px;
-        height: unset;
-    }
-
     @include tablet-landscape-down {
-        max-width: 306px;  
         margin: 0 0 0 20px;
-
-    }
-    @media (max-width: 804px)  {
-        max-width: 280px;
+        height: unset;
     }
 
     @include tablet-portrait-down {
         max-width: 100%;
         height: 284px;
-        margin-top: 34px;
+        margin: 34px 0 0 0;
     }
 
     @include mobile-only {
         align-items: center;
-        margin: 34px 0 0 0;
     }
 }
 

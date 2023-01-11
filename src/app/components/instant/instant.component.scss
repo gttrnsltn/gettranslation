@@ -16,6 +16,7 @@
     margin: 0 auto 140px;
     @include desktop-down {
         margin: 0 64px 140px;
+        padding: 88px 64px;
     }
 
     @include tablet-landscape-down {
@@ -35,18 +36,20 @@
 }
 
 .block {
-    margin: 0 16px 0 0;
+    margin: 0 32px 0 0;
     @include tablet-landscape-down{
         margin: 0 0 18px 0;
     }
     @include tablet-portrait-down {
         display: flex;
+        align-items: center;
         text-align: center;
         flex-direction: column;
     }
 }
 
 .text {
+    margin: 0;
     max-width: 500px;
     font-family: 'Nexa Heavy';
     font-size: 40px;
@@ -89,6 +92,9 @@
     color: #FFFFFF;
     border: none;
     margin: 0;
+    @include desktop-down{
+        height: auto;
+    }
     @include tablet-landscape-down{
         font-size: 16px;
         line-height: 24px;

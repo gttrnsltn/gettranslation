@@ -106,7 +106,7 @@
                     <label *ngFor="let subject of specializations_code_list; let i=index" class="dropdown-item">
                         <input (change)="onCheckboxChangeType($event)" [value]="subject" type="checkbox"
                             class="custom-checkbox">
-                        {{subject}}
+                        <p class="subject_label">{{subject}}</p>
                     </label>
                 </div>
             </form>
@@ -121,7 +121,7 @@
 
     <div class="calculate_item">
         <div class="label_item">{{ 'quote.calc_label5' | translate }}</div>
-        <input class="box_item" [(ngModel)]="delivery" (click)="DateModOpen()" value="Auto (Best price)" type="text">
+        <input class="box_item" [(ngModel)]="delivery" (click)="DateModOpen()" value="{{ 'quote.best_price_label' | translate }})" type="text">
         <img class="arrow_item" src="../../assets/schedule.png" alt="">
     </div>
 
@@ -373,7 +373,7 @@
             <p class="upload_mod_status_name">{{ orderServ.fileName }}</p>
             <div (click)="deleteFile()" class="upload_mod_status_delete"></div>
         </div>
-        <div class="upload_mod_status_word">({{ word }} words)</div>
+        <p class="upload_mod_status_word">({{ word }} {{ 'quote.upload_mod_status_word' | translate }})</p>
     </div>
 
     <div *ngIf="upload_mod_status == 'IN_PROCESS'" class="upload_mod_status_progress">
@@ -392,9 +392,8 @@
                 maxlength="7" (keydown)="onKeydown($event)">
         </div>
         <div class="upload_mod_contact">
-            <span class="upload_mod_status_error">
                 <a [routerLink]="['/contact']" class="upload_mod_link">{{ 'quote.status_error3_bold' | translate }}</a>
-                {{ 'quote.status_error3' | translate }}</span>
+                <p class="upload_mod_status_error">{{ 'quote.status_error3' | translate }}</p>
         </div>
     </div>
 
@@ -405,7 +404,7 @@
         <div class="upload_note"
             [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}">
             <img class="upload_mod_img" src="../../assets/upload_cloud.svg" alt="" />
-            <p class="upload_mod_text">{{ 'quote.mod_text_upload1' | translate }}</p><span class="upload_mod_text_bold">{{ 'quote.mod_text_upload2' | translate }}</span>
+            <p class="upload_mod_text">{{ 'quote.mod_text_upload1' | translate }}<span class="upload_mod_text_bold">{{ 'quote.mod_text_upload2' | translate }}</span></p>
         </div>
     </div>
 

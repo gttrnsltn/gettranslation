@@ -52,7 +52,24 @@ a:hover {
         display: none;
     }
 }
-
+.link{
+    margin: 0 10px 0 10px;
+}
+.link_services{
+    display: flex;
+}
+.link span {
+    display: block;
+    border: solid black;
+    padding: 3px;
+    height: 3px;
+    width: 3px;
+    border-width: 0px 1px 1px 0px;
+    transition: 0.3s;
+}
+.link_arrow:hover{
+    border-color: #4247E5;
+}
 .serviceStandart {
     margin-left: 4px;
 }
@@ -213,6 +230,7 @@ a:hover {
         width: 100%;
         height: 100%;
         z-index: 99;
+        overflow: hidden;
     }
 
 }
@@ -307,6 +325,11 @@ a:hover {
 
 .menu_login a {
     color: #4247E5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
 }
 
 .menu_list {
@@ -495,6 +518,28 @@ a:hover {
     font-style: normal;
     font-weight: 800;
     font-size: 16px;
+    color: #4247e5;
+    border-bottom: 3px solid #4247E5;
+
+    @include tablet-portrait-down {
+        width: 92px;
+        font-size: 12px;
+        line-height: 18px;
+        padding: 0 0 8px 0;
+    }
+}
+.external_btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 0 10px 0;
+    width: 161px;
+
+    font-family: 'Nexa Regular';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
     color: #161616;
     border-bottom: 1px solid #ECEDFC;
 
@@ -502,12 +547,8 @@ a:hover {
         width: 92px;
         font-size: 12px;
         line-height: 18px;
+        padding: 0 0 8px 0;
     }
-}
-
-.login_underline {
-    color: #4247e5;
-    border-bottom: 3px solid #4247E5;
 }
 
 .login_mod_done {
@@ -568,7 +609,7 @@ a:hover {
     padding-left: 24px;
     background: #ECEDFC;
     border-radius: 6px;
-    border: none;
+    border: 1px solid transparent;
 
     font-family: 'Nexa Light';
     font-style: normal;
