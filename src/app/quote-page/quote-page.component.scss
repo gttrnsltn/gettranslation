@@ -433,6 +433,7 @@ select {
     border-radius: 6px;
 
     padding: 8px 16px;
+    cursor: pointer;
 
     @include tablet-landscape-down {
         min-width: 118px;
@@ -499,6 +500,7 @@ select {
 
     color: #FFFFFF;
     border: none;
+    outline: none;
 
     @include tablet-landscape-down {
         width: 280px;
@@ -531,7 +533,8 @@ select {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 40px;
+    height: 40px;
+    width: auto;
     min-width: 170px;
     border-radius: 100px;
     border: none;
@@ -946,7 +949,8 @@ select {
 }
 
 .submit_order:hover {
-    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
+    background: #3135CD;
+    color: #FFFFFF;
 }
 
 .moredetails_item {
@@ -1246,6 +1250,9 @@ select {
 
     bottom: 10%;
     background: #FFFFFF;
+    @include tablet-portrait-down{
+
+    }
 }
 
 .date_mod {
@@ -1290,8 +1297,7 @@ select {
     font-size: 24px;
     line-height: 32px;
     margin: 0 0 32px 0;
-
-    z-index: 9999;
+    text-align: center;
 
     @include tablet-portrait-down {
         font-size: 20px;
@@ -1504,7 +1510,7 @@ input::-webkit-inner-spin-button {
     width: 100%;
     min-height: 376px;
     left: 50%;
-    top: 40%;
+    top: 36%;
     transform: translateX(-50%);
 
     background: #FFFFFF;
@@ -1512,23 +1518,21 @@ input::-webkit-inner-spin-button {
     backdrop-filter: blur(3.5px);
     border-radius: 20px;
 
-    z-index: 9999;
+    z-index: 999;
 
     @include tablet-landscape-down {
         max-width: 608px;
         padding: 40px 36px;
     }
-
     @include tablet-portrait-down {
+        top: 40%;
         max-width: 440px;
         padding: 40px 16px;
         min-height: 298px;
     }
-
     @include mobile-only {
-        max-width: 327px;
+        max-width: 330px;
         padding: 40px 16px;
-        min-height: 298px;
     }
 }
 
@@ -1543,7 +1547,7 @@ input::-webkit-inner-spin-button {
     border-radius: 6px;
 
     @include tablet-portrait-down {
-        height: 80px;
+        height: 90px;
     }
 }
 
@@ -1552,21 +1556,27 @@ input::-webkit-inner-spin-button {
     position: absolute;
     width: 100%;
     height: 144px;
+    padding: 20px;
 
     opacity: 0;
     cursor: pointer;
     z-index: 999;
 
     @include tablet-portrait-down {
-        height: 80px;
+        height: 90px;
     }
 }
 
 .upload_note {
     display: flex;
+    justify-content: center;
     align-items: center;
     cursor: pointer;
     margin: 0;
+    width: 100%;
+    @include tablet-portrait-down{
+        padding: 20px;
+    }
 }
 
 .upload_mod_img {
@@ -1587,8 +1597,7 @@ input::-webkit-inner-spin-button {
     font-size: 16px;
     line-height: 24px;
     color: #4247E5;
-    opacity: 0.6;
-    margin: 0 5px 0 0;
+    margin: 0;
 
     @include tablet-portrait-down {
         font-size: 14px;
@@ -1597,6 +1606,7 @@ input::-webkit-inner-spin-button {
 }
 
 .upload_mod_text_bold {
+    margin: 0 0 0 5px;
     font-family: 'Nexa XBold';
     font-style: normal;
     font-weight: 800;
@@ -1771,16 +1781,13 @@ input::-webkit-inner-spin-button {
 .upload_mod_status_error {
     display: flex;
     align-items: center;
-    margin: 0 0 15px 0;
 
+    margin: 0;
     font-family: 'Nexa Regular';
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 22px;
-
-    color: #161616;
-
     @include tablet-portrait-down {
         font-size: 12px;
         line-height: 16px;
@@ -1852,6 +1859,7 @@ input::-webkit-inner-spin-button {
 .upload_mod_contact {
     display: flex;
     margin: 0;
+    margin: 0 0 15px 0;
 }
 
 // .form_label {
@@ -2240,7 +2248,6 @@ input::-webkit-inner-spin-button {
 
     width: 346px;
     height: 54px;
-    // margin: 4px;
     border: 2px solid transparent;
     border-radius: 6px;
     background: #FFFFFF;
@@ -2272,6 +2279,10 @@ input::-webkit-inner-spin-button {
     padding-top: 16px;
     padding-left: 24px;
     margin-left: 0px;
+    height: 36px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     @include mobile-only {
         padding-top: 16px;
@@ -2293,8 +2304,6 @@ input::-webkit-inner-spin-button {
     width: 3px;
     border-width: 0px 1px 1px 0px;
     transition: 0.3s;
-
-
 }
 
 #dropdown-menu {
@@ -2351,10 +2360,6 @@ input[type="text"]#dropdown-search:focus-within {
     border: 2px solid #4247E5;
 }
 
-input[type="text"]#dropdown-search:hover {
-    box-shadow: 0px 4px 14px rgb(6 7 7 / 15%);
-}
-
 input[type="text"]#dropdown-search::-webkit-input-placeholder {
     background: linear-gradient(90deg, #CCD1F6 43%, #B9BEE4 58%);
     -webkit-background-clip: text;
@@ -2391,8 +2396,9 @@ input[type="text"]#dropdown-search::-webkit-input-placeholder {
 }
 
 .dropdown-item {
-    margin-bottom: 8px;
+    margin: 0 0 8px 0;
     display: flex;
+    min-height: 20px;
 
     -webkit-user-select: none;
     -ms-user-select: none;
@@ -2407,14 +2413,18 @@ input[type="text"]#dropdown-search::-webkit-input-placeholder {
 .dropdown-item label {
     color: #161616;
 }
-
+.subject_label{
+    margin: 0;
+    width: 90%;
+}
 .custom-checkbox {
     appearance: none;
-    width: 1.15em;
-    height: 1.15em;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
     border: 1px solid #4247E5;
     border-radius: 6px;
-    display: inline-flex;
+    display: flex;
     font: inherit;
     transform: translateY(-0.075em);
     margin: 0;
@@ -2425,8 +2435,8 @@ input[type="text"]#dropdown-search::-webkit-input-placeholder {
 
 .custom-checkbox::before {
     content: "";
-    width: 0.65em;
-    height: 0.65em;
+    width: 10px;
+    height: 10px;
     transform: scale(0);
     transition: 120ms transform ease-in-out;
     background-color: #4247E5;
@@ -2460,7 +2470,7 @@ input[type="text"]#dropdown-search::-webkit-input-placeholder {
     width: 100%;
     height: 100%;
     // opacity: 0.7;
-    z-index: 9998;
+    z-index: 998;
 }
 
 .popup:before {

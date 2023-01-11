@@ -230,15 +230,8 @@ export class QuotePageComponent implements OnInit {
     this.date1s = this.datePipe.transform(this.date1, 'EEE d MMM h:mm a');
     this.date2s = this.datePipe.transform(this.date2, 'EEE d MMM h:mm a');
     this.date3s = this.datePipe.transform(this.date3, 'EEE d MMM h:mm a');
-    // this.date1.
+
     window.scrollTo(0, 650)
-
-
-
-    //, { 
-
-    //   behavior: 'smooth', // и плавно 
-    // });
   }
 
   more1() {
@@ -401,7 +394,11 @@ export class QuotePageComponent implements OnInit {
 
   UploudModOpen() {
     this.upload_mod = true;
-    //window.scrollTo(0, 100)
+    window.scrollTo({
+      top: 200,
+      left: 100,
+      behavior: 'smooth'
+    })
   }
 
   UploudModClose() {
@@ -412,7 +409,11 @@ export class QuotePageComponent implements OnInit {
 
   DateModOpen() {
     this.date_mod = true;
-    //window.scrollTo(0, 100)
+    window.scrollTo({
+      top: 150,
+      left: 100,
+      behavior: 'smooth'
+    })
   }
 
   DateModClose() {

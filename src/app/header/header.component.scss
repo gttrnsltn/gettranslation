@@ -55,7 +55,21 @@ a:hover {
 .link{
     margin: 0 10px 0 10px;
 }
-
+.link_services{
+    display: flex;
+}
+.link span {
+    display: block;
+    border: solid black;
+    padding: 3px;
+    height: 3px;
+    width: 3px;
+    border-width: 0px 1px 1px 0px;
+    transition: 0.3s;
+}
+.link_arrow:hover{
+    border-color: #4247E5;
+}
 .serviceStandart {
     margin-left: 4px;
 }

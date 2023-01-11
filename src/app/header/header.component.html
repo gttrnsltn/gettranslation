@@ -14,18 +14,16 @@
         <li class="link">
             <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
         </li>
-        <li (mouseover)="service_hover=true" (mouseout)="service_hover=false" class="link">
-            <a [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
-                <img *ngIf="service" class="serviceActive" src="../../assets/menu/Frame 12 (1).svg" alt="">
-                <img *ngIf="!service && !service_hover" class="serviceStandart" src="../../assets/Frame 12 (2)_1.svg"
-                    alt="">
-                <img *ngIf="!service && service_hover" class="serviceStandart" src="../../assets/Frame 12 (2).svg"
-                    alt="">
+        <li class="link">
+            <a class="link_services" [ngClass]="{'serviceColor': service == true}" (click)="onService()">{{ 'header.services' | translate }}
+                <span class="link_arrow" id="dropdown-arrow" [style.margin]="!service ? '6px 10px': '9px 10px'"
+                    [style.transform]="!service ? 'rotate(45deg)': 'rotate(225deg)'"
+                    [style.border-color]="!service ? 'black': '#4247E5'">
+                </span>
             </a>
         </li>
 
     </ul>
-
     <div (click)="onRoute()" [ngClass]="{'user_quote': quote == true || contact == true}" class="user">
         <a (mouseover)="user_img=true" (mouseout)="user_img=false" (click)="onLoginMod()">
             <img *ngIf="!user_img" class="user_img" src="../../assets/icon/user.svg" alt="">
@@ -52,18 +50,18 @@
                 <img (click)="onShowMobileMenu()" class="menu_close" src="../../assets/close_black.svg"
                     alt="close menu">
 
-                <div (click)="onRoute()" class="menu_login">
+                <div (click)="onRouteMobile()" class="menu_login">
                     <a (click)="onLoginMod()">{{ 'header.login' | translate }}</a>
                 </div>
 
                 <li class="menu_item">
-                    <a [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
+                    <a (click)="onRouteMobile()" [routerLink]="['/enterprises']">{{ 'header.enterprises' | translate }}</a>
                 </li>
                 <li class="menu_item">
-                    <a (click)="onRoute()" [routerLink]="['/developers']">{{ 'header.developers' | translate }}</a>
+                    <a (click)="onRouteMobile()" [routerLink]="['/developers']">{{ 'header.developers' | translate }}</a>
                 </li>
                 <li class="menu_item">
-                    <a (click)="onRoute()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
+                    <a (click)="onRouteMobile()" [routerLink]="['/translators']">{{ 'header.translators' | translate }}</a>
                 </li>
                 <li class="menu_item">
                     <a (click)="onServiceMobile()">{{ 'header.services' | translate }}
@@ -72,37 +70,37 @@
                     </a>
                     <ul class="mobile_service_menu" *ngIf="serviceMobile">
                         <li class="service_menu">
-                            <a class="service_item" (click)="onService()" [routerLink]="['/website-localization']">{{
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()" [routerLink]="['/website-localization']">{{
                                 'header.service_item1' | translate }}</a>
-                            <a class="service_item" (click)="onService()"
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()"
                                 [routerLink]="['/web-software-localization']">{{ 'header.service_item2' | translate
                                 }}</a>
-                            <a class="service_item" (click)="onService()"
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()"
                                 [routerLink]="['/custom-localization-solutions']">{{ 'header.service_item3' | translate
                                 }}</a>
-                            <a class="service_item" (click)="onService()" [routerLink]="['/adwords-localization']">{{
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()" [routerLink]="['/adwords-localization']">{{
                                 'header.service_item4' | translate }}</a>
-                            <a class="service_item" (click)="onService()"
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()"
                                 [routerLink]="['/multilingual-dtp-services']">{{ 'header.service_item5' | translate
                                 }}</a>
-                            <a class="service_item" (click)="onService()"
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()"
                                 [routerLink]="['/multilingual-chatbot-services']">{{ 'header.service_item6' | translate
                                 }}</a>
-                            <a class="service_item" (click)="onService()"
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()"
                                 [routerLink]="['/transcription-subtitle-translation']">{{ 'header.service_item7' |
                                 translate }}</a>
-                            <a class="service_item" (click)="onService()"
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()"
                                 [routerLink]="['/sworn-certified-official-translation']">{{ 'header.service_item8' |
                                 translate }}</a>
-                            <a class="service_item" (click)="onService()" [routerLink]="['/urgent-translations']">{{
+                            <a (click)="onRouteMobile()" class="service_item" (click)="onService()" [routerLink]="['/urgent-translations']">{{
                                 'header.service_item9' | translate }}</a>
                         </li>
                     </ul>
                 </li>
 
                 <div class="buttons_menu">
-                    <a [routerLink]="['/contact']" class="btn_contact">{{ 'header.contact' | translate }}</a>
-                    <a [routerLink]="['/quote']" class="btn_instant">{{ 'header.instant' | translate }}</a>
+                    <a (click)="onRouteMobile()" [routerLink]="['/contact']" class="btn_contact">{{ 'header.contact' | translate }}</a>
+                    <a (click)="onRouteMobile()" [routerLink]="['/quote']" class="btn_instant">{{ 'header.instant' | translate }}</a>
                 </div>
             </ul>
             <div class="menu_footer">

@@ -349,8 +349,21 @@
         "close_subtext5": "We will deliver the transcribed file in your preferred format (.srt, .ssa, .ttml, .sbv, .dfxp, .vtt, .txt), with timestamps.",
 
         "why_title": "Why we are a good fit for your needs?",
-        "why_subtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world."
+        "why_subtext": "We combine advanced artificial intelligence with human editors, for fast, efficient, high-quality translations that get smarter over time. Gettranslation enables consistent multilingual support at scale, so enterprises can build customer trust in every corner of the world.",
 
+        "table_header1": "Service",
+        "table_header2": "Price per minute",
+        "table_header3": "Turnover average time",
+        "table_item11": "Multilingual Subtitles",
+        "table_item12": "From 10 to 20 €",
+        "table_item13": "up to 50 min in 2 days, +1 day for each 50 min",
+        "table_item21": "Transcriptions",
+        "table_item22": "4 € per minute",
+        "table_item23": "up to 100 min in 2 days, +1 day for each 100 min",
+        "table_item31": "Closed Captions",
+        "table_item32": "6 € per minute",
+        "table_item33": "up to 100 min in 2 days, +1 day for each 100 min",
+        "row_note": "(accordingly to language and quality)"
     },
     "websoftware": {
         "title": "Web software localization",
@@ -446,8 +459,63 @@
         "office_contact_label": "Give us a call",
         "office_offline": "We’re not online now",
         "office_contact_notify": "Please send us an e-mail or leave a voice message."
+    },
+    "dtp_services":{
+        "title": "Multilingual DTP services",
 
+        "when_title": "When is DTP necessary?",
+        "when_text1": "There are some cases in which you should consider to add a DTP service to your project, particularly if translation is intended for publication, to make sure that the layout matches the original file:",
+        "when_text2": "If you have any doubts whether you should add a DTP service, feel free to contact us, and we will be happy to find a solution for your specific needs.",
+        "when_subtext1": "Translation from English into latin languages such as French and Spanish, as they tend to expand in word count and require more space or smaller font size.",
+        "when_subtext2": "Translation into or from German, Russian and Polish, as words in these languages can be very long, requiring re-sizing of graphics and menu items.",
+        "when_subtext3": "Translation into or from right-to-left languages, such as Arabic, Hebrew and Farsi, to adjust the position of text and graphics accordingly.",
+        "when_subtext4": "Translation into or from character-based languages, such as Chinese, Japanese and Korean, as they normally require specific versions of the publishing software.",
 
+        "how_get_title": "How to get a quote",
+        "how_get_subtext1": "Check the table below to see in which format you can export your files, and send them via our",
+        "how_get_subtext2": "or at",
+        "how_get_subtext3": "to get a quote for translation (either Professional or Premium) and DTP.",
+        "how_get_link": "contact form",
 
+        "why_needs_title": "Why we are a good fit for your needs?",
+        "why_needs_text1": "Quote",
+        "why_needs_subtext1": "Our team will analyze your files and your instructions, and will get back to you with a quote that includes the service you have requested (Basic, Professional or Premium), and the costs of DTP. Note that these can vary, based on the total volume of pages, the quality of the source files and the required delivery turnarounds.",
+        "why_needs_text2": "Translation",
+        "why_needs_subtext2": "Once you have confirmed the order, we take care of the translation first. If available, please provide your style guides and glossaries, as these assets are critical for quality, consistency and conformance to branding.",
+        "why_needs_text3": "DTP",
+        "why_needs_subtext3": "After translation, the project is assigned to a DTP specialist. When possible, we always chose a DTP specialist that is also a speaker of the target language. Otherwise, the translator will have a look at the final output before delivery, to make sure the content has not been compromised and that you have a ready to print file.",
+
+        "table_header1": "Software",
+        "table_header2": "Accepted source files to export",
+        "header_note": "we will deliver in the same format",
+
+        "table_item11": "Adobe Acrobat",
+        "table_item12": "PDF / Spreadsheet / Word / PowerPoint / HTML",
+        "table_item21": "Adobe Captivate",
+        "table_item22": "HTML",
+        "table_item31": "Adobe Dreamweaver",
+        "table_item32": "HTML / XML",
+        "table_item41": "Adobe Fireworks",
+        "table_item42": "HTML / XHTML",
+        "table_item51": "Adobe FrameMaker",
+        "table_item52": "RTF / MIF",
+        "table_item61": "Adobe Illustrator",
+        "table_item62": "PNG / JPEG / TIFF / PDF",
+        "table_item71": "Adobe InDesign",
+        "table_item72": "ICML / IDML / IDAP (recommended)",
+        "table_item81": "Adobe Photoshop",
+        "table_item82": "PNG / JPEG / PDF",
+        "table_item91": "AutoCAD",
+        "table_item92": "DXF / DWG + PDF",
+        "table_item101": "CorelDRAW",
+        "table_item102": "CDR / JPG / TIFF + PDF",
+        "table_item111": "MadCap Flare",
+        "table_item112": "HTML / XHTML / DITA / PDF / WORD",
+        "table_item121": "Microsoft Publisher",
+        "table_item122": "PUB + PDF",        
+        "table_item131": "QuarkXPress",
+        "table_item132": "QXD + PDF",
+
+        "table_note2": "(PDF necessary for quote)"
     }
 }

@@ -70,6 +70,24 @@ export class HeaderComponent implements OnInit {
       this.quote = false;
       this.contact = false;
     }
+  }  
+  onRouteMobile() {
+    this.service = false;
+    let route = '';
+    route = this.activeRoute.snapshot.url[0].path
+    if (route == 'quote') {
+      this.quote = true;
+      this.contact = false;
+    }
+    else if (route == 'contact') {
+      this.contact = true;
+      this.quote = false;
+    }
+    else {
+      this.quote = false;
+      this.contact = false;
+    }
+    this.onShowMobileMenu();
   }
 
   onLoginMod() {
@@ -111,12 +129,12 @@ export class HeaderComponent implements OnInit {
   }
   
   onShowMobileMenu(){
-    if (this.showMobileMenu === false ) {
-      this.showMobileMenu = true;
-      document.body.style.overflow = 'hidden';
-    }else {
+    if (this.showMobileMenu === true ) {
       this.showMobileMenu = false;
       document.body.style.overflow = 'unset';
+    }else {
+      this.showMobileMenu = true;
+      document.body.style.overflow = 'hidden';
     }
   }
 
