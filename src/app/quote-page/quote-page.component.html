@@ -21,15 +21,14 @@
         <div class="label_item">{{ 'quote.calc_label1' | translate }}</div>
         <div class="to_drop">
             <div (click)="openDropdownFrom()" id="dropdown" tabindex="1">
-                <label class="selected-item" [(ngModel)]="valueCheckboxFrom" [innerHTML]="valueCheckboxFrom"
-                    id="selected-item"></label>
+                <label class="selected-item" [innerHTML]="valueCheckboxFrom" id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckboxFrom ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckboxFrom ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
             <form [formGroup]="fromLanguageForm" novalidate id="dropdown-menu"
                 [ngClass]="{'close' : closeDropdownFrom === false}">
                 <div>
-                    <input (input)="onSearchInputChange($event)" id="dropdown-search" type="text" name="search"
+                    <input (input)="onSearchInputChangeFrom($event)" id="dropdown-search" type="text" name="search"
                         placeholder="{{ 'quote.calc_search' | translate }}">
                 </div>
                 <div id="dropdown-list">
@@ -47,8 +46,7 @@
         <div class="label_item">{{ 'quote.calc_label2' | translate }}</div>
         <div class="to_drop">
             <div (click)="openDropdownTo()" id="dropdown" tabindex="1">
-                <label class="selected-item" [(ngModel)]="valueCheckbox" [innerHTML]="valueCheckbox"
-                    id="selected-item"></label>
+                <label class="selected-item" [innerHTML]="valueCheckbox" id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckbox ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckbox ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
@@ -92,8 +90,7 @@
         <div class="label_item">{{ 'quote.calc_label4' | translate }}</div>
         <div class="to_drop">
             <div (click)="openDropdownType()" id="dropdown" tabindex="1">
-                <label class="selected-item" [(ngModel)]="valueCheckboxType" [innerHTML]="valueCheckboxType"
-                    id="selected-item"></label>
+                <label class="selected-item" [innerHTML]="valueCheckboxType" id="selected-item"></label>
                 <span id="dropdown-arrow" [style.margin]="!arrowCheckboxType ? '20px 24px': '25px 24px'"
                     [style.transform]="!arrowCheckboxType ? 'rotate(45deg)': 'rotate(225deg)'"></span>
             </div>
@@ -399,7 +396,7 @@
 
     <div class="upload_mod_file">
         <input class="upload_mod_btn"
-            [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}" type="file"
+            [ngClass]="{'upload_mod_btn_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}" type="file" multiple="true"
             (change)="changeListener($event)">
         <div class="upload_note"
             [ngClass]="{'upload_mod_img_ok': upload_mod_status =='OK' || upload_mod_status =='IN_PROCESS'}">

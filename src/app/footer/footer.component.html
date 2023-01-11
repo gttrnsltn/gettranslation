@@ -1,19 +1,19 @@
 <div class="footer">
       <!-- Language popup -->
       <div class="popup_container" style="display:none">
-        <img class="popup_close" (click)="langPopupClose()" src="./assets/close.svg" alt="close icon">
+        <img class="popup_close" (click)="popUpLangClose()" src="./assets/close.svg" alt="close icon">
         <div class="popup_content"> 
           <img class="popup_icon" src="./assets/gettrans_icon.svg" />
           <div class="popup_margin">
             <div *ngIf="ipBasedLangEmoji">
-              <p class="popup_title">Do you want change from {{ ipBasedLangEmoji }}?</p>
+              <p class="popup_title">{{ 'footer.footer_lang_msg' | translate }} {{ ipBasedLangEmoji }}?</p>
             </div>
             <div *ngIf="!ipBasedLangEmoji">
-              <p class="popup_title">Do you want change to browerser default language?</p>
+              <p class="popup_title">{{ 'footer.footer_browser_lang_msg' | translate }}</p>
             </div>
             <div class="popup_buttons">
-              <button (click)="popLangChange()" class="button_change">Switch language</button>
-              <button (click)="popLangLeave()" class="button_nochange">No, thanks</button>
+              <button (click)="popLangChange()" class="button_change">{{ 'footer.footer_switch_lang' | translate }}</button>
+              <button (click)="popUpLangClose()" class="button_nochange">{{ 'footer.footer_switch_no' | translate }}</button>
             </div>
           </div>
         </div>

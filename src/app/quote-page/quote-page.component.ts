@@ -26,18 +26,18 @@ export class QuotePageComponent implements OnInit {
 
   // to language
   to = 'Japanese'
-  closeDropdown = false;
   valueCheckbox: any = "Japanese";
+  closeDropdown = false;
   arrowCheckbox = false;
+  formOrder!: FormGroup;
 
   // from language
   from = 'English (USA)'
-  closeDropdownFrom = false;
   valueCheckboxFrom: any = "English (USA)"
+  closeDropdownFrom = false;
   arrowCheckboxFrom = false;
   fromLanguageForm!: FormGroup;
   fromLanguageList: IOrder[] = [];
-  formOrder!: FormGroup;
 
   // order type
   subject = "General"
@@ -82,7 +82,7 @@ export class QuotePageComponent implements OnInit {
   detail2 = false
   detail3 = false
 
-  word = 250;
+  word = 0;
   subjectType = 'General';
   timezone = "CET";
   currency = "EUR"
@@ -132,7 +132,7 @@ export class QuotePageComponent implements OnInit {
     this.fromLanguageForm = this.fb.group({
       language: this.fb.array([])
     })
-  
+
     this.typeOrderForm = this.fb.group({
       subject: this.fb.array([])
     })
@@ -289,17 +289,20 @@ export class QuotePageComponent implements OnInit {
   }
 
   readThis(inputValue: any): void {
-
+    let files = []
     this.file = inputValue.files[0];
 
-    let files = []
-    files.push(this.file)
+    for (var file of inputValue.files) {
+      files.push(file)
+    }
+
     files.forEach(item => {
       this.files.push(item)
     })
     this.orderServ.fileName = this.file.name
     this.orderServ.files = this.files
 
+    console.log("Number of files: " + this.files.length)
 
     var form = new FormData();
 
@@ -318,79 +321,89 @@ export class QuotePageComponent implements OnInit {
 
     form.append("agency_id", "16");
     form.append("language_id", language_id);
-    form.append("file", this.file);
-    this.orderServ.upload(form).subscribe(res => {
+    console.log(this.files)
+    // TODO: Should there be a file limit
+    for (let i = 0; i < this.files.length; ++i) {
+      console.log("Files left: " + this.files.length)
+      console.log("Current index: " + i)
 
-      if (res.status == "counted") {
-        this.word = this.word + res.wordCount
-        this.orderServ.word = this.word
-        if (this.word == 0) {
-          this.upload_mod_status = 'ERROR'
+      form.append("file", this.files[i])
+      this.orderServ.upload(form).subscribe(res => {
+        //console.log(res)
+        if (res.status == "counted") {
+          this.fileCount++
+          this.word += res.wordCount;
+          this.orderServ.word = this.word
+          console.log("Number of words counted: " + this.word)
+          if (this.fileCount > 1) {
+            this.orderServ.fileName = this.fileCount + ' files'
+            this.fileCountStr = this.fileCount + ' files'
+          }
+          else if (this.fileCount = 1) {
+            this.fileCountStr = this.fileCount + ' file'
+          }
+          if (this.word == 0) {
+            this.upload_mod_status = 'ERROR'
+          }
+          else {
+            this.upload_mod_status = "OK"
+          }
+        }
+        else if (res.status == "IN_PROCESS") {
+          do {
+            this.sleep(2000);
+            this.Statistics(res.id)
+          } while (this.upload_mod_status != "IN_PROCESS");
         }
         else {
-          this.upload_mod_status = "OK"
+          this.upload_mod_status = "ERROR"
+          this.word = 0
         }
-        this.fileCount = this.files.length
-        if (this.fileCount > 1) {
-          this.orderServ.fileName = this.fileCount + ' files'
-          this.fileCountStr = this.fileCount + ' files'
-          this.word = this.word + res.wordCount
-          this.orderServ.word = this.word
-        }
-        else if (this.fileCount = 1) {
-          this.fileCountStr = this.fileCount + ' file'
-        }
-
-      }
-      else if (res.status == "IN_PROCESS") {
-
-        do {
-          setTimeout(() => {
-            this.Statistics(res.id)
-          }, 3000);
-
-        } while (this.upload_mod_status != "IN_PROCESS");
-
-      }
-      else {
-        this.upload_mod_status = "ERROR"
-        this.word = 0
-      }
-    })
-
+      })
+      this.sleep(100)
+      form.delete("file")
+      this.files.splice(i, 1)
+      --i
+    }
   }
 
+  sleep(millis: any) {
+    var t = (new Date()).getTime();
+    var i = 0;
+    while (((new Date()).getTime() - t) < millis) {
+      i++;
+    }
+  }
 
   Statistics(file_id: any) {
     this.orderServ.statistics(file_id).subscribe(res => {
+      console.log(res)
       if (res.status == "IN_PROCESS" || res.status == 'waiting') {
         this.upload_mod_status = "IN_PROCESS"
 
       }
       else {
-        this.word = res.wordCount
+        this.fileCount++
+        this.word += res.wordCount;
+        this.orderServ.word = this.word
+        console.log("Number of words counted: " + this.word)
+        if (this.fileCount > 1) {
+          this.orderServ.fileName = this.fileCount + ' files'
+          this.fileCountStr = this.fileCount + ' files'
+        }
+        else if (this.fileCount = 1) {
+          this.fileCountStr = this.fileCount + ' file'
+        }
         if (this.word == 0) {
           this.upload_mod_status = 'ERROR'
         }
         else {
           this.upload_mod_status = "OK"
         }
-
-        this.fileCount = this.files.length
-        if (this.fileCount > 1) {
-          this.orderServ.fileName = this.fileCount + ' files'
-          this.fileCountStr = this.fileCount + ' files'
-          this.word = this.word + res.wordCount
-          this.orderServ.word = this.word
-        }
-        else if (this.fileCount = 1) {
-          this.fileCountStr = this.fileCount + ' file'
-        }
       }
     })
 
   }
-
 
   UploudModOpen() {
     this.upload_mod = true;
@@ -429,19 +442,19 @@ export class QuotePageComponent implements OnInit {
   }
 
   onKeydown(event: { key: string; preventDefault: () => void; }) {
-    if ( ['0','1','2','3','4','5','6','7','8','9'].includes( event.key ) && this.word >= 1000000 ) {
+    if (['0', '1', '2', '3', '4', '5', '6', '7', '8', '9'].includes(event.key) && this.word >= 1000000) {
       event.preventDefault()
       this.word = 1000000
     }
 
-    if ( ( (this.word + "").length > 5 && this.word != 1000000 && this.word != 100000 ) ) {
+    if (((this.word + "").length > 5 && this.word != 1000000 && this.word != 100000)) {
       event.preventDefault()
       this.word = 1000000
     }
-    if( ['+','-','e', '.'].includes( event.key ) ) {
+    if (['+', '-', 'e', '.'].includes(event.key)) {
       event.preventDefault()
     }
-  
+
   }
 
   deleteFile() {
@@ -449,6 +462,7 @@ export class QuotePageComponent implements OnInit {
     this.orderServ.fileName = "";
     this.word = 0;
     this.files = [];
+    this.fileCount = 0
   }
 
   allModalClose() {
@@ -462,49 +476,6 @@ export class QuotePageComponent implements OnInit {
     this.arrowCheckboxType = false;
   }
 
-  onCheckboxChangeType(e: any) {
-    const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
-    console.log(e.target.checked)
-    if (e.target.checked) {
-      /*
-      for (var lang of this.fromLanguageList) {
-        if (lang.name == this.from) {
-          console.log("Found previous lange: " + lang.name)
-          lang.value = false
-        }
-      }
-      */
-      this.subjectType = e.target.value
-      this.valueCheckboxType = this.subjectType
-      subjects.push(new FormControl(this.subjectType))
-    } else {
-      let i: number = 0;
-      subjects.controls.forEach((item: any) => {
-        if (item.value == e.target.value) {
-          subjects.removeAt(i);
-          return;
-        }
-        i++;
-      });
-    }
-
-    console.log("Subject from array size: " + this.typeOrderForm.value.subject.length)
-    console.log("Subject instance array size: " + subjects.length)
-
-    if (this.typeOrderForm.value.subject.length == 0) {
-      this.valueCheckboxType = "General"
-    }
-  }
-
-  onSearchInputChangeType(event: any) {
-    if (event.target.value != "") {
-      this.specializations_code_list = this.specializations_code_list.filter((res: any) => {
-        return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
-      })
-    } else if (event.target.value == "") {
-      this.ngOnInit();
-    }
-  }
 
   // dropdown to 
   onCheckboxChange(e: any) {
@@ -524,6 +495,7 @@ export class QuotePageComponent implements OnInit {
     }
 
     if (this.formOrder.value.country.length === 0) {
+      this.to = "Japanese"
       this.valueCheckbox = "Japanese";
     }
     if (this.formOrder.value.country.length === 1) {
@@ -549,6 +521,7 @@ export class QuotePageComponent implements OnInit {
       }
       this.from = e.target.value
       this.valueCheckboxFrom = this.from
+      languages.clear()
       languages.push(new FormControl(this.from))
     } else {
       let i: number = 0;
@@ -561,15 +534,42 @@ export class QuotePageComponent implements OnInit {
       });
     }
 
-    console.log("Language from array size: " + this.fromLanguageForm.value.language.length)
-    console.log("Language instance array size: " + languages.length)
-
     if (this.fromLanguageForm.value.language.length == 0) {
+      this.from = "English (USA)"
       this.valueCheckboxFrom = "English (USA)"
     }
 
   }
 
+  onCheckboxChangeType(e: any) {
+    const subjects: FormArray = this.typeOrderForm.get('subject') as FormArray
+    if (e.target.checked) {
+      this.subjectType = e.target.value
+      this.valueCheckboxType = this.subjectType
+      subjects.clear()
+      subjects.push(new FormControl(this.subjectType))
+    } else {
+      let i: number = 0;
+      subjects.controls.forEach((item: any) => {
+        if (item.value == e.target.value) {
+          subjects.removeAt(i);
+          return;
+        }
+        i++;
+      });
+    }
+
+    console.log("Subject from array size: " + this.typeOrderForm.value.subject.length)
+    console.log("Subject instance array size: " + subjects.length)
+
+    if (this.typeOrderForm.value.subject.length == 0) {
+      this.valueCheckboxType = "General"
+    }
+  }
+
+  onSearchInputChangeFrom(event: any) {
+    console.log("NOT IMPLEMENTED YET")
+  }
 
   onSearchInputChange(event: any) {
     if (event.target.value != "") {
@@ -581,6 +581,15 @@ export class QuotePageComponent implements OnInit {
       this.ngOnInit();
     }
   }
+
+  onSearchInputChangeType(event: any) {
+    if (event.target.value != "") {
+      this.specializations_code_list = this.specializations_code_list.filter((res: any) => {
+        return res.toLocaleLowerCase().match(event.target.value.toLocaleLowerCase())
+      })
+    }
+  }
+
 
   openDropdownTo() {
     if (this.closeDropdown === false) {
